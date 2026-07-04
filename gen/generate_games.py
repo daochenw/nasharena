@@ -16,16 +16,33 @@ across moves and games. For each game we write:
   games/game-00N.json  per-move telemetry consumed by index.html
   games/manifest.json  index of games
 
-Checkpoint/resume: each game is written to disk the moment it finishes (with
-its raw difficulty signal kept as "rawDifficulty"), and on startup the script
-skips any game-NNN.json that already exists. Killing the run costs at most the
-in-flight game; rerunning the same command resumes.
+Excitement engineering (the corpus is culled to a featured few, so quality
+comes from volume + selection):
 
-A separate finalize pass (always run at the end, or standalone via
---finalize-only) sweeps ALL games on disk, applies a global per-engine
-difficulty normalization, and stamps the eased render delay (0.4s .. 4.0s)
-into every move. It is idempotent, so top-up runs re-normalize the whole
-corpus consistently.
+  * Every game is seeded from a SHARP OPENING BOOK (gambits, opposite-side
+    castling storms). Book moves are stamped "book": true with eval bars but
+    no thinking telemetry - the site plays them "from memory" - and the JSON
+    carries "bookPlies" so the renderer knows where thinking begins. Each
+    opening is played as a colour-reversed pair on consecutive attempts.
+  * ADJUDICATION cuts games short once both engines' eval bars agree:
+    win adjudicated after WIN_PLIES consecutive plies beyond WIN_WP;
+    draw adjudicated after DRAW_PLIES consecutive dead-equal, low-divergence
+    plies. An adjudicated draw whose evals NEVER left the drama band is a
+    dud and is DISCARDED (not written) - its slot goes to a fresh attempt.
+  * --hours N runs time-boxed: keep generating until the deadline (checked
+    between games), then finalize. Overproduce, then cull with
+    select_featured.py (top 5 by excitement.py score).
+
+Checkpoint/resume: each game is written to disk the moment it finishes,
+already complete: difficulty is normalized WITHIN the game (per engine, from
+the raw signal kept as "rawDifficulty") and the eased render delay
+(0.4s .. 4.0s) is stamped into every move. Killing the run costs at most the
+in-flight game; rerunning the same command resumes, and finished games never
+change when more games are added.
+
+A finalize pass (run at the end, or standalone via --finalize-only) rebuilds
+the manifest and re-stamps the per-game normalization for every game on disk
+(idempotent; also upgrades games generated under the old global scheme).
 
 Example (paths default to the bundled engines/ binaries):
   python3 gen/generate_games.py --games 20
@@ -34,6 +51,7 @@ import argparse
 import json
 import math
 import re
+import time
 from pathlib import Path
 
 import chess
@@ -49,7 +67,57 @@ DELAY_MAX_MS = 4000
 EASE_EXP = 1.8           # >1: most moves brisk, only hard ones visibly stall
 MAX_CANDIDATES = 4       # ghost arrows per move
 
+# Adjudication / boredom control. All thresholds act on the per-ply eval bars
+# (White-POV win probs from BOTH engines), post-book plies only.
+WIN_WP = 0.95            # both engines this sure, for the same side...
+WIN_PLIES = 10           # ...this many consecutive plies -> adjudicate the win
+DRAW_BAND = 0.055        # |wp - 0.5| within this = dead equal (per engine)
+DRAW_DIV = 0.06          # and the engines agree within this
+DRAW_PLIES = 40          # consecutive dead plies -> adjudicate the draw
+DRAMA_WP = 0.15          # an adjudicated draw that never saw |wp - 0.5| >= this
+                         # had no story: discard it entirely
+
 GAME_RE = re.compile(r"game-(\d{3})\.json$")
+
+# Sharp opening book: every line is a known theoretical battleground (gambits,
+# sac lines, opposite-side castling races). From the standard start these two
+# engines drift into correct, samey, drawish chess; the book forces imbalance
+# and character. Each entry is played TWICE on consecutive attempts, colours
+# reversed, TCEC-style. All lines are machine-verified legal (SAN from start).
+OPENINGS = [
+    ("King's Gambit, Kieseritzky", "e4 e5 f4 exf4 Nf3 g5 h4 g4 Ne5 Nf6"),
+    ("Muzio Gambit", "e4 e5 f4 exf4 Nf3 g5 Bc4 g4 O-O gxf3 Qxf3 Qf6"),
+    ("Evans Gambit", "e4 e5 Nf3 Nc6 Bc4 Bc5 b4 Bxb4 c3 Ba5 d4 exd4 O-O"),
+    ("Traxler Counterattack", "e4 e5 Nf3 Nc6 Bc4 Nf6 Ng5 Bc5 Nxf7 Bxf2+ Kxf2 Nxe4+"),
+    ("Frankenstein-Dracula", "e4 e5 Nc3 Nf6 Bc4 Nxe4 Qh5 Nd6 Bb3 Nc6 Nb5 g6 "
+                             "Qf3 f5 Qd5 Qe7 Nxc7+ Kd8 Nxa8 b6"),
+    ("Danish Gambit", "e4 e5 d4 exd4 c3 dxc3 Bc4 cxb2 Bxb2 d5"),
+    ("Cochrane Gambit", "e4 e5 Nf3 Nf6 Nxe5 d6 Nxf7 Kxf7 d4"),
+    ("Najdorf, Poisoned Pawn", "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 a6 Bg5 e6 "
+                               "f4 Qb6 Qd2 Qxb2 Rb1 Qa3"),
+    ("Dragon, Yugoslav Attack", "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 g6 Be3 Bg7 "
+                                "f3 O-O Qd2 Nc6 Bc4 Bd7 O-O-O Rc8"),
+    ("Sicilian Sveshnikov", "e4 c5 Nf3 Nc6 d4 cxd4 Nxd4 Nf6 Nc3 e5 Ndb5 d6 "
+                            "Bg5 a6 Na3 b5"),
+    ("Velimirovic Attack", "e4 c5 Nf3 d6 d4 cxd4 Nxd4 Nf6 Nc3 Nc6 Bc4 e6 "
+                           "Be3 Be7 Qe2 a6 O-O-O Qc7"),
+    ("Marshall Attack", "e4 e5 Nf3 Nc6 Bb5 a6 Ba4 Nf6 O-O Be7 Re1 b5 Bb3 O-O "
+                        "c3 d5 exd5 Nxd5 Nxe5 Nxe5 Rxe5 c6"),
+    ("Winawer, Poisoned Pawn", "e4 e6 d4 d5 Nc3 Bb4 e5 c5 a3 Bxc3+ bxc3 Ne7 "
+                               "Qg4 Qc7 Qxg7 Rg8 Qxh7 cxd4"),
+    ("Botvinnik Semi-Slav", "d4 d5 c4 c6 Nc3 Nf6 Nf3 e6 Bg5 dxc4 e4 b5 e5 h6 "
+                            "Bh4 g5 Nxg5 hxg5 Bxg5 Nbd7"),
+    ("King's Indian, Mar del Plata", "d4 Nf6 c4 g6 Nc3 Bg7 e4 d6 Nf3 O-O Be2 e5 "
+                                     "O-O Nc6 d5 Ne7 Ne1 Nd7 Nd3 f5"),
+    ("Benko Gambit Accepted", "d4 Nf6 c4 c5 d5 b5 cxb5 a6 bxa6 g6 Nc3 Bxa6 "
+                              "e4 Bxf1 Kxf1 d6"),
+    ("Grunfeld Exchange", "d4 Nf6 c4 g6 Nc3 d5 cxd5 Nxd5 e4 Nxc3 bxc3 Bg7 "
+                          "Bc4 c5 Ne2 Nc6 Be3 O-O O-O Bg4 f3 Na5"),
+    ("Modern Benoni, Flick-Knife", "d4 Nf6 c4 c5 d5 e6 Nc3 exd5 cxd5 d6 e4 g6 "
+                                   "f4 Bg7 Bb5+ Nfd7"),
+    ("Max Lange Attack", "e4 e5 Nf3 Nc6 Bc4 Nf6 d4 exd4 O-O Bc5 e5 d5 exf6 dxc4 "
+                         "Re1+ Be6 Ng5 Qd5 Nc3 Qf5 Nce4"),
+]
 
 # Parses one Lc0 VerboseMoveStats line, e.g.:
 #  "g1f3  (159 ) N:     193 (+ 6) (P: 15.68%) (WL:  0.07194) (D: 0.574) ... (Q:  0.07194) ..."
@@ -268,17 +336,51 @@ def analyse_sf(engine, board, nodes, multipv=3):
 # Game play
 # --------------------------------------------------------------------------- #
 def play_game(lc0, sf, lc0_white, lc0_nodes, sf_nodes,
-              lc0_eval_nodes, sf_eval_nodes, round_no):
+              lc0_eval_nodes, sf_eval_nodes, round_no, opening):
+    """Play one game from a book line. Returns (pgn_game, data);
+    data is None when the game was adjudicated a dud and discarded."""
+    opening_name, opening_sans = opening
     board = chess.Board()
     game = chess.pgn.Game()
     wn, bn = ("Lc0", "Stockfish") if lc0_white else ("Stockfish", "Lc0")
     game.headers.update({
         "Event": "nasharena: Lc0 vs Stockfish", "Site": "nasharena.ai",
         "Round": str(round_no), "White": wn, "Black": bn,
+        "Opening": opening_name,
     })
     node = game
     moves = []
     ply = 0
+
+    # Book prologue: both players bang out the prepared line from memory.
+    # Eval bars are real (cheap probes) but there is no thinking telemetry.
+    for san_in in opening_sans.split():
+        ply += 1
+        white_to_move = board.turn == chess.WHITE
+        is_lc0 = white_to_move == lc0_white
+        mv = board.parse_san(san_in)
+        san = board.san(mv)
+        board.push(mv)
+        node = node.add_variation(mv)
+        res = game_result(board)
+        moves.append({
+            "ply": ply,
+            "side": "white" if white_to_move else "black",
+            "engine": "Lc0" if is_lc0 else "Stockfish",
+            "uci": mv.uci(), "san": san, "book": True,
+            "evalLc0": eval_wp(lc0, board, lc0_eval_nodes, res),
+            "evalSF": eval_wp(sf, board, sf_eval_nodes, res),
+            "changedMind": False, "candidates": [], "viz": {}, "extra": {},
+        })
+    book_plies = ply
+
+    # Adjudication state (book plies excluded: a gambit's eval dip is theory,
+    # not drama, and prepared lines must not trip the dead-draw counter).
+    result, termination = None, "natural"
+    drama = 0.0          # furthest either eval bar ever strayed from 0.5
+    dead_run = 0         # consecutive dead-equal, engines-agree plies
+    w_run = b_run = 0    # consecutive both-engines-sure plies per side
+
     while game_result(board) is None:
         ply += 1
         white_to_move = board.turn == chess.WHITE
@@ -312,48 +414,89 @@ def play_game(lc0, sf, lc0_white, lc0_nodes, sf_nodes,
             "extra": t["extra"], "rawDifficulty": round(t["raw"], 6),
         })
 
-    result = game_result(board)
+        # ---- adjudication bookkeeping (skip if the game just ended) ----
+        if res is not None:
+            continue
+        drama = max(drama, abs(eval_lc0 - 0.5), abs(eval_sf - 0.5))
+        dead = (max(abs(eval_lc0 - 0.5), abs(eval_sf - 0.5)) <= DRAW_BAND
+                and abs(eval_lc0 - eval_sf) <= DRAW_DIV)
+        dead_run = dead_run + 1 if dead else 0
+        w_run = w_run + 1 if min(eval_lc0, eval_sf) >= WIN_WP else 0
+        b_run = b_run + 1 if max(eval_lc0, eval_sf) <= 1.0 - WIN_WP else 0
+        if w_run >= WIN_PLIES or b_run >= WIN_PLIES:
+            result = "1-0" if w_run >= WIN_PLIES else "0-1"
+            termination = "adjudicated"
+            print(f"    adjudicated {result}: both engines >= {WIN_WP:.0%} "
+                  f"for {WIN_PLIES} plies", flush=True)
+            break
+        if dead_run >= DRAW_PLIES:
+            result, termination = "1/2-1/2", "adjudicated"
+            print(f"    adjudicated draw: dead equal for {DRAW_PLIES} plies",
+                  flush=True)
+            break
+
+    if result is None:
+        result = game_result(board)
     game.headers["Result"] = result
-    return game, {"white": wn, "black": bn, "result": result, "moves": moves}
+    if termination == "adjudicated":
+        game.headers["Termination"] = "adjudication"
+        # A cut-short draw that never had a story is a dud: reclaim the slot.
+        if result == "1/2-1/2" and drama < DRAMA_WP:
+            print(f"    discarded: no drama (peak dev from 0.5 was {drama:.3f})",
+                  flush=True)
+            return game, None
+    return game, {"white": wn, "black": bn, "result": result,
+                  "opening": opening_name, "bookPlies": book_plies,
+                  "termination": termination, "moves": moves}
 
 
 # --------------------------------------------------------------------------- #
-# Finalize: global normalization sweep over everything on disk (idempotent)
+# Normalization (per game) + finalize sweep (idempotent)
 # --------------------------------------------------------------------------- #
+def normalize_game(g):
+    """Stamp difficulty/delayMs from rawDifficulty, normalized within THIS game
+    (per engine): each game's hardest decision paces its own drama, and the
+    JSON is self-contained the moment it is written. Book moves carry no
+    difficulty signal (they are recalled, not computed) and are skipped."""
+    real = [m for m in g["moves"] if not m.get("book")]
+    by_engine = {}
+    for m in real:
+        by_engine.setdefault(m["engine"], []).append(m["rawDifficulty"])
+    bounds = {eng: (min(v), max(v)) for eng, v in by_engine.items()}
+    for m in real:
+        lo, hi = bounds[m["engine"]]
+        norm = (m["rawDifficulty"] - lo) / (hi - lo) if hi > lo else 0.0
+        eased = norm ** EASE_EXP
+        m["difficulty"] = round(norm, 4)
+        m["delayMs"] = int(round(DELAY_MIN_MS + (DELAY_MAX_MS - DELAY_MIN_MS) * eased))
+
+
 def finalize(out):
-    """Re-derive difficulty/delayMs for ALL games on disk from rawDifficulty,
-    and rewrite the full manifest in numeric order."""
+    """Re-stamp per-game normalization for ALL games on disk and rewrite the
+    full manifest in numeric order."""
     files = sorted(f for f in out.glob("game-*.json") if GAME_RE.search(f.name))
     if not files:
         print("finalize: no games on disk, nothing to do")
         return
     games = [(f, json.loads(f.read_text())) for f in files]
 
-    by_engine = {"Lc0": [], "Stockfish": []}
-    for _, g in games:
-        for m in g["moves"]:
-            by_engine[m["engine"]].append(m["rawDifficulty"])
-    bounds = {eng: (min(v), max(v)) for eng, v in by_engine.items() if v}
-
     for f, g in games:
-        for m in g["moves"]:
-            lo, hi = bounds[m["engine"]]
-            norm = (m["rawDifficulty"] - lo) / (hi - lo) if hi > lo else 0.0
-            eased = norm ** EASE_EXP
-            m["difficulty"] = round(norm, 4)
-            m["delayMs"] = int(round(DELAY_MIN_MS + (DELAY_MAX_MS - DELAY_MIN_MS) * eased))
+        normalize_game(g)
         f.write_text(json.dumps(g, indent=1) + "\n", encoding="utf-8")
 
     manifest = {"games": []}
     for i, (f, g) in enumerate(games, 1):
+        vs = f"{g['white']} vs {g['black']}"
+        if g.get("opening"):
+            vs += f" — {g['opening']}"
         manifest["games"].append({
             "file": f.name.replace(".json", ".pgn"), "data": f.name,
-            "label": f"Game {i}: {g['white']} vs {g['black']} ({g['result']})",
+            "label": f"Game {i}: {vs} ({g['result']})",
         })
     (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n",
                                        encoding="utf-8")
     print(f"finalize: normalized {len(games)} game(s), manifest lists all of them")
-    print("          (run select_featured.py to trim the manifest to the top 3)")
+    print("          (run select_featured.py to trim the manifest to the top 5)")
 
 
 def main():
@@ -364,17 +507,25 @@ def main():
     p.add_argument("--lc0-backend", default="metal")
     p.add_argument("--stockfish",
                    default=str(ENGINES / "stockfish/stockfish-macos-m1-apple-silicon"))
-    p.add_argument("--games", type=int, default=20)
+    p.add_argument("--games", type=int, default=None,
+                   help="Target corpus size on disk (default: 20, or unlimited "
+                        "when --hours is set).")
+    p.add_argument("--hours", type=float, default=None,
+                   help="Wall-clock budget: keep generating until the deadline "
+                        "(checked between games; the in-flight game finishes).")
     p.add_argument("--lc0-nodes", type=int, default=50000)
     p.add_argument("--sf-nodes", type=int, default=100000)
     p.add_argument("--lc0-eval-nodes", type=int, default=256,
                    help="Nodes for Lc0's per-position eval bar (value head).")
-    p.add_argument("--sf-eval-nodes", type=int, default=100000,
-                   help="Nodes for Stockfish's per-position eval bar.")
+    p.add_argument("--sf-eval-nodes", type=int, default=16000,
+                   help="Nodes for Stockfish's per-position eval bar. Runs every "
+                        "ply, so keep it far below --sf-nodes; 16k barely moves "
+                        "the bar vs 100k and roughly halves SF's per-ply cost.")
     p.add_argument("--lc0-threads", type=int, default=2)
     p.add_argument("--out", default=str(REPO / "games"))
     p.add_argument("--finalize-only", action="store_true",
-                   help="Skip generation; just re-normalize games on disk.")
+                   help="Skip generation; re-stamp per-game normalization and "
+                        "rebuild the manifest.")
     args = p.parse_args()
 
     out = Path(args.out)
@@ -384,14 +535,14 @@ def main():
         finalize(out)
         return
 
-    # Resume: skip games already checkpointed on disk.
+    # Resume: games already checkpointed on disk count toward the target.
     done = {int(GAME_RE.search(f.name).group(1))
             for f in out.glob("game-*.json") if GAME_RE.search(f.name)}
-    todo = [i for i in range(1, args.games + 1) if i not in done]
+    target = args.games if args.games is not None else (None if args.hours else 20)
+    deadline = time.monotonic() + args.hours * 3600 if args.hours else None
     if done:
-        print(f"resume: {len(done)} game(s) already on disk, "
-              f"{len(todo)} of {args.games} to play")
-    if not todo:
+        print(f"resume: {len(done)} game(s) already on disk")
+    if target is not None and len(done) >= target:
         finalize(out)
         return
 
@@ -406,26 +557,55 @@ def main():
 
     print(f"Lc0:       {args.lc0}  [{args.lc0_backend}]  ({args.lc0_nodes} nodes/move)")
     print(f"Stockfish: {args.stockfish}  ({args.sf_nodes} nodes/move)")
+    if deadline is not None:
+        print(f"deadline:  {args.hours:g}h from now (checked between games)")
 
+    # Openings cycle by ATTEMPT (discards included, so a dud line is not
+    # replayed forever): two consecutive attempts share an opening with
+    # colours reversed. Resuming offsets the cycle past what's on disk.
+    attempt = max(done, default=0)
+    next_no = max(done, default=0) + 1
+    saved = discarded = adjudicated = 0
     try:
-        for i in todo:
-            lc0_white = (i % 2 == 1)
+        while True:
+            if target is not None and len(done) >= target:
+                break
+            if deadline is not None and time.monotonic() >= deadline:
+                print("deadline reached, stopping", flush=True)
+                break
+            opening = OPENINGS[(attempt // 2) % len(OPENINGS)]
+            lc0_white = (attempt % 2 == 0)
+            attempt += 1
             wn = "Lc0" if lc0_white else "Stockfish"
             bn = "Stockfish" if lc0_white else "Lc0"
-            print(f"Game {i}/{args.games}: {wn} (W) vs {bn} (B)", flush=True)
+            print(f"Game {next_no}: {wn} (W) vs {bn} (B) — {opening[0]}",
+                  flush=True)
             game, data = play_game(lc0, sf, lc0_white, args.lc0_nodes,
                                    args.sf_nodes, args.lc0_eval_nodes,
-                                   args.sf_eval_nodes, i)
-            # Checkpoint immediately: a killed run costs at most one game.
-            (out / f"game-{i:03d}.pgn").write_text(str(game) + "\n", encoding="utf-8")
-            (out / f"game-{i:03d}.json").write_text(
+                                   args.sf_eval_nodes, next_no, opening)
+            if data is None:
+                discarded += 1
+                continue
+            # Checkpoint immediately, fully normalized: a killed run costs at
+            # most one game, and finished games are already display-ready.
+            normalize_game(data)
+            (out / f"game-{next_no:03d}.pgn").write_text(str(game) + "\n",
+                                                         encoding="utf-8")
+            (out / f"game-{next_no:03d}.json").write_text(
                 json.dumps(data, indent=1) + "\n", encoding="utf-8")
-            print(f"  result {data['result']}  ({len(data['moves'])} plies)  "
-                  f"[checkpointed]", flush=True)
+            print(f"  result {data['result']}  ({len(data['moves'])} plies, "
+                  f"{data['termination']})  [checkpointed]", flush=True)
+            done.add(next_no)
+            next_no += 1
+            saved += 1
+            if data["termination"] == "adjudicated":
+                adjudicated += 1
     finally:
         lc0.quit()
         sf.quit()
 
+    print(f"run: {saved} saved ({adjudicated} adjudicated), "
+          f"{discarded} dud(s) discarded")
     finalize(out)
 
 

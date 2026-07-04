@@ -124,8 +124,8 @@
     ]
    },
    "rawDifficulty": 0.199576,
-   "difficulty": 0.1894,
-   "delayMs": 580
+   "difficulty": 0.1857,
+   "delayMs": 574
   },
   {
    "ply": 2,
@@ -269,7 +269,7 @@
     ]
    },
    "rawDifficulty": 0.025001,
-   "difficulty": 0.0126,
+   "difficulty": 0.0075,
    "delayMs": 401
   },
   {
@@ -442,8 +442,8 @@
     ]
    },
    "rawDifficulty": 0.588926,
-   "difficulty": 0.5837,
-   "delayMs": 1766
+   "difficulty": 0.583,
+   "delayMs": 1763
   },
   {
    "ply": 6,
@@ -631,8 +631,8 @@
     ]
    },
    "rawDifficulty": 0.318218,
-   "difficulty": 0.3096,
-   "delayMs": 836
+   "difficulty": 0.3067,
+   "delayMs": 829
   },
   {
    "ply": 8,
@@ -792,8 +792,8 @@
     ]
    },
    "rawDifficulty": 0.492891,
-   "difficulty": 0.4865,
-   "delayMs": 1384
+   "difficulty": 0.485,
+   "delayMs": 1379
   },
   {
    "ply": 10,
@@ -957,8 +957,8 @@
     ]
    },
    "rawDifficulty": 0.153831,
-   "difficulty": 0.1431,
-   "delayMs": 509
+   "difficulty": 0.139,
+   "delayMs": 503
   },
   {
    "ply": 12,
@@ -1134,8 +1134,8 @@
     ]
    },
    "rawDifficulty": 0.199307,
-   "difficulty": 0.1891,
-   "delayMs": 580
+   "difficulty": 0.1854,
+   "delayMs": 573
   },
   {
    "ply": 14,
@@ -1315,8 +1315,8 @@
     ]
    },
    "rawDifficulty": 0.34987,
-   "difficulty": 0.3416,
-   "delayMs": 921
+   "difficulty": 0.339,
+   "delayMs": 914
   },
   {
    "ply": 16,
@@ -1484,8 +1484,8 @@
     ]
    },
    "rawDifficulty": 0.735549,
-   "difficulty": 0.7322,
-   "delayMs": 2454
+   "difficulty": 0.7326,
+   "delayMs": 2456
   },
   {
    "ply": 18,
@@ -1645,8 +1645,8 @@
     ]
    },
    "rawDifficulty": 0.902746,
-   "difficulty": 0.9015,
-   "delayMs": 3387
+   "difficulty": 0.9033,
+   "delayMs": 3397
   },
   {
    "ply": 20,
@@ -1806,8 +1806,8 @@
     ]
    },
    "rawDifficulty": 0.626914,
-   "difficulty": 0.6222,
-   "delayMs": 1932
+   "difficulty": 0.6218,
+   "delayMs": 1930
   },
   {
    "ply": 22,
@@ -1987,7 +1987,7 @@
     ]
    },
    "rawDifficulty": 0.70116,
-   "difficulty": 0.6974,
+   "difficulty": 0.6975,
    "delayMs": 2282
   },
   {
@@ -2148,8 +2148,8 @@
     ]
    },
    "rawDifficulty": 0.16075,
-   "difficulty": 0.1501,
-   "delayMs": 519
+   "difficulty": 0.146,
+   "delayMs": 513
   },
   {
    "ply": 26,
@@ -2293,7 +2293,7 @@
     ]
    },
    "rawDifficulty": 0.025001,
-   "difficulty": 0.0126,
+   "difficulty": 0.0075,
    "delayMs": 401
   },
   {
@@ -2466,8 +2466,8 @@
     ]
    },
    "rawDifficulty": 0.47558,
-   "difficulty": 0.4689,
-   "delayMs": 1321
+   "difficulty": 0.4673,
+   "delayMs": 1315
   },
   {
    "ply": 30,
@@ -2623,8 +2623,8 @@
     ]
    },
    "rawDifficulty": 0.711817,
-   "difficulty": 0.7082,
-   "delayMs": 2334
+   "difficulty": 0.7084,
+   "delayMs": 2336
   },
   {
    "ply": 32,
@@ -2800,8 +2800,8 @@
     ]
    },
    "rawDifficulty": 0.722516,
-   "difficulty": 0.719,
-   "delayMs": 2388
+   "difficulty": 0.7193,
+   "delayMs": 2390
   },
   {
    "ply": 34,
@@ -2997,8 +2997,8 @@
     ]
    },
    "rawDifficulty": 0.047925,
-   "difficulty": 0.0358,
-   "delayMs": 409
+   "difficulty": 0.0309,
+   "delayMs": 407
   },
   {
    "ply": 36,
@@ -3170,8 +3170,8 @@
     ]
    },
    "rawDifficulty": 0.312107,
-   "difficulty": 0.3034,
-   "delayMs": 821
+   "difficulty": 0.3005,
+   "delayMs": 813
   },
   {
    "ply": 38,
@@ -3327,8 +3327,8 @@
     ]
    },
    "rawDifficulty": 0.021429,
-   "difficulty": 0.009,
-   "delayMs": 401
+   "difficulty": 0.0039,
+   "delayMs": 400
   },
   {
    "ply": 40,
@@ -3480,8 +3480,8 @@
     ]
    },
    "rawDifficulty": 0.134409,
-   "difficulty": 0.1234,
-   "delayMs": 483
+   "difficulty": 0.1192,
+   "delayMs": 478
   },
   {
    "ply": 42,
@@ -3649,8 +3649,8 @@
     ]
    },
    "rawDifficulty": 0.093188,
-   "difficulty": 0.0817,
-   "delayMs": 440
+   "difficulty": 0.0771,
+   "delayMs": 436
   },
   {
    "ply": 44,
@@ -3822,8 +3822,8 @@
     ]
    },
    "rawDifficulty": 0.740246,
-   "difficulty": 0.737,
-   "delayMs": 2478
+   "difficulty": 0.7374,
+   "delayMs": 2481
   },
   {
    "ply": 46,
@@ -3999,8 +3999,8 @@
     ]
    },
    "rawDifficulty": 0.567639,
-   "difficulty": 0.5622,
-   "delayMs": 1677
+   "difficulty": 0.5613,
+   "delayMs": 1673
   },
   {
    "ply": 48,
@@ -4188,8 +4188,8 @@
     ]
    },
    "rawDifficulty": 0.021855,
-   "difficulty": 0.0094,
-   "delayMs": 401
+   "difficulty": 0.0043,
+   "delayMs": 400
   },
   {
    "ply": 50,
@@ -4337,8 +4337,8 @@
     ]
    },
    "rawDifficulty": 0.525001,
-   "difficulty": 0.519,
-   "delayMs": 1506
+   "difficulty": 0.5178,
+   "delayMs": 1501
   },
   {
    "ply": 52,
@@ -4510,8 +4510,8 @@
     ]
    },
    "rawDifficulty": 0.415189,
-   "difficulty": 0.4078,
-   "delayMs": 1116
+   "difficulty": 0.4057,
+   "delayMs": 1110
   },
   {
    "ply": 54,
@@ -4667,8 +4667,8 @@
     ]
    },
    "rawDifficulty": 0.386005,
-   "difficulty": 0.3782,
-   "delayMs": 1026
+   "difficulty": 0.3759,
+   "delayMs": 1019
   },
   {
    "ply": 56,
@@ -4816,8 +4816,8 @@
     ]
    },
    "rawDifficulty": 0.023078,
-   "difficulty": 0.0107,
-   "delayMs": 401
+   "difficulty": 0.0055,
+   "delayMs": 400
   },
   {
    "ply": 58,
@@ -4993,8 +4993,8 @@
     ]
    },
    "rawDifficulty": 0.6625,
-   "difficulty": 0.6582,
-   "delayMs": 2096
+   "difficulty": 0.6581,
+   "delayMs": 2095
   },
   {
    "ply": 60,
@@ -5158,7 +5158,7 @@
     ]
    },
    "rawDifficulty": 0.682562,
-   "difficulty": 0.6785,
+   "difficulty": 0.6786,
    "delayMs": 2191
   },
   {
@@ -5323,8 +5323,8 @@
     ]
    },
    "rawDifficulty": 0.371133,
-   "difficulty": 0.3632,
-   "delayMs": 981
+   "difficulty": 0.3607,
+   "delayMs": 974
   },
   {
    "ply": 64,
@@ -5488,8 +5488,8 @@
     ]
    },
    "rawDifficulty": 0.171241,
-   "difficulty": 0.1607,
-   "delayMs": 534
+   "difficulty": 0.1567,
+   "delayMs": 528
   },
   {
    "ply": 66,
@@ -5633,8 +5633,8 @@
     ]
    },
    "rawDifficulty": 0.375001,
-   "difficulty": 0.3671,
-   "delayMs": 993
+   "difficulty": 0.3647,
+   "delayMs": 986
   },
   {
    "ply": 68,
@@ -5794,8 +5794,8 @@
     ]
    },
    "rawDifficulty": 0.825,
-   "difficulty": 0.8228,
-   "delayMs": 2934
+   "difficulty": 0.8239,
+   "delayMs": 2940
   },
   {
    "ply": 70,
@@ -5947,8 +5947,8 @@
     ]
    },
    "rawDifficulty": 0.569644,
-   "difficulty": 0.5642,
-   "delayMs": 1685
+   "difficulty": 0.5633,
+   "delayMs": 1681
   },
   {
    "ply": 72,
@@ -6124,8 +6124,8 @@
     ]
    },
    "rawDifficulty": 0.635549,
-   "difficulty": 0.6309,
-   "delayMs": 1971
+   "difficulty": 0.6306,
+   "delayMs": 1970
   },
   {
    "ply": 74,
@@ -6328,8 +6328,8 @@
     ]
    },
    "rawDifficulty": 0.523049,
-   "difficulty": 0.517,
-   "delayMs": 1498
+   "difficulty": 0.5158,
+   "delayMs": 1493
   },
   {
    "ply": 76,
@@ -6477,8 +6477,8 @@
     ]
    },
    "rawDifficulty": 0.503847,
-   "difficulty": 0.4976,
-   "delayMs": 1425
+   "difficulty": 0.4962,
+   "delayMs": 1420
   },
   {
    "ply": 78,
@@ -6670,8 +6670,8 @@
     ]
    },
    "rawDifficulty": 0.283244,
-   "difficulty": 0.2742,
-   "delayMs": 750
+   "difficulty": 0.271,
+   "delayMs": 743
   },
   {
    "ply": 80,
@@ -6847,8 +6847,8 @@
     ]
    },
    "rawDifficulty": 0.820744,
-   "difficulty": 0.8185,
-   "delayMs": 2910
+   "difficulty": 0.8196,
+   "delayMs": 2916
   },
   {
    "ply": 82,
@@ -7027,8 +7027,8 @@
     ]
    },
    "rawDifficulty": 0.190968,
-   "difficulty": 0.1807,
-   "delayMs": 566
+   "difficulty": 0.1769,
+   "delayMs": 559
   },
   {
    "ply": 84,
@@ -7212,8 +7212,8 @@
     ]
    },
    "rawDifficulty": 0.278762,
-   "difficulty": 0.2696,
-   "delayMs": 740
+   "difficulty": 0.2665,
+   "delayMs": 733
   },
   {
    "ply": 86,
@@ -7385,8 +7385,8 @@
     ]
    },
    "rawDifficulty": 0.183033,
-   "difficulty": 0.1727,
-   "delayMs": 553
+   "difficulty": 0.1688,
+   "delayMs": 546
   },
   {
    "ply": 88,
@@ -7546,8 +7546,8 @@
     ]
    },
    "rawDifficulty": 0.747516,
-   "difficulty": 0.7443,
-   "delayMs": 2516
+   "difficulty": 0.7448,
+   "delayMs": 2518
   },
   {
    "ply": 90,
@@ -7738,8 +7738,8 @@
     ]
    },
    "rawDifficulty": 0.019642,
-   "difficulty": 0.0072,
-   "delayMs": 401
+   "difficulty": 0.002,
+   "delayMs": 400
   },
   {
    "ply": 92,
@@ -7899,8 +7899,8 @@
     ]
    },
    "rawDifficulty": 0.102501,
-   "difficulty": 0.0911,
-   "delayMs": 448
+   "difficulty": 0.0866,
+   "delayMs": 444
   },
   {
    "ply": 94,
@@ -8092,8 +8092,8 @@
     ]
    },
    "rawDifficulty": 0.580062,
-   "difficulty": 0.5747,
-   "delayMs": 1728
+   "difficulty": 0.5739,
+   "delayMs": 1725
   },
   {
    "ply": 96,
@@ -8249,8 +8249,8 @@
     ]
    },
    "rawDifficulty": 0.447501,
-   "difficulty": 0.4405,
-   "delayMs": 1223
+   "difficulty": 0.4387,
+   "delayMs": 1217
   },
   {
    "ply": 98,
@@ -8410,8 +8410,8 @@
     ]
    },
    "rawDifficulty": 0.595001,
-   "difficulty": 0.5899,
-   "delayMs": 1792
+   "difficulty": 0.5892,
+   "delayMs": 1789
   },
   {
    "ply": 100,
@@ -8583,8 +8583,8 @@
     ]
    },
    "rawDifficulty": 0.215062,
-   "difficulty": 0.2051,
-   "delayMs": 608
+   "difficulty": 0.2015,
+   "delayMs": 601
   },
   {
    "ply": 102,
@@ -8768,8 +8768,8 @@
     ]
    },
    "rawDifficulty": 0.935016,
-   "difficulty": 0.9342,
-   "delayMs": 3585
+   "difficulty": 0.9362,
+   "delayMs": 3597
   },
   {
    "ply": 104,
@@ -8937,8 +8937,8 @@
     ]
    },
    "rawDifficulty": 0.230883,
-   "difficulty": 0.2211,
-   "delayMs": 638
+   "difficulty": 0.2176,
+   "delayMs": 631
   },
   {
    "ply": 106,
@@ -9126,8 +9126,8 @@
     ]
    },
    "rawDifficulty": 0.415246,
-   "difficulty": 0.4078,
-   "delayMs": 1116
+   "difficulty": 0.4058,
+   "delayMs": 1110
   },
   {
    "ply": 108,
@@ -9308,8 +9308,8 @@
     ]
    },
    "rawDifficulty": 0.851312,
-   "difficulty": 0.8494,
-   "delayMs": 3084
+   "difficulty": 0.8508,
+   "delayMs": 3091
   },
   {
    "ply": 110,
@@ -9485,8 +9485,8 @@
     ]
    },
    "rawDifficulty": 0.75,
-   "difficulty": 0.7468,
-   "delayMs": 2529
+   "difficulty": 0.7474,
+   "delayMs": 2531
   },
   {
    "ply": 112,
@@ -9666,8 +9666,8 @@
     ]
    },
    "rawDifficulty": 0.201994,
-   "difficulty": 0.1919,
-   "delayMs": 584
+   "difficulty": 0.1881,
+   "delayMs": 578
   },
   {
    "ply": 114,
@@ -9859,8 +9859,8 @@
     ]
    },
    "rawDifficulty": 0.8125,
-   "difficulty": 0.8101,
-   "delayMs": 2864
+   "difficulty": 0.8112,
+   "delayMs": 2870
   },
   {
    "ply": 116,
@@ -10028,8 +10028,8 @@
     ]
    },
    "rawDifficulty": 0.612501,
-   "difficulty": 0.6076,
-   "delayMs": 1868
+   "difficulty": 0.6071,
+   "delayMs": 1866
   },
   {
    "ply": 118,
@@ -10225,8 +10225,8 @@
     ]
    },
    "rawDifficulty": 0.844133,
-   "difficulty": 0.8422,
-   "delayMs": 3042
+   "difficulty": 0.8434,
+   "delayMs": 3050
   },
   {
    "ply": 120,
@@ -10394,8 +10394,8 @@
     ]
    },
    "rawDifficulty": 0.782354,
-   "difficulty": 0.7796,
-   "delayMs": 2700
+   "difficulty": 0.7804,
+   "delayMs": 2704
   },
   {
    "ply": 122,
@@ -10558,7 +10558,7 @@
     ]
    },
    "rawDifficulty": 0.017648,
-   "difficulty": 0.0052,
+   "difficulty": 0.0,
    "delayMs": 400
   },
   {
@@ -10719,8 +10719,8 @@
     ]
    },
    "rawDifficulty": 0.781251,
-   "difficulty": 0.7785,
-   "delayMs": 2694
+   "difficulty": 0.7793,
+   "delayMs": 2698
   },
   {
    "ply": 126,
@@ -10915,8 +10915,8 @@
     ]
    },
    "rawDifficulty": 0.977415,
-   "difficulty": 0.9771,
-   "delayMs": 3853
+   "difficulty": 0.9795,
+   "delayMs": 3868
   },
   {
    "ply": 128,
@@ -11072,7 +11072,7 @@
     ]
    },
    "rawDifficulty": 0.697501,
-   "difficulty": 0.6937,
+   "difficulty": 0.6938,
    "delayMs": 2264
   },
   {
@@ -11225,8 +11225,8 @@
     ]
    },
    "rawDifficulty": 0.403572,
-   "difficulty": 0.396,
-   "delayMs": 1079
+   "difficulty": 0.3938,
+   "delayMs": 1073
   },
   {
    "ply": 132,
@@ -11378,8 +11378,8 @@
     ]
    },
    "rawDifficulty": 0.548215,
-   "difficulty": 0.5425,
-   "delayMs": 1597
+   "difficulty": 0.5414,
+   "delayMs": 1593
   },
   {
    "ply": 134,
@@ -11546,8 +11546,8 @@
     ]
    },
    "rawDifficulty": 0.913587,
-   "difficulty": 0.9125,
-   "delayMs": 3453
+   "difficulty": 0.9143,
+   "delayMs": 3464
   },
   {
    "ply": 136,
@@ -11731,8 +11731,8 @@
     ]
    },
    "rawDifficulty": 0.872516,
-   "difficulty": 0.8709,
-   "delayMs": 3207
+   "difficulty": 0.8724,
+   "delayMs": 3216
   },
   {
    "ply": 138,
@@ -11880,8 +11880,8 @@
     ]
    },
    "rawDifficulty": 0.526924,
-   "difficulty": 0.5209,
-   "delayMs": 1513
+   "difficulty": 0.5197,
+   "delayMs": 1508
   },
   {
    "ply": 140,
@@ -12041,8 +12041,8 @@
     ]
    },
    "rawDifficulty": 0.656251,
-   "difficulty": 0.6519,
-   "delayMs": 2067
+   "difficulty": 0.6517,
+   "delayMs": 2066
   },
   {
    "ply": 142,
@@ -12246,8 +12246,8 @@
     ]
    },
    "rawDifficulty": 0.920833,
-   "difficulty": 0.9198,
-   "delayMs": 3497
+   "difficulty": 0.9217,
+   "delayMs": 3509
   },
   {
    "ply": 144,
@@ -12419,8 +12419,8 @@
     ]
    },
    "rawDifficulty": 0.704167,
-   "difficulty": 0.7004,
-   "delayMs": 2296
+   "difficulty": 0.7006,
+   "delayMs": 2297
   },
   {
    "ply": 146,
@@ -12620,8 +12620,8 @@
     ]
    },
    "rawDifficulty": 0.979869,
-   "difficulty": 0.9796,
-   "delayMs": 3869
+   "difficulty": 0.982,
+   "delayMs": 3884
   },
   {
    "ply": 148,
@@ -12781,8 +12781,8 @@
     ]
    },
    "rawDifficulty": 0.510001,
-   "difficulty": 0.5038,
-   "delayMs": 1448
+   "difficulty": 0.5025,
+   "delayMs": 1443
   },
   {
    "ply": 150,
@@ -12958,8 +12958,8 @@
     ]
    },
    "rawDifficulty": 0.727516,
-   "difficulty": 0.7241,
-   "delayMs": 2413
+   "difficulty": 0.7244,
+   "delayMs": 2415
   },
   {
    "ply": 152,
@@ -13143,8 +13143,8 @@
     ]
    },
    "rawDifficulty": 0.173104,
-   "difficulty": 0.1626,
-   "delayMs": 537
+   "difficulty": 0.1586,
+   "delayMs": 531
   },
   {
    "ply": 154,
@@ -13320,8 +13320,8 @@
     ]
    },
    "rawDifficulty": 0.973889,
-   "difficulty": 0.9736,
-   "delayMs": 3830
+   "difficulty": 0.9759,
+   "delayMs": 3845
   },
   {
    "ply": 156,
@@ -13477,8 +13477,8 @@
     ]
    },
    "rawDifficulty": 0.225001,
-   "difficulty": 0.2152,
-   "delayMs": 627
+   "difficulty": 0.2116,
+   "delayMs": 620
   },
   {
    "ply": 158,
@@ -13649,8 +13649,8 @@
     ]
    },
    "rawDifficulty": 0.995062,
-   "difficulty": 0.995,
-   "delayMs": 3968
+   "difficulty": 0.9975,
+   "delayMs": 3984
   },
   {
    "ply": 160,
@@ -13826,8 +13826,8 @@
     ]
    },
    "rawDifficulty": 0.745139,
-   "difficulty": 0.7419,
-   "delayMs": 2503
+   "difficulty": 0.7424,
+   "delayMs": 2506
   },
   {
    "ply": 162,
@@ -14027,8 +14027,8 @@
     ]
    },
    "rawDifficulty": 0.899721,
-   "difficulty": 0.8984,
-   "delayMs": 3369
+   "difficulty": 0.9002,
+   "delayMs": 3379
   },
   {
    "ply": 164,
@@ -14162,8 +14162,8 @@
     ]
    },
    "rawDifficulty": 0.737501,
-   "difficulty": 0.7342,
-   "delayMs": 2464
+   "difficulty": 0.7346,
+   "delayMs": 2466
   },
   {
    "ply": 166,
@@ -14327,8 +14327,8 @@
     ]
    },
    "rawDifficulty": 0.782354,
-   "difficulty": 0.7796,
-   "delayMs": 2700
+   "difficulty": 0.7804,
+   "delayMs": 2704
   },
   {
    "ply": 168,
@@ -14484,8 +14484,8 @@
     ]
    },
    "rawDifficulty": 0.325001,
-   "difficulty": 0.3164,
-   "delayMs": 854
+   "difficulty": 0.3137,
+   "delayMs": 847
   },
   {
    "ply": 170,
@@ -14619,8 +14619,8 @@
     ]
    },
    "rawDifficulty": 0.431251,
-   "difficulty": 0.424,
-   "delayMs": 1168
+   "difficulty": 0.4221,
+   "delayMs": 1162
   },
   {
    "ply": 172,
@@ -14784,8 +14784,8 @@
     ]
    },
    "rawDifficulty": 0.195219,
-   "difficulty": 0.185,
-   "delayMs": 573
+   "difficulty": 0.1812,
+   "delayMs": 566
   },
   {
    "ply": 174,
@@ -14964,8 +14964,8 @@
     ]
    },
    "rawDifficulty": 0.995062,
-   "difficulty": 0.995,
-   "delayMs": 3968
+   "difficulty": 0.9975,
+   "delayMs": 3984
   },
   {
    "ply": 176,
@@ -15132,8 +15132,8 @@
     ]
    },
    "rawDifficulty": 0.783334,
-   "difficulty": 0.7806,
-   "delayMs": 2705
+   "difficulty": 0.7814,
+   "delayMs": 2709
   },
   {
    "ply": 178,
@@ -15301,8 +15301,8 @@
     ]
    },
    "rawDifficulty": 0.800001,
-   "difficulty": 0.7975,
-   "delayMs": 2795
+   "difficulty": 0.7984,
+   "delayMs": 2800
   },
   {
    "ply": 180,
@@ -15494,8 +15494,8 @@
     ]
    },
    "rawDifficulty": 0.856726,
-   "difficulty": 0.8549,
-   "delayMs": 3115
+   "difficulty": 0.8563,
+   "delayMs": 3123
   },
   {
    "ply": 182,
@@ -15667,8 +15667,8 @@
     ]
    },
    "rawDifficulty": 0.579167,
-   "difficulty": 0.5738,
-   "delayMs": 1725
+   "difficulty": 0.573,
+   "delayMs": 1721
   },
   {
    "ply": 184,
@@ -15848,8 +15848,8 @@
     ]
    },
    "rawDifficulty": 0.173104,
-   "difficulty": 0.1626,
-   "delayMs": 537
+   "difficulty": 0.1586,
+   "delayMs": 531
   },
   {
    "ply": 186,
@@ -16013,8 +16013,8 @@
     ]
    },
    "rawDifficulty": 0.990246,
-   "difficulty": 0.9901,
-   "delayMs": 3936
+   "difficulty": 0.9925,
+   "delayMs": 3952
   },
   {
    "ply": 188,
@@ -16162,8 +16162,8 @@
     ]
    },
    "rawDifficulty": 0.401924,
-   "difficulty": 0.3943,
-   "delayMs": 1074
+   "difficulty": 0.3922,
+   "delayMs": 1068
   },
   {
    "ply": 190,
@@ -16315,8 +16315,8 @@
     ]
    },
    "rawDifficulty": 0.800001,
-   "difficulty": 0.7975,
-   "delayMs": 2795
+   "difficulty": 0.7984,
+   "delayMs": 2800
   },
   {
    "ply": 192,
@@ -16476,8 +16476,8 @@
     ]
    },
    "rawDifficulty": 0.780001,
-   "difficulty": 0.7772,
-   "delayMs": 2687
+   "difficulty": 0.778,
+   "delayMs": 2691
   },
   {
    "ply": 194,
@@ -16629,8 +16629,8 @@
     ]
    },
    "rawDifficulty": 0.737501,
-   "difficulty": 0.7342,
-   "delayMs": 2464
+   "difficulty": 0.7346,
+   "delayMs": 2466
   },
   {
    "ply": 196,
@@ -16842,8 +16842,8 @@
     ]
    },
    "rawDifficulty": 0.785,
-   "difficulty": 0.7823,
-   "delayMs": 2714
+   "difficulty": 0.7831,
+   "delayMs": 2718
   },
   {
    "ply": 198,
@@ -17038,8 +17038,8 @@
     ]
    },
    "rawDifficulty": 0.415,
-   "difficulty": 0.4076,
-   "delayMs": 1116
+   "difficulty": 0.4055,
+   "delayMs": 1109
   },
   {
    "ply": 200,
@@ -17267,8 +17267,8 @@
     ]
    },
    "rawDifficulty": 0.4875,
-   "difficulty": 0.481,
-   "delayMs": 1364
+   "difficulty": 0.4795,
+   "delayMs": 1359
   },
   {
    "ply": 202,
@@ -17496,8 +17496,8 @@
     ]
    },
    "rawDifficulty": 0.9,
-   "difficulty": 0.8987,
-   "delayMs": 3371
+   "difficulty": 0.9004,
+   "delayMs": 3381
   },
   {
    "ply": 204,
@@ -17737,8 +17737,8 @@
     ]
    },
    "rawDifficulty": 0.623611,
-   "difficulty": 0.6188,
-   "delayMs": 1918
+   "difficulty": 0.6184,
+   "delayMs": 1916
   },
   {
    "ply": 206,
@@ -17954,8 +17954,8 @@
     ]
    },
    "rawDifficulty": 0.6325,
-   "difficulty": 0.6278,
-   "delayMs": 1958
+   "difficulty": 0.6275,
+   "delayMs": 1956
   },
   {
    "ply": 208,
@@ -18186,8 +18186,8 @@
     ]
    },
    "rawDifficulty": 0.412501,
-   "difficulty": 0.405,
-   "delayMs": 1108
+   "difficulty": 0.403,
+   "delayMs": 1101
   },
   {
    "ply": 210,
@@ -18450,8 +18450,8 @@
     ]
    },
    "rawDifficulty": 0.425,
-   "difficulty": 0.4177,
-   "delayMs": 1148
+   "difficulty": 0.4157,
+   "delayMs": 1142
   },
   {
    "ply": 212,
@@ -19548,8 +19548,8 @@
     ]
    },
    "rawDifficulty": 0.997551,
-   "difficulty": 0.9975,
-   "delayMs": 3984
+   "difficulty": 1.0,
+   "delayMs": 4000
   }
  ]
 }

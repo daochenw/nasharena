@@ -112,6 +112,8 @@ def score_sacrifices(moves, timeline):
     """
     events = []
     for i, m in enumerate(moves):
+        if m.get("book"):
+            continue  # a book gambit is theory, not the engine's own daring
         before = pov_balance(timeline, i - 1, m["side"]) if i else 0
         window = range(min(i + 2, len(timeline) - 1),
                        min(i + 7, len(timeline)))
@@ -270,7 +272,7 @@ def evaluate(path):
         print(f"  {k:<13} {v:5.2f}  x{WEIGHTS[k]:.2f}{note}")
     score = to_integer(raw)
     print(f"  raw {raw:.3f}  ->  excitement: {score}/10")
-    return score
+    return score, raw
 
 
 def main():

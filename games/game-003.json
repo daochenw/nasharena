@@ -61,8 +61,8 @@
     "totalVisits": 37760
    },
    "rawDifficulty": 0.508153,
-   "difficulty": 0.5084,
-   "delayMs": 1465
+   "difficulty": 0.5128,
+   "delayMs": 1482
   },
   {
    "ply": 2,
@@ -185,8 +185,8 @@
     ]
    },
    "rawDifficulty": 0.855849,
-   "difficulty": 0.854,
-   "delayMs": 3110
+   "difficulty": 0.8559,
+   "delayMs": 3121
   },
   {
    "ply": 3,
@@ -246,8 +246,8 @@
     "totalVisits": 32808
    },
    "rawDifficulty": 0.390298,
-   "difficulty": 0.3905,
-   "delayMs": 1063
+   "difficulty": 0.3938,
+   "delayMs": 1073
   },
   {
    "ply": 4,
@@ -370,8 +370,8 @@
     ]
    },
    "rawDifficulty": 0.685016,
-   "difficulty": 0.681,
-   "delayMs": 2203
+   "difficulty": 0.6822,
+   "delayMs": 2208
   },
   {
    "ply": 5,
@@ -431,8 +431,8 @@
     "totalVisits": 40364
    },
    "rawDifficulty": 0.332845,
-   "difficulty": 0.333,
-   "delayMs": 897
+   "difficulty": 0.3359,
+   "delayMs": 905
   },
   {
    "ply": 6,
@@ -543,8 +543,8 @@
     ]
    },
    "rawDifficulty": 0.675001,
-   "difficulty": 0.6709,
-   "delayMs": 2155
+   "difficulty": 0.672,
+   "delayMs": 2160
   },
   {
    "ply": 7,
@@ -604,8 +604,8 @@
     "totalVisits": 39400
    },
    "rawDifficulty": 0.339765,
-   "difficulty": 0.3399,
-   "delayMs": 916
+   "difficulty": 0.3428,
+   "delayMs": 924
   },
   {
    "ply": 8,
@@ -748,8 +748,8 @@
     ]
    },
    "rawDifficulty": 0.536729,
-   "difficulty": 0.5309,
-   "delayMs": 1551
+   "difficulty": 0.5314,
+   "delayMs": 1553
   },
   {
    "ply": 9,
@@ -809,8 +809,8 @@
     "totalVisits": 28060
    },
    "rawDifficulty": 0.21104,
-   "difficulty": 0.2111,
-   "delayMs": 619
+   "difficulty": 0.2129,
+   "delayMs": 622
   },
   {
    "ply": 10,
@@ -948,8 +948,8 @@
     ]
    },
    "rawDifficulty": 0.184558,
-   "difficulty": 0.1742,
-   "delayMs": 555
+   "difficulty": 0.1732,
+   "delayMs": 553
   },
   {
    "ply": 11,
@@ -1009,8 +1009,8 @@
     "totalVisits": 9228
    },
    "rawDifficulty": 0.286832,
-   "difficulty": 0.287,
-   "delayMs": 781
+   "difficulty": 0.2894,
+   "delayMs": 786
   },
   {
    "ply": 12,
@@ -1117,8 +1117,8 @@
     ]
    },
    "rawDifficulty": 0.304167,
-   "difficulty": 0.2953,
-   "delayMs": 801
+   "difficulty": 0.2948,
+   "delayMs": 800
   },
   {
    "ply": 13,
@@ -1178,8 +1178,8 @@
     "totalVisits": 38517
    },
    "rawDifficulty": 0.263631,
-   "difficulty": 0.2638,
-   "delayMs": 727
+   "difficulty": 0.266,
+   "delayMs": 732
   },
   {
    "ply": 14,
@@ -1317,8 +1317,8 @@
     ]
    },
    "rawDifficulty": 0.997516,
-   "difficulty": 0.9975,
-   "delayMs": 3984
+   "difficulty": 1.0,
+   "delayMs": 4000
   },
   {
    "ply": 15,
@@ -1378,8 +1378,8 @@
     "totalVisits": 26542
    },
    "rawDifficulty": 0.228066,
-   "difficulty": 0.2282,
-   "delayMs": 652
+   "difficulty": 0.2301,
+   "delayMs": 656
   },
   {
    "ply": 16,
@@ -1522,7 +1522,7 @@
     ]
    },
    "rawDifficulty": 0.48264,
-   "difficulty": 0.4761,
+   "difficulty": 0.4763,
    "delayMs": 1347
   },
   {
@@ -1583,8 +1583,8 @@
     "totalVisits": 17728
    },
    "rawDifficulty": 0.291771,
-   "difficulty": 0.2919,
-   "delayMs": 792
+   "difficulty": 0.2944,
+   "delayMs": 798
   },
   {
    "ply": 18,
@@ -1695,8 +1695,8 @@
     ]
    },
    "rawDifficulty": 0.642764,
-   "difficulty": 0.6382,
-   "delayMs": 2004
+   "difficulty": 0.6392,
+   "delayMs": 2009
   },
   {
    "ply": 19,
@@ -1756,7 +1756,7 @@
     "totalVisits": 22016
    },
    "rawDifficulty": 0.041914,
-   "difficulty": 0.0419,
+   "difficulty": 0.0423,
    "delayMs": 412
   },
   {
@@ -1884,8 +1884,8 @@
     ]
    },
    "rawDifficulty": 0.177502,
-   "difficulty": 0.1671,
-   "delayMs": 544
+   "difficulty": 0.166,
+   "delayMs": 542
   },
   {
    "ply": 21,
@@ -1945,8 +1945,8 @@
     "totalVisits": 25098
    },
    "rawDifficulty": 0.119486,
-   "difficulty": 0.1195,
-   "delayMs": 479
+   "difficulty": 0.1206,
+   "delayMs": 480
   },
   {
    "ply": 22,
@@ -2073,8 +2073,8 @@
     ]
    },
    "rawDifficulty": 0.153247,
-   "difficulty": 0.1425,
-   "delayMs": 508
+   "difficulty": 0.1413,
+   "delayMs": 506
   },
   {
    "ply": 23,
@@ -2134,8 +2134,8 @@
     "totalVisits": 5055
    },
    "rawDifficulty": 0.440574,
-   "difficulty": 0.4408,
-   "delayMs": 1224
+   "difficulty": 0.4446,
+   "delayMs": 1237
   },
   {
    "ply": 24,
@@ -2241,8 +2241,8 @@
     ]
    },
    "rawDifficulty": 0.258334,
-   "difficulty": 0.2489,
-   "delayMs": 695
+   "difficulty": 0.2482,
+   "delayMs": 693
   },
   {
    "ply": 25,
@@ -2302,8 +2302,8 @@
     "totalVisits": 3237
    },
    "rawDifficulty": 0.476382,
-   "difficulty": 0.4766,
-   "delayMs": 1348
+   "difficulty": 0.4807,
+   "delayMs": 1363
   },
   {
    "ply": 26,
@@ -2405,8 +2405,8 @@
     ]
    },
    "rawDifficulty": 0.550001,
-   "difficulty": 0.5443,
-   "delayMs": 1604
+   "difficulty": 0.5449,
+   "delayMs": 1607
   },
   {
    "ply": 27,
@@ -2466,8 +2466,8 @@
     "totalVisits": 1531
    },
    "rawDifficulty": 0.373047,
-   "difficulty": 0.3732,
-   "delayMs": 1011
+   "difficulty": 0.3764,
+   "delayMs": 1020
   },
   {
    "ply": 28,
@@ -2586,8 +2586,8 @@
     ]
    },
    "rawDifficulty": 0.17735,
-   "difficulty": 0.1669,
-   "delayMs": 543
+   "difficulty": 0.1658,
+   "delayMs": 542
   },
   {
    "ply": 29,
@@ -2647,8 +2647,8 @@
     "totalVisits": 3080
    },
    "rawDifficulty": 0.415107,
-   "difficulty": 0.4153,
-   "delayMs": 1140
+   "difficulty": 0.4189,
+   "delayMs": 1152
   },
   {
    "ply": 30,
@@ -2763,8 +2763,8 @@
     ]
    },
    "rawDifficulty": 0.736389,
-   "difficulty": 0.733,
-   "delayMs": 2458
+   "difficulty": 0.7344,
+   "delayMs": 2465
   },
   {
    "ply": 31,
@@ -2824,7 +2824,7 @@
     "totalVisits": 23628
    },
    "rawDifficulty": 0.080375,
-   "difficulty": 0.0804,
+   "difficulty": 0.0811,
    "delayMs": 439
   },
   {
@@ -2932,8 +2932,8 @@
     ]
    },
    "rawDifficulty": 0.658334,
-   "difficulty": 0.654,
-   "delayMs": 2076
+   "difficulty": 0.655,
+   "delayMs": 2081
   },
   {
    "ply": 33,
@@ -2993,8 +2993,8 @@
     "totalVisits": 48027
    },
    "rawDifficulty": 0.327742,
-   "difficulty": 0.3279,
-   "delayMs": 884
+   "difficulty": 0.3307,
+   "delayMs": 891
   },
   {
    "ply": 34,
@@ -3116,8 +3116,8 @@
     ]
    },
    "rawDifficulty": 0.997516,
-   "difficulty": 0.9975,
-   "delayMs": 3984
+   "difficulty": 1.0,
+   "delayMs": 4000
   },
   {
    "ply": 35,
@@ -3177,8 +3177,8 @@
     "totalVisits": 809
    },
    "rawDifficulty": 0.48251,
-   "difficulty": 0.4828,
-   "delayMs": 1371
+   "difficulty": 0.4869,
+   "delayMs": 1385
   },
   {
    "ply": 36,
@@ -3289,8 +3289,8 @@
     ]
    },
    "rawDifficulty": 0.275001,
-   "difficulty": 0.2658,
-   "delayMs": 732
+   "difficulty": 0.2652,
+   "delayMs": 730
   },
   {
    "ply": 37,
@@ -3350,8 +3350,8 @@
     "totalVisits": 47886
    },
    "rawDifficulty": 0.216772,
-   "difficulty": 0.2169,
-   "delayMs": 630
+   "difficulty": 0.2187,
+   "delayMs": 633
   },
   {
    "ply": 38,
@@ -3470,8 +3470,8 @@
     ]
    },
    "rawDifficulty": 0.884559,
-   "difficulty": 0.8831,
-   "delayMs": 3278
+   "difficulty": 0.8851,
+   "delayMs": 3290
   },
   {
    "ply": 39,
@@ -3531,8 +3531,8 @@
     "totalVisits": 374
    },
    "rawDifficulty": 0.795394,
-   "difficulty": 0.7958,
-   "delayMs": 2786
+   "difficulty": 0.8026,
+   "delayMs": 2823
   },
   {
    "ply": 40,
@@ -3651,8 +3651,8 @@
     ]
    },
    "rawDifficulty": 0.053282,
-   "difficulty": 0.0413,
-   "delayMs": 412
+   "difficulty": 0.0397,
+   "delayMs": 411
   },
   {
    "ply": 41,
@@ -3712,8 +3712,8 @@
     "totalVisits": 827
    },
    "rawDifficulty": 0.908295,
-   "difficulty": 0.9088,
-   "delayMs": 3431
+   "difficulty": 0.9165,
+   "delayMs": 3477
   },
   {
    "ply": 42,
@@ -3860,7 +3860,7 @@
     ]
    },
    "rawDifficulty": 0.015809,
-   "difficulty": 0.0033,
+   "difficulty": 0.0015,
    "delayMs": 400
   },
   {
@@ -3921,8 +3921,8 @@
     "totalVisits": 27256
    },
    "rawDifficulty": 0.261032,
-   "difficulty": 0.2612,
-   "delayMs": 721
+   "difficulty": 0.2634,
+   "delayMs": 726
   },
   {
    "ply": 44,
@@ -4029,7 +4029,7 @@
     ]
    },
    "rawDifficulty": 0.399265,
-   "difficulty": 0.3916,
+   "difficulty": 0.3915,
    "delayMs": 1066
   },
   {
@@ -4090,8 +4090,8 @@
     "totalVisits": 40108
    },
    "rawDifficulty": 0.443198,
-   "difficulty": 0.4434,
-   "delayMs": 1233
+   "difficulty": 0.4472,
+   "delayMs": 1246
   },
   {
    "ply": 46,
@@ -4238,8 +4238,8 @@
     ]
    },
    "rawDifficulty": 0.066993,
-   "difficulty": 0.0552,
-   "delayMs": 420
+   "difficulty": 0.0536,
+   "delayMs": 419
   },
   {
    "ply": 47,
@@ -4299,8 +4299,8 @@
     "totalVisits": 31253
    },
    "rawDifficulty": 0.395038,
-   "difficulty": 0.3952,
-   "delayMs": 1077
+   "difficulty": 0.3986,
+   "delayMs": 1088
   },
   {
    "ply": 48,
@@ -4403,8 +4403,8 @@
     ]
    },
    "rawDifficulty": 0.200001,
-   "difficulty": 0.1899,
-   "delayMs": 581
+   "difficulty": 0.1889,
+   "delayMs": 579
   },
   {
    "ply": 49,
@@ -4464,8 +4464,8 @@
     "totalVisits": 34703
    },
    "rawDifficulty": 0.32904,
-   "difficulty": 0.3292,
-   "delayMs": 887
+   "difficulty": 0.332,
+   "delayMs": 895
   },
   {
    "ply": 50,
@@ -4604,8 +4604,8 @@
     ]
    },
    "rawDifficulty": 0.116964,
-   "difficulty": 0.1058,
-   "delayMs": 463
+   "difficulty": 0.1044,
+   "delayMs": 462
   },
   {
    "ply": 51,
@@ -4665,8 +4665,8 @@
     "totalVisits": 22527
    },
    "rawDifficulty": 0.123599,
-   "difficulty": 0.1237,
-   "delayMs": 484
+   "difficulty": 0.1247,
+   "delayMs": 485
   },
   {
    "ply": 52,
@@ -4809,8 +4809,8 @@
     ]
    },
    "rawDifficulty": 0.139499,
-   "difficulty": 0.1286,
-   "delayMs": 490
+   "difficulty": 0.1273,
+   "delayMs": 488
   },
   {
    "ply": 53,
@@ -4870,8 +4870,8 @@
     "totalVisits": 24019
    },
    "rawDifficulty": 0.234156,
-   "difficulty": 0.2343,
-   "delayMs": 664
+   "difficulty": 0.2363,
+   "delayMs": 668
   },
   {
    "ply": 54,
@@ -4982,7 +4982,7 @@
     ]
    },
    "rawDifficulty": 0.016667,
-   "difficulty": 0.0042,
+   "difficulty": 0.0024,
    "delayMs": 400
   },
   {
@@ -5043,8 +5043,8 @@
     "totalVisits": 38414
    },
    "rawDifficulty": 0.453809,
-   "difficulty": 0.454,
-   "delayMs": 1269
+   "difficulty": 0.4579,
+   "delayMs": 1283
   },
   {
    "ply": 56,
@@ -5183,8 +5183,8 @@
     ]
    },
    "rawDifficulty": 0.094034,
-   "difficulty": 0.0825,
-   "delayMs": 440
+   "difficulty": 0.0811,
+   "delayMs": 439
   },
   {
    "ply": 57,
@@ -5244,8 +5244,8 @@
     "totalVisits": 31469
    },
    "rawDifficulty": 0.317351,
-   "difficulty": 0.3175,
-   "delayMs": 857
+   "difficulty": 0.3202,
+   "delayMs": 864
   },
   {
    "ply": 58,
@@ -5392,8 +5392,8 @@
     ]
    },
    "rawDifficulty": 0.557283,
-   "difficulty": 0.5517,
-   "delayMs": 1634
+   "difficulty": 0.5523,
+   "delayMs": 1636
   },
   {
    "ply": 59,
@@ -5453,8 +5453,8 @@
     "totalVisits": 40280
    },
    "rawDifficulty": 0.675556,
-   "difficulty": 0.6759,
-   "delayMs": 2179
+   "difficulty": 0.6817,
+   "delayMs": 2206
   },
   {
    "ply": 60,
@@ -5597,8 +5597,8 @@
     ]
    },
    "rawDifficulty": 0.188808,
-   "difficulty": 0.1785,
-   "delayMs": 562
+   "difficulty": 0.1775,
+   "delayMs": 560
   },
   {
    "ply": 61,
@@ -5648,8 +5648,8 @@
     "totalVisits": 31103
    },
    "rawDifficulty": 0.532161,
-   "difficulty": 0.5324,
-   "delayMs": 1558
+   "difficulty": 0.537,
+   "delayMs": 1575
   },
   {
    "ply": 62,
@@ -5784,8 +5784,8 @@
     ]
    },
    "rawDifficulty": 0.285549,
-   "difficulty": 0.2765,
-   "delayMs": 756
+   "difficulty": 0.2759,
+   "delayMs": 755
   },
   {
    "ply": 63,
@@ -5845,8 +5845,8 @@
     "totalVisits": 22624
    },
    "rawDifficulty": 0.198338,
-   "difficulty": 0.1984,
-   "delayMs": 596
+   "difficulty": 0.2001,
+   "delayMs": 599
   },
   {
    "ply": 64,
@@ -6001,7 +6001,7 @@
     ]
    },
    "rawDifficulty": 0.014286,
-   "difficulty": 0.0018,
+   "difficulty": 0.0,
    "delayMs": 400
   },
   {
@@ -6062,8 +6062,8 @@
     "totalVisits": 49989
    },
    "rawDifficulty": 0.945772,
-   "difficulty": 0.9463,
-   "delayMs": 3659
+   "difficulty": 0.9543,
+   "delayMs": 3709
   },
   {
    "ply": 66,
@@ -6194,8 +6194,8 @@
     ]
    },
    "rawDifficulty": 0.862883,
-   "difficulty": 0.8611,
-   "delayMs": 3151
+   "difficulty": 0.8631,
+   "delayMs": 3162
   },
   {
    "ply": 67,
@@ -6255,8 +6255,8 @@
     "totalVisits": 48738
    },
    "rawDifficulty": 0.940856,
-   "difficulty": 0.9413,
-   "delayMs": 3629
+   "difficulty": 0.9494,
+   "delayMs": 3679
   },
   {
    "ply": 68,
@@ -6379,8 +6379,8 @@
     ]
    },
    "rawDifficulty": 0.935016,
-   "difficulty": 0.9342,
-   "delayMs": 3585
+   "difficulty": 0.9364,
+   "delayMs": 3599
   },
   {
    "ply": 69,
@@ -6440,8 +6440,8 @@
     "totalVisits": 47852
    },
    "rawDifficulty": 0.938362,
-   "difficulty": 0.9388,
-   "delayMs": 3613
+   "difficulty": 0.9469,
+   "delayMs": 3663
   },
   {
    "ply": 70,
@@ -6584,8 +6584,8 @@
     ]
    },
    "rawDifficulty": 0.062998,
-   "difficulty": 0.0511,
-   "delayMs": 417
+   "difficulty": 0.0495,
+   "delayMs": 416
   },
   {
    "ply": 71,
@@ -6645,8 +6645,8 @@
     "totalVisits": 49828
    },
    "rawDifficulty": 0.914641,
-   "difficulty": 0.9151,
-   "delayMs": 3469
+   "difficulty": 0.9229,
+   "delayMs": 3516
   },
   {
    "ply": 72,
@@ -6769,8 +6769,8 @@
     ]
    },
    "rawDifficulty": 0.12337,
-   "difficulty": 0.1122,
-   "delayMs": 470
+   "difficulty": 0.1109,
+   "delayMs": 469
   },
   {
    "ply": 73,
@@ -6830,8 +6830,8 @@
     "totalVisits": 51039
    },
    "rawDifficulty": 0.916752,
-   "difficulty": 0.9172,
-   "delayMs": 3481
+   "difficulty": 0.925,
+   "delayMs": 3529
   },
   {
    "ply": 74,
@@ -6978,8 +6978,8 @@
     ]
    },
    "rawDifficulty": 0.494009,
-   "difficulty": 0.4876,
-   "delayMs": 1388
+   "difficulty": 0.4879,
+   "delayMs": 1389
   },
   {
    "ply": 75,
@@ -7039,8 +7039,8 @@
     "totalVisits": 50419
    },
    "rawDifficulty": 0.937461,
-   "difficulty": 0.9379,
-   "delayMs": 3608
+   "difficulty": 0.9459,
+   "delayMs": 3657
   },
   {
    "ply": 76,
@@ -7183,7 +7183,7 @@
     ]
    },
    "rawDifficulty": 0.456497,
-   "difficulty": 0.4496,
+   "difficulty": 0.4498,
    "delayMs": 1254
   },
   {
@@ -7244,8 +7244,8 @@
     "totalVisits": 49285
    },
    "rawDifficulty": 0.900918,
-   "difficulty": 0.9014,
-   "delayMs": 3386
+   "difficulty": 0.9091,
+   "delayMs": 3432
   },
   {
    "ply": 78,
@@ -7368,8 +7368,8 @@
     ]
    },
    "rawDifficulty": 0.919853,
-   "difficulty": 0.9188,
-   "delayMs": 3491
+   "difficulty": 0.921,
+   "delayMs": 3504
   },
   {
    "ply": 79,
@@ -7429,8 +7429,8 @@
     "totalVisits": 49844
    },
    "rawDifficulty": 0.884774,
-   "difficulty": 0.8852,
-   "delayMs": 3291
+   "difficulty": 0.8928,
+   "delayMs": 3335
   },
   {
    "ply": 80,
@@ -7537,8 +7537,8 @@
     ]
    },
    "rawDifficulty": 0.782354,
-   "difficulty": 0.7796,
-   "delayMs": 2700
+   "difficulty": 0.7812,
+   "delayMs": 2708
   },
   {
    "ply": 81,
@@ -7588,8 +7588,8 @@
     "totalVisits": 39595
    },
    "rawDifficulty": 0.920315,
-   "difficulty": 0.9208,
-   "delayMs": 3503
+   "difficulty": 0.9286,
+   "delayMs": 3551
   },
   {
    "ply": 82,
@@ -7712,8 +7712,8 @@
     ]
    },
    "rawDifficulty": 0.217647,
-   "difficulty": 0.2077,
-   "delayMs": 613
+   "difficulty": 0.2068,
+   "delayMs": 611
   },
   {
    "ply": 83,
@@ -7773,8 +7773,8 @@
     "totalVisits": 49700
    },
    "rawDifficulty": 0.931019,
-   "difficulty": 0.9315,
-   "delayMs": 3568
+   "difficulty": 0.9394,
+   "delayMs": 3617
   },
   {
    "ply": 84,
@@ -7921,8 +7921,8 @@
     ]
    },
    "rawDifficulty": 0.921711,
-   "difficulty": 0.9207,
-   "delayMs": 3503
+   "difficulty": 0.9229,
+   "delayMs": 3516
   },
   {
    "ply": 85,
@@ -7982,8 +7982,8 @@
     "totalVisits": 48480
    },
    "rawDifficulty": 0.917365,
-   "difficulty": 0.9178,
-   "delayMs": 3485
+   "difficulty": 0.9257,
+   "delayMs": 3533
   },
   {
    "ply": 86,
@@ -8122,8 +8122,8 @@
     ]
    },
    "rawDifficulty": 0.749347,
-   "difficulty": 0.7462,
-   "delayMs": 2525
+   "difficulty": 0.7476,
+   "delayMs": 2533
   },
   {
    "ply": 87,
@@ -8183,8 +8183,8 @@
     "totalVisits": 47005
    },
    "rawDifficulty": 0.990804,
-   "difficulty": 0.9913,
-   "delayMs": 3944
+   "difficulty": 0.9998,
+   "delayMs": 3999
   },
   {
    "ply": 88,
@@ -8311,8 +8311,8 @@
     ]
    },
    "rawDifficulty": 0.990246,
-   "difficulty": 0.9901,
-   "delayMs": 3936
+   "difficulty": 0.9926,
+   "delayMs": 3952
   },
   {
    "ply": 89,
@@ -8372,8 +8372,8 @@
     "totalVisits": 47681
    },
    "rawDifficulty": 0.905557,
-   "difficulty": 0.906,
-   "delayMs": 3414
+   "difficulty": 0.9138,
+   "delayMs": 3461
   },
   {
    "ply": 90,
@@ -8512,8 +8512,8 @@
     ]
    },
    "rawDifficulty": 0.649721,
-   "difficulty": 0.6453,
-   "delayMs": 2036
+   "difficulty": 0.6463,
+   "delayMs": 2041
   },
   {
    "ply": 91,
@@ -8573,8 +8573,8 @@
     "totalVisits": 48412
    },
    "rawDifficulty": 0.947591,
-   "difficulty": 0.9481,
-   "delayMs": 3671
+   "difficulty": 0.9562,
+   "delayMs": 3721
   },
   {
    "ply": 92,
@@ -8713,8 +8713,8 @@
     ]
    },
    "rawDifficulty": 0.44757,
-   "difficulty": 0.4406,
-   "delayMs": 1223
+   "difficulty": 0.4407,
+   "delayMs": 1224
   },
   {
    "ply": 93,
@@ -8764,8 +8764,8 @@
     "totalVisits": 45864
    },
    "rawDifficulty": 0.991032,
-   "difficulty": 0.9915,
-   "delayMs": 3945
+   "difficulty": 1.0,
+   "delayMs": 4000
   },
   {
    "ply": 94,
@@ -8908,8 +8908,8 @@
     ]
    },
    "rawDifficulty": 0.526308,
-   "difficulty": 0.5203,
-   "delayMs": 1511
+   "difficulty": 0.5208,
+   "delayMs": 1512
   },
   {
    "ply": 95,
@@ -8969,8 +8969,8 @@
     "totalVisits": 50124
    },
    "rawDifficulty": 0.96474,
-   "difficulty": 0.9652,
-   "delayMs": 3778
+   "difficulty": 0.9735,
+   "delayMs": 3830
   },
   {
    "ply": 96,
@@ -9089,8 +9089,8 @@
     ]
    },
    "rawDifficulty": 0.560016,
-   "difficulty": 0.5544,
-   "delayMs": 1645
+   "difficulty": 0.555,
+   "delayMs": 1648
   },
   {
    "ply": 97,
@@ -9150,8 +9150,8 @@
     "totalVisits": 49480
    },
    "rawDifficulty": 0.908609,
-   "difficulty": 0.9091,
-   "delayMs": 3432
+   "difficulty": 0.9168,
+   "delayMs": 3479
   },
   {
    "ply": 98,
@@ -9270,8 +9270,8 @@
     ]
    },
    "rawDifficulty": 0.101087,
-   "difficulty": 0.0897,
-   "delayMs": 447
+   "difficulty": 0.0883,
+   "delayMs": 446
   },
   {
    "ply": 99,
@@ -9331,8 +9331,8 @@
     "totalVisits": 50295
    },
    "rawDifficulty": 0.956441,
-   "difficulty": 0.9569,
-   "delayMs": 3726
+   "difficulty": 0.9651,
+   "delayMs": 3777
   },
   {
    "ply": 100,
@@ -9447,7 +9447,7 @@
     ]
    },
    "rawDifficulty": 0.445304,
-   "difficulty": 0.4383,
+   "difficulty": 0.4384,
    "delayMs": 1216
   },
   {
@@ -9508,8 +9508,8 @@
     "totalVisits": 50263
    },
    "rawDifficulty": 0.960508,
-   "difficulty": 0.961,
-   "delayMs": 3751
+   "difficulty": 0.9692,
+   "delayMs": 3803
   },
   {
    "ply": 102,
@@ -9636,7 +9636,7 @@
     ]
    },
    "rawDifficulty": 0.355092,
-   "difficulty": 0.3469,
+   "difficulty": 0.3466,
    "delayMs": 935
   },
   {
@@ -9697,8 +9697,8 @@
     "totalVisits": 50767
    },
    "rawDifficulty": 0.98471,
-   "difficulty": 0.9852,
-   "delayMs": 3905
+   "difficulty": 0.9936,
+   "delayMs": 3959
   },
   {
    "ply": 104,
@@ -9829,8 +9829,8 @@
     ]
    },
    "rawDifficulty": 0.073161,
-   "difficulty": 0.0614,
-   "delayMs": 424
+   "difficulty": 0.0599,
+   "delayMs": 423
   },
   {
    "ply": 105,
@@ -9890,8 +9890,8 @@
     "totalVisits": 46343
    },
    "rawDifficulty": 0.889337,
-   "difficulty": 0.8898,
-   "delayMs": 3318
+   "difficulty": 0.8974,
+   "delayMs": 3363
   },
   {
    "ply": 106,
@@ -9994,7 +9994,7 @@
     ]
    },
    "rawDifficulty": 0.018751,
-   "difficulty": 0.0063,
+   "difficulty": 0.0045,
    "delayMs": 400
   },
   {
@@ -10055,8 +10055,8 @@
     "totalVisits": 49264
    },
    "rawDifficulty": 0.865565,
-   "difficulty": 0.866,
-   "delayMs": 3179
+   "difficulty": 0.8734,
+   "delayMs": 3222
   },
   {
    "ply": 108,
@@ -10187,8 +10187,8 @@
     ]
    },
    "rawDifficulty": 0.359783,
-   "difficulty": 0.3517,
-   "delayMs": 949
+   "difficulty": 0.3514,
+   "delayMs": 948
   },
   {
    "ply": 109,
@@ -10248,8 +10248,8 @@
     "totalVisits": 24182
    },
    "rawDifficulty": 0.271358,
-   "difficulty": 0.2715,
-   "delayMs": 744
+   "difficulty": 0.2738,
+   "delayMs": 750
   },
   {
    "ply": 110,
@@ -10364,7 +10364,7 @@
     ]
    },
    "rawDifficulty": 0.01579,
-   "difficulty": 0.0033,
+   "difficulty": 0.0015,
    "delayMs": 400
   },
   {
@@ -10425,8 +10425,8 @@
     "totalVisits": 48121
    },
    "rawDifficulty": 0.954104,
-   "difficulty": 0.9546,
-   "delayMs": 3711
+   "difficulty": 0.9627,
+   "delayMs": 3762
   },
   {
    "ply": 112,
@@ -10637,8 +10637,8 @@
     ]
    },
    "rawDifficulty": 0.476801,
-   "difficulty": 0.4702,
-   "delayMs": 1325
+   "difficulty": 0.4704,
+   "delayMs": 1326
   },
   {
    "ply": 113,
@@ -10698,8 +10698,8 @@
     "totalVisits": 42500
    },
    "rawDifficulty": 0.93427,
-   "difficulty": 0.9348,
-   "delayMs": 3588
+   "difficulty": 0.9427,
+   "delayMs": 3637
   },
   {
    "ply": 114,
@@ -10922,8 +10922,8 @@
     ]
    },
    "rawDifficulty": 0.20541,
-   "difficulty": 0.1953,
-   "delayMs": 590
+   "difficulty": 0.1944,
+   "delayMs": 589
   },
   {
    "ply": 115,
@@ -10983,8 +10983,8 @@
     "totalVisits": 34034
    },
    "rawDifficulty": 0.805439,
-   "difficulty": 0.8059,
-   "delayMs": 2841
+   "difficulty": 0.8127,
+   "delayMs": 2879
   },
   {
    "ply": 116,
@@ -11155,8 +11155,8 @@
     ]
    },
    "rawDifficulty": 0.186844,
-   "difficulty": 0.1765,
-   "delayMs": 559
+   "difficulty": 0.1755,
+   "delayMs": 557
   },
   {
    "ply": 117,
@@ -11216,8 +11216,8 @@
     "totalVisits": 40500
    },
    "rawDifficulty": 0.96531,
-   "difficulty": 0.9658,
-   "delayMs": 3781
+   "difficulty": 0.974,
+   "delayMs": 3834
   },
   {
    "ply": 118,
@@ -11444,8 +11444,8 @@
     ]
    },
    "rawDifficulty": 0.271515,
-   "difficulty": 0.2623,
-   "delayMs": 724
+   "difficulty": 0.2616,
+   "delayMs": 722
   },
   {
    "ply": 119,
@@ -11495,8 +11495,8 @@
     "totalVisits": 10045
    },
    "rawDifficulty": 0.642195,
-   "difficulty": 0.6425,
-   "delayMs": 2024
+   "difficulty": 0.648,
+   "delayMs": 2049
   },
   {
    "ply": 120,
@@ -11847,8 +11847,8 @@
     ]
    },
    "rawDifficulty": 0.204286,
-   "difficulty": 0.1942,
-   "delayMs": 588
+   "difficulty": 0.1932,
+   "delayMs": 587
   },
   {
    "ply": 121,
@@ -11908,8 +11908,8 @@
     "totalVisits": 4655
    },
    "rawDifficulty": 0.645066,
-   "difficulty": 0.6454,
-   "delayMs": 2037
+   "difficulty": 0.6509,
+   "delayMs": 2062
   },
   {
    "ply": 122,
@@ -12883,8 +12883,8 @@
     ]
    },
    "rawDifficulty": 0.26267,
-   "difficulty": 0.2533,
-   "delayMs": 704
+   "difficulty": 0.2526,
+   "delayMs": 703
   },
   {
    "ply": 123,
@@ -13961,8 +13961,8 @@
     ]
    },
    "rawDifficulty": 0.262465,
-   "difficulty": 0.2531,
-   "delayMs": 704
+   "difficulty": 0.2524,
+   "delayMs": 702
   },
   {
    "ply": 125,
@@ -14002,8 +14002,8 @@
     "totalVisits": 7
    },
    "rawDifficulty": 0.985228,
-   "difficulty": 0.9857,
-   "delayMs": 3908
+   "difficulty": 0.9941,
+   "delayMs": 3962
   },
   {
    "ply": 126,
@@ -15045,8 +15045,8 @@
     ]
    },
    "rawDifficulty": 0.19874,
-   "difficulty": 0.1886,
-   "delayMs": 579
+   "difficulty": 0.1876,
+   "delayMs": 577
   }
  ]
 }

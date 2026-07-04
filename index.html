@@ -49,6 +49,7 @@
        the whole group stays vertically centered and the cards hug the board. */
     #stage::before, #stage::after { content: ''; flex: 1 1 0; }
     #boardArea {
+      position: relative;   /* anchors the mute button beside the board */
       flex: 999 1 auto;
       min-height: 240px;
       max-height: 560px;
@@ -57,6 +58,49 @@
       align-items: center;
       justify-content: center;
     }
+
+    /* Spectator controls (pause / next game / sound): a quiet column
+       centered in the strip between board edge and viewport edge, on
+       the board's vertical midline. */
+    #ctrls {
+      position: absolute;
+      left: calc(75% + var(--bw, 480px) / 4);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .ctrl {
+      background: none;
+      border: 0;
+      padding: 6px;
+      color: #000;
+      cursor: pointer;
+      outline: none;  /* no focus ring: keyboard use after clicking a ctrl drew one */
+    }
+    .ctrl svg { display: block; }
+    #mute .slash { display: none; }
+    #mute.muted .waves { display: none; }
+    #mute.muted .slash { display: initial; }
+    #pauseBtn .tri { display: none; }
+    #pauseBtn.paused .bars { display: none; }
+    #pauseBtn.paused .tri { display: initial; }
+    /* One shared caption under the column names the hovered action,
+       re-read from live state (pause/play, mute/unmute). */
+    #ctrlTip {
+      position: absolute;
+      top: calc(100% + 5.25px);   /* button padding + this = 25% more gap */
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 12px;
+      color: var(--ink-soft);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    @media (max-width: 640px) { #ctrls { display: none; } }
     #board { /* sized in px by fitBoard() */ }
 
     /* Board colours: sand light squares, venetian clay dark squares. */
@@ -199,7 +243,35 @@
         <span class="conf"><span class="pct"></span><span class="bar"><i></i></span></span></div>
       <div class="status"></div>
     </div>
-    <div id="boardArea"><div id="board"></div></div>
+    <div id="boardArea"><div id="board"></div>
+      <div id="ctrls">
+        <button id="nextBtn" class="ctrl" aria-label="next game">
+          <svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor">
+            <path d="M6.5 6v12l8.8-6z"/><rect x="16.5" y="6" width="2.6" height="12" rx="1"/>
+          </svg>
+        </button>
+        <button id="pauseBtn" class="ctrl" aria-label="pause or resume">
+          <svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor">
+            <g class="bars"><rect x="7" y="6" width="3.4" height="12" rx="1"/><rect x="13.6" y="6" width="3.4" height="12" rx="1"/></g>
+            <path class="tri" d="M8.5 5.5v13l10-6.5z"/>
+          </svg>
+        </button>
+        <button id="mute" class="ctrl muted" aria-label="toggle sound">
+          <svg viewBox="0 0 24 24" width="21" height="21">
+            <path d="M3 9v6h4l5 4V5L7 9H3z" fill="currentColor"/>
+            <g class="waves" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round">
+              <path d="M15.5 9a4.5 4.5 0 0 1 0 6"/>
+              <path d="M18 6.5a8 8 0 0 1 0 11"/>
+            </g>
+            <g class="slash" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <line x1="15.5" y1="9.5" x2="20.5" y2="14.5"/>
+              <line x1="20.5" y1="9.5" x2="15.5" y2="14.5"/>
+            </g>
+          </svg>
+        </button>
+        <div id="ctrlTip"></div>
+      </div>
+    </div>
     <div class="player" id="pBot">
       <div class="row"><span class="name"></span>
         <span class="conf"><span class="pct"></span><span class="bar"><i></i></span></span></div>
@@ -413,14 +485,16 @@
     //  one-shot takes. Quiet moves draw from five low, soft landings;
     //  a capture gets the set's one sharp piece-on-piece clack
     //  (~1kHz vs ~200Hz - unmistakable). Small pitch/level
-    //  fluctuations per play. Key 0 (or m) mutes; ?sound=0 loads muted.
+    //  fluctuations per play. Starts muted; the speaker button beside
+    //  the board is the only sound control (its click also satisfies
+    //  the browser's autoplay-unlock requirement).
     // ============================================================ //
     const MOVE_TAKES = ['soft-a', 'soft-b', 'soft-d', 'soft-e', 'soft-f'];
     const CAPTURE_TAKE = 'soft-c';
 
     let audioCtx = null, master = null, lastTake = -1;
     const samples = {};   // name -> AudioBuffer
-    let soundOn = new URLSearchParams(location.search).get('sound') !== '0';
+    let soundOn = false;
 
     function ac() {
       if (!audioCtx) {
@@ -438,20 +512,21 @@
       if (audioCtx.state === 'suspended') audioCtx.resume();
       return audioCtx;
     }
-    // Autoplay policy: browsers keep audio suspended until a real user
-    // gesture. Best effort at automatic: create + preload at boot (works
-    // outright where the browser trusts the site - e.g. autoplay allowed
-    // in site settings), then keep retrying resume() on any interaction
-    // until it sticks.
-    const UNLOCK_EVENTS = ['pointerdown', 'pointermove', 'keydown', 'touchstart', 'wheel'];
-    function tryUnlock() {
-      ac().resume().then(() => {
-        if (audioCtx.state === 'running')
-          UNLOCK_EVENTS.forEach(ev => document.removeEventListener(ev, tryUnlock, true));
-      }).catch(() => {});
+    // Create the (suspended) context at boot so samples preload; the
+    // first click on the speaker resumes it and unmutes in one gesture.
+    ac();
+
+    const muteBtn = document.getElementById('mute');
+    function audible() { return soundOn && audioCtx && audioCtx.state === 'running'; }
+    function updateMuteBtn() {
+      muteBtn.classList.toggle('muted', !audible());
+      refreshTip();
     }
-    UNLOCK_EVENTS.forEach(ev => document.addEventListener(ev, tryUnlock, true));
-    tryUnlock();
+    muteBtn.addEventListener('click', () => {
+      soundOn = !soundOn;
+      if (soundOn) ac().resume().then(updateMuteBtn).catch(() => {});
+      updateMuteBtn();
+    });
 
     function playSample(name, delay, rate, gain) {
       const buf = samples[name];
@@ -579,22 +654,43 @@
     }
 
     // ---- manual override ----
+    const pauseBtn = document.getElementById('pauseBtn');
+    function updatePauseBtn() {
+      pauseBtn.classList.toggle('paused', paused);
+      refreshTip();
+    }
+
+    // Hover caption: names the hovered button's action from live state.
+    const ctrlTip = document.getElementById('ctrlTip');
+    const TIPS = {
+      nextBtn: () => 'next game',
+      pauseBtn: () => paused ? 'play' : 'pause',
+      mute: () => muteBtn.classList.contains('muted') ? 'unmute' : 'mute',
+    };
+    let tipOwner = null;
+    function refreshTip() { ctrlTip.textContent = tipOwner ? TIPS[tipOwner]() : ''; }
+    for (const id of Object.keys(TIPS)) {
+      const b = document.getElementById(id);
+      b.addEventListener('mouseenter', () => { tipOwner = id; refreshTip(); });
+      b.addEventListener('mouseleave', () => { tipOwner = null; refreshTip(); });
+    }
     function pause() {
       paused = true;
       clearTimers();
       boardEl.classList.remove('think-l');
       setActive(null);
+      updatePauseBtn();
     }
     function resume() {
       if (!paused) return;
       paused = false;
+      updatePauseBtn();
       later(thinkNext, 200);
     }
+    pauseBtn.addEventListener('click', () => paused ? resume() : pause());
+    document.getElementById('nextBtn').addEventListener('click', () => startGame(gi + 1));
     function step(dir) {
-      paused = true;
-      clearTimers();
-      boardEl.classList.remove('think-l');
-      setActive(null);
+      pause();
       const was = ply;
       ply = Math.max(0, Math.min(moves.length, ply + dir));
       const mv = rebuildTo(ply);
@@ -612,10 +708,6 @@
       if (e.key === ' ') { e.preventDefault(); paused ? resume() : pause(); }
       else if (e.key === 'ArrowRight') { e.preventDefault(); step(+1); }
       else if (e.key === 'ArrowLeft')  { e.preventDefault(); step(-1); }
-      else if (e.key === '0' || e.key === 'm') soundOn = !soundOn;
-      // audition keys: n = normal move, c = capture
-      else if (e.key === 'n') { ac(); playMoveSound(false); }
-      else if (e.key === 'c') { ac(); playMoveSound(true); }
     });
 
     // ---- boot ----

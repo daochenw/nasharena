@@ -1,0 +1,15 @@
+/* "Cooke" chess pieces by fejfar (https://github.com/fejfar), from lichess-org/lila,
+   drawn from the 1849 Cooke/Staunton pattern set.
+   License: CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/ */
+.cg-wrap piece.pawn.white   { background-image: url('cooke/wP.svg'); }
+.cg-wrap piece.knight.white { background-image: url('cooke/wN.svg'); }
+.cg-wrap piece.bishop.white { background-image: url('cooke/wB.svg'); }
+.cg-wrap piece.rook.white   { background-image: url('cooke/wR.svg'); }
+.cg-wrap piece.queen.white  { background-image: url('cooke/wQ.svg'); }
+.cg-wrap piece.king.white   { background-image: url('cooke/wK.svg'); }
+.cg-wrap piece.pawn.black   { background-image: url('cooke/bP.svg'); }
+.cg-wrap piece.knight.black { background-image: url('cooke/bN.svg'); }
+.cg-wrap piece.bishop.black { background-image: url('cooke/bB.svg'); }
+.cg-wrap piece.rook.black   { background-image: url('cooke/bR.svg'); }
+.cg-wrap piece.queen.black  { background-image: url('cooke/bQ.svg'); }
+.cg-wrap piece.king.black   { background-image: url('cooke/bK.svg'); }

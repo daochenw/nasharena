@@ -1,0 +1,1 @@
+Sacrifice grammar for concision

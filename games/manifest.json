@@ -1,0 +1,24 @@
+{
+  "games": [
+    {
+      "file": "game-001.pgn",
+      "data": "game-001.json",
+      "label": "Game 1: Lc0 vs Stockfish (1/2-1/2)"
+    },
+    {
+      "file": "game-002.pgn",
+      "data": "game-002.json",
+      "label": "Game 2: Stockfish vs Lc0 (1/2-1/2)"
+    },
+    {
+      "file": "game-003.pgn",
+      "data": "game-003.json",
+      "label": "Game 3: Lc0 vs Stockfish (0-1)"
+    },
+    {
+      "file": "game-004.pgn",
+      "data": "game-004.json",
+      "label": "Game 4: Stockfish vs Lc0 (1/2-1/2)"
+    }
+  ]
+}

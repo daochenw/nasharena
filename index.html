@@ -1,1 +1,555 @@
-hello world!
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NashArena</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Chessground structure + piece set (board colours overridden below) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chessground@9/assets/chessground.base.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chessground@9/assets/chessground.brown.css" />
+  <link rel="stylesheet" href="pieces/cooke.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Great+Vibes&family=Chakra+Petch:wght@500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --paper: #f7f2ea;
+      --ink:   #141414;
+      --ink-soft: rgba(20, 20, 20, .55);
+      --hairline: rgba(28, 26, 23, .13);
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+    }
+
+    /* One column in normal flow — nothing is fixed, nothing can overlap. */
+    #stage {
+      box-sizing: border-box;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px 12px;
+    }
+
+    /* Board flexes to absorb leftover height; it shrinks before anything
+       overlaps. Once it hits its cap, the spacers take the extra space so
+       the whole group stays vertically centered and the cards hug the board. */
+    #stage::before, #stage::after { content: ''; flex: 1 1 0; }
+    #boardArea {
+      flex: 999 1 auto;
+      min-height: 240px;
+      max-height: 560px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #board { /* sized in px by fitBoard() */ }
+
+    /* Board colours: sand light squares, venetian clay dark squares. */
+    cg-board {
+      background-color: #e9d8bf;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cdefs%3E%3Cpattern id='p' width='2' height='2' patternUnits='userSpaceOnUse'%3E%3Crect width='2' height='2' fill='%23e9d8bf'/%3E%3Crect x='1' width='1' height='1' fill='%23a3564a'/%3E%3Crect y='1' width='1' height='1' fill='%23a3564a'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='8' height='8' fill='url(%23p)'/%3E%3C/svg%3E");
+    }
+    cg-board square.last-move { background-color: rgba(196, 145, 62, .32); }
+
+    /* ---- player cards: unboxed text blocks — a masthead hairline under
+       the name row is the only structure ---- */
+    .player {
+      box-sizing: border-box;
+      width: var(--bw, min(94vw, 480px));
+      padding: 2px 2px 0;
+    }
+
+    .player .row {
+      display: flex; align-items: center; gap: 9px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    /* The bottom card mirrors the top one around the board: thought line
+       nearest the board, hairline, name row at the outer edge. */
+    #pBot { display: flex; flex-direction: column-reverse; }
+    #pBot .row {
+      border-bottom: none;
+      border-top: 1px solid var(--hairline);
+      padding-bottom: 0;
+      padding-top: 5px;
+    }
+    #pBot .status { margin-top: 0; margin-bottom: 4px; }
+    .player .name {
+      font-family: var(--serif);
+      font-variant-caps: all-small-caps;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: .05em;
+    }
+    /* Each name in its engine's voice: Leela flows, Stockfish is machined. */
+    .player.Lc0 .name {
+      font-family: 'Great Vibes', cursive;
+      font-variant-caps: normal;
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 0;     /* scripts connect; never letterspace them */
+      line-height: 1;
+    }
+    .player.Stockfish .name {
+      font-family: 'Chakra Petch', var(--sans);
+      font-variant-caps: normal;
+      font-size: 16.5px;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+
+    /* Confidence: this engine's own sense of how it's doing. */
+    .player .conf { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+    .player .pct {
+      font-size: 10.5px;
+      font-variant-numeric: tabular-nums;
+      color: var(--ink);
+    }
+    .player .bar {
+      position: relative;
+      width: 128px; height: 5px;
+      border-radius: 3px;
+      background: rgba(28, 26, 23, .08);
+      overflow: hidden;
+    }
+    .player .bar::after {   /* equality tick */
+      content: ''; position: absolute; top: 0; bottom: 0; left: 50%;
+      width: 1px; background: rgba(28, 26, 23, .18);
+    }
+    .player .bar i {
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 50%;
+      border-radius: 3px;
+      transition: width 700ms cubic-bezier(.4, 0, .2, 1);
+    }
+    .player .bar i { background: var(--ink); }
+
+    /* One quiet line; speaks only when the data says something notable. */
+    .player .status {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 13.5px;
+      line-height: 1.5;   /* room for italic descenders inside overflow:hidden */
+      min-height: 1.5em;
+      margin-top: 4px;
+      color: var(--ink-soft);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      /* Italic descenders (g, j) overhang left of the glyph origin; pad the
+         clip box and pull it back so they aren't cut by overflow:hidden. */
+      padding-left: .25em; margin-left: -.25em;
+      transition: opacity 700ms ease;
+    }
+    .player .status.faded { opacity: 0; }
+
+    /* Leela's whole thought-layer breathes softly while she considers. */
+    #board.think-l .cg-shapes { animation: breathe 2.6s ease-in-out infinite; }
+    @keyframes breathe { 0%, 100% { opacity: .78; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      #board.think-l .cg-shapes { animation: none; }
+    }
+
+    /* Wordmark: fixed in the corner, outside the column. */
+    #logo {
+      position: fixed;
+      top: 14px; left: 18px;
+      font-family: var(--serif);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: .22em;
+      color: var(--ink);
+      user-select: none;
+    }
+
+    /* ---- progressive shedding: the board is king ---- */
+    @media (max-height: 660px), (max-width: 540px) {
+      #stage { padding: 10px 12px; gap: 8px; }
+      #logo { display: none; }   /* first thing shed: keeps no-overlap guarantee */
+    }
+    @media (max-height: 560px), (max-width: 460px) {
+      .player .status { display: none; }
+      .player { padding: 0 2px; }
+      .player .name { font-size: 14px; }
+      .player.Lc0 .name { font-size: 20px; }
+      .player.Stockfish .name { font-size: 13.5px; }
+      .player .bar { width: 88px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="logo">NashArena</div>
+  <div id="stage">
+    <div class="player" id="pTop">
+      <div class="row"><span class="name"></span>
+        <span class="conf"><span class="pct"></span><span class="bar"><i></i></span></span></div>
+      <div class="status"></div>
+    </div>
+    <div id="boardArea"><div id="board"></div></div>
+    <div class="player" id="pBot">
+      <div class="row"><span class="name"></span>
+        <span class="conf"><span class="pct"></span><span class="bar"><i></i></span></span></div>
+      <div class="status"></div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { Chessground } from 'https://esm.sh/chessground@9';
+    import { Chess } from 'https://esm.sh/chess.js@1';
+
+    const boardEl = document.getElementById('board');
+    const stage = document.getElementById('stage');
+
+    const ground = Chessground(boardEl, {
+      viewOnly: true,
+      coordinates: false,
+      fen: 'start',
+      animation: { enabled: true, duration: 300 },
+      drawable: { enabled: false },
+    });
+
+    // Deterministic sizing: the board takes the largest square that fits the
+    // flexed area (so it can never overlap or overflow), and the cards match
+    // its width so the column reads as one object.
+    const areaEl = document.getElementById('boardArea');
+    function fitBoard() {
+      const r = areaEl.getBoundingClientRect();
+      const s = Math.floor(Math.min(r.width, r.height, 560));
+      if (s <= 0) return;
+      boardEl.style.width = s + 'px';
+      boardEl.style.height = s + 'px';
+      stage.style.setProperty('--bw', s + 'px');
+      document.body.dispatchEvent(new Event('chessground.resize'));
+      ground.redrawAll();
+    }
+    new ResizeObserver(fitBoard).observe(areaEl);
+    window.addEventListener('resize', fitBoard);
+    fitBoard();
+
+    // ---- player cards ----
+    const cards = { top: document.getElementById('pTop'), bot: document.getElementById('pBot') };
+    function bindCard(card, engine) {
+      card.className = 'player ' + engine;
+      card.querySelector('.name').textContent = engine === 'Lc0' ? 'Leela' : 'Stockfish';
+      setStatusEl(card.querySelector('.status'), '');
+    }
+    function cardFor(engine) {
+      return cards.top.classList.contains(engine) ? cards.top : cards.bot;
+    }
+    function setActive(engine) {
+      Object.values(cards).forEach(c => c.classList.remove('active'));
+      if (engine) {
+        const c = cardFor(engine);
+        c.classList.add('active');
+        setStatusEl(c.querySelector('.status'), '');
+      }
+    }
+    // Thoughts dissolve rather than blink: clearing fades the old words out
+    // in place; new words replace them and fade back in.
+    function setStatusEl(el, text) {
+      clearTimeout(el._fade);
+      if (!text) { el.classList.add('faded'); return; }
+      if (el.classList.contains('faded') || !el.textContent) {
+        el.textContent = text;
+        el.classList.remove('faded');
+      } else if (el.textContent !== text) {
+        el.classList.add('faded');
+        el._fade = setTimeout(() => {
+          el.textContent = text;
+          el.classList.remove('faded');
+        }, 700);
+      }
+    }
+    function setStatus(engine, text) {
+      setStatusEl(cardFor(engine).querySelector('.status'), text);
+    }
+
+    // ---- confidence bars: each engine's own sense of its position ----
+    function setBar(engine, own) {
+      const card = cardFor(engine);
+      const v = Math.max(.01, Math.min(.99, own));
+      card.querySelector('.bar i').style.width = (v * 100) + '%';
+      card.querySelector('.pct').textContent = Math.round(v * 100) + '%';
+    }
+    function setEvals(m) {
+      const g = games[gi];
+      const eL = m ? m.evalLc0 : 0.5, eS = m ? m.evalSF : 0.5;
+      setBar('Lc0',       g.white === 'Lc0'       ? eL : 1 - eL);
+      setBar('Stockfish', g.white === 'Stockfish' ? eS : 1 - eS);
+    }
+
+    // Renderer-side tempo remap: hard moves become proper scenes.
+    const DELAY_MIN = 900, DELAY_MAX = 15750;
+    function delayFor(m) {
+      // rawDifficulty fallback keeps tempo honest for un-finalized games
+      // (missing difficulty once made every delay NaN -> instant).
+      const d = m.difficulty ?? m.rawDifficulty ?? 0.5;
+      return Math.round(DELAY_MIN + (DELAY_MAX - DELAY_MIN) * Math.pow(d, 1.8));
+    }
+
+    // The first moves are preparation, not calculation: at fixed node budgets
+    // the opening's high entropy means "many moves are fine" (a matter of
+    // taste), so staging it as agonized deliberation would misread the data.
+    // Both minds bang out their opening from memory; thinking begins after.
+    const BOOK_PLIES = 12;
+    const BOOK_LINE = 'opening, from memory';
+
+    // ---- two voices, one grammar ------------------------------------- //
+    // Leela's telemetry is intuition (policy = first impression, visits =
+    // reflection), so she speaks in feelings. Stockfish's is proof (depth,
+    // margins, root flips), so he speaks in calculations. Every line below
+    // is triggered by, and phrased from, the mover's real telemetry.
+
+    function sanByUci(cands, uci) {
+      const c = (cands || []).find(x => x.uci === uci);
+      return c && c.san;
+    }
+
+    // Lines carry a category so the same kind of remark is never repeated
+    // within a few moves - people don't narrate every thought aloud.
+    const lastSaid = {};   // engine -> { category: ply last said }
+    function gated(engine, plyNo, line, cooldown = 8) {
+      if (!line) return '';
+      const seen = lastSaid[engine] || (lastSaid[engine] = {});
+      if (seen[line.c] != null && plyNo - seen[line.c] < cooldown) return '';
+      seen[line.c] = plyNo;
+      return line.t;
+    }
+
+    // One quiet line at commit, only when the data says something notable.
+    function settleLine(m) {
+      const c = m.candidates || [];
+      const ru = c[1];
+      const ex = m.extra || {};
+      if (m.engine === 'Lc0') {
+        // Policy is literally her gut; visits are her second thoughts.
+        const instinct = [...c].sort((a, b) => (b.policy || 0) - (a.policy || 0))[0];
+        if (instinct && instinct.uci !== m.uci)
+          return { c: 'instinct', t: 'my hand wanted ' + instinct.san };
+        if (ru && ex.qMargin != null && ex.qMargin <= 0.05 && ru.share >= 0.25)
+          return { c: 'tie', t: ru.san + ' felt just as good' };
+        if (ex.entropyNorm != null && ex.entropyNorm >= 0.8)
+          return { c: 'fog', t: 'nothing here feels clear' };
+        if (m.difficulty >= 0.85) return { c: 'long', t: 'a long stare' };
+      } else {
+        if ((ex.changes || 0) >= 5) {
+          // His actual iterative-deepening wobble, named move by move.
+          const seen = [...new Set((ex.rootHistory || []).map(r => r[1]))]
+            .map(u => sanByUci(c, u)).filter(Boolean);
+          if (seen.length === 2)
+            return { c: 'waver', t: 'switched between ' + seen[0] + ' and ' + seen[1] + ' ' + ex.changes + ' times' };
+          return { c: 'waver', t: 'changed my mind ' + ex.changes + ' times' };
+        }
+        if (ru && ex.marginCp != null && ex.marginCp <= 12)
+          return { c: 'tie', t: ru.san + ' calculates equal' };
+        if (ex.settleDepth && ex.maxDepth && ex.settleDepth >= ex.maxDepth - 1 && (ex.changes || 0) >= 1)
+          return { c: 'late', t: 'not sure until depth ' + ex.settleDepth };
+        if ((ex.changes || 0) === 0 && (ex.marginCp || 0) >= 250)
+          return { c: 'forced', t: 'forced — every line agrees' };
+        if (m.difficulty >= 0.85 && ex.maxDepth)
+          return { c: 'long', t: 'proved to depth ' + ex.maxDepth };
+        if (m.difficulty >= 0.85) return { c: 'long', t: 'a deep count' };
+      }
+      return '';
+    }
+
+    // Shown while the mover thinks: their honest reaction to what the
+    // opponent just played, judged by their own engine's assessments.
+    function reactionLine(m) {
+      if (ply < 1) return '';
+      const prev = moves[ply - 1];               // opponent's move
+      const mine = ply >= 2 ? moves[ply - 2] : null;  // mover's previous turn
+      const evalOf = mv => m.engine === 'Lc0' ? mv.evalLc0 : mv.evalSF;
+      const pov = e => m.side === 'white' ? e : 1 - e;
+      const before = pov(mine ? evalOf(mine) : 0.5);
+      const drop = before - pov(evalOf(prev));
+      if (m.engine === 'Lc0') {
+        // No PV to check against - she only *feels* the position turn.
+        if (drop >= 0.08) return { c: 'hit', t: 'I didn’t feel that coming' };
+        if (drop <= -0.12) return { c: 'gift', t: 'that… helps me' };
+        return '';
+      }
+      // Stockfish checks the move against the line he calculated last turn.
+      // A deviation stings when it cost eval, or upended a long calculation.
+      const expected = mine && (mine.candidates || []).find(x => x.uci === mine.uci);
+      const reply = expected && expected.line && expected.line[1];
+      if (reply && prev.uci !== reply && (drop >= 0.02 || mine.difficulty >= 0.55) && lastFenBefore) {
+        const san = sanFor(lastFenBefore, reply);
+        if (san) return { c: 'miss', t: 'expected ' + san };
+      }
+      if (drop >= 0.10) return { c: 'hit', t: 'that was not in my calculations' };
+      if (drop <= -0.12) return { c: 'gift', t: 'an inaccuracy — noted' };
+      // Only worth saying when last turn's calculation was actual work.
+      if (reply && prev.uci === reply && drop <= 0.02 && mine.difficulty >= 0.55)
+        return { c: 'calc', t: 'as calculated' };
+      return '';
+    }
+
+    function sanFor(fen, uci) {
+      try {
+        const ch = new Chess(fen);
+        return ch.move(moveObj(uci)).san;
+      } catch { return null; }
+    }
+
+    // ============================================================ //
+    //  Playback
+    // ============================================================ //
+    let games = [];
+    let gi = 0;
+    let chess = new Chess();
+    let moves = [];
+    let ply = 0;
+    let paused = false;
+    let timers = [];
+    let lastFenBefore = null;  // position the last committed move was played from
+    const COMMIT_PAUSE = 1460;
+    const GAME_PAUSE = 3400;
+
+    function clearTimers() { timers.forEach(clearTimeout); timers = []; }
+    function later(fn, ms) { const t = setTimeout(fn, ms); timers.push(t); return t; }
+
+    function moveObj(u) {
+      const o = { from: u.slice(0, 2), to: u.slice(2, 4) };
+      if (u.length > 4) o.promotion = u[4];
+      return o;
+    }
+    function uciSquares(u) { return [u.slice(0, 2), u.slice(2, 4)]; }
+
+    function rebuildTo(n) {
+      chess = new Chess();
+      for (let i = 0; i < n; i++) chess.move(moveObj(moves[i].uci));
+      const last = n > 0 ? uciSquares(moves[n - 1].uci) : undefined;
+      ground.set({ fen: chess.fen(), lastMove: last });
+      setEvals(n > 0 ? moves[n - 1] : null);
+    }
+
+    function startGame(i) {
+      clearTimers();
+      boardEl.classList.remove('think-l');
+      gi = ((i % games.length) + games.length) % games.length;
+      const g = games[gi];
+      moves = g.moves;
+      ply = 0;
+      chess = new Chess();
+      // Seats follow colour: whoever plays White sits in the bottom card.
+      bindCard(cards.top, g.black);
+      bindCard(cards.bot, g.white);
+      delete lastSaid.Lc0; delete lastSaid.Stockfish;
+      setActive(null);
+      ground.set({ fen: 'start', lastMove: undefined });
+      setEvals(null);
+      if (!paused) later(thinkNext, 800);
+    }
+
+    function gameOver() {
+      const g = games[gi];
+      setActive(null);
+      boardEl.classList.remove('think-l');
+      if (g.result === '1-0') setStatus(g.white, 'wins this one');
+      else if (g.result === '0-1') setStatus(g.black, 'wins this one');
+      else { setStatus(g.white, 'a draw'); setStatus(g.black, 'a draw'); }
+      later(() => startGame(gi + 1), GAME_PAUSE);
+    }
+
+    function thinkNext() {
+      if (paused) return;
+      if (ply >= moves.length) { gameOver(); return; }
+      const m = moves[ply];
+      const inBook = m.ply <= BOOK_PLIES;
+      const delay = inBook ? 1395 + Math.round(Math.random() * 405) : delayFor(m);
+      setActive(m.engine);
+      if (inBook) {
+        setStatus(m.engine, BOOK_LINE);
+      } else {
+        boardEl.classList.toggle('think-l', m.engine === 'Lc0');
+        // A reaction to the opponent's move accompanies a proper think.
+        if (delay >= 2000) {
+          const r = gated(m.engine, m.ply, reactionLine(m), 10);
+          if (r) setStatus(m.engine, r);
+        }
+      }
+      later(() => commit(m), delay);
+    }
+
+    function commit(m) {
+      if (paused) return;
+      boardEl.classList.remove('think-l');
+      lastFenBefore = chess.fen();
+      chess.move(moveObj(m.uci));
+      ground.set({ fen: chess.fen(), lastMove: uciSquares(m.uci) });
+      setEvals(m);
+      // Book moves keep their "from memory" label; real moves get a verdict.
+      if (m.ply > BOOK_PLIES) setStatus(m.engine, gated(m.engine, m.ply, settleLine(m)));
+      ply++;
+      later(thinkNext, COMMIT_PAUSE);
+    }
+
+    // ---- manual override ----
+    function pause() {
+      paused = true;
+      clearTimers();
+      boardEl.classList.remove('think-l');
+      setActive(null);
+    }
+    function resume() {
+      if (!paused) return;
+      paused = false;
+      later(thinkNext, 200);
+    }
+    function step(dir) {
+      paused = true;
+      clearTimers();
+      boardEl.classList.remove('think-l');
+      setActive(null);
+      ply = Math.max(0, Math.min(moves.length, ply + dir));
+      rebuildTo(ply);
+      Object.values(cards).forEach(c => setStatusEl(c.querySelector('.status'), ''));
+      if (ply > 0) {
+        const m = moves[ply - 1];
+        // Stepping is inspection mode: show the line ungated.
+        const L = m.ply <= BOOK_PLIES ? null : settleLine(m);
+        setStatus(m.engine, m.ply <= BOOK_PLIES ? BOOK_LINE : (L ? L.t : ''));
+      }
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === ' ') { e.preventDefault(); paused ? resume() : pause(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); step(+1); }
+      else if (e.key === 'ArrowLeft')  { e.preventDefault(); step(-1); }
+    });
+
+    // ---- boot ----
+    (async () => {
+      try {
+        const manifest = await (await fetch('games/manifest.json', { cache: 'no-store' })).json();
+        games = await Promise.all(manifest.games.map(async g => {
+          if (g.data) return await (await fetch('games/' + g.data, { cache: 'no-store' })).json();
+          throw new Error('no telemetry');
+        }));
+        if (!games.length) throw new Error('empty');
+        const want = parseInt(new URLSearchParams(location.search).get('game'), 10);
+        const first = want >= 1 && want <= games.length ? want - 1 : 0;
+        startGame(first);
+      } catch (err) {
+        cards.top.querySelector('.status').textContent = 'telemetry not found (run gen/generate_games.py)';
+        console.error(err);
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# engine binaries / networks (large, downloadable)
+engines/
+
+__pycache__/
+.claude/settings.local.json

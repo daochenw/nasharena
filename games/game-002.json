@@ -1,0 +1,12823 @@
+{
+ "white": "Stockfish",
+ "black": "Lc0",
+ "result": "1/2-1/2",
+ "moves": [
+  {
+   "ply": 1,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e2e4",
+   "san": "e4",
+   "evalLc0": 0.5072,
+   "evalSF": 0.5587,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "e2e4",
+     "from": "e2",
+     "to": "e4",
+     "san": "e4",
+     "share": 1.0,
+     "cp": 37,
+     "line": [
+      "e2e4",
+      "e7e6"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 5,
+    "settleDepth": 15,
+    "maxDepth": 18,
+    "marginCp": 1000,
+    "rootHistory": [
+     [
+      1,
+      "g1f3"
+     ],
+     [
+      2,
+      "g1f3"
+     ],
+     [
+      3,
+      "e2e4"
+     ],
+     [
+      4,
+      "e2e4"
+     ],
+     [
+      5,
+      "d2d4"
+     ],
+     [
+      6,
+      "e2e4"
+     ],
+     [
+      7,
+      "e2e4"
+     ],
+     [
+      8,
+      "e2e4"
+     ],
+     [
+      9,
+      "e2e4"
+     ],
+     [
+      10,
+      "e2e4"
+     ],
+     [
+      11,
+      "e2e4"
+     ],
+     [
+      12,
+      "e2e4"
+     ],
+     [
+      13,
+      "e2e4"
+     ],
+     [
+      14,
+      "d2d4"
+     ],
+     [
+      15,
+      "e2e4"
+     ],
+     [
+      16,
+      "e2e4"
+     ],
+     [
+      17,
+      "e2e4"
+     ],
+     [
+      18,
+      "e2e4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.562501,
+   "difficulty": 0.557,
+   "delayMs": 1655
+  },
+  {
+   "ply": 2,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "e7e5",
+   "san": "e5",
+   "evalLc0": 0.5173,
+   "evalSF": 0.5545,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e7e5",
+     "from": "e7",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.9064,
+     "visits": 3001,
+     "policy": 0.5593,
+     "q": -0.0355
+    },
+    {
+     "uci": "c7c6",
+     "from": "c7",
+     "to": "c6",
+     "san": "c6",
+     "share": 0.032,
+     "visits": 106,
+     "policy": 0.072,
+     "q": -0.0921
+    },
+    {
+     "uci": "c7c5",
+     "from": "c7",
+     "to": "c5",
+     "san": "c5",
+     "share": 0.0205,
+     "visits": 68,
+     "policy": 0.0686,
+     "q": -0.12
+    },
+    {
+     "uci": "e7e6",
+     "from": "e7",
+     "to": "e6",
+     "san": "e6",
+     "share": 0.0094,
+     "visits": 31,
+     "policy": 0.0418,
+     "q": -0.1311
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1697,
+    "qMargin": 0.0566,
+    "totalVisits": 3311
+   },
+   "rawDifficulty": 0.169685,
+   "difficulty": 0.1698,
+   "delayMs": 548
+  },
+  {
+   "ply": 3,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "g1f3",
+   "san": "Nf3",
+   "evalLc0": 0.5129,
+   "evalSF": 0.5473,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g1f3",
+     "from": "g1",
+     "to": "f3",
+     "san": "Nf3",
+     "share": 0.5653,
+     "cp": 38,
+     "line": [
+      "g1f3",
+      "b8c6",
+      "d2d4",
+      "e5d4",
+      "f3d4",
+      "g8f6"
+     ]
+    },
+    {
+     "uci": "b1c3",
+     "from": "b1",
+     "to": "c3",
+     "san": "Nc3",
+     "share": 0.4347,
+     "cp": 17,
+     "line": [
+      "b1c3",
+      "g8f6"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 17,
+    "marginCp": 21,
+    "rootHistory": [
+     [
+      1,
+      "g1f3"
+     ],
+     [
+      2,
+      "g1f3"
+     ],
+     [
+      3,
+      "g1f3"
+     ],
+     [
+      4,
+      "g1f3"
+     ],
+     [
+      5,
+      "g1f3"
+     ],
+     [
+      6,
+      "g1f3"
+     ],
+     [
+      7,
+      "g1f3"
+     ],
+     [
+      8,
+      "g1f3"
+     ],
+     [
+      9,
+      "g1f3"
+     ],
+     [
+      10,
+      "g1f3"
+     ],
+     [
+      11,
+      "g1f3"
+     ],
+     [
+      12,
+      "g1f3"
+     ],
+     [
+      13,
+      "g1f3"
+     ],
+     [
+      14,
+      "g1f3"
+     ],
+     [
+      15,
+      "g1f3"
+     ],
+     [
+      16,
+      "g1f3"
+     ],
+     [
+      17,
+      "g1f3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.171472,
+   "difficulty": 0.161,
+   "delayMs": 534
+  },
+  {
+   "ply": 4,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "b8c6",
+   "san": "Nc6",
+   "evalLc0": 0.5173,
+   "evalSF": 0.5559,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "b8c6",
+     "from": "b8",
+     "to": "c6",
+     "san": "Nc6",
+     "share": 0.9407,
+     "visits": 2746,
+     "policy": 0.6418,
+     "q": -0.041
+    },
+    {
+     "uci": "g8f6",
+     "from": "g8",
+     "to": "f6",
+     "san": "Nf6",
+     "share": 0.0418,
+     "visits": 122,
+     "policy": 0.1,
+     "q": -0.1095
+    },
+    {
+     "uci": "d7d6",
+     "from": "d7",
+     "to": "d6",
+     "san": "d6",
+     "share": 0.0031,
+     "visits": 9,
+     "policy": 0.0206,
+     "q": -0.2722
+    },
+    {
+     "uci": "d8f6",
+     "from": "d8",
+     "to": "f6",
+     "san": "Qf6",
+     "share": 0.001,
+     "visits": 3,
+     "policy": 0.0105,
+     "q": -0.3147
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0934,
+    "qMargin": 0.0685,
+    "totalVisits": 2919
+   },
+   "rawDifficulty": 0.093449,
+   "difficulty": 0.0935,
+   "delayMs": 451
+  },
+  {
+   "ply": 5,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "f1b5",
+   "san": "Bb5",
+   "evalLc0": 0.5058,
+   "evalSF": 0.5587,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "f1b5",
+     "from": "f1",
+     "to": "b5",
+     "san": "Bb5",
+     "share": 0.5467,
+     "cp": 45,
+     "line": [
+      "f1b5",
+      "a7a6",
+      "b5a4",
+      "g8f6",
+      "e1g1",
+      "f6e4"
+     ]
+    },
+    {
+     "uci": "f1c4",
+     "from": "f1",
+     "to": "c4",
+     "san": "Bc4",
+     "share": 0.4533,
+     "cp": 30,
+     "line": [
+      "f1c4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 4,
+    "settleDepth": 15,
+    "maxDepth": 17,
+    "marginCp": 15,
+    "rootHistory": [
+     [
+      1,
+      "d2d4"
+     ],
+     [
+      2,
+      "d2d4"
+     ],
+     [
+      3,
+      "d2d4"
+     ],
+     [
+      4,
+      "f1b5"
+     ],
+     [
+      5,
+      "f1b5"
+     ],
+     [
+      6,
+      "f1b5"
+     ],
+     [
+      7,
+      "d2d4"
+     ],
+     [
+      8,
+      "d2d4"
+     ],
+     [
+      9,
+      "d2d4"
+     ],
+     [
+      10,
+      "d2d4"
+     ],
+     [
+      11,
+      "d2d4"
+     ],
+     [
+      12,
+      "d2d4"
+     ],
+     [
+      13,
+      "f1c4"
+     ],
+     [
+      14,
+      "f1c4"
+     ],
+     [
+      15,
+      "f1b5"
+     ],
+     [
+      16,
+      "f1b5"
+     ],
+     [
+      17,
+      "f1b5"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.680512,
+   "difficulty": 0.6765,
+   "delayMs": 2181
+  },
+  {
+   "ply": 6,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "a7a6",
+   "san": "a6",
+   "evalLc0": 0.5144,
+   "evalSF": 0.5644,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "a7a6",
+     "from": "a7",
+     "to": "a6",
+     "san": "a6",
+     "share": 0.8285,
+     "visits": 2797,
+     "policy": 0.4825,
+     "q": -0.0349
+    },
+    {
+     "uci": "g8f6",
+     "from": "g8",
+     "to": "f6",
+     "san": "Nf6",
+     "share": 0.1108,
+     "visits": 374,
+     "policy": 0.1429,
+     "q": -0.0549
+    },
+    {
+     "uci": "f8e7",
+     "from": "f8",
+     "to": "e7",
+     "san": "Be7",
+     "share": 0.0264,
+     "visits": 89,
+     "policy": 0.0758,
+     "q": -0.1139
+    },
+    {
+     "uci": "f8c5",
+     "from": "f8",
+     "to": "c5",
+     "san": "Bc5",
+     "share": 0.0068,
+     "visits": 23,
+     "policy": 0.0345,
+     "q": -0.1566
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.2078,
+    "qMargin": 0.02,
+    "totalVisits": 3376
+   },
+   "rawDifficulty": 0.207846,
+   "difficulty": 0.208,
+   "delayMs": 613
+  },
+  {
+   "ply": 7,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "b5a4",
+   "san": "Ba4",
+   "evalLc0": 0.5101,
+   "evalSF": 0.5658,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "b5a4",
+     "from": "b5",
+     "to": "a4",
+     "san": "Ba4",
+     "share": 0.5987,
+     "cp": 46,
+     "line": [
+      "b5a4",
+      "g8f6",
+      "e1g1",
+      "f6e4",
+      "d2d4",
+      "b7b5"
+     ]
+    },
+    {
+     "uci": "b5c4",
+     "from": "b5",
+     "to": "c4",
+     "san": "Bc4",
+     "share": 0.4013,
+     "cp": 14,
+     "line": [
+      "b5c4",
+      "g8f6"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 17,
+    "marginCp": 32,
+    "rootHistory": [
+     [
+      1,
+      "b5a4"
+     ],
+     [
+      2,
+      "b5a4"
+     ],
+     [
+      3,
+      "b5a4"
+     ],
+     [
+      4,
+      "b5a4"
+     ],
+     [
+      5,
+      "b5a4"
+     ],
+     [
+      6,
+      "b5a4"
+     ],
+     [
+      7,
+      "b5a4"
+     ],
+     [
+      8,
+      "b5a4"
+     ],
+     [
+      9,
+      "b5a4"
+     ],
+     [
+      10,
+      "b5a4"
+     ],
+     [
+      11,
+      "b5a4"
+     ],
+     [
+      12,
+      "b5a4"
+     ],
+     [
+      13,
+      "b5a4"
+     ],
+     [
+      14,
+      "b5a4"
+     ],
+     [
+      15,
+      "b5a4"
+     ],
+     [
+      16,
+      "b5a4"
+     ],
+     [
+      17,
+      "b5a4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.151711,
+   "difficulty": 0.1409,
+   "delayMs": 506
+  },
+  {
+   "ply": 8,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "g8f6",
+   "san": "Nf6",
+   "evalLc0": 0.5115,
+   "evalSF": 0.553,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g8f6",
+     "from": "g8",
+     "to": "f6",
+     "san": "Nf6",
+     "share": 0.9064,
+     "visits": 3690,
+     "policy": 0.509,
+     "q": -0.0312
+    },
+    {
+     "uci": "f8e7",
+     "from": "f8",
+     "to": "e7",
+     "san": "Be7",
+     "share": 0.0447,
+     "visits": 182,
+     "policy": 0.1077,
+     "q": -0.0864
+    },
+    {
+     "uci": "b7b5",
+     "from": "b7",
+     "to": "b5",
+     "san": "b5",
+     "share": 0.013,
+     "visits": 53,
+     "policy": 0.0503,
+     "q": -0.1306
+    },
+    {
+     "uci": "f8c5",
+     "from": "f8",
+     "to": "c5",
+     "san": "Bc5",
+     "share": 0.0096,
+     "visits": 39,
+     "policy": 0.044,
+     "q": -0.1521
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1428,
+    "qMargin": 0.0552,
+    "totalVisits": 4071
+   },
+   "rawDifficulty": 0.14276,
+   "difficulty": 0.1428,
+   "delayMs": 508
+  },
+  {
+   "ply": 9,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e1g1",
+   "san": "O-O",
+   "evalLc0": 0.5014,
+   "evalSF": 0.5545,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e1g1",
+     "from": "e1",
+     "to": "g1",
+     "san": "O-O",
+     "share": 1.0,
+     "cp": 45,
+     "line": [
+      "e1g1",
+      "b7b5",
+      "a4b3",
+      "f6e4",
+      "d2d4",
+      "d7d5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 8,
+    "maxDepth": 16,
+    "marginCp": 1000,
+    "rootHistory": [
+     [
+      1,
+      "e1g1"
+     ],
+     [
+      2,
+      "e1g1"
+     ],
+     [
+      3,
+      "e1g1"
+     ],
+     [
+      4,
+      "e1g1"
+     ],
+     [
+      5,
+      "e1g1"
+     ],
+     [
+      6,
+      "e1g1"
+     ],
+     [
+      7,
+      "b1c3"
+     ],
+     [
+      8,
+      "e1g1"
+     ],
+     [
+      9,
+      "e1g1"
+     ],
+     [
+      10,
+      "e1g1"
+     ],
+     [
+      11,
+      "e1g1"
+     ],
+     [
+      12,
+      "e1g1"
+     ],
+     [
+      13,
+      "e1g1"
+     ],
+     [
+      14,
+      "e1g1"
+     ],
+     [
+      15,
+      "e1g1"
+     ],
+     [
+      16,
+      "e1g1"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.275001,
+   "difficulty": 0.2658,
+   "delayMs": 732
+  },
+  {
+   "ply": 10,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f6e4",
+   "san": "Nxe4",
+   "evalLc0": 0.5201,
+   "evalSF": 0.563,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f6e4",
+     "from": "f6",
+     "to": "e4",
+     "san": "Nxe4",
+     "share": 0.8689,
+     "visits": 2777,
+     "policy": 0.5723,
+     "q": -0.0474
+    },
+    {
+     "uci": "f8e7",
+     "from": "f8",
+     "to": "e7",
+     "san": "Be7",
+     "share": 0.0588,
+     "visits": 188,
+     "policy": 0.0851,
+     "q": -0.0857
+    },
+    {
+     "uci": "b7b5",
+     "from": "b7",
+     "to": "b5",
+     "san": "b5",
+     "share": 0.0357,
+     "visits": 114,
+     "policy": 0.0746,
+     "q": -0.1009
+    },
+    {
+     "uci": "f8c5",
+     "from": "f8",
+     "to": "c5",
+     "san": "Bc5",
+     "share": 0.0153,
+     "visits": 49,
+     "policy": 0.0398,
+     "q": -0.126
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1795,
+    "qMargin": 0.0383,
+    "totalVisits": 3196
+   },
+   "rawDifficulty": 0.179481,
+   "difficulty": 0.1796,
+   "delayMs": 564
+  },
+  {
+   "ply": 11,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "d2d4",
+   "san": "d4",
+   "evalLc0": 0.5173,
+   "evalSF": 0.5672,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d2d4",
+     "from": "d2",
+     "to": "d4",
+     "san": "d4",
+     "share": 0.5591,
+     "cp": 43,
+     "line": [
+      "d2d4",
+      "b7b5",
+      "a4b3",
+      "d7d5",
+      "d4e5",
+      "c8e6"
+     ]
+    },
+    {
+     "uci": "f1e1",
+     "from": "f1",
+     "to": "e1",
+     "san": "Re1",
+     "share": 0.4409,
+     "cp": 24,
+     "line": [
+      "f1e1"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 1,
+    "settleDepth": 2,
+    "maxDepth": 18,
+    "marginCp": 19,
+    "rootHistory": [
+     [
+      1,
+      "f1e1"
+     ],
+     [
+      2,
+      "d2d4"
+     ],
+     [
+      3,
+      "d2d4"
+     ],
+     [
+      4,
+      "d2d4"
+     ],
+     [
+      5,
+      "d2d4"
+     ],
+     [
+      6,
+      "d2d4"
+     ],
+     [
+      7,
+      "d2d4"
+     ],
+     [
+      8,
+      "d2d4"
+     ],
+     [
+      9,
+      "d2d4"
+     ],
+     [
+      10,
+      "d2d4"
+     ],
+     [
+      11,
+      "d2d4"
+     ],
+     [
+      12,
+      "d2d4"
+     ],
+     [
+      13,
+      "d2d4"
+     ],
+     [
+      14,
+      "d2d4"
+     ],
+     [
+      15,
+      "d2d4"
+     ],
+     [
+      16,
+      "d2d4"
+     ],
+     [
+      17,
+      "d2d4"
+     ],
+     [
+      18,
+      "d2d4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.253553,
+   "difficulty": 0.2441,
+   "delayMs": 684
+  },
+  {
+   "ply": 12,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "b7b5",
+   "san": "b5",
+   "evalLc0": 0.5201,
+   "evalSF": 0.563,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "b7b5",
+     "from": "b7",
+     "to": "b5",
+     "san": "b5",
+     "share": 0.9792,
+     "visits": 3156,
+     "policy": 0.6802,
+     "q": -0.0529
+    },
+    {
+     "uci": "f8e7",
+     "from": "f8",
+     "to": "e7",
+     "san": "Be7",
+     "share": 0.0047,
+     "visits": 15,
+     "policy": 0.0435,
+     "q": -0.2168
+    },
+    {
+     "uci": "e5d4",
+     "from": "e5",
+     "to": "d4",
+     "san": "exd4",
+     "share": 0.0012,
+     "visits": 4,
+     "policy": 0.0093,
+     "q": -0.3606
+    },
+    {
+     "uci": "d7d6",
+     "from": "d7",
+     "to": "d6",
+     "san": "d6",
+     "share": 0.0009,
+     "visits": 3,
+     "policy": 0.0074,
+     "q": -0.491
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.046,
+    "qMargin": 0.1639,
+    "totalVisits": 3223
+   },
+   "rawDifficulty": 0.046045,
+   "difficulty": 0.0461,
+   "delayMs": 414
+  },
+  {
+   "ply": 13,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "a4b3",
+   "san": "Bb3",
+   "evalLc0": 0.5173,
+   "evalSF": 0.5573,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "a4b3",
+     "from": "a4",
+     "to": "b3",
+     "san": "Bb3",
+     "share": 0.4783,
+     "cp": 47,
+     "line": [
+      "a4b3",
+      "d7d5",
+      "d4e5",
+      "c8e6",
+      "c2c3",
+      "f8c5"
+     ]
+    },
+    {
+     "uci": "f3e5",
+     "from": "f3",
+     "to": "e5",
+     "san": "Nxe5",
+     "share": 0.2625,
+     "cp": -1,
+     "line": [
+      "f3e5",
+      "b5a4"
+     ]
+    },
+    {
+     "uci": "d1e2",
+     "from": "d1",
+     "to": "e2",
+     "san": "Qe2",
+     "share": 0.2592,
+     "cp": -2,
+     "line": [
+      "d1e2",
+      "b5a4",
+      "f3e5",
+      "d8h4",
+      "e5c6",
+      "d7c6"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 17,
+    "marginCp": 48,
+    "rootHistory": [
+     [
+      1,
+      "a4b3"
+     ],
+     [
+      2,
+      "a4b3"
+     ],
+     [
+      3,
+      "a4b3"
+     ],
+     [
+      4,
+      "a4b3"
+     ],
+     [
+      5,
+      "a4b3"
+     ],
+     [
+      6,
+      "a4b3"
+     ],
+     [
+      7,
+      "a4b3"
+     ],
+     [
+      8,
+      "a4b3"
+     ],
+     [
+      9,
+      "a4b3"
+     ],
+     [
+      10,
+      "a4b3"
+     ],
+     [
+      11,
+      "a4b3"
+     ],
+     [
+      12,
+      "a4b3"
+     ],
+     [
+      13,
+      "a4b3"
+     ],
+     [
+      14,
+      "a4b3"
+     ],
+     [
+      15,
+      "a4b3"
+     ],
+     [
+      16,
+      "a4b3"
+     ],
+     [
+      17,
+      "a4b3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.127409,
+   "difficulty": 0.1163,
+   "delayMs": 475
+  },
+  {
+   "ply": 14,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d7d5",
+   "san": "d5",
+   "evalLc0": 0.523,
+   "evalSF": 0.5473,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d7d5",
+     "from": "d7",
+     "to": "d5",
+     "san": "d5",
+     "share": 0.9743,
+     "visits": 3373,
+     "policy": 0.6572,
+     "q": -0.052
+    },
+    {
+     "uci": "c8b7",
+     "from": "c8",
+     "to": "b7",
+     "san": "Bb7",
+     "share": 0.0061,
+     "visits": 21,
+     "policy": 0.0275,
+     "q": -0.1891
+    },
+    {
+     "uci": "f8e7",
+     "from": "f8",
+     "to": "e7",
+     "san": "Be7",
+     "share": 0.0058,
+     "visits": 20,
+     "policy": 0.0293,
+     "q": -0.2048
+    },
+    {
+     "uci": "e5d4",
+     "from": "e5",
+     "to": "d4",
+     "san": "exd4",
+     "share": 0.0014,
+     "visits": 5,
+     "policy": 0.0124,
+     "q": -0.2381
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0528,
+    "qMargin": 0.1371,
+    "totalVisits": 3462
+   },
+   "rawDifficulty": 0.052839,
+   "difficulty": 0.0529,
+   "delayMs": 418
+  },
+  {
+   "ply": 15,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "d4e5",
+   "san": "dxe5",
+   "evalLc0": 0.5173,
+   "evalSF": 0.5644,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d4e5",
+     "from": "d4",
+     "to": "e5",
+     "san": "dxe5",
+     "share": 0.4071,
+     "cp": 41,
+     "line": [
+      "d4e5",
+      "c8e6",
+      "c2c3",
+      "f8c5",
+      "b1d2",
+      "e8g8"
+     ]
+    },
+    {
+     "uci": "f1e1",
+     "from": "f1",
+     "to": "e1",
+     "san": "Re1",
+     "share": 0.3131,
+     "cp": 20,
+     "line": [
+      "f1e1",
+      "c8e6",
+      "d4e5",
+      "f8c5",
+      "c1e3",
+      "c5e3"
+     ]
+    },
+    {
+     "uci": "f3e5",
+     "from": "f3",
+     "to": "e5",
+     "san": "Nxe5",
+     "share": 0.2798,
+     "cp": 11,
+     "line": [
+      "f3e5",
+      "c6e5",
+      "d4e5",
+      "c7c6",
+      "a2a4",
+      "c8e6"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 4,
+    "maxDepth": 18,
+    "marginCp": 21,
+    "rootHistory": [
+     [
+      1,
+      "d4e5"
+     ],
+     [
+      2,
+      "f3e5"
+     ],
+     [
+      3,
+      "f3e5"
+     ],
+     [
+      4,
+      "d4e5"
+     ],
+     [
+      5,
+      "d4e5"
+     ],
+     [
+      6,
+      "d4e5"
+     ],
+     [
+      7,
+      "d4e5"
+     ],
+     [
+      8,
+      "d4e5"
+     ],
+     [
+      9,
+      "d4e5"
+     ],
+     [
+      10,
+      "d4e5"
+     ],
+     [
+      11,
+      "d4e5"
+     ],
+     [
+      12,
+      "d4e5"
+     ],
+     [
+      13,
+      "d4e5"
+     ],
+     [
+      14,
+      "d4e5"
+     ],
+     [
+      15,
+      "d4e5"
+     ],
+     [
+      16,
+      "d4e5"
+     ],
+     [
+      17,
+      "d4e5"
+     ],
+     [
+      18,
+      "d4e5"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.345492,
+   "difficulty": 0.3372,
+   "delayMs": 909
+  },
+  {
+   "ply": 16,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c8e6",
+   "san": "Be6",
+   "evalLc0": 0.5244,
+   "evalSF": 0.5516,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c8e6",
+     "from": "c8",
+     "to": "e6",
+     "san": "Be6",
+     "share": 0.9845,
+     "visits": 2921,
+     "policy": 0.6736,
+     "q": -0.057
+    },
+    {
+     "uci": "c6e7",
+     "from": "c6",
+     "to": "e7",
+     "san": "Ne7",
+     "share": 0.0007,
+     "visits": 2,
+     "policy": 0.0096,
+     "q": -0.4699
+    },
+    {
+     "uci": "e4g3",
+     "from": "e4",
+     "to": "g3",
+     "san": "Ng3",
+     "share": 0.0003,
+     "visits": 1,
+     "policy": 0.0066,
+     "q": -0.9938
+    },
+    {
+     "uci": "e4g5",
+     "from": "e4",
+     "to": "g5",
+     "san": "Ng5",
+     "share": 0.0003,
+     "visits": 1,
+     "policy": 0.0067,
+     "q": -0.9904
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0363,
+    "qMargin": 0.4129,
+    "totalVisits": 2967
+   },
+   "rawDifficulty": 0.036272,
+   "difficulty": 0.0363,
+   "delayMs": 409
+  },
+  {
+   "ply": 17,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "c2c3",
+   "san": "c3",
+   "evalLc0": 0.5144,
+   "evalSF": 0.5488,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "c2c3",
+     "from": "c2",
+     "to": "c3",
+     "san": "c3",
+     "share": 0.5125,
+     "cp": 39,
+     "line": [
+      "c2c3",
+      "f8c5",
+      "b1d2",
+      "e8g8",
+      "b3c2",
+      "e4f2"
+     ]
+    },
+    {
+     "uci": "b1d2",
+     "from": "b1",
+     "to": "d2",
+     "san": "Nbd2",
+     "share": 0.4875,
+     "cp": 35,
+     "line": [
+      "b1d2",
+      "e4c5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 4,
+    "settleDepth": 17,
+    "maxDepth": 18,
+    "marginCp": 4,
+    "rootHistory": [
+     [
+      1,
+      "c2c3"
+     ],
+     [
+      2,
+      "c2c3"
+     ],
+     [
+      3,
+      "c2c3"
+     ],
+     [
+      4,
+      "c2c3"
+     ],
+     [
+      5,
+      "c2c3"
+     ],
+     [
+      6,
+      "c2c3"
+     ],
+     [
+      7,
+      "c2c3"
+     ],
+     [
+      8,
+      "c2c3"
+     ],
+     [
+      9,
+      "b1d2"
+     ],
+     [
+      10,
+      "b1d2"
+     ],
+     [
+      11,
+      "b1d2"
+     ],
+     [
+      12,
+      "b1d2"
+     ],
+     [
+      13,
+      "c2c3"
+     ],
+     [
+      14,
+      "b1d2"
+     ],
+     [
+      15,
+      "b1d2"
+     ],
+     [
+      16,
+      "b1d2"
+     ],
+     [
+      17,
+      "c2c3"
+     ],
+     [
+      18,
+      "c2c3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.723579,
+   "difficulty": 0.7201,
+   "delayMs": 2393
+  },
+  {
+   "ply": 18,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f8e7",
+   "san": "Be7",
+   "evalLc0": 0.5244,
+   "evalSF": 0.5516,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f8e7",
+     "from": "f8",
+     "to": "e7",
+     "san": "Be7",
+     "share": 0.9276,
+     "visits": 2731,
+     "policy": 0.5498,
+     "q": -0.0612
+    },
+    {
+     "uci": "f8c5",
+     "from": "f8",
+     "to": "c5",
+     "san": "Bc5",
+     "share": 0.0387,
+     "visits": 114,
+     "policy": 0.1284,
+     "q": -0.1281
+    },
+    {
+     "uci": "d8d7",
+     "from": "d8",
+     "to": "d7",
+     "san": "Qd7",
+     "share": 0.0105,
+     "visits": 31,
+     "policy": 0.0341,
+     "q": -0.1495
+    },
+    {
+     "uci": "e4c5",
+     "from": "e4",
+     "to": "c5",
+     "san": "Nc5",
+     "share": 0.0041,
+     "visits": 12,
+     "policy": 0.0196,
+     "q": -0.173
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1062,
+    "qMargin": 0.0669,
+    "totalVisits": 2944
+   },
+   "rawDifficulty": 0.106227,
+   "difficulty": 0.1063,
+   "delayMs": 464
+  },
+  {
+   "ply": 19,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "b1d2",
+   "san": "Nbd2",
+   "evalLc0": 0.5101,
+   "evalSF": 0.563,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "b1d2",
+     "from": "b1",
+     "to": "d2",
+     "san": "Nbd2",
+     "share": 0.3417,
+     "cp": 40,
+     "line": [
+      "b1d2"
+     ]
+    },
+    {
+     "uci": "c1e3",
+     "from": "c1",
+     "to": "e3",
+     "san": "Be3",
+     "share": 0.3333,
+     "cp": 38,
+     "line": [
+      "c1e3",
+      "c6a5",
+      "f3d4",
+      "e8g8",
+      "b1d2",
+      "e4d2"
+     ]
+    },
+    {
+     "uci": "b3c2",
+     "from": "b3",
+     "to": "c2",
+     "san": "Bc2",
+     "share": 0.325,
+     "cp": 36,
+     "line": [
+      "b3c2",
+      "e6g4",
+      "c2b3",
+      "e4c5",
+      "b3d5",
+      "c6e5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 5,
+    "settleDepth": 17,
+    "maxDepth": 17,
+    "marginCp": 2,
+    "rootHistory": [
+     [
+      1,
+      "d1e2"
+     ],
+     [
+      2,
+      "c1e3"
+     ],
+     [
+      3,
+      "b1d2"
+     ],
+     [
+      4,
+      "b1d2"
+     ],
+     [
+      5,
+      "b1d2"
+     ],
+     [
+      6,
+      "b3c2"
+     ],
+     [
+      7,
+      "b3c2"
+     ],
+     [
+      8,
+      "b3c2"
+     ],
+     [
+      9,
+      "b3c2"
+     ],
+     [
+      10,
+      "c1e3"
+     ],
+     [
+      11,
+      "c1e3"
+     ],
+     [
+      12,
+      "c1e3"
+     ],
+     [
+      13,
+      "c1e3"
+     ],
+     [
+      14,
+      "c1e3"
+     ],
+     [
+      15,
+      "c1e3"
+     ],
+     [
+      16,
+      "c1e3"
+     ],
+     [
+      17,
+      "b1d2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.807562,
+   "difficulty": 0.8051,
+   "delayMs": 2837
+  },
+  {
+   "ply": 20,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "e4c5",
+   "san": "Nc5",
+   "evalLc0": 0.5302,
+   "evalSF": 0.5644,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e4c5",
+     "from": "e4",
+     "to": "c5",
+     "san": "Nc5",
+     "share": 0.976,
+     "visits": 3452,
+     "policy": 0.6338,
+     "q": -0.0805
+    },
+    {
+     "uci": "d8d7",
+     "from": "d8",
+     "to": "d7",
+     "san": "Qd7",
+     "share": 0.0042,
+     "visits": 15,
+     "policy": 0.017,
+     "q": -0.1745
+    },
+    {
+     "uci": "e4d2",
+     "from": "e4",
+     "to": "d2",
+     "san": "Nxd2",
+     "share": 0.0017,
+     "visits": 6,
+     "policy": 0.014,
+     "q": -0.2682
+    },
+    {
+     "uci": "e6g4",
+     "from": "e6",
+     "to": "g4",
+     "san": "Bg4",
+     "share": 0.0008,
+     "visits": 3,
+     "policy": 0.0099,
+     "q": -0.44
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0512,
+    "qMargin": 0.094,
+    "totalVisits": 3537
+   },
+   "rawDifficulty": 0.051167,
+   "difficulty": 0.0512,
+   "delayMs": 417
+  },
+  {
+   "ply": 21,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "b3c2",
+   "san": "Bc2",
+   "evalLc0": 0.5259,
+   "evalSF": 0.5701,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "b3c2",
+     "from": "b3",
+     "to": "c2",
+     "san": "Bc2",
+     "share": 0.4014,
+     "cp": 43,
+     "line": [
+      "b3c2",
+      "d5d4",
+      "d2b3",
+      "d4d3",
+      "c2b1",
+      "c5b3"
+     ]
+    },
+    {
+     "uci": "h2h3",
+     "from": "h2",
+     "to": "h3",
+     "san": "h3",
+     "share": 0.3049,
+     "cp": 21,
+     "line": [
+      "h2h3",
+      "d5d4",
+      "b3c2",
+      "d4d3",
+      "c2b1",
+      "d8d5"
+     ]
+    },
+    {
+     "uci": "f3d4",
+     "from": "f3",
+     "to": "d4",
+     "san": "Nd4",
+     "share": 0.2937,
+     "cp": 18,
+     "line": [
+      "f3d4",
+      "c6e5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 16,
+    "marginCp": 22,
+    "rootHistory": [
+     [
+      1,
+      "b3c2"
+     ],
+     [
+      2,
+      "b3c2"
+     ],
+     [
+      3,
+      "b3c2"
+     ],
+     [
+      4,
+      "b3c2"
+     ],
+     [
+      5,
+      "b3c2"
+     ],
+     [
+      6,
+      "b3c2"
+     ],
+     [
+      7,
+      "b3c2"
+     ],
+     [
+      8,
+      "b3c2"
+     ],
+     [
+      9,
+      "b3c2"
+     ],
+     [
+      10,
+      "b3c2"
+     ],
+     [
+      11,
+      "b3c2"
+     ],
+     [
+      12,
+      "b3c2"
+     ],
+     [
+      13,
+      "b3c2"
+     ],
+     [
+      14,
+      "b3c2"
+     ],
+     [
+      15,
+      "b3c2"
+     ],
+     [
+      16,
+      "b3c2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.170664,
+   "difficulty": 0.1601,
+   "delayMs": 533
+  },
+  {
+   "ply": 22,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d5d4",
+   "san": "d4",
+   "evalLc0": 0.5331,
+   "evalSF": 0.5686,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d5d4",
+     "from": "d5",
+     "to": "d4",
+     "san": "d4",
+     "share": 0.9647,
+     "visits": 3193,
+     "policy": 0.6384,
+     "q": -0.0833
+    },
+    {
+     "uci": "e6g4",
+     "from": "e6",
+     "to": "g4",
+     "san": "Bg4",
+     "share": 0.0157,
+     "visits": 52,
+     "policy": 0.045,
+     "q": -0.1546
+    },
+    {
+     "uci": "d8d7",
+     "from": "d8",
+     "to": "d7",
+     "san": "Qd7",
+     "share": 0.003,
+     "visits": 10,
+     "policy": 0.0186,
+     "q": -0.2314
+    },
+    {
+     "uci": "c5d7",
+     "from": "c5",
+     "to": "d7",
+     "san": "Nd7",
+     "share": 0.0009,
+     "visits": 3,
+     "policy": 0.0071,
+     "q": -0.3688
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0656,
+    "qMargin": 0.0714,
+    "totalVisits": 3310
+   },
+   "rawDifficulty": 0.065631,
+   "difficulty": 0.0657,
+   "delayMs": 427
+  },
+  {
+   "ply": 23,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "d2b3",
+   "san": "Nb3",
+   "evalLc0": 0.5101,
+   "evalSF": 0.5701,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d2b3",
+     "from": "d2",
+     "to": "b3",
+     "san": "Nb3",
+     "share": 0.3835,
+     "cp": 47,
+     "line": [
+      "d2b3",
+      "d4d3",
+      "c2b1",
+      "c5b3",
+      "a2b3",
+      "e6f5"
+     ]
+    },
+    {
+     "uci": "d2e4",
+     "from": "d2",
+     "to": "e4",
+     "san": "Ne4",
+     "share": 0.3179,
+     "cp": 32,
+     "line": [
+      "d2e4",
+      "d4d3",
+      "e4c5",
+      "d3c2",
+      "d1d8",
+      "a8d8"
+     ]
+    },
+    {
+     "uci": "f3d4",
+     "from": "f3",
+     "to": "d4",
+     "san": "Nxd4",
+     "share": 0.2986,
+     "cp": 27,
+     "line": [
+      "f3d4",
+      "c6d4",
+      "c3d4",
+      "d8d4",
+      "d2f3",
+      "d4d1"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 19,
+    "marginCp": 15,
+    "rootHistory": [
+     [
+      1,
+      "d2b3"
+     ],
+     [
+      2,
+      "d2b3"
+     ],
+     [
+      3,
+      "d2b3"
+     ],
+     [
+      4,
+      "d2b3"
+     ],
+     [
+      5,
+      "d2b3"
+     ],
+     [
+      6,
+      "d2b3"
+     ],
+     [
+      7,
+      "d2b3"
+     ],
+     [
+      8,
+      "d2b3"
+     ],
+     [
+      9,
+      "d2b3"
+     ],
+     [
+      10,
+      "d2b3"
+     ],
+     [
+      11,
+      "d2b3"
+     ],
+     [
+      12,
+      "d2b3"
+     ],
+     [
+      13,
+      "d2b3"
+     ],
+     [
+      14,
+      "d2b3"
+     ],
+     [
+      15,
+      "d2b3"
+     ],
+     [
+      16,
+      "d2b3"
+     ],
+     [
+      17,
+      "d2b3"
+     ],
+     [
+      18,
+      "d2b3"
+     ],
+     [
+      19,
+      "d2b3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.181595,
+   "difficulty": 0.1712,
+   "delayMs": 550
+  },
+  {
+   "ply": 24,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d4c3",
+   "san": "dxc3",
+   "evalLc0": 0.5187,
+   "evalSF": 0.5939,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d4c3",
+     "from": "d4",
+     "to": "c3",
+     "san": "dxc3",
+     "share": 0.9473,
+     "visits": 2803,
+     "policy": 0.5857,
+     "q": -0.0449
+    },
+    {
+     "uci": "d4d3",
+     "from": "d4",
+     "to": "d3",
+     "san": "d3",
+     "share": 0.0331,
+     "visits": 98,
+     "policy": 0.1053,
+     "q": -0.1438
+    },
+    {
+     "uci": "e6b3",
+     "from": "e6",
+     "to": "b3",
+     "san": "Bxb3",
+     "share": 0.0027,
+     "visits": 8,
+     "policy": 0.0226,
+     "q": -0.3389
+    },
+    {
+     "uci": "c5b3",
+     "from": "c5",
+     "to": "b3",
+     "san": "Nxb3",
+     "share": 0.0027,
+     "visits": 8,
+     "policy": 0.0241,
+     "q": -0.3125
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0809,
+    "qMargin": 0.0988,
+    "totalVisits": 2959
+   },
+   "rawDifficulty": 0.08086,
+   "difficulty": 0.0809,
+   "delayMs": 439
+  },
+  {
+   "ply": 25,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "b3c5",
+   "san": "Nxc5",
+   "evalLc0": 0.5144,
+   "evalSF": 0.5994,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "b3c5",
+     "from": "b3",
+     "to": "c5",
+     "san": "Nxc5",
+     "share": 0.671,
+     "cp": 65,
+     "line": [
+      "b3c5",
+      "e7c5",
+      "c2e4",
+      "d8d1",
+      "f1d1",
+      "e6d7"
+     ]
+    },
+    {
+     "uci": "b2c3",
+     "from": "b2",
+     "to": "c3",
+     "san": "bxc3",
+     "share": 0.329,
+     "cp": 8,
+     "line": [
+      "b2c3",
+      "d8d1"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 5,
+    "maxDepth": 16,
+    "marginCp": 57,
+    "rootHistory": [
+     [
+      1,
+      "b3c5"
+     ],
+     [
+      2,
+      "b3c5"
+     ],
+     [
+      3,
+      "b2c3"
+     ],
+     [
+      4,
+      "b2c3"
+     ],
+     [
+      5,
+      "b3c5"
+     ],
+     [
+      6,
+      "b3c5"
+     ],
+     [
+      7,
+      "b3c5"
+     ],
+     [
+      8,
+      "b3c5"
+     ],
+     [
+      9,
+      "b3c5"
+     ],
+     [
+      10,
+      "b3c5"
+     ],
+     [
+      11,
+      "b3c5"
+     ],
+     [
+      12,
+      "b3c5"
+     ],
+     [
+      13,
+      "b3c5"
+     ],
+     [
+      14,
+      "b3c5"
+     ],
+     [
+      15,
+      "b3c5"
+     ],
+     [
+      16,
+      "b3c5"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.316833,
+   "difficulty": 0.3082,
+   "delayMs": 833
+  },
+  {
+   "ply": 26,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "e7c5",
+   "san": "Bxc5",
+   "evalLc0": 0.5173,
+   "evalSF": 0.5813,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e7c5",
+     "from": "e7",
+     "to": "c5",
+     "san": "Bxc5",
+     "share": 0.9745,
+     "visits": 2785,
+     "policy": 0.646,
+     "q": -0.0443
+    },
+    {
+     "uci": "d8d1",
+     "from": "d8",
+     "to": "d1",
+     "san": "Qxd1",
+     "share": 0.0098,
+     "visits": 28,
+     "policy": 0.0384,
+     "q": -0.2024
+    },
+    {
+     "uci": "c3b2",
+     "from": "c3",
+     "to": "b2",
+     "san": "cxb2",
+     "share": 0.001,
+     "visits": 3,
+     "policy": 0.0105,
+     "q": -0.2892
+    },
+    {
+     "uci": "e6h3",
+     "from": "e6",
+     "to": "h3",
+     "san": "Bh3",
+     "share": 0.0003,
+     "visits": 1,
+     "policy": 0.0062,
+     "q": -0.994
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0511,
+    "qMargin": 0.1581,
+    "totalVisits": 2858
+   },
+   "rawDifficulty": 0.051141,
+   "difficulty": 0.0512,
+   "delayMs": 417
+  },
+  {
+   "ply": 27,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "c2e4",
+   "san": "Be4",
+   "evalLc0": 0.5115,
+   "evalSF": 0.6022,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c2e4",
+     "from": "c2",
+     "to": "e4",
+     "san": "Be4",
+     "share": 1.0,
+     "cp": 63,
+     "line": [
+      "c2e4",
+      "d8d1"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 18,
+    "marginCp": 1000,
+    "rootHistory": [
+     [
+      1,
+      "c2e4"
+     ],
+     [
+      2,
+      "c2e4"
+     ],
+     [
+      3,
+      "c2e4"
+     ],
+     [
+      4,
+      "c2e4"
+     ],
+     [
+      5,
+      "c2e4"
+     ],
+     [
+      6,
+      "c2e4"
+     ],
+     [
+      7,
+      "c2e4"
+     ],
+     [
+      8,
+      "c2e4"
+     ],
+     [
+      9,
+      "c2e4"
+     ],
+     [
+      10,
+      "c2e4"
+     ],
+     [
+      11,
+      "c2e4"
+     ],
+     [
+      12,
+      "c2e4"
+     ],
+     [
+      13,
+      "c2e4"
+     ],
+     [
+      14,
+      "c2e4"
+     ],
+     [
+      15,
+      "c2e4"
+     ],
+     [
+      16,
+      "c2e4"
+     ],
+     [
+      17,
+      "c2e4"
+     ],
+     [
+      18,
+      "c2e4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.016667,
+   "difficulty": 0.0042,
+   "delayMs": 400
+  },
+  {
+   "ply": 28,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d8d7",
+   "san": "Qd7",
+   "evalLc0": 0.5173,
+   "evalSF": 0.609,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d8d7",
+     "from": "d8",
+     "to": "d7",
+     "san": "Qd7",
+     "share": 0.9698,
+     "visits": 3174,
+     "policy": 0.5952,
+     "q": -0.0377
+    },
+    {
+     "uci": "d8d1",
+     "from": "d8",
+     "to": "d1",
+     "san": "Qxd1",
+     "share": 0.0116,
+     "visits": 38,
+     "policy": 0.0551,
+     "q": -0.1933
+    },
+    {
+     "uci": "c6b4",
+     "from": "c6",
+     "to": "b4",
+     "san": "Nb4",
+     "share": 0.0012,
+     "visits": 4,
+     "policy": 0.0099,
+     "q": -0.3611
+    },
+    {
+     "uci": "c6e7",
+     "from": "c6",
+     "to": "e7",
+     "san": "Ne7",
+     "share": 0.0009,
+     "visits": 3,
+     "policy": 0.0106,
+     "q": -0.3081
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0568,
+    "qMargin": 0.1556,
+    "totalVisits": 3273
+   },
+   "rawDifficulty": 0.056842,
+   "difficulty": 0.0569,
+   "delayMs": 421
+  },
+  {
+   "ply": 29,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "c1g5",
+   "san": "Bg5",
+   "evalLc0": 0.5129,
+   "evalSF": 0.628,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c1g5",
+     "from": "c1",
+     "to": "g5",
+     "san": "Bg5",
+     "share": 0.4528,
+     "cp": 79,
+     "line": [
+      "c1g5",
+      "c3b2",
+      "a1b1",
+      "a8b8",
+      "d1c2",
+      "e6c4"
+     ]
+    },
+    {
+     "uci": "b2c3",
+     "from": "b2",
+     "to": "c3",
+     "san": "bxc3",
+     "share": 0.2924,
+     "cp": 44,
+     "line": [
+      "b2c3",
+      "a8d8",
+      "d1c2",
+      "e6d5",
+      "c1g5",
+      "d5e4"
+     ]
+    },
+    {
+     "uci": "d1c2",
+     "from": "d1",
+     "to": "c2",
+     "san": "Qc2",
+     "share": 0.2548,
+     "cp": 33,
+     "line": [
+      "d1c2",
+      "e6d5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 3,
+    "maxDepth": 15,
+    "marginCp": 35,
+    "rootHistory": [
+     [
+      1,
+      "c1g5"
+     ],
+     [
+      2,
+      "b2c3"
+     ],
+     [
+      3,
+      "c1g5"
+     ],
+     [
+      4,
+      "c1g5"
+     ],
+     [
+      5,
+      "c1g5"
+     ],
+     [
+      6,
+      "c1g5"
+     ],
+     [
+      7,
+      "c1g5"
+     ],
+     [
+      8,
+      "c1g5"
+     ],
+     [
+      9,
+      "c1g5"
+     ],
+     [
+      10,
+      "c1g5"
+     ],
+     [
+      11,
+      "c1g5"
+     ],
+     [
+      12,
+      "c1g5"
+     ],
+     [
+      13,
+      "c1g5"
+     ],
+     [
+      14,
+      "c1g5"
+     ],
+     [
+      15,
+      "c1g5"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.31413,
+   "difficulty": 0.3054,
+   "delayMs": 826
+  },
+  {
+   "ply": 30,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c3b2",
+   "san": "cxb2",
+   "evalLc0": 0.553,
+   "evalSF": 0.6199,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c3b2",
+     "from": "c3",
+     "to": "b2",
+     "san": "cxb2",
+     "share": 0.85,
+     "visits": 2732,
+     "policy": 0.2773,
+     "q": -0.0939
+    },
+    {
+     "uci": "h7h6",
+     "from": "h7",
+     "to": "h6",
+     "san": "h6",
+     "share": 0.1098,
+     "visits": 353,
+     "policy": 0.2681,
+     "q": -0.2663
+    },
+    {
+     "uci": "a8b8",
+     "from": "a8",
+     "to": "b8",
+     "san": "Rb8",
+     "share": 0.0171,
+     "visits": 55,
+     "policy": 0.1139,
+     "q": -0.3463
+    },
+    {
+     "uci": "a8c8",
+     "from": "a8",
+     "to": "c8",
+     "san": "Rc8",
+     "share": 0.0081,
+     "visits": 26,
+     "policy": 0.0459,
+     "q": -0.3213
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1655,
+    "qMargin": 0.1724,
+    "totalVisits": 3214
+   },
+   "rawDifficulty": 0.165538,
+   "difficulty": 0.1656,
+   "delayMs": 541
+  },
+  {
+   "ply": 31,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "a1b1",
+   "san": "Rb1",
+   "evalLc0": 0.5316,
+   "evalSF": 0.6467,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "a1b1",
+     "from": "a1",
+     "to": "b1",
+     "san": "Rb1",
+     "share": 0.8656,
+     "cp": 105,
+     "line": [
+      "a1b1",
+      "a8b8",
+      "d1c2",
+      "e6c4",
+      "b1b2",
+      "d7e6"
+     ]
+    },
+    {
+     "uci": "d1d7",
+     "from": "d1",
+     "to": "d7",
+     "san": "Qxd7+",
+     "share": 0.1344,
+     "cp": -44,
+     "line": [
+      "d1d7",
+      "e6d7"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 18,
+    "marginCp": 149,
+    "rootHistory": [
+     [
+      1,
+      "a1b1"
+     ],
+     [
+      2,
+      "a1b1"
+     ],
+     [
+      3,
+      "a1b1"
+     ],
+     [
+      4,
+      "a1b1"
+     ],
+     [
+      5,
+      "a1b1"
+     ],
+     [
+      6,
+      "a1b1"
+     ],
+     [
+      7,
+      "a1b1"
+     ],
+     [
+      8,
+      "a1b1"
+     ],
+     [
+      9,
+      "a1b1"
+     ],
+     [
+      10,
+      "a1b1"
+     ],
+     [
+      11,
+      "a1b1"
+     ],
+     [
+      12,
+      "a1b1"
+     ],
+     [
+      13,
+      "a1b1"
+     ],
+     [
+      14,
+      "a1b1"
+     ],
+     [
+      15,
+      "a1b1"
+     ],
+     [
+      16,
+      "a1b1"
+     ],
+     [
+      17,
+      "a1b1"
+     ],
+     [
+      18,
+      "a1b1"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.047723,
+   "difficulty": 0.0356,
+   "delayMs": 409
+  },
+  {
+   "ply": 32,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "a8b8",
+   "san": "Rb8",
+   "evalLc0": 0.5459,
+   "evalSF": 0.6401,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "a8b8",
+     "from": "a8",
+     "to": "b8",
+     "san": "Rb8",
+     "share": 0.8148,
+     "visits": 2803,
+     "policy": 0.1081,
+     "q": -0.0746
+    },
+    {
+     "uci": "h7h6",
+     "from": "h7",
+     "to": "h6",
+     "san": "h6",
+     "share": 0.1259,
+     "visits": 433,
+     "policy": 0.2108,
+     "q": -0.1921
+    },
+    {
+     "uci": "c5a3",
+     "from": "c5",
+     "to": "a3",
+     "san": "Ba3",
+     "share": 0.0195,
+     "visits": 67,
+     "policy": 0.071,
+     "q": -0.2386
+    },
+    {
+     "uci": "e6f5",
+     "from": "e6",
+     "to": "f5",
+     "san": "Bf5",
+     "share": 0.0096,
+     "visits": 33,
+     "policy": 0.1409,
+     "q": -0.5735
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1936,
+    "qMargin": 0.1174,
+    "totalVisits": 3440
+   },
+   "rawDifficulty": 0.193591,
+   "difficulty": 0.1937,
+   "delayMs": 588
+  },
+  {
+   "ply": 33,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "d1c2",
+   "san": "Qc2",
+   "evalLc0": 0.5302,
+   "evalSF": 0.6788,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d1c2",
+     "from": "d1",
+     "to": "c2",
+     "san": "Qc2",
+     "share": 0.8684,
+     "cp": 120,
+     "line": [
+      "d1c2",
+      "e6c4",
+      "b1b2",
+      "d7e6",
+      "f1d1",
+      "c6e5"
+     ]
+    },
+    {
+     "uci": "b1b2",
+     "from": "b1",
+     "to": "b2",
+     "san": "Rxb2",
+     "share": 0.074,
+     "cp": -77,
+     "line": [
+      "b1b2",
+      "d7d1",
+      "f1d1",
+      "c6a5",
+      "b2c2",
+      "c5b6"
+     ]
+    },
+    {
+     "uci": "d1d7",
+     "from": "d1",
+     "to": "d7",
+     "san": "Qxd7+",
+     "share": 0.0576,
+     "cp": -97,
+     "line": [
+      "d1d7",
+      "e6d7",
+      "f1d1",
+      "c6a5",
+      "b1b2",
+      "d7e6"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 18,
+    "marginCp": 197,
+    "rootHistory": [
+     [
+      1,
+      "d1c2"
+     ],
+     [
+      2,
+      "d1c2"
+     ],
+     [
+      3,
+      "d1c2"
+     ],
+     [
+      4,
+      "d1c2"
+     ],
+     [
+      5,
+      "d1c2"
+     ],
+     [
+      6,
+      "d1c2"
+     ],
+     [
+      7,
+      "d1c2"
+     ],
+     [
+      8,
+      "d1c2"
+     ],
+     [
+      9,
+      "d1c2"
+     ],
+     [
+      10,
+      "d1c2"
+     ],
+     [
+      11,
+      "d1c2"
+     ],
+     [
+      12,
+      "d1c2"
+     ],
+     [
+      13,
+      "d1c2"
+     ],
+     [
+      14,
+      "d1c2"
+     ],
+     [
+      15,
+      "d1c2"
+     ],
+     [
+      16,
+      "d1c2"
+     ],
+     [
+      17,
+      "d1c2"
+     ],
+     [
+      18,
+      "d1c2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.033711,
+   "difficulty": 0.0215,
+   "delayMs": 404
+  },
+  {
+   "ply": 34,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "e6c4",
+   "san": "Bc4",
+   "evalLc0": 0.5559,
+   "evalSF": 0.675,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "e6c4",
+     "from": "e6",
+     "to": "c4",
+     "san": "Bc4",
+     "share": 0.9613,
+     "visits": 2734,
+     "policy": 0.2378,
+     "q": -0.074
+    },
+    {
+     "uci": "e6d5",
+     "from": "e6",
+     "to": "d5",
+     "san": "Bd5",
+     "share": 0.0193,
+     "visits": 55,
+     "policy": 0.3593,
+     "q": -0.7308
+    },
+    {
+     "uci": "c6d4",
+     "from": "c6",
+     "to": "d4",
+     "san": "Nd4",
+     "share": 0.0021,
+     "visits": 6,
+     "policy": 0.0546,
+     "q": -0.9913
+    },
+    {
+     "uci": "h7h6",
+     "from": "h7",
+     "to": "h6",
+     "san": "h6",
+     "share": 0.0018,
+     "visits": 5,
+     "policy": 0.0486,
+     "q": -0.9871
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0675,
+    "qMargin": 0.6568,
+    "totalVisits": 2844
+   },
+   "rawDifficulty": 0.067529,
+   "difficulty": 0.0676,
+   "delayMs": 428
+  },
+  {
+   "ply": 35,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "f1d1",
+   "san": "Rfd1",
+   "evalLc0": 0.4413,
+   "evalSF": 0.6912,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "f1d1",
+     "from": "f1",
+     "to": "d1",
+     "san": "Rfd1",
+     "share": 0.4197,
+     "cp": 125,
+     "line": [
+      "f1d1",
+      "c6b4",
+      "c2b2",
+      "d7e6",
+      "a2a3",
+      "b4d5"
+     ]
+    },
+    {
+     "uci": "b1b2",
+     "from": "b1",
+     "to": "b2",
+     "san": "Rxb2",
+     "share": 0.3894,
+     "cp": 119,
+     "line": [
+      "b1b2",
+      "d7e6",
+      "f1d1",
+      "c6e5",
+      "f3e5",
+      "e6e5"
+     ]
+    },
+    {
+     "uci": "e5e6",
+     "from": "e5",
+     "to": "e6",
+     "san": "e6",
+     "share": 0.1909,
+     "cp": 62,
+     "line": [
+      "e5e6",
+      "d7e6"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 15,
+    "maxDepth": 16,
+    "marginCp": 6,
+    "rootHistory": [
+     [
+      1,
+      "f1d1"
+     ],
+     [
+      2,
+      "f1d1"
+     ],
+     [
+      3,
+      "b1b2"
+     ],
+     [
+      4,
+      "b1b2"
+     ],
+     [
+      5,
+      "b1b2"
+     ],
+     [
+      6,
+      "b1b2"
+     ],
+     [
+      7,
+      "b1b2"
+     ],
+     [
+      8,
+      "b1b2"
+     ],
+     [
+      9,
+      "b1b2"
+     ],
+     [
+      10,
+      "b1b2"
+     ],
+     [
+      11,
+      "b1b2"
+     ],
+     [
+      12,
+      "b1b2"
+     ],
+     [
+      13,
+      "b1b2"
+     ],
+     [
+      14,
+      "b1b2"
+     ],
+     [
+      15,
+      "f1d1"
+     ],
+     [
+      16,
+      "f1d1"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.591799,
+   "difficulty": 0.5866,
+   "delayMs": 1778
+  },
+  {
+   "ply": 36,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c6d4",
+   "san": "Nd4",
+   "evalLc0": 0.5072,
+   "evalSF": 0.69,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c6d4",
+     "from": "c6",
+     "to": "d4",
+     "san": "Nd4",
+     "share": 0.9574,
+     "visits": 2739,
+     "policy": 0.3306,
+     "q": 0.0354
+    },
+    {
+     "uci": "d7e6",
+     "from": "d7",
+     "to": "e6",
+     "san": "Qe6",
+     "share": 0.0136,
+     "visits": 39,
+     "policy": 0.2145,
+     "q": -0.521
+    },
+    {
+     "uci": "c6b4",
+     "from": "c6",
+     "to": "b4",
+     "san": "Nb4",
+     "share": 0.0115,
+     "visits": 33,
+     "policy": 0.1021,
+     "q": -0.2736
+    },
+    {
+     "uci": "c5d4",
+     "from": "c5",
+     "to": "d4",
+     "san": "Bd4",
+     "share": 0.0007,
+     "visits": 2,
+     "policy": 0.0179,
+     "q": -0.9392
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0735,
+    "qMargin": 0.5563,
+    "totalVisits": 2861
+   },
+   "rawDifficulty": 0.073484,
+   "difficulty": 0.0735,
+   "delayMs": 433
+  },
+  {
+   "ply": 37,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e5e6",
+   "san": "e6",
+   "evalLc0": 0.4971,
+   "evalSF": 0.7211,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e5e6",
+     "from": "e5",
+     "to": "e6",
+     "san": "e6",
+     "share": 0.8439,
+     "cp": 143,
+     "line": [
+      "e5e6",
+      "f7e6",
+      "c2b2",
+      "d4f3",
+      "e4f3",
+      "c5d6"
+     ]
+    },
+    {
+     "uci": "f3d4",
+     "from": "f3",
+     "to": "d4",
+     "san": "Nxd4",
+     "share": 0.1561,
+     "cp": 8,
+     "line": [
+      "f3d4",
+      "c5d4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 1,
+    "settleDepth": 3,
+    "maxDepth": 18,
+    "marginCp": 135,
+    "rootHistory": [
+     [
+      1,
+      "c2b2"
+     ],
+     [
+      2,
+      "c2b2"
+     ],
+     [
+      3,
+      "e5e6"
+     ],
+     [
+      4,
+      "e5e6"
+     ],
+     [
+      5,
+      "e5e6"
+     ],
+     [
+      6,
+      "e5e6"
+     ],
+     [
+      7,
+      "e5e6"
+     ],
+     [
+      8,
+      "e5e6"
+     ],
+     [
+      9,
+      "e5e6"
+     ],
+     [
+      10,
+      "e5e6"
+     ],
+     [
+      11,
+      "e5e6"
+     ],
+     [
+      12,
+      "e5e6"
+     ],
+     [
+      13,
+      "e5e6"
+     ],
+     [
+      14,
+      "e5e6"
+     ],
+     [
+      15,
+      "e5e6"
+     ],
+     [
+      16,
+      "e5e6"
+     ],
+     [
+      17,
+      "e5e6"
+     ],
+     [
+      18,
+      "e5e6"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.149496,
+   "difficulty": 0.1387,
+   "delayMs": 503
+  },
+  {
+   "ply": 38,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f7e6",
+   "san": "fxe6",
+   "evalLc0": 0.5144,
+   "evalSF": 0.7176,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f7e6",
+     "from": "f7",
+     "to": "e6",
+     "san": "fxe6",
+     "share": 0.9645,
+     "visits": 2773,
+     "policy": 0.2308,
+     "q": -0.0026
+    },
+    {
+     "uci": "d4f3",
+     "from": "d4",
+     "to": "f3",
+     "san": "Nxf3+",
+     "share": 0.009,
+     "visits": 26,
+     "policy": 0.1774,
+     "q": -0.6984
+    },
+    {
+     "uci": "d7d6",
+     "from": "d7",
+     "to": "d6",
+     "san": "Qd6",
+     "share": 0.0087,
+     "visits": 25,
+     "policy": 0.1423,
+     "q": -0.5765
+    },
+    {
+     "uci": "d7e6",
+     "from": "d7",
+     "to": "e6",
+     "san": "Qxe6",
+     "share": 0.0031,
+     "visits": 9,
+     "policy": 0.079,
+     "q": -0.8869
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0729,
+    "qMargin": 0.6958,
+    "totalVisits": 2875
+   },
+   "rawDifficulty": 0.072905,
+   "difficulty": 0.0729,
+   "delayMs": 432
+  },
+  {
+   "ply": 39,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "c2b2",
+   "san": "Qxb2",
+   "evalLc0": 0.5058,
+   "evalSF": 0.7082,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c2b2",
+     "from": "c2",
+     "to": "b2",
+     "san": "Qxb2",
+     "share": 0.7782,
+     "cp": 132,
+     "line": [
+      "c2b2",
+      "d4f3",
+      "e4f3",
+      "c5d6",
+      "d1d6",
+      "c7d6"
+     ]
+    },
+    {
+     "uci": "f3e5",
+     "from": "f3",
+     "to": "e5",
+     "san": "Ne5",
+     "share": 0.1494,
+     "cp": 0,
+     "line": [
+      "f3e5",
+      "d7d6",
+      "e4g6",
+      "e8f8",
+      "c2e4",
+      "h7g6"
+     ]
+    },
+    {
+     "uci": "f3d4",
+     "from": "f3",
+     "to": "d4",
+     "san": "Nxd4",
+     "share": 0.0724,
+     "cp": -58,
+     "line": [
+      "f3d4",
+      "c5d4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 18,
+    "marginCp": 132,
+    "rootHistory": [
+     [
+      1,
+      "c2b2"
+     ],
+     [
+      2,
+      "c2b2"
+     ],
+     [
+      3,
+      "c2b2"
+     ],
+     [
+      4,
+      "c2b2"
+     ],
+     [
+      5,
+      "c2b2"
+     ],
+     [
+      6,
+      "c2b2"
+     ],
+     [
+      7,
+      "c2b2"
+     ],
+     [
+      8,
+      "c2b2"
+     ],
+     [
+      9,
+      "c2b2"
+     ],
+     [
+      10,
+      "c2b2"
+     ],
+     [
+      11,
+      "c2b2"
+     ],
+     [
+      12,
+      "c2b2"
+     ],
+     [
+      13,
+      "c2b2"
+     ],
+     [
+      14,
+      "c2b2"
+     ],
+     [
+      15,
+      "c2b2"
+     ],
+     [
+      16,
+      "c2b2"
+     ],
+     [
+      17,
+      "c2b2"
+     ],
+     [
+      18,
+      "c2b2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.055077,
+   "difficulty": 0.0431,
+   "delayMs": 413
+  },
+  {
+   "ply": 40,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d4f3",
+   "san": "Nxf3+",
+   "evalLc0": 0.5101,
+   "evalSF": 0.7022,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d4f3",
+     "from": "d4",
+     "to": "f3",
+     "san": "Nxf3+",
+     "share": 0.9754,
+     "visits": 2737,
+     "policy": 0.4418,
+     "q": -0.0122
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.0046,
+     "visits": 13,
+     "policy": 0.0936,
+     "q": -0.6972
+    },
+    {
+     "uci": "c4d5",
+     "from": "c4",
+     "to": "d5",
+     "san": "Bd5",
+     "share": 0.0032,
+     "visits": 9,
+     "policy": 0.0425,
+     "q": -0.4365
+    },
+    {
+     "uci": "b8b6",
+     "from": "b8",
+     "to": "b6",
+     "san": "Rb6",
+     "share": 0.0018,
+     "visits": 5,
+     "policy": 0.0189,
+     "q": -0.4543
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0523,
+    "qMargin": 0.685,
+    "totalVisits": 2806
+   },
+   "rawDifficulty": 0.052321,
+   "difficulty": 0.0523,
+   "delayMs": 418
+  },
+  {
+   "ply": 41,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e4f3",
+   "san": "Bxf3",
+   "evalLc0": 0.5,
+   "evalSF": 0.69,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e4f3",
+     "from": "e4",
+     "to": "f3",
+     "san": "Bxf3",
+     "share": 0.8697,
+     "cp": 153,
+     "line": [
+      "e4f3",
+      "c5d6",
+      "d1d6",
+      "c7d6",
+      "f3c6",
+      "d7c6"
+     ]
+    },
+    {
+     "uci": "g2f3",
+     "from": "g2",
+     "to": "f3",
+     "san": "gxf3",
+     "share": 0.1285,
+     "cp": 0,
+     "line": [
+      "g2f3",
+      "c5d6",
+      "d1d6",
+      "c7d6",
+      "e4c6",
+      "d7c6"
+     ]
+    },
+    {
+     "uci": "g1h1",
+     "from": "g1",
+     "to": "h1",
+     "san": "Kh1",
+     "share": 0.0019,
+     "cp": -338,
+     "line": [
+      "g1h1",
+      "c5d4",
+      "b2c1",
+      "e8g8",
+      "g2f3",
+      "c7c5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 20,
+    "marginCp": 153,
+    "rootHistory": [
+     [
+      1,
+      "e4f3"
+     ],
+     [
+      2,
+      "e4f3"
+     ],
+     [
+      3,
+      "e4f3"
+     ],
+     [
+      4,
+      "e4f3"
+     ],
+     [
+      5,
+      "e4f3"
+     ],
+     [
+      6,
+      "e4f3"
+     ],
+     [
+      7,
+      "e4f3"
+     ],
+     [
+      8,
+      "e4f3"
+     ],
+     [
+      9,
+      "e4f3"
+     ],
+     [
+      10,
+      "e4f3"
+     ],
+     [
+      11,
+      "e4f3"
+     ],
+     [
+      12,
+      "e4f3"
+     ],
+     [
+      13,
+      "e4f3"
+     ],
+     [
+      14,
+      "e4f3"
+     ],
+     [
+      15,
+      "e4f3"
+     ],
+     [
+      16,
+      "e4f3"
+     ],
+     [
+      17,
+      "e4f3"
+     ],
+     [
+      18,
+      "e4f3"
+     ],
+     [
+      19,
+      "e4f3"
+     ],
+     [
+      20,
+      "e4f3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.044542,
+   "difficulty": 0.0324,
+   "delayMs": 408
+  },
+  {
+   "ply": 42,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c5d6",
+   "san": "Bd6",
+   "evalLc0": 0.5101,
+   "evalSF": 0.6961,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c5d6",
+     "from": "c5",
+     "to": "d6",
+     "san": "Bd6",
+     "share": 0.9504,
+     "visits": 2895,
+     "policy": 0.3007,
+     "q": -0.0017
+    },
+    {
+     "uci": "c4d5",
+     "from": "c4",
+     "to": "d5",
+     "san": "Bd5",
+     "share": 0.0233,
+     "visits": 71,
+     "policy": 0.1584,
+     "q": -0.2327
+    },
+    {
+     "uci": "d7f7",
+     "from": "d7",
+     "to": "f7",
+     "san": "Qf7",
+     "share": 0.0131,
+     "visits": 40,
+     "policy": 0.2479,
+     "q": -0.5636
+    },
+    {
+     "uci": "d7d3",
+     "from": "d7",
+     "to": "d3",
+     "san": "Qd3",
+     "share": 0.0003,
+     "visits": 1,
+     "policy": 0.0058,
+     "q": -0.998
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0793,
+    "qMargin": 0.231,
+    "totalVisits": 3046
+   },
+   "rawDifficulty": 0.079277,
+   "difficulty": 0.0793,
+   "delayMs": 438
+  },
+  {
+   "ply": 43,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "d1d6",
+   "san": "Rxd6",
+   "evalLc0": 0.6584,
+   "evalSF": 0.6937,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d1d6",
+     "from": "d1",
+     "to": "d6",
+     "san": "Rxd6",
+     "share": 0.716,
+     "cp": 152,
+     "line": [
+      "d1d6",
+      "c7d6",
+      "f3c6",
+      "d7c6",
+      "b2g7",
+      "c6b7"
+     ]
+    },
+    {
+     "uci": "f3h5",
+     "from": "f3",
+     "to": "h5",
+     "san": "Bh5+",
+     "share": 0.2634,
+     "cp": 72,
+     "line": [
+      "f3h5",
+      "e8f8",
+      "d1d4",
+      "h7h6",
+      "g5f4",
+      "c4d5"
+     ]
+    },
+    {
+     "uci": "d1d4",
+     "from": "d1",
+     "to": "d4",
+     "san": "Rd4",
+     "share": 0.0206,
+     "cp": -132,
+     "line": [
+      "d1d4",
+      "e8g8",
+      "g5h6",
+      "f8f3",
+      "g2f3",
+      "c4d5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 3,
+    "maxDepth": 17,
+    "marginCp": 80,
+    "rootHistory": [
+     [
+      1,
+      "d1d6"
+     ],
+     [
+      2,
+      "f3h5"
+     ],
+     [
+      3,
+      "d1d6"
+     ],
+     [
+      4,
+      "d1d6"
+     ],
+     [
+      5,
+      "d1d6"
+     ],
+     [
+      6,
+      "d1d6"
+     ],
+     [
+      7,
+      "d1d6"
+     ],
+     [
+      8,
+      "d1d6"
+     ],
+     [
+      9,
+      "d1d6"
+     ],
+     [
+      10,
+      "d1d6"
+     ],
+     [
+      11,
+      "d1d6"
+     ],
+     [
+      12,
+      "d1d6"
+     ],
+     [
+      13,
+      "d1d6"
+     ],
+     [
+      14,
+      "d1d6"
+     ],
+     [
+      15,
+      "d1d6"
+     ],
+     [
+      16,
+      "d1d6"
+     ],
+     [
+      17,
+      "d1d6"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.251517,
+   "difficulty": 0.242,
+   "delayMs": 680
+  },
+  {
+   "ply": 44,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c7d6",
+   "san": "cxd6",
+   "evalLc0": 0.6361,
+   "evalSF": 0.701,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c7d6",
+     "from": "c7",
+     "to": "d6",
+     "san": "cxd6",
+     "share": 0.9863,
+     "visits": 2813,
+     "policy": 0.6418,
+     "q": -0.3444
+    },
+    {
+     "uci": "d7d6",
+     "from": "d7",
+     "to": "d6",
+     "san": "Qxd6",
+     "share": 0.0039,
+     "visits": 11,
+     "policy": 0.0811,
+     "q": -0.9639
+    },
+    {
+     "uci": "d7d8",
+     "from": "d7",
+     "to": "d8",
+     "san": "Qd8",
+     "share": 0.0004,
+     "visits": 1,
+     "policy": 0.0082,
+     "q": -0.9992
+    },
+    {
+     "uci": "b8a8",
+     "from": "b8",
+     "to": "a8",
+     "san": "Ra8",
+     "share": 0.0004,
+     "visits": 1,
+     "policy": 0.0085,
+     "q": -0.9991
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0333,
+    "qMargin": 0.6195,
+    "totalVisits": 2852
+   },
+   "rawDifficulty": 0.03326,
+   "difficulty": 0.0333,
+   "delayMs": 408
+  },
+  {
+   "ply": 45,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "f3c6",
+   "san": "Bc6",
+   "evalLc0": 0.6307,
+   "evalSF": 0.707,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f3c6",
+     "from": "f3",
+     "to": "c6",
+     "san": "Bc6",
+     "share": 0.9392,
+     "cp": 141,
+     "line": [
+      "f3c6",
+      "d7c6",
+      "b2g7",
+      "c6b7",
+      "g7h8",
+      "e8d7"
+     ]
+    },
+    {
+     "uci": "f3h5",
+     "from": "f3",
+     "to": "h5",
+     "san": "Bh5+",
+     "share": 0.0586,
+     "cp": -81,
+     "line": [
+      "f3h5",
+      "e8f8",
+      "b1d1",
+      "f8g8",
+      "g5f4",
+      "c4d5"
+     ]
+    },
+    {
+     "uci": "f3e4",
+     "from": "f3",
+     "to": "e4",
+     "san": "Be4",
+     "share": 0.0023,
+     "cp": -341,
+     "line": [
+      "f3e4",
+      "e8g8",
+      "b1d1",
+      "c4d5",
+      "e4b1",
+      "b8c8"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 19,
+    "marginCp": 222,
+    "rootHistory": [
+     [
+      1,
+      "f3c6"
+     ],
+     [
+      2,
+      "f3c6"
+     ],
+     [
+      3,
+      "f3c6"
+     ],
+     [
+      4,
+      "f3c6"
+     ],
+     [
+      5,
+      "f3c6"
+     ],
+     [
+      6,
+      "f3c6"
+     ],
+     [
+      7,
+      "f3c6"
+     ],
+     [
+      8,
+      "f3c6"
+     ],
+     [
+      9,
+      "f3c6"
+     ],
+     [
+      10,
+      "f3c6"
+     ],
+     [
+      11,
+      "f3c6"
+     ],
+     [
+      12,
+      "f3c6"
+     ],
+     [
+      13,
+      "f3c6"
+     ],
+     [
+      14,
+      "f3c6"
+     ],
+     [
+      15,
+      "f3c6"
+     ],
+     [
+      16,
+      "f3c6"
+     ],
+     [
+      17,
+      "f3c6"
+     ],
+     [
+      18,
+      "f3c6"
+     ],
+     [
+      19,
+      "f3c6"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.028259,
+   "difficulty": 0.0159,
+   "delayMs": 402
+  },
+  {
+   "ply": 46,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d7c6",
+   "san": "Qxc6",
+   "evalLc0": 0.6361,
+   "evalSF": 0.6912,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d7c6",
+     "from": "d7",
+     "to": "c6",
+     "san": "Qxc6",
+     "share": 0.9787,
+     "visits": 2892,
+     "policy": 0.4478,
+     "q": -0.3712
+    },
+    {
+     "uci": "b8b7",
+     "from": "b8",
+     "to": "b7",
+     "san": "Rb7",
+     "share": 0.0037,
+     "visits": 11,
+     "policy": 0.0708,
+     "q": -0.9248
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.0027,
+     "visits": 8,
+     "policy": 0.0623,
+     "q": -0.9941
+    },
+    {
+     "uci": "h8g8",
+     "from": "h8",
+     "to": "g8",
+     "san": "Rg8",
+     "share": 0.0017,
+     "visits": 5,
+     "policy": 0.0355,
+     "q": -0.9929
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0518,
+    "qMargin": 0.5536,
+    "totalVisits": 2955
+   },
+   "rawDifficulty": 0.051784,
+   "difficulty": 0.0518,
+   "delayMs": 417
+  },
+  {
+   "ply": 47,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "b2g7",
+   "san": "Qxg7",
+   "evalLc0": 0.628,
+   "evalSF": 0.7094,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "b2g7",
+     "from": "b2",
+     "to": "g7",
+     "san": "Qxg7",
+     "share": 0.9996,
+     "cp": 150,
+     "line": [
+      "b2g7",
+      "c6b7",
+      "g7h8",
+      "e8d7",
+      "h8h7",
+      "d7c6"
+     ]
+    },
+    {
+     "uci": "g5e7",
+     "from": "g5",
+     "to": "e7",
+     "san": "Be7",
+     "share": 0.0003,
+     "cp": -507,
+     "line": [
+      "g5e7",
+      "e6e5"
+     ]
+    },
+    {
+     "uci": "g5h6",
+     "from": "g5",
+     "to": "h6",
+     "san": "Bh6",
+     "share": 0.0002,
+     "cp": -543,
+     "line": [
+      "g5h6",
+      "e6e5",
+      "b1e1",
+      "c6d5",
+      "h6g7",
+      "h8g8"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 18,
+    "marginCp": 657,
+    "rootHistory": [
+     [
+      1,
+      "b2g7"
+     ],
+     [
+      2,
+      "b2g7"
+     ],
+     [
+      3,
+      "b2g7"
+     ],
+     [
+      4,
+      "b2g7"
+     ],
+     [
+      5,
+      "b2g7"
+     ],
+     [
+      6,
+      "b2g7"
+     ],
+     [
+      7,
+      "b2g7"
+     ],
+     [
+      8,
+      "b2g7"
+     ],
+     [
+      9,
+      "b2g7"
+     ],
+     [
+      10,
+      "b2g7"
+     ],
+     [
+      11,
+      "b2g7"
+     ],
+     [
+      12,
+      "b2g7"
+     ],
+     [
+      13,
+      "b2g7"
+     ],
+     [
+      14,
+      "b2g7"
+     ],
+     [
+      15,
+      "b2g7"
+     ],
+     [
+      16,
+      "b2g7"
+     ],
+     [
+      17,
+      "b2g7"
+     ],
+     [
+      18,
+      "b2g7"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.016721,
+   "difficulty": 0.0042,
+   "delayMs": 400
+  },
+  {
+   "ply": 48,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c6b7",
+   "san": "Qb7",
+   "evalLc0": 0.6334,
+   "evalSF": 0.7105,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c6b7",
+     "from": "c6",
+     "to": "b7",
+     "san": "Qb7",
+     "share": 0.9616,
+     "visits": 3328,
+     "policy": 0.3563,
+     "q": -0.3787
+    },
+    {
+     "uci": "b8b7",
+     "from": "b8",
+     "to": "b7",
+     "san": "Rb7",
+     "share": 0.024,
+     "visits": 83,
+     "policy": 0.3424,
+     "q": -0.811
+    },
+    {
+     "uci": "c6d7",
+     "from": "c6",
+     "to": "d7",
+     "san": "Qd7",
+     "share": 0.0023,
+     "visits": 8,
+     "policy": 0.045,
+     "q": -0.9486
+    },
+    {
+     "uci": "h8g8",
+     "from": "h8",
+     "to": "g8",
+     "san": "Rg8",
+     "share": 0.0009,
+     "visits": 3,
+     "policy": 0.0,
+     "q": -1.0
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0688,
+    "qMargin": 0.4323,
+    "totalVisits": 3461
+   },
+   "rawDifficulty": 0.068772,
+   "difficulty": 0.0688,
+   "delayMs": 429
+  },
+  {
+   "ply": 49,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "g7h8",
+   "san": "Qxh8+",
+   "evalLc0": 0.6321,
+   "evalSF": 0.6925,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g7h8",
+     "from": "g7",
+     "to": "h8",
+     "san": "Qxh8+",
+     "share": 0.9958,
+     "cp": 138,
+     "line": [
+      "g7h8",
+      "e8d7",
+      "h8h7",
+      "d7c6",
+      "h7e4",
+      "c6c7"
+     ]
+    },
+    {
+     "uci": "g5e7",
+     "from": "g5",
+     "to": "e7",
+     "san": "Be7",
+     "share": 0.0042,
+     "cp": -300,
+     "line": [
+      "g5e7"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 17,
+    "marginCp": 438,
+    "rootHistory": [
+     [
+      1,
+      "g7h8"
+     ],
+     [
+      2,
+      "g7h8"
+     ],
+     [
+      3,
+      "g7h8"
+     ],
+     [
+      4,
+      "g7h8"
+     ],
+     [
+      5,
+      "g7h8"
+     ],
+     [
+      6,
+      "g7h8"
+     ],
+     [
+      7,
+      "g7h8"
+     ],
+     [
+      8,
+      "g7h8"
+     ],
+     [
+      9,
+      "g7h8"
+     ],
+     [
+      10,
+      "g7h8"
+     ],
+     [
+      11,
+      "g7h8"
+     ],
+     [
+      12,
+      "g7h8"
+     ],
+     [
+      13,
+      "g7h8"
+     ],
+     [
+      14,
+      "g7h8"
+     ],
+     [
+      15,
+      "g7h8"
+     ],
+     [
+      16,
+      "g7h8"
+     ],
+     [
+      17,
+      "g7h8"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.018485,
+   "difficulty": 0.006,
+   "delayMs": 400
+  },
+  {
+   "ply": 50,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "e8d7",
+   "san": "Kd7",
+   "evalLc0": 0.6374,
+   "evalSF": 0.6875,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e8d7",
+     "from": "e8",
+     "to": "d7",
+     "san": "Kd7",
+     "share": 0.9253,
+     "visits": 3394,
+     "policy": 0.7373,
+     "q": -0.3961
+    },
+    {
+     "uci": "e8f7",
+     "from": "e8",
+     "to": "f7",
+     "san": "Kf7",
+     "share": 0.0747,
+     "visits": 274,
+     "policy": 0.2627,
+     "q": -0.4926
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.3832,
+    "qMargin": 0.0965,
+    "totalVisits": 3668
+   },
+   "rawDifficulty": 0.383224,
+   "difficulty": 0.3834,
+   "delayMs": 1041
+  },
+  {
+   "ply": 51,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "h8h7",
+   "san": "Qxh7+",
+   "evalLc0": 0.6347,
+   "evalSF": 0.7117,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "h8h7",
+     "from": "h8",
+     "to": "h7",
+     "san": "Qxh7+",
+     "share": 0.6691,
+     "cp": 149,
+     "line": [
+      "h8h7",
+      "d7c6",
+      "h7e4",
+      "c6c7",
+      "e4g6",
+      "b7c8"
+     ]
+    },
+    {
+     "uci": "h8f6",
+     "from": "h8",
+     "to": "f6",
+     "san": "Qf6",
+     "share": 0.1941,
+     "cp": 50,
+     "line": [
+      "h8f6",
+      "d7c6",
+      "a2a4",
+      "e6e5",
+      "b1c1",
+      "b7d7"
+     ]
+    },
+    {
+     "uci": "h8g7",
+     "from": "h8",
+     "to": "g7",
+     "san": "Qg7+",
+     "share": 0.1368,
+     "cp": 22,
+     "line": [
+      "h8g7",
+      "d7c6"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 17,
+    "marginCp": 99,
+    "rootHistory": [
+     [
+      1,
+      "h8h7"
+     ],
+     [
+      2,
+      "h8h7"
+     ],
+     [
+      3,
+      "h8h7"
+     ],
+     [
+      4,
+      "h8h7"
+     ],
+     [
+      5,
+      "h8h7"
+     ],
+     [
+      6,
+      "h8h7"
+     ],
+     [
+      7,
+      "h8h7"
+     ],
+     [
+      8,
+      "h8h7"
+     ],
+     [
+      9,
+      "h8h7"
+     ],
+     [
+      10,
+      "h8h7"
+     ],
+     [
+      11,
+      "h8h7"
+     ],
+     [
+      12,
+      "h8h7"
+     ],
+     [
+      13,
+      "h8h7"
+     ],
+     [
+      14,
+      "h8h7"
+     ],
+     [
+      15,
+      "h8h7"
+     ],
+     [
+      16,
+      "h8h7"
+     ],
+     [
+      17,
+      "h8h7"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.075669,
+   "difficulty": 0.0639,
+   "delayMs": 426
+  },
+  {
+   "ply": 52,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d7c6",
+   "san": "Kc6",
+   "evalLc0": 0.6361,
+   "evalSF": 0.7141,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d7c6",
+     "from": "d7",
+     "to": "c6",
+     "san": "Kc6",
+     "share": 0.8949,
+     "visits": 3465,
+     "policy": 0.6826,
+     "q": -0.4131
+    },
+    {
+     "uci": "d7c8",
+     "from": "d7",
+     "to": "c8",
+     "san": "Kc8",
+     "share": 0.0695,
+     "visits": 269,
+     "policy": 0.2404,
+     "q": -0.5126
+    },
+    {
+     "uci": "d7e8",
+     "from": "d7",
+     "to": "e8",
+     "san": "Ke8",
+     "share": 0.0356,
+     "visits": 138,
+     "policy": 0.077,
+     "q": -0.4783
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.3673,
+    "qMargin": 0.0996,
+    "totalVisits": 3872
+   },
+   "rawDifficulty": 0.367274,
+   "difficulty": 0.3675,
+   "delayMs": 994
+  },
+  {
+   "ply": 53,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "h7g6",
+   "san": "Qg6",
+   "evalLc0": 0.6199,
+   "evalSF": 0.7094,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "h7g6",
+     "from": "h7",
+     "to": "g6",
+     "san": "Qg6",
+     "share": 1.0,
+     "cp": 157,
+     "line": [
+      "h7g6",
+      "b8f8",
+      "a2a4",
+      "b7f7",
+      "g6e4",
+      "d6d5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 1,
+    "settleDepth": 17,
+    "maxDepth": 17,
+    "marginCp": 1000,
+    "rootHistory": [
+     [
+      1,
+      "h7e4"
+     ],
+     [
+      2,
+      "h7e4"
+     ],
+     [
+      3,
+      "h7e4"
+     ],
+     [
+      4,
+      "h7e4"
+     ],
+     [
+      5,
+      "h7e4"
+     ],
+     [
+      6,
+      "h7e4"
+     ],
+     [
+      7,
+      "h7e4"
+     ],
+     [
+      8,
+      "h7e4"
+     ],
+     [
+      9,
+      "h7e4"
+     ],
+     [
+      10,
+      "h7e4"
+     ],
+     [
+      11,
+      "h7e4"
+     ],
+     [
+      12,
+      "h7e4"
+     ],
+     [
+      13,
+      "h7e4"
+     ],
+     [
+      14,
+      "h7e4"
+     ],
+     [
+      15,
+      "h7e4"
+     ],
+     [
+      16,
+      "h7e4"
+     ],
+     [
+      17,
+      "h7g6"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.362501,
+   "difficulty": 0.3544,
+   "delayMs": 956
+  },
+  {
+   "ply": 54,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "b8f8",
+   "san": "Rf8",
+   "evalLc0": 0.6361,
+   "evalSF": 0.6937,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "b8f8",
+     "from": "b8",
+     "to": "f8",
+     "san": "Rf8",
+     "share": 0.5505,
+     "visits": 3062,
+     "policy": 0.1152,
+     "q": -0.3955
+    },
+    {
+     "uci": "b8h8",
+     "from": "b8",
+     "to": "h8",
+     "san": "Rh8",
+     "share": 0.342,
+     "visits": 1902,
+     "policy": 0.1201,
+     "q": -0.41
+    },
+    {
+     "uci": "c4a2",
+     "from": "c4",
+     "to": "a2",
+     "san": "Bxa2",
+     "share": 0.0236,
+     "visits": 131,
+     "policy": 0.1105,
+     "q": -0.5088
+    },
+    {
+     "uci": "b7d7",
+     "from": "b7",
+     "to": "d7",
+     "san": "Qd7",
+     "share": 0.018,
+     "visits": 100,
+     "policy": 0.1165,
+     "q": -0.5493
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.3514,
+    "qMargin": 0.0145,
+    "totalVisits": 5562
+   },
+   "rawDifficulty": 0.351439,
+   "difficulty": 0.3516,
+   "delayMs": 949
+  },
+  {
+   "ply": 55,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "g6e4",
+   "san": "Qe4+",
+   "evalLc0": 0.5715,
+   "evalSF": 0.6888,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "g6e4",
+     "from": "g6",
+     "to": "e4",
+     "san": "Qe4+",
+     "share": 0.3402,
+     "cp": 130,
+     "line": [
+      "g6e4",
+      "c6c7"
+     ]
+    },
+    {
+     "uci": "a2a4",
+     "from": "a2",
+     "to": "a4",
+     "san": "a4",
+     "share": 0.3402,
+     "cp": 130,
+     "line": [
+      "a2a4",
+      "b7f7",
+      "g6e4",
+      "d6d5",
+      "e4e1",
+      "f7f5"
+     ]
+    },
+    {
+     "uci": "h2h4",
+     "from": "h2",
+     "to": "h4",
+     "san": "h4",
+     "share": 0.3196,
+     "cp": 125,
+     "line": [
+      "h2h4",
+      "b7f7",
+      "g6e4",
+      "d6d5",
+      "e4e3",
+      "a6a5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 8,
+    "settleDepth": 17,
+    "maxDepth": 17,
+    "marginCp": 0,
+    "rootHistory": [
+     [
+      1,
+      "h2h4"
+     ],
+     [
+      2,
+      "a2a4"
+     ],
+     [
+      3,
+      "a2a4"
+     ],
+     [
+      4,
+      "h2h4"
+     ],
+     [
+      5,
+      "a2a4"
+     ],
+     [
+      6,
+      "a2a4"
+     ],
+     [
+      7,
+      "a2a4"
+     ],
+     [
+      8,
+      "a2a4"
+     ],
+     [
+      9,
+      "a2a4"
+     ],
+     [
+      10,
+      "a2a4"
+     ],
+     [
+      11,
+      "a2a4"
+     ],
+     [
+      12,
+      "g6e4"
+     ],
+     [
+      13,
+      "g6e4"
+     ],
+     [
+      14,
+      "a2a4"
+     ],
+     [
+      15,
+      "g6e4"
+     ],
+     [
+      16,
+      "h2h4"
+     ],
+     [
+      17,
+      "g6e4"
+     ]
+    ]
+   },
+   "rawDifficulty": 1.0,
+   "difficulty": 1.0,
+   "delayMs": 4000
+  },
+  {
+   "ply": 56,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c6c7",
+   "san": "Kc7",
+   "evalLc0": 0.628,
+   "evalSF": 0.6888,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c6c7",
+     "from": "c6",
+     "to": "c7",
+     "san": "Kc7",
+     "share": 0.9695,
+     "visits": 2737,
+     "policy": 0.4874,
+     "q": -0.369
+    },
+    {
+     "uci": "c4d5",
+     "from": "c4",
+     "to": "d5",
+     "san": "Bd5",
+     "share": 0.0131,
+     "visits": 37,
+     "policy": 0.0,
+     "q": -1.0
+    },
+    {
+     "uci": "c6b6",
+     "from": "c6",
+     "to": "b6",
+     "san": "Kb6",
+     "share": 0.012,
+     "visits": 34,
+     "policy": 0.1415,
+     "q": -0.7838
+    },
+    {
+     "uci": "d6d5",
+     "from": "d6",
+     "to": "d5",
+     "san": "d5",
+     "share": 0.0043,
+     "visits": 12,
+     "policy": 0.0795,
+     "q": -0.9948
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0955,
+    "qMargin": 0.631,
+    "totalVisits": 2823
+   },
+   "rawDifficulty": 0.095547,
+   "difficulty": 0.0956,
+   "delayMs": 453
+  },
+  {
+   "ply": 57,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e4g6",
+   "san": "Qg6",
+   "evalLc0": 0.6227,
+   "evalSF": 0.6925,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "e4g6",
+     "from": "e4",
+     "to": "g6",
+     "san": "Qg6",
+     "share": 0.3673,
+     "cp": 130,
+     "line": [
+      "e4g6",
+      "c7b8",
+      "b1d1",
+      "c4d5",
+      "g6d3",
+      "f8c8"
+     ]
+    },
+    {
+     "uci": "e4h7",
+     "from": "e4",
+     "to": "h7",
+     "san": "Qh7+",
+     "share": 0.3282,
+     "cp": 121,
+     "line": [
+      "e4h7",
+      "c7b8",
+      "h7e7",
+      "b7e7",
+      "g5e7",
+      "c4a2"
+     ]
+    },
+    {
+     "uci": "e4d4",
+     "from": "e4",
+     "to": "d4",
+     "san": "Qd4",
+     "share": 0.3045,
+     "cp": 115,
+     "line": [
+      "e4d4",
+      "f8f5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 5,
+    "settleDepth": 14,
+    "maxDepth": 17,
+    "marginCp": 9,
+    "rootHistory": [
+     [
+      1,
+      "e4g6"
+     ],
+     [
+      2,
+      "e4e3"
+     ],
+     [
+      3,
+      "e4e3"
+     ],
+     [
+      4,
+      "e4e3"
+     ],
+     [
+      5,
+      "e4e3"
+     ],
+     [
+      6,
+      "e4e1"
+     ],
+     [
+      7,
+      "e4g6"
+     ],
+     [
+      8,
+      "e4g6"
+     ],
+     [
+      9,
+      "e4g6"
+     ],
+     [
+      10,
+      "e4g6"
+     ],
+     [
+      11,
+      "e4g6"
+     ],
+     [
+      12,
+      "e4g6"
+     ],
+     [
+      13,
+      "e4e1"
+     ],
+     [
+      14,
+      "e4g6"
+     ],
+     [
+      15,
+      "e4g6"
+     ],
+     [
+      16,
+      "e4g6"
+     ],
+     [
+      17,
+      "e4g6"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.738278,
+   "difficulty": 0.735,
+   "delayMs": 2468
+  },
+  {
+   "ply": 58,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c7c6",
+   "san": "Kc6",
+   "evalLc0": 0.6334,
+   "evalSF": 0.6851,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c7c6",
+     "from": "c7",
+     "to": "c6",
+     "san": "Kc6",
+     "share": 0.4909,
+     "visits": 2971,
+     "policy": 0.2548,
+     "q": -0.3946
+    },
+    {
+     "uci": "c7c8",
+     "from": "c7",
+     "to": "c8",
+     "san": "Kc8",
+     "share": 0.2621,
+     "visits": 1586,
+     "policy": 0.0175,
+     "q": -0.3873
+    },
+    {
+     "uci": "c7b8",
+     "from": "c7",
+     "to": "b8",
+     "san": "Kb8",
+     "share": 0.1856,
+     "visits": 1123,
+     "policy": 0.1341,
+     "q": -0.4032
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.0164,
+     "visits": 99,
+     "policy": 0.1251,
+     "q": -0.5868
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.3657,
+    "qMargin": 0.0073,
+    "totalVisits": 6052
+   },
+   "rawDifficulty": 0.365683,
+   "difficulty": 0.3659,
+   "delayMs": 989
+  },
+  {
+   "ply": 59,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "a2a4",
+   "san": "a4",
+   "evalLc0": 0.6321,
+   "evalSF": 0.6687,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "a2a4",
+     "from": "a2",
+     "to": "a4",
+     "san": "a4",
+     "share": 0.3556,
+     "cp": 125,
+     "line": [
+      "a2a4",
+      "b7f7",
+      "g6e4",
+      "d6d5",
+      "e4e1",
+      "f7f5"
+     ]
+    },
+    {
+     "uci": "g6e4",
+     "from": "g6",
+     "to": "e4",
+     "san": "Qe4+",
+     "share": 0.3383,
+     "cp": 121,
+     "line": [
+      "g6e4",
+      "c6c7",
+      "e4d4",
+      "e6e5",
+      "d4d2",
+      "b7d5"
+     ]
+    },
+    {
+     "uci": "h2h4",
+     "from": "h2",
+     "to": "h4",
+     "san": "h4",
+     "share": 0.3061,
+     "cp": 113,
+     "line": [
+      "h2h4",
+      "b7f7"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 5,
+    "settleDepth": 16,
+    "maxDepth": 16,
+    "marginCp": 4,
+    "rootHistory": [
+     [
+      1,
+      "h2h4"
+     ],
+     [
+      2,
+      "a2a4"
+     ],
+     [
+      3,
+      "a2a4"
+     ],
+     [
+      4,
+      "a2a4"
+     ],
+     [
+      5,
+      "a2a4"
+     ],
+     [
+      6,
+      "h2h4"
+     ],
+     [
+      7,
+      "a2a4"
+     ],
+     [
+      8,
+      "a2a4"
+     ],
+     [
+      9,
+      "a2a4"
+     ],
+     [
+      10,
+      "a2a4"
+     ],
+     [
+      11,
+      "a2a4"
+     ],
+     [
+      12,
+      "a2a4"
+     ],
+     [
+      13,
+      "a2a4"
+     ],
+     [
+      14,
+      "h2h4"
+     ],
+     [
+      15,
+      "h2h4"
+     ],
+     [
+      16,
+      "a2a4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.802746,
+   "difficulty": 0.8002,
+   "delayMs": 2810
+  },
+  {
+   "ply": 60,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "b7f7",
+   "san": "Qf7",
+   "evalLc0": 0.6532,
+   "evalSF": 0.6636,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "b7f7",
+     "from": "b7",
+     "to": "f7",
+     "san": "Qf7",
+     "share": 0.9262,
+     "visits": 2749,
+     "policy": 0.3522,
+     "q": -0.4472
+    },
+    {
+     "uci": "b7a7",
+     "from": "b7",
+     "to": "a7",
+     "san": "Qa7",
+     "share": 0.0138,
+     "visits": 41,
+     "policy": 0.0552,
+     "q": -0.5621
+    },
+    {
+     "uci": "b5b4",
+     "from": "b5",
+     "to": "b4",
+     "san": "b4",
+     "share": 0.0125,
+     "visits": 37,
+     "policy": 0.1566,
+     "q": -0.841
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.0088,
+     "visits": 26,
+     "policy": 0.0421,
+     "q": -0.6006
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1283,
+    "qMargin": 0.1149,
+    "totalVisits": 2968
+   },
+   "rawDifficulty": 0.128268,
+   "difficulty": 0.1283,
+   "delayMs": 489
+  },
+  {
+   "ply": 61,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "g6e4",
+   "san": "Qe4+",
+   "evalLc0": 0.6519,
+   "evalSF": 0.6925,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g6e4",
+     "from": "g6",
+     "to": "e4",
+     "san": "Qe4+",
+     "share": 0.5498,
+     "cp": 118,
+     "line": [
+      "g6e4",
+      "d6d5",
+      "e4e1",
+      "f7f5",
+      "h2h4",
+      "f8b8"
+     ]
+    },
+    {
+     "uci": "a4b5",
+     "from": "a4",
+     "to": "b5",
+     "san": "axb5+",
+     "share": 0.4502,
+     "cp": 102,
+     "line": [
+      "a4b5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 18,
+    "marginCp": 16,
+    "rootHistory": [
+     [
+      1,
+      "g6e4"
+     ],
+     [
+      2,
+      "g6e4"
+     ],
+     [
+      3,
+      "g6e4"
+     ],
+     [
+      4,
+      "g6e4"
+     ],
+     [
+      5,
+      "g6e4"
+     ],
+     [
+      6,
+      "g6e4"
+     ],
+     [
+      7,
+      "g6e4"
+     ],
+     [
+      8,
+      "g6e4"
+     ],
+     [
+      9,
+      "g6e4"
+     ],
+     [
+      10,
+      "g6e4"
+     ],
+     [
+      11,
+      "g6e4"
+     ],
+     [
+      12,
+      "g6e4"
+     ],
+     [
+      13,
+      "g6e4"
+     ],
+     [
+      14,
+      "g6e4"
+     ],
+     [
+      15,
+      "g6e4"
+     ],
+     [
+      16,
+      "g6e4"
+     ],
+     [
+      17,
+      "g6e4"
+     ],
+     [
+      18,
+      "g6e4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.180413,
+   "difficulty": 0.17,
+   "delayMs": 548
+  },
+  {
+   "ply": 62,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d6d5",
+   "san": "d5",
+   "evalLc0": 0.6687,
+   "evalSF": 0.67,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "d6d5",
+     "from": "d6",
+     "to": "d5",
+     "san": "d5",
+     "share": 0.6294,
+     "visits": 3057,
+     "policy": 0.2657,
+     "q": -0.4937
+    },
+    {
+     "uci": "c4d5",
+     "from": "c4",
+     "to": "d5",
+     "san": "Bd5",
+     "share": 0.348,
+     "visits": 1690,
+     "policy": 0.3561,
+     "q": -0.5135
+    },
+    {
+     "uci": "c6c7",
+     "from": "c6",
+     "to": "c7",
+     "san": "Kc7",
+     "share": 0.0183,
+     "visits": 89,
+     "policy": 0.1533,
+     "q": -0.674
+    },
+    {
+     "uci": "c6b6",
+     "from": "c6",
+     "to": "b6",
+     "san": "Kb6",
+     "share": 0.0031,
+     "visits": 15,
+     "policy": 0.0338,
+     "q": -0.7416
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.4236,
+    "qMargin": 0.0197,
+    "totalVisits": 4857
+   },
+   "rawDifficulty": 0.423568,
+   "difficulty": 0.4238,
+   "delayMs": 1168
+  },
+  {
+   "ply": 63,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e4e1",
+   "san": "Qe1",
+   "evalLc0": 0.661,
+   "evalSF": 0.707,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "e4e1",
+     "from": "e4",
+     "to": "e1",
+     "san": "Qe1",
+     "share": 0.4379,
+     "cp": 151,
+     "line": [
+      "e4e1"
+     ]
+    },
+    {
+     "uci": "a4b5",
+     "from": "a4",
+     "to": "b5",
+     "san": "axb5+",
+     "share": 0.2899,
+     "cp": 118,
+     "line": [
+      "a4b5",
+      "a6b5",
+      "e4e1",
+      "f8a8",
+      "b1a1",
+      "a8a1"
+     ]
+    },
+    {
+     "uci": "e4e3",
+     "from": "e4",
+     "to": "e3",
+     "san": "Qe3",
+     "share": 0.2723,
+     "cp": 113,
+     "line": [
+      "e4e3",
+      "e6e5",
+      "h2h4",
+      "d5d4",
+      "e3d2",
+      "c6b7"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 5,
+    "settleDepth": 14,
+    "maxDepth": 17,
+    "marginCp": 33,
+    "rootHistory": [
+     [
+      1,
+      "e4d4"
+     ],
+     [
+      2,
+      "e4e1"
+     ],
+     [
+      3,
+      "e4e1"
+     ],
+     [
+      4,
+      "e4e1"
+     ],
+     [
+      5,
+      "e4e1"
+     ],
+     [
+      6,
+      "e4e1"
+     ],
+     [
+      7,
+      "e4e1"
+     ],
+     [
+      8,
+      "e4e3"
+     ],
+     [
+      9,
+      "e4e3"
+     ],
+     [
+      10,
+      "e4e3"
+     ],
+     [
+      11,
+      "e4e1"
+     ],
+     [
+      12,
+      "e4e1"
+     ],
+     [
+      13,
+      "e4e3"
+     ],
+     [
+      14,
+      "e4e1"
+     ],
+     [
+      15,
+      "e4e1"
+     ],
+     [
+      16,
+      "e4e1"
+     ],
+     [
+      17,
+      "e4e1"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.691957,
+   "difficulty": 0.688,
+   "delayMs": 2237
+  },
+  {
+   "ply": 64,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f7f5",
+   "san": "Qf5",
+   "evalLc0": 0.6519,
+   "evalSF": 0.6986,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f7f5",
+     "from": "f7",
+     "to": "f5",
+     "san": "Qf5",
+     "share": 0.6259,
+     "visits": 2849,
+     "policy": 0.3004,
+     "q": -0.4517
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.2735,
+     "visits": 1245,
+     "policy": 0.1261,
+     "q": -0.528
+    },
+    {
+     "uci": "d5d4",
+     "from": "d5",
+     "to": "d4",
+     "san": "d4",
+     "share": 0.036,
+     "visits": 164,
+     "policy": 0.1517,
+     "q": -0.6128
+    },
+    {
+     "uci": "f7g6",
+     "from": "f7",
+     "to": "g6",
+     "san": "Qg6",
+     "share": 0.0211,
+     "visits": 96,
+     "policy": 0.0852,
+     "q": -0.6074
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.2985,
+    "qMargin": 0.0763,
+    "totalVisits": 4552
+   },
+   "rawDifficulty": 0.298491,
+   "difficulty": 0.2986,
+   "delayMs": 809
+  },
+  {
+   "ply": 65,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "h2h4",
+   "san": "h4",
+   "evalLc0": 0.6321,
+   "evalSF": 0.6801,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "h2h4",
+     "from": "h2",
+     "to": "h4",
+     "san": "h4",
+     "share": 1.0,
+     "cp": 125,
+     "line": [
+      "h2h4",
+      "f8b8",
+      "a4b5",
+      "a6b5",
+      "b1a1",
+      "b5b4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 18,
+    "marginCp": 1000,
+    "rootHistory": [
+     [
+      1,
+      "h2h4"
+     ],
+     [
+      2,
+      "h2h4"
+     ],
+     [
+      3,
+      "h2h4"
+     ],
+     [
+      4,
+      "h2h4"
+     ],
+     [
+      5,
+      "h2h4"
+     ],
+     [
+      6,
+      "h2h4"
+     ],
+     [
+      7,
+      "h2h4"
+     ],
+     [
+      8,
+      "h2h4"
+     ],
+     [
+      9,
+      "h2h4"
+     ],
+     [
+      10,
+      "h2h4"
+     ],
+     [
+      11,
+      "h2h4"
+     ],
+     [
+      12,
+      "h2h4"
+     ],
+     [
+      13,
+      "h2h4"
+     ],
+     [
+      14,
+      "h2h4"
+     ],
+     [
+      15,
+      "h2h4"
+     ],
+     [
+      16,
+      "h2h4"
+     ],
+     [
+      17,
+      "h2h4"
+     ],
+     [
+      18,
+      "h2h4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.016667,
+   "difficulty": 0.0042,
+   "delayMs": 400
+  },
+  {
+   "ply": 66,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f8b8",
+   "san": "Rb8",
+   "evalLc0": 0.6267,
+   "evalSF": 0.6571,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "f8b8",
+     "from": "f8",
+     "to": "b8",
+     "san": "Rb8",
+     "share": 0.6619,
+     "visits": 2541,
+     "policy": 0.0193,
+     "q": -0.3907
+    },
+    {
+     "uci": "d5d4",
+     "from": "d5",
+     "to": "d4",
+     "san": "d4",
+     "share": 0.1315,
+     "visits": 505,
+     "policy": 0.1634,
+     "q": -0.5176
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.0821,
+     "visits": 315,
+     "policy": 0.1088,
+     "q": -0.5276
+    },
+    {
+     "uci": "b5a4",
+     "from": "b5",
+     "to": "a4",
+     "san": "bxa4",
+     "share": 0.0477,
+     "visits": 183,
+     "policy": 0.1219,
+     "q": -0.5177
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.3383,
+    "qMargin": 0.1269,
+    "totalVisits": 3839
+   },
+   "rawDifficulty": 0.338327,
+   "difficulty": 0.3385,
+   "delayMs": 912
+  },
+  {
+   "ply": 67,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "b1b2",
+   "san": "Rb2",
+   "evalLc0": 0.6049,
+   "evalSF": 0.6712,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "b1b2",
+     "from": "b1",
+     "to": "b2",
+     "san": "Rb2",
+     "share": 0.525,
+     "cp": 120,
+     "line": [
+      "b1b2"
+     ]
+    },
+    {
+     "uci": "a4b5",
+     "from": "a4",
+     "to": "b5",
+     "san": "axb5+",
+     "share": 0.475,
+     "cp": 112,
+     "line": [
+      "a4b5",
+      "a6b5",
+      "b1a1",
+      "b5b4",
+      "g5e7",
+      "b4b3"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 8,
+    "settleDepth": 17,
+    "maxDepth": 17,
+    "marginCp": 8,
+    "rootHistory": [
+     [
+      1,
+      "b1b2"
+     ],
+     [
+      2,
+      "a4b5"
+     ],
+     [
+      3,
+      "a4b5"
+     ],
+     [
+      4,
+      "a4b5"
+     ],
+     [
+      5,
+      "a4b5"
+     ],
+     [
+      6,
+      "g5e7"
+     ],
+     [
+      7,
+      "g5e7"
+     ],
+     [
+      8,
+      "g5e7"
+     ],
+     [
+      9,
+      "a4b5"
+     ],
+     [
+      10,
+      "g5e7"
+     ],
+     [
+      11,
+      "a4b5"
+     ],
+     [
+      12,
+      "a4b5"
+     ],
+     [
+      13,
+      "b1b2"
+     ],
+     [
+      14,
+      "a4b5"
+     ],
+     [
+      15,
+      "a4b5"
+     ],
+     [
+      16,
+      "a4b5"
+     ],
+     [
+      17,
+      "b1b2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.980967,
+   "difficulty": 0.9807,
+   "delayMs": 3876
+  },
+  {
+   "ply": 68,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d5d4",
+   "san": "d4",
+   "evalLc0": 0.6213,
+   "evalSF": 0.6532,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d5d4",
+     "from": "d5",
+     "to": "d4",
+     "san": "d4",
+     "share": 0.8741,
+     "visits": 2998,
+     "policy": 0.2529,
+     "q": -0.3473
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.0531,
+     "visits": 182,
+     "policy": 0.2094,
+     "q": -0.4641
+    },
+    {
+     "uci": "f5e4",
+     "from": "f5",
+     "to": "e4",
+     "san": "Qe4",
+     "share": 0.0385,
+     "visits": 132,
+     "policy": 0.1293,
+     "q": -0.439
+    },
+    {
+     "uci": "b8b7",
+     "from": "b8",
+     "to": "b7",
+     "san": "Rb7",
+     "share": 0.0064,
+     "visits": 22,
+     "policy": 0.0523,
+     "q": -0.5977
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1663,
+    "qMargin": 0.1167,
+    "totalVisits": 3430
+   },
+   "rawDifficulty": 0.166311,
+   "difficulty": 0.1664,
+   "delayMs": 543
+  },
+  {
+   "ply": 69,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "b2b1",
+   "san": "Rb1",
+   "evalLc0": 0.6118,
+   "evalSF": 0.6493,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "b2b1",
+     "from": "b2",
+     "to": "b1",
+     "san": "Rb1",
+     "share": 0.416,
+     "cp": 108,
+     "line": [
+      "b2b1",
+      "f5c5",
+      "b1c1",
+      "b8g8",
+      "a4b5",
+      "a6b5"
+     ]
+    },
+    {
+     "uci": "f2f3",
+     "from": "f2",
+     "to": "f3",
+     "san": "f3",
+     "share": 0.312,
+     "cp": 85,
+     "line": [
+      "f2f3",
+      "f5c5",
+      "g5d2",
+      "b8b7",
+      "d2b4",
+      "c5d5"
+     ]
+    },
+    {
+     "uci": "e1d2",
+     "from": "e1",
+     "to": "d2",
+     "san": "Qd2",
+     "share": 0.272,
+     "cp": 74,
+     "line": [
+      "e1d2",
+      "e6e5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 3,
+    "settleDepth": 6,
+    "maxDepth": 16,
+    "marginCp": 23,
+    "rootHistory": [
+     [
+      1,
+      "e1a5"
+     ],
+     [
+      2,
+      "b2b1"
+     ],
+     [
+      3,
+      "b2b1"
+     ],
+     [
+      4,
+      "b2b1"
+     ],
+     [
+      5,
+      "f2f3"
+     ],
+     [
+      6,
+      "b2b1"
+     ],
+     [
+      7,
+      "b2b1"
+     ],
+     [
+      8,
+      "b2b1"
+     ],
+     [
+      9,
+      "b2b1"
+     ],
+     [
+      10,
+      "b2b1"
+     ],
+     [
+      11,
+      "b2b1"
+     ],
+     [
+      12,
+      "b2b1"
+     ],
+     [
+      13,
+      "b2b1"
+     ],
+     [
+      14,
+      "b2b1"
+     ],
+     [
+      15,
+      "b2b1"
+     ],
+     [
+      16,
+      "b2b1"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.450027,
+   "difficulty": 0.4431,
+   "delayMs": 1232
+  },
+  {
+   "ply": 70,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c6d5",
+   "san": "Kd5",
+   "evalLc0": 0.6172,
+   "evalSF": 0.6712,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "c6d5",
+     "from": "c6",
+     "to": "d5",
+     "san": "Kd5",
+     "share": 0.7895,
+     "visits": 2580,
+     "policy": 0.0874,
+     "q": -0.3407
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.0496,
+     "visits": 162,
+     "policy": 0.1588,
+     "q": -0.4587
+    },
+    {
+     "uci": "f5d5",
+     "from": "f5",
+     "to": "d5",
+     "san": "Qd5",
+     "share": 0.0349,
+     "visits": 114,
+     "policy": 0.0622,
+     "q": -0.3808
+    },
+    {
+     "uci": "b8c8",
+     "from": "b8",
+     "to": "c8",
+     "san": "Rc8",
+     "share": 0.0242,
+     "visits": 79,
+     "policy": 0.0757,
+     "q": -0.4596
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.309,
+    "qMargin": 0.118,
+    "totalVisits": 3268
+   },
+   "rawDifficulty": 0.30905,
+   "difficulty": 0.3092,
+   "delayMs": 835
+  },
+  {
+   "ply": 71,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "a4b5",
+   "san": "axb5",
+   "evalLc0": 0.6063,
+   "evalSF": 0.6813,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "a4b5",
+     "from": "a4",
+     "to": "b5",
+     "san": "axb5",
+     "share": 0.3893,
+     "cp": 124,
+     "line": [
+      "a4b5",
+      "b8b5",
+      "b1c1",
+      "a6a5",
+      "f2f3",
+      "a5a4"
+     ]
+    },
+    {
+     "uci": "b1b2",
+     "from": "b1",
+     "to": "b2",
+     "san": "Rb2",
+     "share": 0.3187,
+     "cp": 108,
+     "line": [
+      "b1b2",
+      "e6e5",
+      "e1a5",
+      "f5e6",
+      "a5c7",
+      "b8c8"
+     ]
+    },
+    {
+     "uci": "f2f3",
+     "from": "f2",
+     "to": "f3",
+     "san": "f3",
+     "share": 0.292,
+     "cp": 101,
+     "line": [
+      "f2f3"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 6,
+    "settleDepth": 15,
+    "maxDepth": 17,
+    "marginCp": 16,
+    "rootHistory": [
+     [
+      1,
+      "a4b5"
+     ],
+     [
+      2,
+      "a4b5"
+     ],
+     [
+      3,
+      "a4b5"
+     ],
+     [
+      4,
+      "a4b5"
+     ],
+     [
+      5,
+      "a4b5"
+     ],
+     [
+      6,
+      "a4b5"
+     ],
+     [
+      7,
+      "f2f3"
+     ],
+     [
+      8,
+      "a4b5"
+     ],
+     [
+      9,
+      "f2f3"
+     ],
+     [
+      10,
+      "f2f3"
+     ],
+     [
+      11,
+      "a4b5"
+     ],
+     [
+      12,
+      "a4b5"
+     ],
+     [
+      13,
+      "a4b5"
+     ],
+     [
+      14,
+      "f2f3"
+     ],
+     [
+      15,
+      "a4b5"
+     ],
+     [
+      16,
+      "a4b5"
+     ],
+     [
+      17,
+      "a4b5"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.803452,
+   "difficulty": 0.801,
+   "delayMs": 2814
+  },
+  {
+   "ply": 72,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "b8b5",
+   "san": "Rxb5",
+   "evalLc0": 0.609,
+   "evalSF": 0.7058,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "b8b5",
+     "from": "b8",
+     "to": "b5",
+     "san": "Rxb5",
+     "share": 0.8882,
+     "visits": 2812,
+     "policy": 0.2349,
+     "q": -0.3341
+    },
+    {
+     "uci": "a6b5",
+     "from": "a6",
+     "to": "b5",
+     "san": "axb5",
+     "share": 0.0471,
+     "visits": 149,
+     "policy": 0.3116,
+     "q": -0.5669
+    },
+    {
+     "uci": "f5e4",
+     "from": "f5",
+     "to": "e4",
+     "san": "Qe4",
+     "share": 0.0389,
+     "visits": 123,
+     "policy": 0.1201,
+     "q": -0.4521
+    },
+    {
+     "uci": "c4b5",
+     "from": "c4",
+     "to": "b5",
+     "san": "Bxb5",
+     "share": 0.0044,
+     "visits": 14,
+     "policy": 0.0383,
+     "q": -0.6037
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1501,
+    "qMargin": 0.2329,
+    "totalVisits": 3166
+   },
+   "rawDifficulty": 0.150132,
+   "difficulty": 0.1502,
+   "delayMs": 519
+  },
+  {
+   "ply": 73,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "b1c1",
+   "san": "Rc1",
+   "evalLc0": 0.598,
+   "evalSF": 0.7022,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "b1c1",
+     "from": "b1",
+     "to": "c1",
+     "san": "Rc1",
+     "share": 1.0,
+     "cp": 132,
+     "line": [
+      "b1c1"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 8,
+    "maxDepth": 17,
+    "marginCp": 1000,
+    "rootHistory": [
+     [
+      1,
+      "b1c1"
+     ],
+     [
+      2,
+      "b1c1"
+     ],
+     [
+      3,
+      "b1c1"
+     ],
+     [
+      4,
+      "b1c1"
+     ],
+     [
+      5,
+      "b1c1"
+     ],
+     [
+      6,
+      "b1a1"
+     ],
+     [
+      7,
+      "b1a1"
+     ],
+     [
+      8,
+      "b1c1"
+     ],
+     [
+      9,
+      "b1c1"
+     ],
+     [
+      10,
+      "b1c1"
+     ],
+     [
+      11,
+      "b1c1"
+     ],
+     [
+      12,
+      "b1c1"
+     ],
+     [
+      13,
+      "b1c1"
+     ],
+     [
+      14,
+      "b1c1"
+     ],
+     [
+      15,
+      "b1c1"
+     ],
+     [
+      16,
+      "b1c1"
+     ],
+     [
+      17,
+      "b1c1"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.266177,
+   "difficulty": 0.2569,
+   "delayMs": 712
+  },
+  {
+   "ply": 74,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "a6a5",
+   "san": "a5",
+   "evalLc0": 0.6186,
+   "evalSF": 0.7058,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "a6a5",
+     "from": "a6",
+     "to": "a5",
+     "san": "a5",
+     "share": 0.5787,
+     "visits": 2883,
+     "policy": 0.1312,
+     "q": -0.3359
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.3595,
+     "visits": 1791,
+     "policy": 0.1909,
+     "q": -0.3563
+    },
+    {
+     "uci": "f5d3",
+     "from": "f5",
+     "to": "d3",
+     "san": "Qd3",
+     "share": 0.0243,
+     "visits": 121,
+     "policy": 0.1273,
+     "q": -0.467
+    },
+    {
+     "uci": "c4d3",
+     "from": "c4",
+     "to": "d3",
+     "san": "Bd3",
+     "share": 0.0084,
+     "visits": 42,
+     "policy": 0.0701,
+     "q": -0.5315
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.2768,
+    "qMargin": 0.0204,
+    "totalVisits": 4982
+   },
+   "rawDifficulty": 0.276772,
+   "difficulty": 0.2769,
+   "delayMs": 757
+  },
+  {
+   "ply": 75,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "f2f3",
+   "san": "f3",
+   "evalLc0": 0.609,
+   "evalSF": 0.7381,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "f2f3",
+     "from": "f2",
+     "to": "f3",
+     "san": "f3",
+     "share": 1.0,
+     "cp": 159,
+     "line": [
+      "f2f3",
+      "a5a4",
+      "e1e4",
+      "f5e4",
+      "f3e4",
+      "d5e4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 12,
+    "maxDepth": 18,
+    "marginCp": 1000,
+    "rootHistory": [
+     [
+      1,
+      "f2f3"
+     ],
+     [
+      2,
+      "f2f3"
+     ],
+     [
+      3,
+      "f2f3"
+     ],
+     [
+      4,
+      "f2f3"
+     ],
+     [
+      5,
+      "f2f3"
+     ],
+     [
+      6,
+      "f2f3"
+     ],
+     [
+      7,
+      "f2f3"
+     ],
+     [
+      8,
+      "f2f3"
+     ],
+     [
+      9,
+      "f2f3"
+     ],
+     [
+      10,
+      "f2f3"
+     ],
+     [
+      11,
+      "f2f4"
+     ],
+     [
+      12,
+      "f2f3"
+     ],
+     [
+      13,
+      "f2f3"
+     ],
+     [
+      14,
+      "f2f3"
+     ],
+     [
+      15,
+      "f2f3"
+     ],
+     [
+      16,
+      "f2f3"
+     ],
+     [
+      17,
+      "f2f3"
+     ],
+     [
+      18,
+      "f2f3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.325001,
+   "difficulty": 0.3164,
+   "delayMs": 854
+  },
+  {
+   "ply": 76,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "a5a4",
+   "san": "a4",
+   "evalLc0": 0.7618,
+   "evalSF": 0.7523,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "a5a4",
+     "from": "a5",
+     "to": "a4",
+     "san": "a4",
+     "share": 0.4957,
+     "visits": 3130,
+     "policy": 0.2371,
+     "q": -0.5777
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.4333,
+     "visits": 2736,
+     "policy": 0.1518,
+     "q": -0.5483
+    },
+    {
+     "uci": "c4d3",
+     "from": "c4",
+     "to": "d3",
+     "san": "Bd3",
+     "share": 0.0298,
+     "visits": 188,
+     "policy": 0.0635,
+     "q": -0.4885
+    },
+    {
+     "uci": "f5d3",
+     "from": "f5",
+     "to": "d3",
+     "san": "Qd3",
+     "share": 0.0166,
+     "visits": 105,
+     "policy": 0.1227,
+     "q": -0.5917
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.2919,
+    "qMargin": 0.0294,
+    "totalVisits": 6314
+   },
+   "rawDifficulty": 0.29193,
+   "difficulty": 0.2921,
+   "delayMs": 793
+  },
+  {
+   "ply": 77,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e1e4",
+   "san": "Qe4+",
+   "evalLc0": 0.7587,
+   "evalSF": 0.7176,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e1e4",
+     "from": "e1",
+     "to": "e4",
+     "san": "Qe4+",
+     "share": 0.4786,
+     "cp": 165,
+     "line": [
+      "e1e4",
+      "f5e4",
+      "f3e4",
+      "d5e4",
+      "c1c4",
+      "b5a5"
+     ]
+    },
+    {
+     "uci": "g5e7",
+     "from": "g5",
+     "to": "e7",
+     "san": "Be7",
+     "share": 0.2867,
+     "cp": 124,
+     "line": [
+      "g5e7",
+      "e6e5",
+      "e1g3",
+      "f5e6",
+      "g3g5",
+      "d5c6"
+     ]
+    },
+    {
+     "uci": "e1d1",
+     "from": "e1",
+     "to": "d1",
+     "san": "Qd1",
+     "share": 0.2347,
+     "cp": 108,
+     "line": [
+      "e1d1",
+      "c4b3"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 5,
+    "maxDepth": 16,
+    "marginCp": 41,
+    "rootHistory": [
+     [
+      1,
+      "e1e4"
+     ],
+     [
+      2,
+      "e1e4"
+     ],
+     [
+      3,
+      "g5e7"
+     ],
+     [
+      4,
+      "g5e7"
+     ],
+     [
+      5,
+      "e1e4"
+     ],
+     [
+      6,
+      "e1e4"
+     ],
+     [
+      7,
+      "e1e4"
+     ],
+     [
+      8,
+      "e1e4"
+     ],
+     [
+      9,
+      "e1e4"
+     ],
+     [
+      10,
+      "e1e4"
+     ],
+     [
+      11,
+      "e1e4"
+     ],
+     [
+      12,
+      "e1e4"
+     ],
+     [
+      13,
+      "e1e4"
+     ],
+     [
+      14,
+      "e1e4"
+     ],
+     [
+      15,
+      "e1e4"
+     ],
+     [
+      16,
+      "e1e4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.338549,
+   "difficulty": 0.3302,
+   "delayMs": 890
+  },
+  {
+   "ply": 78,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f5e4",
+   "san": "Qxe4",
+   "evalLc0": 0.7491,
+   "evalSF": 0.7302,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f5e4",
+     "from": "f5",
+     "to": "e4",
+     "san": "Qxe4",
+     "share": 0.968,
+     "visits": 2780,
+     "policy": 0.7595,
+     "q": -0.7105
+    },
+    {
+     "uci": "d5c5",
+     "from": "d5",
+     "to": "c5",
+     "san": "Kc5",
+     "share": 0.023,
+     "visits": 66,
+     "policy": 0.1679,
+     "q": -0.9422
+    },
+    {
+     "uci": "d5d6",
+     "from": "d5",
+     "to": "d6",
+     "san": "Kd6",
+     "share": 0.0091,
+     "visits": 26,
+     "policy": 0.0726,
+     "q": -0.975
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1464,
+    "qMargin": 0.2317,
+    "totalVisits": 2872
+   },
+   "rawDifficulty": 0.146379,
+   "difficulty": 0.1465,
+   "delayMs": 513
+  },
+  {
+   "ply": 79,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "f3e4",
+   "san": "fxe4+",
+   "evalLc0": 0.7403,
+   "evalSF": 0.737,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f3e4",
+     "from": "f3",
+     "to": "e4",
+     "san": "fxe4+",
+     "share": 1.0,
+     "cp": 179,
+     "line": [
+      "f3e4",
+      "d5e4",
+      "c1c4",
+      "b5a5",
+      "c4c2",
+      "e4f5"
+     ]
+    },
+    {
+     "uci": "g1h1",
+     "from": "g1",
+     "to": "h1",
+     "san": "Kh1",
+     "share": 0.0,
+     "cp": -824,
+     "line": [
+      "g1h1",
+      "e4e2",
+      "c1g1",
+      "a4a3",
+      "h4h5",
+      "c4d3"
+     ]
+    },
+    {
+     "uci": "c1d1",
+     "from": "c1",
+     "to": "d1",
+     "san": "Rd1",
+     "share": 0.0,
+     "cp": -840,
+     "line": [
+      "c1d1",
+      "e4e2",
+      "d1d2",
+      "e2e1",
+      "g1h2",
+      "b5b1"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 19,
+    "marginCp": 1003,
+    "rootHistory": [
+     [
+      1,
+      "f3e4"
+     ],
+     [
+      2,
+      "f3e4"
+     ],
+     [
+      3,
+      "f3e4"
+     ],
+     [
+      4,
+      "f3e4"
+     ],
+     [
+      5,
+      "f3e4"
+     ],
+     [
+      6,
+      "f3e4"
+     ],
+     [
+      7,
+      "f3e4"
+     ],
+     [
+      8,
+      "f3e4"
+     ],
+     [
+      9,
+      "f3e4"
+     ],
+     [
+      10,
+      "f3e4"
+     ],
+     [
+      11,
+      "f3e4"
+     ],
+     [
+      12,
+      "f3e4"
+     ],
+     [
+      13,
+      "f3e4"
+     ],
+     [
+      14,
+      "f3e4"
+     ],
+     [
+      15,
+      "f3e4"
+     ],
+     [
+      16,
+      "f3e4"
+     ],
+     [
+      17,
+      "f3e4"
+     ],
+     [
+      18,
+      "f3e4"
+     ],
+     [
+      19,
+      "f3e4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.01579,
+   "difficulty": 0.0033,
+   "delayMs": 400
+  },
+  {
+   "ply": 80,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d5e4",
+   "san": "Kxe4",
+   "evalLc0": 0.7302,
+   "evalSF": 0.7425,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d5e4",
+     "from": "d5",
+     "to": "e4",
+     "san": "Kxe4",
+     "share": 0.9096,
+     "visits": 2797,
+     "policy": 0.4225,
+     "q": -0.7015
+    },
+    {
+     "uci": "d5c5",
+     "from": "d5",
+     "to": "c5",
+     "san": "Kc5",
+     "share": 0.0433,
+     "visits": 133,
+     "policy": 0.3101,
+     "q": -0.9452
+    },
+    {
+     "uci": "d5e5",
+     "from": "d5",
+     "to": "e5",
+     "san": "Ke5",
+     "share": 0.0351,
+     "visits": 108,
+     "policy": 0.1614,
+     "q": -0.8507
+    },
+    {
+     "uci": "d5d6",
+     "from": "d5",
+     "to": "d6",
+     "san": "Kd6",
+     "share": 0.0085,
+     "visits": 26,
+     "policy": 0.0739,
+     "q": -0.9887
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.2486,
+    "qMargin": 0.2437,
+    "totalVisits": 3075
+   },
+   "rawDifficulty": 0.248634,
+   "difficulty": 0.2488,
+   "delayMs": 694
+  },
+  {
+   "ply": 81,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "c1c4",
+   "san": "Rxc4",
+   "evalLc0": 0.7222,
+   "evalSF": 0.7458,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c1c4",
+     "from": "c1",
+     "to": "c4",
+     "san": "Rxc4",
+     "share": 0.9905,
+     "cp": 194,
+     "line": [
+      "c1c4",
+      "b5a5",
+      "c4c2",
+      "e6e5",
+      "h4h5",
+      "e4d3"
+     ]
+    },
+    {
+     "uci": "c1e1",
+     "from": "c1",
+     "to": "e1",
+     "san": "Re1+",
+     "share": 0.0048,
+     "cp": -232,
+     "line": [
+      "c1e1",
+      "e4f5",
+      "g5c1",
+      "b5b1",
+      "g1f2",
+      "e6e5"
+     ]
+    },
+    {
+     "uci": "g5e7",
+     "from": "g5",
+     "to": "e7",
+     "san": "Be7",
+     "share": 0.0047,
+     "cp": -234,
+     "line": [
+      "g5e7",
+      "c4b3"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 18,
+    "marginCp": 426,
+    "rootHistory": [
+     [
+      1,
+      "c1c4"
+     ],
+     [
+      2,
+      "c1c4"
+     ],
+     [
+      3,
+      "c1c4"
+     ],
+     [
+      4,
+      "c1c4"
+     ],
+     [
+      5,
+      "c1c4"
+     ],
+     [
+      6,
+      "c1c4"
+     ],
+     [
+      7,
+      "c1c4"
+     ],
+     [
+      8,
+      "c1c4"
+     ],
+     [
+      9,
+      "c1c4"
+     ],
+     [
+      10,
+      "c1c4"
+     ],
+     [
+      11,
+      "c1c4"
+     ],
+     [
+      12,
+      "c1c4"
+     ],
+     [
+      13,
+      "c1c4"
+     ],
+     [
+      14,
+      "c1c4"
+     ],
+     [
+      15,
+      "c1c4"
+     ],
+     [
+      16,
+      "c1c4"
+     ],
+     [
+      17,
+      "c1c4"
+     ],
+     [
+      18,
+      "c1c4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.01764,
+   "difficulty": 0.0052,
+   "delayMs": 400
+  },
+  {
+   "ply": 82,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "b5a5",
+   "san": "Ra5",
+   "evalLc0": 0.7314,
+   "evalSF": 0.7314,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "b5a5",
+     "from": "b5",
+     "to": "a5",
+     "san": "Ra5",
+     "share": 0.9305,
+     "visits": 2904,
+     "policy": 0.4749,
+     "q": -0.6925
+    },
+    {
+     "uci": "a4a3",
+     "from": "a4",
+     "to": "a3",
+     "san": "a3",
+     "share": 0.0394,
+     "visits": 123,
+     "policy": 0.2617,
+     "q": -0.9064
+    },
+    {
+     "uci": "b5b1",
+     "from": "b5",
+     "to": "b1",
+     "san": "Rb1+",
+     "share": 0.0115,
+     "visits": 36,
+     "policy": 0.072,
+     "q": -0.9025
+    },
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.0022,
+     "visits": 7,
+     "policy": 0.0199,
+     "q": -0.9637
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1258,
+    "qMargin": 0.2139,
+    "totalVisits": 3121
+   },
+   "rawDifficulty": 0.125769,
+   "difficulty": 0.1258,
+   "delayMs": 486
+  },
+  {
+   "ply": 83,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "c4c2",
+   "san": "Rc2",
+   "evalLc0": 0.7188,
+   "evalSF": 0.7425,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c4c2",
+     "from": "c4",
+     "to": "c2",
+     "san": "Rc2",
+     "share": 0.5789,
+     "cp": 197,
+     "line": [
+      "c4c2",
+      "e6e5",
+      "h4h5",
+      "e4f5",
+      "g5c1",
+      "a5a8"
+     ]
+    },
+    {
+     "uci": "g5d8",
+     "from": "g5",
+     "to": "d8",
+     "san": "Bd8",
+     "share": 0.2211,
+     "cp": 120,
+     "line": [
+      "g5d8",
+      "a5a8",
+      "d8f6",
+      "e6e5",
+      "c4c1",
+      "a4a3"
+     ]
+    },
+    {
+     "uci": "g5f6",
+     "from": "g5",
+     "to": "f6",
+     "san": "Bf6",
+     "share": 0.2,
+     "cp": 112,
+     "line": [
+      "g5f6",
+      "e6e5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 16,
+    "marginCp": 77,
+    "rootHistory": [
+     [
+      1,
+      "c4c2"
+     ],
+     [
+      2,
+      "c4c2"
+     ],
+     [
+      3,
+      "c4c2"
+     ],
+     [
+      4,
+      "c4c2"
+     ],
+     [
+      5,
+      "c4c2"
+     ],
+     [
+      6,
+      "c4c2"
+     ],
+     [
+      7,
+      "c4c2"
+     ],
+     [
+      8,
+      "c4c2"
+     ],
+     [
+      9,
+      "c4c2"
+     ],
+     [
+      10,
+      "c4c2"
+     ],
+     [
+      11,
+      "c4c2"
+     ],
+     [
+      12,
+      "c4c2"
+     ],
+     [
+      13,
+      "c4c2"
+     ],
+     [
+      14,
+      "c4c2"
+     ],
+     [
+      15,
+      "c4c2"
+     ],
+     [
+      16,
+      "c4c2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.095137,
+   "difficulty": 0.0837,
+   "delayMs": 441
+  },
+  {
+   "ply": 84,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "e6e5",
+   "san": "e5",
+   "evalLc0": 0.7403,
+   "evalSF": 0.766,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "e6e5",
+     "from": "e6",
+     "to": "e5",
+     "san": "e5",
+     "share": 0.5555,
+     "visits": 2868,
+     "policy": 0.2177,
+     "q": -0.6859
+    },
+    {
+     "uci": "e4d3",
+     "from": "e4",
+     "to": "d3",
+     "san": "Kd3",
+     "share": 0.3388,
+     "visits": 1749,
+     "policy": 0.1874,
+     "q": -0.6872
+    },
+    {
+     "uci": "a4a3",
+     "from": "a4",
+     "to": "a3",
+     "san": "a3",
+     "share": 0.0401,
+     "visits": 207,
+     "policy": 0.2484,
+     "q": -0.8355
+    },
+    {
+     "uci": "e4f5",
+     "from": "e4",
+     "to": "f5",
+     "san": "Kf5",
+     "share": 0.0217,
+     "visits": 112,
+     "policy": 0.0811,
+     "q": -0.7855
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.4075,
+    "qMargin": 0.0013,
+    "totalVisits": 5163
+   },
+   "rawDifficulty": 0.407471,
+   "difficulty": 0.4077,
+   "delayMs": 1116
+  },
+  {
+   "ply": 85,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "h4h5",
+   "san": "h5",
+   "evalLc0": 0.7381,
+   "evalSF": 0.7741,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "h4h5",
+     "from": "h4",
+     "to": "h5",
+     "san": "h5",
+     "share": 0.5175,
+     "cp": 195,
+     "line": [
+      "h4h5",
+      "a5a6",
+      "c2f2",
+      "e4d3",
+      "h5h6",
+      "a6a7"
+     ]
+    },
+    {
+     "uci": "g1f2",
+     "from": "g1",
+     "to": "f2",
+     "san": "Kf2",
+     "share": 0.2668,
+     "cp": 142,
+     "line": [
+      "g1f2",
+      "e4f5",
+      "f2g3",
+      "e5e4",
+      "g5c1",
+      "a5b5"
+     ]
+    },
+    {
+     "uci": "c2a2",
+     "from": "c2",
+     "to": "a2",
+     "san": "Ra2",
+     "share": 0.2157,
+     "cp": 125,
+     "line": [
+      "c2a2",
+      "e4f5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 17,
+    "marginCp": 53,
+    "rootHistory": [
+     [
+      1,
+      "h4h5"
+     ],
+     [
+      2,
+      "h4h5"
+     ],
+     [
+      3,
+      "h4h5"
+     ],
+     [
+      4,
+      "h4h5"
+     ],
+     [
+      5,
+      "h4h5"
+     ],
+     [
+      6,
+      "h4h5"
+     ],
+     [
+      7,
+      "h4h5"
+     ],
+     [
+      8,
+      "h4h5"
+     ],
+     [
+      9,
+      "h4h5"
+     ],
+     [
+      10,
+      "h4h5"
+     ],
+     [
+      11,
+      "h4h5"
+     ],
+     [
+      12,
+      "h4h5"
+     ],
+     [
+      13,
+      "h4h5"
+     ],
+     [
+      14,
+      "h4h5"
+     ],
+     [
+      15,
+      "h4h5"
+     ],
+     [
+      16,
+      "h4h5"
+     ],
+     [
+      17,
+      "h4h5"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.120759,
+   "difficulty": 0.1096,
+   "delayMs": 467
+  },
+  {
+   "ply": 86,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "e4d3",
+   "san": "Kd3",
+   "evalLc0": 0.7639,
+   "evalSF": 0.7752,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "e4d3",
+     "from": "e4",
+     "to": "d3",
+     "san": "Kd3",
+     "share": 0.6869,
+     "visits": 2690,
+     "policy": 0.1136,
+     "q": -0.6932
+    },
+    {
+     "uci": "e4f5",
+     "from": "e4",
+     "to": "f5",
+     "san": "Kf5",
+     "share": 0.1887,
+     "visits": 739,
+     "policy": 0.3446,
+     "q": -0.7463
+    },
+    {
+     "uci": "a4a3",
+     "from": "a4",
+     "to": "a3",
+     "san": "a3",
+     "share": 0.0656,
+     "visits": 257,
+     "policy": 0.2947,
+     "q": -0.8216
+    },
+    {
+     "uci": "a5a8",
+     "from": "a5",
+     "to": "a8",
+     "san": "Ra8",
+     "share": 0.0227,
+     "visits": 89,
+     "policy": 0.0679,
+     "q": -0.7737
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.4197,
+    "qMargin": 0.0531,
+    "totalVisits": 3916
+   },
+   "rawDifficulty": 0.419708,
+   "difficulty": 0.4199,
+   "delayMs": 1155
+  },
+  {
+   "ply": 87,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "c2d2",
+   "san": "Rd2+",
+   "evalLc0": 0.7618,
+   "evalSF": 0.7801,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c2d2",
+     "from": "c2",
+     "to": "d2",
+     "san": "Rd2+",
+     "share": 0.6195,
+     "cp": 222,
+     "line": [
+      "c2d2",
+      "d3c3",
+      "h5h6",
+      "a5a7",
+      "d2d1",
+      "c3c2"
+     ]
+    },
+    {
+     "uci": "c2c1",
+     "from": "c2",
+     "to": "c1",
+     "san": "Rc1",
+     "share": 0.3805,
+     "cp": 183,
+     "line": [
+      "c2c1"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 6,
+    "maxDepth": 17,
+    "marginCp": 39,
+    "rootHistory": [
+     [
+      1,
+      "c2d2"
+     ],
+     [
+      2,
+      "c2d2"
+     ],
+     [
+      3,
+      "c2a2"
+     ],
+     [
+      4,
+      "c2a2"
+     ],
+     [
+      5,
+      "c2a2"
+     ],
+     [
+      6,
+      "c2d2"
+     ],
+     [
+      7,
+      "c2d2"
+     ],
+     [
+      8,
+      "c2d2"
+     ],
+     [
+      9,
+      "c2d2"
+     ],
+     [
+      10,
+      "c2d2"
+     ],
+     [
+      11,
+      "c2d2"
+     ],
+     [
+      12,
+      "c2d2"
+     ],
+     [
+      13,
+      "c2d2"
+     ],
+     [
+      14,
+      "c2d2"
+     ],
+     [
+      15,
+      "c2d2"
+     ],
+     [
+      16,
+      "c2d2"
+     ],
+     [
+      17,
+      "c2d2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.353714,
+   "difficulty": 0.3455,
+   "delayMs": 932
+  },
+  {
+   "ply": 88,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d3c3",
+   "san": "Kc3",
+   "evalLc0": 0.7772,
+   "evalSF": 0.7681,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d3c3",
+     "from": "d3",
+     "to": "c3",
+     "san": "Kc3",
+     "share": 0.7979,
+     "visits": 2992,
+     "policy": 0.4279,
+     "q": -0.7294
+    },
+    {
+     "uci": "d3e4",
+     "from": "d3",
+     "to": "e4",
+     "san": "Ke4",
+     "share": 0.1288,
+     "visits": 483,
+     "policy": 0.2388,
+     "q": -0.7694
+    },
+    {
+     "uci": "d3c4",
+     "from": "d3",
+     "to": "c4",
+     "san": "Kc4",
+     "share": 0.0733,
+     "visits": 275,
+     "policy": 0.3334,
+     "q": -0.8639
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.5787,
+    "qMargin": 0.04,
+    "totalVisits": 3750
+   },
+   "rawDifficulty": 0.57868,
+   "difficulty": 0.579,
+   "delayMs": 1746
+  },
+  {
+   "ply": 89,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "d2f2",
+   "san": "Rf2",
+   "evalLc0": 0.6826,
+   "evalSF": 0.8162,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "d2f2",
+     "from": "d2",
+     "to": "f2",
+     "san": "Rf2",
+     "share": 0.4535,
+     "cp": 248,
+     "line": [
+      "d2f2",
+      "a5a7",
+      "g5f6",
+      "c3c4",
+      "h5h6",
+      "a4a3"
+     ]
+    },
+    {
+     "uci": "h5h6",
+     "from": "h5",
+     "to": "h6",
+     "san": "h6",
+     "share": 0.426,
+     "cp": 243,
+     "line": [
+      "h5h6",
+      "a5a7",
+      "d2a2",
+      "c3b3",
+      "a2a1",
+      "b3b2"
+     ]
+    },
+    {
+     "uci": "d2a2",
+     "from": "d2",
+     "to": "a2",
+     "san": "Ra2",
+     "share": 0.1205,
+     "cp": 142,
+     "line": [
+      "d2a2",
+      "c3b3",
+      "a2a1",
+      "e5e4",
+      "g5f6",
+      "d4d3"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 3,
+    "settleDepth": 16,
+    "maxDepth": 17,
+    "marginCp": 5,
+    "rootHistory": [
+     [
+      1,
+      "h5h6"
+     ],
+     [
+      2,
+      "h5h6"
+     ],
+     [
+      3,
+      "h5h6"
+     ],
+     [
+      4,
+      "d2f2"
+     ],
+     [
+      5,
+      "h5h6"
+     ],
+     [
+      6,
+      "h5h6"
+     ],
+     [
+      7,
+      "h5h6"
+     ],
+     [
+      8,
+      "h5h6"
+     ],
+     [
+      9,
+      "h5h6"
+     ],
+     [
+      10,
+      "h5h6"
+     ],
+     [
+      11,
+      "h5h6"
+     ],
+     [
+      12,
+      "h5h6"
+     ],
+     [
+      13,
+      "h5h6"
+     ],
+     [
+      14,
+      "h5h6"
+     ],
+     [
+      15,
+      "h5h6"
+     ],
+     [
+      16,
+      "d2f2"
+     ],
+     [
+      17,
+      "d2f2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.657736,
+   "difficulty": 0.6534,
+   "delayMs": 2073
+  },
+  {
+   "ply": 90,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "a5a7",
+   "san": "Ra7",
+   "evalLc0": 0.785,
+   "evalSF": 0.8392,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "a5a7",
+     "from": "a5",
+     "to": "a7",
+     "san": "Ra7",
+     "share": 0.6014,
+     "visits": 2799,
+     "policy": 0.2173,
+     "q": -0.7275
+    },
+    {
+     "uci": "a5a8",
+     "from": "a5",
+     "to": "a8",
+     "san": "Ra8",
+     "share": 0.2901,
+     "visits": 1350,
+     "policy": 0.2291,
+     "q": -0.7443
+    },
+    {
+     "uci": "c3b3",
+     "from": "c3",
+     "to": "b3",
+     "san": "Kb3",
+     "share": 0.0619,
+     "visits": 288,
+     "policy": 0.2123,
+     "q": -0.7967
+    },
+    {
+     "uci": "c3c4",
+     "from": "c3",
+     "to": "c4",
+     "san": "Kc4",
+     "share": 0.0129,
+     "visits": 60,
+     "policy": 0.0672,
+     "q": -0.8432
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.4187,
+    "qMargin": 0.0168,
+    "totalVisits": 4654
+   },
+   "rawDifficulty": 0.418659,
+   "difficulty": 0.4189,
+   "delayMs": 1152
+  },
+  {
+   "ply": 91,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "g5f6",
+   "san": "Bf6",
+   "evalLc0": 0.7841,
+   "evalSF": 0.8577,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g5f6",
+     "from": "g5",
+     "to": "f6",
+     "san": "Bf6",
+     "share": 0.7084,
+     "cp": 306,
+     "line": [
+      "g5f6",
+      "c3c4",
+      "h5h6",
+      "a7h7",
+      "f6g7",
+      "d4d3"
+     ]
+    },
+    {
+     "uci": "h5h6",
+     "from": "h5",
+     "to": "h6",
+     "san": "h6",
+     "share": 0.2916,
+     "cp": 235,
+     "line": [
+      "h5h6"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 6,
+    "maxDepth": 17,
+    "marginCp": 71,
+    "rootHistory": [
+     [
+      1,
+      "g5f6"
+     ],
+     [
+      2,
+      "g5f6"
+     ],
+     [
+      3,
+      "g5f6"
+     ],
+     [
+      4,
+      "g5f6"
+     ],
+     [
+      5,
+      "h5h6"
+     ],
+     [
+      6,
+      "g5f6"
+     ],
+     [
+      7,
+      "g5f6"
+     ],
+     [
+      8,
+      "g5f6"
+     ],
+     [
+      9,
+      "g5f6"
+     ],
+     [
+      10,
+      "g5f6"
+     ],
+     [
+      11,
+      "g5f6"
+     ],
+     [
+      12,
+      "g5f6"
+     ],
+     [
+      13,
+      "g5f6"
+     ],
+     [
+      14,
+      "g5f6"
+     ],
+     [
+      15,
+      "g5f6"
+     ],
+     [
+      16,
+      "g5f6"
+     ],
+     [
+      17,
+      "g5f6"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.313219,
+   "difficulty": 0.3045,
+   "delayMs": 823
+  },
+  {
+   "ply": 92,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "a4a3",
+   "san": "a3",
+   "evalLc0": 0.8101,
+   "evalSF": 0.8841,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "a4a3",
+     "from": "a4",
+     "to": "a3",
+     "san": "a3",
+     "share": 0.585,
+     "visits": 2910,
+     "policy": 0.3065,
+     "q": -0.7439
+    },
+    {
+     "uci": "e5e4",
+     "from": "e5",
+     "to": "e4",
+     "san": "e4",
+     "share": 0.3386,
+     "visits": 1684,
+     "policy": 0.2843,
+     "q": -0.7896
+    },
+    {
+     "uci": "c3c4",
+     "from": "c3",
+     "to": "c4",
+     "san": "Kc4",
+     "share": 0.0229,
+     "visits": 114,
+     "policy": 0.0261,
+     "q": -0.8027
+    },
+    {
+     "uci": "d4d3",
+     "from": "d4",
+     "to": "d3",
+     "san": "d3",
+     "share": 0.0191,
+     "visits": 95,
+     "policy": 0.1436,
+     "q": -0.9405
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.3658,
+    "qMargin": 0.0456,
+    "totalVisits": 4974
+   },
+   "rawDifficulty": 0.365781,
+   "difficulty": 0.366,
+   "delayMs": 990
+  },
+  {
+   "ply": 93,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "h5h6",
+   "san": "h6",
+   "evalLc0": 0.8011,
+   "evalSF": 0.8949,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "h5h6",
+     "from": "h5",
+     "to": "h6",
+     "san": "h6",
+     "share": 0.9525,
+     "cp": 366,
+     "line": [
+      "h5h6",
+      "d4d3",
+      "f6e5",
+      "c3c4",
+      "f2a2",
+      "a7d7"
+     ]
+    },
+    {
+     "uci": "f2a2",
+     "from": "f2",
+     "to": "a2",
+     "san": "Ra2",
+     "share": 0.0374,
+     "cp": 107,
+     "line": [
+      "f2a2",
+      "c3b3",
+      "a2a1",
+      "d4d3",
+      "g2g4",
+      "b3c2"
+     ]
+    },
+    {
+     "uci": "f6e5",
+     "from": "f6",
+     "to": "e5",
+     "san": "Bxe5",
+     "share": 0.0101,
+     "cp": 2,
+     "line": [
+      "f6e5",
+      "a3a2",
+      "f2a2",
+      "a7a2",
+      "h5h6",
+      "a2a1"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 2,
+    "settleDepth": 5,
+    "maxDepth": 17,
+    "marginCp": 259,
+    "rootHistory": [
+     [
+      1,
+      "h5h6"
+     ],
+     [
+      2,
+      "h5h6"
+     ],
+     [
+      3,
+      "h5h6"
+     ],
+     [
+      4,
+      "f2a2"
+     ],
+     [
+      5,
+      "h5h6"
+     ],
+     [
+      6,
+      "h5h6"
+     ],
+     [
+      7,
+      "h5h6"
+     ],
+     [
+      8,
+      "h5h6"
+     ],
+     [
+      9,
+      "h5h6"
+     ],
+     [
+      10,
+      "h5h6"
+     ],
+     [
+      11,
+      "h5h6"
+     ],
+     [
+      12,
+      "h5h6"
+     ],
+     [
+      13,
+      "h5h6"
+     ],
+     [
+      14,
+      "h5h6"
+     ],
+     [
+      15,
+      "h5h6"
+     ],
+     [
+      16,
+      "h5h6"
+     ],
+     [
+      17,
+      "h5h6"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.221088,
+   "difficulty": 0.2112,
+   "delayMs": 619
+  },
+  {
+   "ply": 94,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "a3a2",
+   "san": "a2",
+   "evalLc0": 0.7831,
+   "evalSF": 0.8965,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "a3a2",
+     "from": "a3",
+     "to": "a2",
+     "san": "a2",
+     "share": 0.616,
+     "visits": 2615,
+     "policy": 0.2285,
+     "q": -0.7273
+    },
+    {
+     "uci": "e5e4",
+     "from": "e5",
+     "to": "e4",
+     "san": "e4",
+     "share": 0.1767,
+     "visits": 750,
+     "policy": 0.2004,
+     "q": -0.797
+    },
+    {
+     "uci": "c3c4",
+     "from": "c3",
+     "to": "c4",
+     "san": "Kc4",
+     "share": 0.11,
+     "visits": 467,
+     "policy": 0.041,
+     "q": -0.799
+    },
+    {
+     "uci": "a7h7",
+     "from": "a7",
+     "to": "h7",
+     "san": "Rh7",
+     "share": 0.0372,
+     "visits": 158,
+     "policy": 0.1489,
+     "q": -0.8769
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.434,
+    "qMargin": 0.0696,
+    "totalVisits": 4245
+   },
+   "rawDifficulty": 0.433953,
+   "difficulty": 0.4342,
+   "delayMs": 1202
+  },
+  {
+   "ply": 95,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "f2a2",
+   "san": "Rxa2",
+   "evalLc0": 0.7781,
+   "evalSF": 0.949,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f2a2",
+     "from": "f2",
+     "to": "a2",
+     "san": "Rxa2",
+     "share": 0.9999,
+     "cp": 499,
+     "line": [
+      "f2a2",
+      "a7h7",
+      "f6g7",
+      "c3b3",
+      "a2a5",
+      "b3c4"
+     ]
+    },
+    {
+     "uci": "f2f3",
+     "from": "f2",
+     "to": "f3",
+     "san": "Rf3+",
+     "share": 0.0001,
+     "cp": -226,
+     "line": [
+      "f2f3",
+      "c3c4",
+      "f3f1",
+      "a2a1q",
+      "f1a1",
+      "a7a1"
+     ]
+    },
+    {
+     "uci": "f2f1",
+     "from": "f2",
+     "to": "f1",
+     "san": "Rf1",
+     "share": 0.0,
+     "cp": -348,
+     "line": [
+      "f2f1",
+      "a2a1q",
+      "f1a1",
+      "a7a1",
+      "g1f2",
+      "a1h1"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 18,
+    "marginCp": 725,
+    "rootHistory": [
+     [
+      1,
+      "f2a2"
+     ],
+     [
+      2,
+      "f2a2"
+     ],
+     [
+      3,
+      "f2a2"
+     ],
+     [
+      4,
+      "f2a2"
+     ],
+     [
+      5,
+      "f2a2"
+     ],
+     [
+      6,
+      "f2a2"
+     ],
+     [
+      7,
+      "f2a2"
+     ],
+     [
+      8,
+      "f2a2"
+     ],
+     [
+      9,
+      "f2a2"
+     ],
+     [
+      10,
+      "f2a2"
+     ],
+     [
+      11,
+      "f2a2"
+     ],
+     [
+      12,
+      "f2a2"
+     ],
+     [
+      13,
+      "f2a2"
+     ],
+     [
+      14,
+      "f2a2"
+     ],
+     [
+      15,
+      "f2a2"
+     ],
+     [
+      16,
+      "f2a2"
+     ],
+     [
+      17,
+      "f2a2"
+     ],
+     [
+      18,
+      "f2a2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.01669,
+   "difficulty": 0.0042,
+   "delayMs": 400
+  },
+  {
+   "ply": 96,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "a7a2",
+   "san": "Rxa2",
+   "evalLc0": 0.8011,
+   "evalSF": 0.9499,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "a7a2",
+     "from": "a7",
+     "to": "a2",
+     "san": "Rxa2",
+     "share": 0.97,
+     "visits": 2753,
+     "policy": 0.7334,
+     "q": -0.7522
+    },
+    {
+     "uci": "d4d3",
+     "from": "d4",
+     "to": "d3",
+     "san": "d3",
+     "share": 0.0032,
+     "visits": 9,
+     "policy": 0.0257,
+     "q": -0.999
+    },
+    {
+     "uci": "a7h7",
+     "from": "a7",
+     "to": "h7",
+     "san": "Rh7",
+     "share": 0.0025,
+     "visits": 7,
+     "policy": 0.0206,
+     "q": -0.9949
+    },
+    {
+     "uci": "a7f7",
+     "from": "a7",
+     "to": "f7",
+     "san": "Rf7",
+     "share": 0.0025,
+     "visits": 7,
+     "policy": 0.0221,
+     "q": -0.9962
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0747,
+    "qMargin": 0.2467,
+    "totalVisits": 2838
+   },
+   "rawDifficulty": 0.074684,
+   "difficulty": 0.0747,
+   "delayMs": 434
+  },
+  {
+   "ply": 97,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "h6h7",
+   "san": "h7",
+   "evalLc0": 0.7965,
+   "evalSF": 0.9548,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "h6h7",
+     "from": "h6",
+     "to": "h7",
+     "san": "h7",
+     "share": 0.9972,
+     "cp": 530,
+     "line": [
+      "h6h7",
+      "a2a1",
+      "g1f2",
+      "a1a2",
+      "f2f3",
+      "e5e4"
+     ]
+    },
+    {
+     "uci": "g2g4",
+     "from": "g2",
+     "to": "g4",
+     "san": "g4",
+     "share": 0.0014,
+     "cp": 7,
+     "line": [
+      "g2g4",
+      "d4d3",
+      "f6e5",
+      "c3c4",
+      "e5f4",
+      "a2a8"
+     ]
+    },
+    {
+     "uci": "f6e5",
+     "from": "f6",
+     "to": "e5",
+     "san": "Bxe5",
+     "share": 0.0013,
+     "cp": 0,
+     "line": [
+      "f6e5",
+      "a2a1",
+      "g1h2",
+      "a1a6",
+      "e5f4",
+      "c3d3"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 20,
+    "marginCp": 523,
+    "rootHistory": [
+     [
+      1,
+      "h6h7"
+     ],
+     [
+      2,
+      "h6h7"
+     ],
+     [
+      3,
+      "h6h7"
+     ],
+     [
+      4,
+      "h6h7"
+     ],
+     [
+      5,
+      "h6h7"
+     ],
+     [
+      6,
+      "h6h7"
+     ],
+     [
+      7,
+      "h6h7"
+     ],
+     [
+      8,
+      "h6h7"
+     ],
+     [
+      9,
+      "h6h7"
+     ],
+     [
+      10,
+      "h6h7"
+     ],
+     [
+      11,
+      "h6h7"
+     ],
+     [
+      12,
+      "h6h7"
+     ],
+     [
+      13,
+      "h6h7"
+     ],
+     [
+      14,
+      "h6h7"
+     ],
+     [
+      15,
+      "h6h7"
+     ],
+     [
+      16,
+      "h6h7"
+     ],
+     [
+      17,
+      "h6h7"
+     ],
+     [
+      18,
+      "h6h7"
+     ],
+     [
+      19,
+      "h6h7"
+     ],
+     [
+      20,
+      "h6h7"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.01529,
+   "difficulty": 0.0028,
+   "delayMs": 400
+  },
+  {
+   "ply": 98,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "a2a8",
+   "san": "Ra8",
+   "evalLc0": 0.8769,
+   "evalSF": 0.9644,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "a2a8",
+     "from": "a2",
+     "to": "a8",
+     "san": "Ra8",
+     "share": 0.8532,
+     "visits": 2992,
+     "policy": 0.4215,
+     "q": -0.788
+    },
+    {
+     "uci": "a2a1",
+     "from": "a2",
+     "to": "a1",
+     "san": "Ra1+",
+     "share": 0.1101,
+     "visits": 386,
+     "policy": 0.2909,
+     "q": -0.8452
+    },
+    {
+     "uci": "d4d3",
+     "from": "d4",
+     "to": "d3",
+     "san": "d3",
+     "share": 0.0125,
+     "visits": 44,
+     "policy": 0.0862,
+     "q": -0.9854
+    },
+    {
+     "uci": "c3c2",
+     "from": "c3",
+     "to": "c2",
+     "san": "Kc2",
+     "share": 0.002,
+     "visits": 7,
+     "policy": 0.0156,
+     "q": -0.9939
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.1923,
+    "qMargin": 0.0573,
+    "totalVisits": 3507
+   },
+   "rawDifficulty": 0.192271,
+   "difficulty": 0.1924,
+   "delayMs": 585
+  },
+  {
+   "ply": 99,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "f6e5",
+   "san": "Bxe5",
+   "evalLc0": 0.8718,
+   "evalSF": 0.9595,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f6e5",
+     "from": "f6",
+     "to": "e5",
+     "san": "Bxe5",
+     "share": 0.9978,
+     "cp": 568,
+     "line": [
+      "f6e5",
+      "c3c4",
+      "g1f2",
+      "a8f8",
+      "f2e2",
+      "d4d3"
+     ]
+    },
+    {
+     "uci": "h7h8r",
+     "from": "h7",
+     "to": "h8",
+     "san": "h8=R",
+     "share": 0.0012,
+     "cp": 27,
+     "line": [
+      "h7h8r",
+      "a8h8",
+      "f6h8",
+      "e5e4",
+      "g1f2",
+      "c3d3"
+     ]
+    },
+    {
+     "uci": "h7h8q",
+     "from": "h7",
+     "to": "h8",
+     "san": "h8=Q",
+     "share": 0.001,
+     "cp": 17,
+     "line": [
+      "h7h8q",
+      "a8h8",
+      "f6h8",
+      "e5e4",
+      "g1f2",
+      "c3d3"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 14,
+    "marginCp": 541,
+    "rootHistory": [
+     [
+      1,
+      "f6e5"
+     ],
+     [
+      2,
+      "f6e5"
+     ],
+     [
+      3,
+      "f6e5"
+     ],
+     [
+      4,
+      "f6e5"
+     ],
+     [
+      5,
+      "f6e5"
+     ],
+     [
+      6,
+      "f6e5"
+     ],
+     [
+      7,
+      "f6e5"
+     ],
+     [
+      8,
+      "f6e5"
+     ],
+     [
+      9,
+      "f6e5"
+     ],
+     [
+      10,
+      "f6e5"
+     ],
+     [
+      11,
+      "f6e5"
+     ],
+     [
+      12,
+      "f6e5"
+     ],
+     [
+      13,
+      "f6e5"
+     ],
+     [
+      14,
+      "f6e5"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.02166,
+   "difficulty": 0.0092,
+   "delayMs": 401
+  },
+  {
+   "ply": 100,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c3c4",
+   "san": "Kc4",
+   "evalLc0": 0.897,
+   "evalSF": 0.9619,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c3c4",
+     "from": "c3",
+     "to": "c4",
+     "san": "Kc4",
+     "share": 0.7501,
+     "visits": 2896,
+     "policy": 0.1882,
+     "q": -0.8918
+    },
+    {
+     "uci": "c3d3",
+     "from": "c3",
+     "to": "d3",
+     "san": "Kd3",
+     "share": 0.0593,
+     "visits": 229,
+     "policy": 0.1768,
+     "q": -0.9485
+    },
+    {
+     "uci": "c3c2",
+     "from": "c3",
+     "to": "c2",
+     "san": "Kc2",
+     "share": 0.0466,
+     "visits": 180,
+     "policy": 0.1633,
+     "q": -0.9607
+    },
+    {
+     "uci": "c3d2",
+     "from": "c3",
+     "to": "d2",
+     "san": "Kd2",
+     "share": 0.0197,
+     "visits": 76,
+     "policy": 0.0452,
+     "q": -0.9294
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.381,
+    "qMargin": 0.0566,
+    "totalVisits": 3861
+   },
+   "rawDifficulty": 0.380997,
+   "difficulty": 0.3812,
+   "delayMs": 1034
+  },
+  {
+   "ply": 101,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "g1f2",
+   "san": "Kf2",
+   "evalLc0": 0.9146,
+   "evalSF": 0.9747,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g1f2",
+     "from": "g1",
+     "to": "f2",
+     "san": "Kf2",
+     "share": 0.7357,
+     "cp": 613,
+     "line": [
+      "g1f2",
+      "d4d3",
+      "f2e3",
+      "d3d2",
+      "e3d2",
+      "a8a2"
+     ]
+    },
+    {
+     "uci": "g1f1",
+     "from": "g1",
+     "to": "f1",
+     "san": "Kf1",
+     "share": 0.264,
+     "cp": 531,
+     "line": [
+      "g1f1",
+      "d4d3",
+      "f1e1",
+      "a8a2",
+      "h7h8q",
+      "a2g2"
+     ]
+    },
+    {
+     "uci": "h7h8r",
+     "from": "h7",
+     "to": "h8",
+     "san": "h8=R",
+     "share": 0.0004,
+     "cp": 6,
+     "line": [
+      "h7h8r",
+      "a8h8",
+      "e5h8",
+      "d4d3",
+      "g1f2",
+      "c4b3"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 16,
+    "marginCp": 82,
+    "rootHistory": [
+     [
+      1,
+      "g1f2"
+     ],
+     [
+      2,
+      "g1f2"
+     ],
+     [
+      3,
+      "g1f2"
+     ],
+     [
+      4,
+      "g1f2"
+     ],
+     [
+      5,
+      "g1f2"
+     ],
+     [
+      6,
+      "g1f2"
+     ],
+     [
+      7,
+      "g1f2"
+     ],
+     [
+      8,
+      "g1f2"
+     ],
+     [
+      9,
+      "g1f2"
+     ],
+     [
+      10,
+      "g1f2"
+     ],
+     [
+      11,
+      "g1f2"
+     ],
+     [
+      12,
+      "g1f2"
+     ],
+     [
+      13,
+      "g1f2"
+     ],
+     [
+      14,
+      "g1f2"
+     ],
+     [
+      15,
+      "g1f2"
+     ],
+     [
+      16,
+      "g1f2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.090509,
+   "difficulty": 0.079,
+   "delayMs": 437
+  },
+  {
+   "ply": 102,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d4d3",
+   "san": "d3",
+   "evalLc0": 0.9961,
+   "evalSF": 0.9755,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "d4d3",
+     "from": "d4",
+     "to": "d3",
+     "san": "d3",
+     "share": 0.3008,
+     "visits": 1904,
+     "policy": 0.155,
+     "q": -0.9335
+    },
+    {
+     "uci": "a8f8",
+     "from": "a8",
+     "to": "f8",
+     "san": "Rf8+",
+     "share": 0.2904,
+     "visits": 1838,
+     "policy": 0.2625,
+     "q": -0.9514
+    },
+    {
+     "uci": "a8a2",
+     "from": "a8",
+     "to": "a2",
+     "san": "Ra2+",
+     "share": 0.1929,
+     "visits": 1221,
+     "policy": 0.0967,
+     "q": -0.9483
+    },
+    {
+     "uci": "c4d3",
+     "from": "c4",
+     "to": "d3",
+     "san": "Kd3",
+     "share": 0.0531,
+     "visits": 336,
+     "policy": 0.1115,
+     "q": -0.9696
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.6007,
+    "qMargin": 0.0179,
+    "totalVisits": 6330
+   },
+   "rawDifficulty": 0.600697,
+   "difficulty": 0.601,
+   "delayMs": 1840
+  },
+  {
+   "ply": 103,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "f2e3",
+   "san": "Ke3",
+   "evalLc0": 0.9855,
+   "evalSF": 0.9772,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f2e3",
+     "from": "f2",
+     "to": "e3",
+     "san": "Ke3",
+     "share": 1.0,
+     "cp": 621,
+     "line": [
+      "f2e3",
+      "a8a2",
+      "h7h8q",
+      "a2e2",
+      "e3f3",
+      "e2d2"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 17,
+    "marginCp": 1000,
+    "rootHistory": [
+     [
+      1,
+      "f2e3"
+     ],
+     [
+      2,
+      "f2e3"
+     ],
+     [
+      3,
+      "f2e3"
+     ],
+     [
+      4,
+      "f2e3"
+     ],
+     [
+      5,
+      "f2e3"
+     ],
+     [
+      6,
+      "f2e3"
+     ],
+     [
+      7,
+      "f2e3"
+     ],
+     [
+      8,
+      "f2e3"
+     ],
+     [
+      9,
+      "f2e3"
+     ],
+     [
+      10,
+      "f2e3"
+     ],
+     [
+      11,
+      "f2e3"
+     ],
+     [
+      12,
+      "f2e3"
+     ],
+     [
+      13,
+      "f2e3"
+     ],
+     [
+      14,
+      "f2e3"
+     ],
+     [
+      15,
+      "f2e3"
+     ],
+     [
+      16,
+      "f2e3"
+     ],
+     [
+      17,
+      "f2e3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.017648,
+   "difficulty": 0.0052,
+   "delayMs": 400
+  },
+  {
+   "ply": 104,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d3d2",
+   "san": "d2",
+   "evalLc0": 0.9997,
+   "evalSF": 0.977,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "d3d2",
+     "from": "d3",
+     "to": "d2",
+     "san": "d2",
+     "share": 0.31,
+     "visits": 1982,
+     "policy": 0.0934,
+     "q": -0.963
+    },
+    {
+     "uci": "c4d5",
+     "from": "c4",
+     "to": "d5",
+     "san": "Kd5",
+     "share": 0.18,
+     "visits": 1151,
+     "policy": 0.1815,
+     "q": -0.9656
+    },
+    {
+     "uci": "c4b3",
+     "from": "c4",
+     "to": "b3",
+     "san": "Kb3",
+     "share": 0.1219,
+     "visits": 779,
+     "policy": 0.0653,
+     "q": -0.9768
+    },
+    {
+     "uci": "a8e8",
+     "from": "a8",
+     "to": "e8",
+     "san": "Re8",
+     "share": 0.1109,
+     "visits": 709,
+     "policy": 0.192,
+     "q": -0.9691
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.7063,
+    "qMargin": 0.0026,
+    "totalVisits": 6393
+   },
+   "rawDifficulty": 0.706267,
+   "difficulty": 0.7066,
+   "delayMs": 2327
+  },
+  {
+   "ply": 105,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e3d2",
+   "san": "Kxd2",
+   "evalLc0": 0.9981,
+   "evalSF": 0.9767,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e3d2",
+     "from": "e3",
+     "to": "d2",
+     "san": "Kxd2",
+     "share": 1.0,
+     "cp": 660,
+     "line": [
+      "e3d2",
+      "c4d5",
+      "h7h8q",
+      "a8h8",
+      "e5h8",
+      "d5e4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 19,
+    "marginCp": 1000,
+    "rootHistory": [
+     [
+      1,
+      "e3d2"
+     ],
+     [
+      2,
+      "e3d2"
+     ],
+     [
+      3,
+      "e3d2"
+     ],
+     [
+      4,
+      "e3d2"
+     ],
+     [
+      5,
+      "e3d2"
+     ],
+     [
+      6,
+      "e3d2"
+     ],
+     [
+      7,
+      "e3d2"
+     ],
+     [
+      8,
+      "e3d2"
+     ],
+     [
+      9,
+      "e3d2"
+     ],
+     [
+      10,
+      "e3d2"
+     ],
+     [
+      11,
+      "e3d2"
+     ],
+     [
+      12,
+      "e3d2"
+     ],
+     [
+      13,
+      "e3d2"
+     ],
+     [
+      14,
+      "e3d2"
+     ],
+     [
+      15,
+      "e3d2"
+     ],
+     [
+      16,
+      "e3d2"
+     ],
+     [
+      17,
+      "e3d2"
+     ],
+     [
+      18,
+      "e3d2"
+     ],
+     [
+      19,
+      "e3d2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.01579,
+   "difficulty": 0.0033,
+   "delayMs": 400
+  },
+  {
+   "ply": 106,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "c4d5",
+   "san": "Kd5",
+   "evalLc0": 0.9999,
+   "evalSF": 0.9785,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c4d5",
+     "from": "c4",
+     "to": "d5",
+     "san": "Kd5",
+     "share": 0.4445,
+     "visits": 2151,
+     "policy": 0.3577,
+     "q": -0.9783
+    },
+    {
+     "uci": "a8a2",
+     "from": "a8",
+     "to": "a2",
+     "san": "Ra2+",
+     "share": 0.1271,
+     "visits": 615,
+     "policy": 0.1503,
+     "q": -0.987
+    },
+    {
+     "uci": "a8d8",
+     "from": "a8",
+     "to": "d8",
+     "san": "Rd8+",
+     "share": 0.1141,
+     "visits": 552,
+     "policy": 0.0783,
+     "q": -0.9847
+    },
+    {
+     "uci": "a8e8",
+     "from": "a8",
+     "to": "e8",
+     "san": "Re8",
+     "share": 0.0732,
+     "visits": 354,
+     "policy": 0.0717,
+     "q": -0.98
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.6706,
+    "qMargin": 0.0087,
+    "totalVisits": 4839
+   },
+   "rawDifficulty": 0.670551,
+   "difficulty": 0.6709,
+   "delayMs": 2155
+  },
+  {
+   "ply": 107,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "h7h8q",
+   "san": "h8=Q",
+   "evalLc0": 0.9991,
+   "evalSF": 0.9812,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "h7h8q",
+     "from": "h7",
+     "to": "h8",
+     "san": "h8=Q",
+     "share": 0.5805,
+     "cp": 686,
+     "line": [
+      "h7h8q",
+      "a8h8",
+      "e5h8",
+      "d5e4",
+      "h8c3",
+      "e4f4"
+     ]
+    },
+    {
+     "uci": "e5c3",
+     "from": "e5",
+     "to": "c3",
+     "san": "Bc3",
+     "share": 0.4195,
+     "cp": 660,
+     "line": [
+      "e5c3",
+      "a8d8",
+      "h7h8q",
+      "d8h8",
+      "c3h8",
+      "d5e4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 16,
+    "marginCp": 26,
+    "rootHistory": [
+     [
+      1,
+      "h7h8q"
+     ],
+     [
+      2,
+      "h7h8q"
+     ],
+     [
+      3,
+      "h7h8q"
+     ],
+     [
+      4,
+      "h7h8q"
+     ],
+     [
+      5,
+      "h7h8q"
+     ],
+     [
+      6,
+      "h7h8q"
+     ],
+     [
+      7,
+      "h7h8q"
+     ],
+     [
+      8,
+      "h7h8q"
+     ],
+     [
+      9,
+      "h7h8q"
+     ],
+     [
+      10,
+      "h7h8q"
+     ],
+     [
+      11,
+      "h7h8q"
+     ],
+     [
+      12,
+      "h7h8q"
+     ],
+     [
+      13,
+      "h7h8q"
+     ],
+     [
+      14,
+      "h7h8q"
+     ],
+     [
+      15,
+      "h7h8q"
+     ],
+     [
+      16,
+      "h7h8q"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.163255,
+   "difficulty": 0.1526,
+   "delayMs": 522
+  },
+  {
+   "ply": 108,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "a8h8",
+   "san": "Rxh8",
+   "evalLc0": 1.0,
+   "evalSF": 0.9819,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "a8h8",
+     "from": "a8",
+     "to": "h8",
+     "san": "Rxh8",
+     "share": 0.8022,
+     "visits": 3658,
+     "policy": 0.4513,
+     "q": -0.9831
+    },
+    {
+     "uci": "a8a2",
+     "from": "a8",
+     "to": "a2",
+     "san": "Ra2+",
+     "share": 0.0371,
+     "visits": 169,
+     "policy": 0.0832,
+     "q": -0.9991
+    },
+    {
+     "uci": "a8a6",
+     "from": "a8",
+     "to": "a6",
+     "san": "Ra6",
+     "share": 0.0162,
+     "visits": 74,
+     "policy": 0.0369,
+     "q": -0.999
+    },
+    {
+     "uci": "a8a7",
+     "from": "a8",
+     "to": "a7",
+     "san": "Ra7",
+     "share": 0.0162,
+     "visits": 74,
+     "policy": 0.0363,
+     "q": -0.9991
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.3504,
+    "qMargin": 0.016,
+    "totalVisits": 4560
+   },
+   "rawDifficulty": 0.350435,
+   "difficulty": 0.3506,
+   "delayMs": 946
+  },
+  {
+   "ply": 109,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e5h8",
+   "san": "Bxh8",
+   "evalLc0": 1.0,
+   "evalSF": 0.9834,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e5h8",
+     "from": "e5",
+     "to": "h8",
+     "san": "Bxh8",
+     "share": 0.9997,
+     "cp": 714,
+     "line": [
+      "e5h8",
+      "d5e4",
+      "d2e2",
+      "e4f4",
+      "h8c3",
+      "f4g3"
+     ]
+    },
+    {
+     "uci": "e5c3",
+     "from": "e5",
+     "to": "c3",
+     "san": "Bc3",
+     "share": 0.0001,
+     "cp": 0,
+     "line": [
+      "e5c3",
+      "h8g8",
+      "g2g4",
+      "g8g4",
+      "c3a1",
+      "g4g3"
+     ]
+    },
+    {
+     "uci": "e5f6",
+     "from": "e5",
+     "to": "f6",
+     "san": "Bf6",
+     "share": 0.0001,
+     "cp": 0,
+     "line": [
+      "e5f6",
+      "h8f8",
+      "f6c3",
+      "f8g8",
+      "g2g4",
+      "g8g4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 24,
+    "marginCp": 714,
+    "rootHistory": [
+     [
+      1,
+      "e5h8"
+     ],
+     [
+      2,
+      "e5h8"
+     ],
+     [
+      3,
+      "e5h8"
+     ],
+     [
+      4,
+      "e5h8"
+     ],
+     [
+      5,
+      "e5h8"
+     ],
+     [
+      6,
+      "e5h8"
+     ],
+     [
+      7,
+      "e5h8"
+     ],
+     [
+      8,
+      "e5h8"
+     ],
+     [
+      9,
+      "e5h8"
+     ],
+     [
+      10,
+      "e5h8"
+     ],
+     [
+      11,
+      "e5h8"
+     ],
+     [
+      12,
+      "e5h8"
+     ],
+     [
+      13,
+      "e5h8"
+     ],
+     [
+      14,
+      "e5h8"
+     ],
+     [
+      15,
+      "e5h8"
+     ],
+     [
+      16,
+      "e5h8"
+     ],
+     [
+      17,
+      "e5h8"
+     ],
+     [
+      18,
+      "e5h8"
+     ],
+     [
+      19,
+      "e5h8"
+     ],
+     [
+      20,
+      "e5h8"
+     ],
+     [
+      21,
+      "e5h8"
+     ],
+     [
+      22,
+      "e5h8"
+     ],
+     [
+      23,
+      "e5h8"
+     ],
+     [
+      24,
+      "e5h8"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.012527,
+   "difficulty": 0.0,
+   "delayMs": 400
+  },
+  {
+   "ply": 110,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "d5e4",
+   "san": "Ke4",
+   "evalLc0": 1.0,
+   "evalSF": 0.9846,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d5e4",
+     "from": "d5",
+     "to": "e4",
+     "san": "Ke4",
+     "share": 0.3931,
+     "visits": 2873,
+     "policy": 0.2335,
+     "q": -0.9878
+    },
+    {
+     "uci": "d5e6",
+     "from": "d5",
+     "to": "e6",
+     "san": "Ke6",
+     "share": 0.1602,
+     "visits": 1171,
+     "policy": 0.1772,
+     "q": -0.9944
+    },
+    {
+     "uci": "d5d6",
+     "from": "d5",
+     "to": "d6",
+     "san": "Kd6",
+     "share": 0.1296,
+     "visits": 947,
+     "policy": 0.1639,
+     "q": -0.995
+    },
+    {
+     "uci": "d5c5",
+     "from": "d5",
+     "to": "c5",
+     "san": "Kc5",
+     "share": 0.1093,
+     "visits": 799,
+     "policy": 0.1437,
+     "q": -0.9943
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.914,
+    "qMargin": 0.0066,
+    "totalVisits": 7308
+   },
+   "rawDifficulty": 0.91399,
+   "difficulty": 0.9145,
+   "delayMs": 3465
+  },
+  {
+   "ply": 111,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "d2e1",
+   "san": "Ke1",
+   "evalLc0": 1.0,
+   "evalSF": 0.989,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "d2e1",
+     "from": "d2",
+     "to": "e1",
+     "san": "Ke1",
+     "share": 0.3389,
+     "cp": 741,
+     "line": [
+      "d2e1",
+      "e4f5",
+      "h8c3",
+      "f5e6",
+      "e1f2",
+      "e6f5"
+     ]
+    },
+    {
+     "uci": "h8c3",
+     "from": "h8",
+     "to": "c3",
+     "san": "Bc3",
+     "share": 0.3305,
+     "cp": 739,
+     "line": [
+      "h8c3",
+      "e4f4",
+      "d2e2",
+      "f4g3",
+      "e2f1",
+      "g3f4"
+     ]
+    },
+    {
+     "uci": "d2e2",
+     "from": "d2",
+     "to": "e2",
+     "san": "Ke2",
+     "share": 0.3305,
+     "cp": 739,
+     "line": [
+      "d2e2",
+      "e4f4",
+      "e2f2",
+      "f4e4",
+      "h8c3",
+      "e4f4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 8,
+    "settleDepth": 19,
+    "maxDepth": 20,
+    "marginCp": 2,
+    "rootHistory": [
+     [
+      1,
+      "d2e2"
+     ],
+     [
+      2,
+      "d2e2"
+     ],
+     [
+      3,
+      "d2e2"
+     ],
+     [
+      4,
+      "d2e2"
+     ],
+     [
+      5,
+      "d2e2"
+     ],
+     [
+      6,
+      "d2e2"
+     ],
+     [
+      7,
+      "d2e2"
+     ],
+     [
+      8,
+      "d2e2"
+     ],
+     [
+      9,
+      "d2e1"
+     ],
+     [
+      10,
+      "h8c3"
+     ],
+     [
+      11,
+      "d2e2"
+     ],
+     [
+      12,
+      "d2e2"
+     ],
+     [
+      13,
+      "h8c3"
+     ],
+     [
+      14,
+      "d2e2"
+     ],
+     [
+      15,
+      "d2e1"
+     ],
+     [
+      16,
+      "h8c3"
+     ],
+     [
+      17,
+      "h8c3"
+     ],
+     [
+      18,
+      "h8c3"
+     ],
+     [
+      19,
+      "d2e1"
+     ],
+     [
+      20,
+      "d2e1"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.980062,
+   "difficulty": 0.9798,
+   "delayMs": 3870
+  },
+  {
+   "ply": 112,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "e4f4",
+   "san": "Kf4",
+   "evalLc0": 0.9994,
+   "evalSF": 0.9861,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e4f4",
+     "from": "e4",
+     "to": "f4",
+     "san": "Kf4",
+     "share": 0.3137,
+     "visits": 1999,
+     "policy": 0.2224,
+     "q": -0.9799
+    },
+    {
+     "uci": "e4e3",
+     "from": "e4",
+     "to": "e3",
+     "san": "Ke3",
+     "share": 0.2872,
+     "visits": 1830,
+     "policy": 0.2135,
+     "q": -0.9825
+    },
+    {
+     "uci": "e4d3",
+     "from": "e4",
+     "to": "d3",
+     "san": "Kd3",
+     "share": 0.2023,
+     "visits": 1289,
+     "policy": 0.1697,
+     "q": -0.9828
+    },
+    {
+     "uci": "e4f5",
+     "from": "e4",
+     "to": "f5",
+     "san": "Kf5",
+     "share": 0.131,
+     "visits": 835,
+     "policy": 0.2136,
+     "q": -0.994
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.9261,
+    "qMargin": 0.0026,
+    "totalVisits": 6372
+   },
+   "rawDifficulty": 0.926124,
+   "difficulty": 0.9266,
+   "delayMs": 3538
+  },
+  {
+   "ply": 113,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e1f1",
+   "san": "Kf1",
+   "evalLc0": 1.0,
+   "evalSF": 0.9868,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "e1f1",
+     "from": "e1",
+     "to": "f1",
+     "san": "Kf1",
+     "share": 0.5467,
+     "cp": 754,
+     "line": [
+      "e1f1",
+      "f4e3",
+      "h8g7",
+      "e3e4",
+      "g7h6",
+      "e4d5"
+     ]
+    },
+    {
+     "uci": "e1e2",
+     "from": "e1",
+     "to": "e2",
+     "san": "Ke2",
+     "share": 0.4533,
+     "cp": 739,
+     "line": [
+      "e1e2",
+      "f4g3",
+      "e2f1",
+      "g3f4",
+      "f1f2",
+      "f4e4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 8,
+    "settleDepth": 19,
+    "maxDepth": 19,
+    "marginCp": 15,
+    "rootHistory": [
+     [
+      1,
+      "h8c3"
+     ],
+     [
+      2,
+      "h8c3"
+     ],
+     [
+      3,
+      "h8c3"
+     ],
+     [
+      4,
+      "h8c3"
+     ],
+     [
+      5,
+      "h8c3"
+     ],
+     [
+      6,
+      "h8c3"
+     ],
+     [
+      7,
+      "e1f2"
+     ],
+     [
+      8,
+      "h8c3"
+     ],
+     [
+      9,
+      "h8c3"
+     ],
+     [
+      10,
+      "h8c3"
+     ],
+     [
+      11,
+      "h8c3"
+     ],
+     [
+      12,
+      "h8c3"
+     ],
+     [
+      13,
+      "h8c3"
+     ],
+     [
+      14,
+      "e1e2"
+     ],
+     [
+      15,
+      "e1f2"
+     ],
+     [
+      16,
+      "e1e2"
+     ],
+     [
+      17,
+      "e1f2"
+     ],
+     [
+      18,
+      "e1e2"
+     ],
+     [
+      19,
+      "e1f1"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.965806,
+   "difficulty": 0.9654,
+   "delayMs": 3779
+  },
+  {
+   "ply": 114,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f4g3",
+   "san": "Kg3",
+   "evalLc0": 1.0,
+   "evalSF": 0.9868,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f4g3",
+     "from": "f4",
+     "to": "g3",
+     "san": "Kg3",
+     "share": 0.5068,
+     "visits": 3644,
+     "policy": 0.1749,
+     "q": -0.9785
+    },
+    {
+     "uci": "f4g4",
+     "from": "f4",
+     "to": "g4",
+     "san": "Kg4",
+     "share": 0.1191,
+     "visits": 856,
+     "policy": 0.1747,
+     "q": -0.9904
+    },
+    {
+     "uci": "f4e3",
+     "from": "f4",
+     "to": "e3",
+     "san": "Ke3",
+     "share": 0.1178,
+     "visits": 847,
+     "policy": 0.1546,
+     "q": -0.9841
+    },
+    {
+     "uci": "f4f5",
+     "from": "f4",
+     "to": "f5",
+     "san": "Kf5",
+     "share": 0.1058,
+     "visits": 761,
+     "policy": 0.1695,
+     "q": -0.9926
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.8229,
+    "qMargin": 0.0119,
+    "totalVisits": 7190
+   },
+   "rawDifficulty": 0.822925,
+   "difficulty": 0.8234,
+   "delayMs": 2937
+  },
+  {
+   "ply": 115,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "h8b2",
+   "san": "Bb2",
+   "evalLc0": 0.9997,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "h8b2",
+     "from": "h8",
+     "to": "b2",
+     "san": "Bb2",
+     "share": 1.0,
+     "cp": 8115,
+     "line": [
+      "h8b2",
+      "g3g4",
+      "b2c3",
+      "g4f5",
+      "f1f2",
+      "f5e4"
+     ]
+    },
+    {
+     "uci": "f1g1",
+     "from": "f1",
+     "to": "g1",
+     "san": "Kg1",
+     "share": 0.0,
+     "cp": 2978,
+     "line": [
+      "f1g1",
+      "g3g4",
+      "g1f2",
+      "g4f4",
+      "h8g7",
+      "f4e4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 8,
+    "settleDepth": 20,
+    "maxDepth": 20,
+    "marginCp": 5137,
+    "rootHistory": [
+     [
+      1,
+      "h8c3"
+     ],
+     [
+      2,
+      "h8c3"
+     ],
+     [
+      3,
+      "h8c3"
+     ],
+     [
+      4,
+      "h8c3"
+     ],
+     [
+      5,
+      "h8c3"
+     ],
+     [
+      6,
+      "h8g7"
+     ],
+     [
+      7,
+      "h8g7"
+     ],
+     [
+      8,
+      "h8c3"
+     ],
+     [
+      9,
+      "h8c3"
+     ],
+     [
+      10,
+      "h8c3"
+     ],
+     [
+      11,
+      "h8c3"
+     ],
+     [
+      12,
+      "h8g7"
+     ],
+     [
+      13,
+      "h8c3"
+     ],
+     [
+      14,
+      "h8c3"
+     ],
+     [
+      15,
+      "h8b2"
+     ],
+     [
+      16,
+      "h8c3"
+     ],
+     [
+      17,
+      "f1g1"
+     ],
+     [
+      18,
+      "f1g1"
+     ],
+     [
+      19,
+      "f1g1"
+     ],
+     [
+      20,
+      "h8b2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.8,
+   "difficulty": 0.7975,
+   "delayMs": 2795
+  },
+  {
+   "ply": 116,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "g3g4",
+   "san": "Kg4",
+   "evalLc0": 0.9992,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "g3g4",
+     "from": "g3",
+     "to": "g4",
+     "san": "Kg4",
+     "share": 0.4049,
+     "visits": 2271,
+     "policy": 0.2861,
+     "q": -0.9702
+    },
+    {
+     "uci": "g3f4",
+     "from": "g3",
+     "to": "f4",
+     "san": "Kf4",
+     "share": 0.2915,
+     "visits": 1635,
+     "policy": 0.2925,
+     "q": -0.9781
+    },
+    {
+     "uci": "g3h4",
+     "from": "g3",
+     "to": "h4",
+     "san": "Kh4",
+     "share": 0.2225,
+     "visits": 1248,
+     "policy": 0.2574,
+     "q": -0.9854
+    },
+    {
+     "uci": "g3h2",
+     "from": "g3",
+     "to": "h2",
+     "san": "Kh2",
+     "share": 0.0811,
+     "visits": 455,
+     "policy": 0.1639,
+     "q": -0.9611
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.9115,
+    "qMargin": 0.0079,
+    "totalVisits": 5609
+   },
+   "rawDifficulty": 0.911459,
+   "difficulty": 0.9119,
+   "delayMs": 3450
+  },
+  {
+   "ply": 117,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "f1f2",
+   "san": "Kf2",
+   "evalLc0": 0.9948,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "f1f2",
+     "from": "f1",
+     "to": "f2",
+     "san": "Kf2",
+     "share": 0.3333,
+     "cp": 6716,
+     "line": [
+      "f1f2",
+      "g4f4",
+      "b2c1",
+      "f4e4",
+      "g2g4",
+      "e4d5"
+     ]
+    },
+    {
+     "uci": "b2c1",
+     "from": "b2",
+     "to": "c1",
+     "san": "Bc1",
+     "share": 0.3333,
+     "cp": 6716,
+     "line": [
+      "b2c1",
+      "g4h4",
+      "c1e3",
+      "h4g3",
+      "e3d2",
+      "g3g4"
+     ]
+    },
+    {
+     "uci": "b2c3",
+     "from": "b2",
+     "to": "c3",
+     "san": "Bc3",
+     "share": 0.3333,
+     "cp": 6716,
+     "line": [
+      "b2c3",
+      "g4f4",
+      "f1f2",
+      "f4e4",
+      "c3d2",
+      "e4d3"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 6,
+    "settleDepth": 23,
+    "maxDepth": 23,
+    "marginCp": 0,
+    "rootHistory": [
+     [
+      1,
+      "b2d4"
+     ],
+     [
+      2,
+      "b2d4"
+     ],
+     [
+      3,
+      "b2d4"
+     ],
+     [
+      4,
+      "b2d4"
+     ],
+     [
+      5,
+      "b2d4"
+     ],
+     [
+      6,
+      "b2d4"
+     ],
+     [
+      7,
+      "b2d4"
+     ],
+     [
+      8,
+      "b2d4"
+     ],
+     [
+      9,
+      "b2c3"
+     ],
+     [
+      10,
+      "b2c3"
+     ],
+     [
+      11,
+      "b2c1"
+     ],
+     [
+      12,
+      "b2c1"
+     ],
+     [
+      13,
+      "b2c1"
+     ],
+     [
+      14,
+      "b2c1"
+     ],
+     [
+      15,
+      "b2c1"
+     ],
+     [
+      16,
+      "b2c1"
+     ],
+     [
+      17,
+      "b2c1"
+     ],
+     [
+      18,
+      "b2c1"
+     ],
+     [
+      19,
+      "b2c1"
+     ],
+     [
+      20,
+      "f1f2"
+     ],
+     [
+      21,
+      "b2c3"
+     ],
+     [
+      22,
+      "b2c1"
+     ],
+     [
+      23,
+      "f1f2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.875,
+   "difficulty": 0.8734,
+   "delayMs": 3222
+  },
+  {
+   "ply": 118,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "g4f4",
+   "san": "Kf4",
+   "evalLc0": 1.0,
+   "evalSF": 1.0,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g4f4",
+     "from": "g4",
+     "to": "f4",
+     "san": "Kf4",
+     "share": 0.307,
+     "visits": 1970,
+     "policy": 0.2311,
+     "q": -0.9715
+    },
+    {
+     "uci": "g4f5",
+     "from": "g4",
+     "to": "f5",
+     "san": "Kf5",
+     "share": 0.247,
+     "visits": 1585,
+     "policy": 0.2008,
+     "q": -0.9719
+    },
+    {
+     "uci": "g4h4",
+     "from": "g4",
+     "to": "h4",
+     "san": "Kh4",
+     "share": 0.1699,
+     "visits": 1090,
+     "policy": 0.1844,
+     "q": -0.9832
+    },
+    {
+     "uci": "g4g5",
+     "from": "g4",
+     "to": "g5",
+     "san": "Kg5",
+     "share": 0.139,
+     "visits": 892,
+     "policy": 0.199,
+     "q": -0.9873
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.9666,
+    "qMargin": 0.0004,
+    "totalVisits": 6416
+   },
+   "rawDifficulty": 0.966638,
+   "difficulty": 0.9671,
+   "delayMs": 3790
+  },
+  {
+   "ply": 119,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "b2g7",
+   "san": "Bg7",
+   "evalLc0": 0.9999,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "b2g7",
+     "from": "b2",
+     "to": "g7",
+     "san": "Bg7",
+     "share": 0.5,
+     "cp": 4692,
+     "line": [
+      "b2g7",
+      "f4e4",
+      "g7h6",
+      "e4e5",
+      "h6d2",
+      "e5f5"
+     ]
+    },
+    {
+     "uci": "b2d4",
+     "from": "b2",
+     "to": "d4",
+     "san": "Bd4",
+     "share": 0.5,
+     "cp": 4692,
+     "line": [
+      "b2d4",
+      "f4e4",
+      "d4e3",
+      "e4d5",
+      "e3h6",
+      "d5d4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 7,
+    "settleDepth": 17,
+    "maxDepth": 17,
+    "marginCp": 0,
+    "rootHistory": [
+     [
+      1,
+      "b2c1"
+     ],
+     [
+      2,
+      "b2g7"
+     ],
+     [
+      3,
+      "b2g7"
+     ],
+     [
+      4,
+      "b2g7"
+     ],
+     [
+      5,
+      "b2g7"
+     ],
+     [
+      6,
+      "b2g7"
+     ],
+     [
+      7,
+      "b2g7"
+     ],
+     [
+      8,
+      "b2d4"
+     ],
+     [
+      9,
+      "b2c3"
+     ],
+     [
+      10,
+      "b2c3"
+     ],
+     [
+      11,
+      "b2d4"
+     ],
+     [
+      12,
+      "b2d4"
+     ],
+     [
+      13,
+      "b2c1"
+     ],
+     [
+      14,
+      "b2c1"
+     ],
+     [
+      15,
+      "b2c1"
+     ],
+     [
+      16,
+      "b2d4"
+     ],
+     [
+      17,
+      "b2g7"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.9375,
+   "difficulty": 0.9367,
+   "delayMs": 3600
+  },
+  {
+   "ply": 120,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f4g4",
+   "san": "Kg4",
+   "evalLc0": 1.0,
+   "evalSF": 1.0,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f4g4",
+     "from": "f4",
+     "to": "g4",
+     "san": "Kg4",
+     "share": 0.4409,
+     "visits": 3310,
+     "policy": 0.2643,
+     "q": -0.9767
+    },
+    {
+     "uci": "f4f5",
+     "from": "f4",
+     "to": "f5",
+     "san": "Kf5",
+     "share": 0.227,
+     "visits": 1704,
+     "policy": 0.2488,
+     "q": -0.982
+    },
+    {
+     "uci": "f4e4",
+     "from": "f4",
+     "to": "e4",
+     "san": "Ke4",
+     "share": 0.1826,
+     "visits": 1371,
+     "policy": 0.2426,
+     "q": -0.9822
+    },
+    {
+     "uci": "f4g5",
+     "from": "f4",
+     "to": "g5",
+     "san": "Kg5",
+     "share": 0.1496,
+     "visits": 1123,
+     "policy": 0.2444,
+     "q": -0.9907
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.9322,
+    "qMargin": 0.0053,
+    "totalVisits": 7508
+   },
+   "rawDifficulty": 0.93223,
+   "difficulty": 0.9327,
+   "delayMs": 3576
+  },
+  {
+   "ply": 121,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "g7h6",
+   "san": "Bh6",
+   "evalLc0": 0.9952,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "g7h6",
+     "from": "g7",
+     "to": "h6",
+     "san": "Bh6",
+     "share": 0.5031,
+     "cp": 4757,
+     "line": [
+      "g7h6",
+      "g4f5",
+      "f2f3",
+      "f5e6",
+      "h6d2",
+      "e6e7"
+     ]
+    },
+    {
+     "uci": "g7b2",
+     "from": "g7",
+     "to": "b2",
+     "san": "Bb2",
+     "share": 0.4969,
+     "cp": 4756,
+     "line": [
+      "g7b2",
+      "g4f4",
+      "b2d4",
+      "f4e4",
+      "d4e3",
+      "e4f5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 9,
+    "settleDepth": 19,
+    "maxDepth": 19,
+    "marginCp": 1,
+    "rootHistory": [
+     [
+      1,
+      "g7h6"
+     ],
+     [
+      2,
+      "g7b2"
+     ],
+     [
+      3,
+      "g7h6"
+     ],
+     [
+      4,
+      "g7h6"
+     ],
+     [
+      5,
+      "g7h6"
+     ],
+     [
+      6,
+      "g7h6"
+     ],
+     [
+      7,
+      "g7h6"
+     ],
+     [
+      8,
+      "g7h6"
+     ],
+     [
+      9,
+      "g7h6"
+     ],
+     [
+      10,
+      "g7h8"
+     ],
+     [
+      11,
+      "g7c3"
+     ],
+     [
+      12,
+      "g7h6"
+     ],
+     [
+      13,
+      "g7h8"
+     ],
+     [
+      14,
+      "g7h6"
+     ],
+     [
+      15,
+      "g7h6"
+     ],
+     [
+      16,
+      "g7h6"
+     ],
+     [
+      17,
+      "g7b2"
+     ],
+     [
+      18,
+      "g7b2"
+     ],
+     [
+      19,
+      "g7h6"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.997516,
+   "difficulty": 0.9975,
+   "delayMs": 3984
+  },
+  {
+   "ply": 122,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "g4f5",
+   "san": "Kf5",
+   "evalLc0": 1.0,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "g4f5",
+     "from": "g4",
+     "to": "f5",
+     "san": "Kf5",
+     "share": 0.4539,
+     "visits": 2532,
+     "policy": 0.3379,
+     "q": -0.9729
+    },
+    {
+     "uci": "g4h4",
+     "from": "g4",
+     "to": "h4",
+     "san": "Kh4",
+     "share": 0.2747,
+     "visits": 1532,
+     "policy": 0.3212,
+     "q": -0.985
+    },
+    {
+     "uci": "g4h5",
+     "from": "g4",
+     "to": "h5",
+     "san": "Kh5",
+     "share": 0.2714,
+     "visits": 1514,
+     "policy": 0.3409,
+     "q": -0.986
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.9716,
+    "qMargin": 0.012,
+    "totalVisits": 5578
+   },
+   "rawDifficulty": 0.971585,
+   "difficulty": 0.9721,
+   "delayMs": 3821
+  },
+  {
+   "ply": 123,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "h6e3",
+   "san": "Be3",
+   "evalLc0": 0.9839,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "h6e3",
+     "from": "h6",
+     "to": "e3",
+     "san": "Be3",
+     "share": 0.3459,
+     "cp": 4674,
+     "line": [
+      "h6e3",
+      "f5e4",
+      "f2e2",
+      "e4e5",
+      "e2f3",
+      "e5f5"
+     ]
+    },
+    {
+     "uci": "h6d2",
+     "from": "h6",
+     "to": "d2",
+     "san": "Bd2",
+     "share": 0.3291,
+     "cp": 4670,
+     "line": [
+      "h6d2",
+      "f5e4",
+      "d2e3",
+      "e4e5",
+      "f2f3",
+      "e5f5"
+     ]
+    },
+    {
+     "uci": "f2f3",
+     "from": "f2",
+     "to": "f3",
+     "san": "Kf3",
+     "share": 0.325,
+     "cp": 4669,
+     "line": [
+      "f2f3",
+      "f5e6",
+      "f3e4",
+      "e6e7",
+      "e4f5",
+      "e7d7"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 9,
+    "settleDepth": 19,
+    "maxDepth": 19,
+    "marginCp": 4,
+    "rootHistory": [
+     [
+      1,
+      "h6c1"
+     ],
+     [
+      2,
+      "h6c1"
+     ],
+     [
+      3,
+      "h6d2"
+     ],
+     [
+      4,
+      "h6d2"
+     ],
+     [
+      5,
+      "h6d2"
+     ],
+     [
+      6,
+      "h6d2"
+     ],
+     [
+      7,
+      "h6d2"
+     ],
+     [
+      8,
+      "h6g7"
+     ],
+     [
+      9,
+      "f2f3"
+     ],
+     [
+      10,
+      "f2f3"
+     ],
+     [
+      11,
+      "f2f3"
+     ],
+     [
+      12,
+      "f2f3"
+     ],
+     [
+      13,
+      "h6e3"
+     ],
+     [
+      14,
+      "f2f3"
+     ],
+     [
+      15,
+      "f2f3"
+     ],
+     [
+      16,
+      "h6d2"
+     ],
+     [
+      17,
+      "h6g7"
+     ],
+     [
+      18,
+      "f2f3"
+     ],
+     [
+      19,
+      "h6e3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.990246,
+   "difficulty": 0.9901,
+   "delayMs": 3936
+  },
+  {
+   "ply": 124,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f5g4",
+   "san": "Kg4",
+   "evalLc0": 0.9977,
+   "evalSF": 1.0,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f5g4",
+     "from": "f5",
+     "to": "g4",
+     "san": "Kg4",
+     "share": 0.2517,
+     "visits": 1528,
+     "policy": 0.1768,
+     "q": -0.9675
+    },
+    {
+     "uci": "f5e4",
+     "from": "f5",
+     "to": "e4",
+     "san": "Ke4",
+     "share": 0.1568,
+     "visits": 952,
+     "policy": 0.1674,
+     "q": -0.977
+    },
+    {
+     "uci": "f5e5",
+     "from": "f5",
+     "to": "e5",
+     "san": "Ke5",
+     "share": 0.1555,
+     "visits": 944,
+     "policy": 0.1661,
+     "q": -0.9866
+    },
+    {
+     "uci": "f5e6",
+     "from": "f5",
+     "to": "e6",
+     "san": "Ke6",
+     "share": 0.1488,
+     "visits": 903,
+     "policy": 0.1638,
+     "q": -0.9872
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.9867,
+    "qMargin": 0.0095,
+    "totalVisits": 6070
+   },
+   "rawDifficulty": 0.986683,
+   "difficulty": 0.9872,
+   "delayMs": 3917
+  },
+  {
+   "ply": 125,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e3d2",
+   "san": "Bd2",
+   "evalLc0": 0.993,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "e3d2",
+     "from": "e3",
+     "to": "d2",
+     "san": "Bd2",
+     "share": 0.3444,
+     "cp": 4051,
+     "line": [
+      "e3d2",
+      "g4f5",
+      "d2c1",
+      "f5e4",
+      "f2e2",
+      "e4f5"
+     ]
+    },
+    {
+     "uci": "e3h6",
+     "from": "e3",
+     "to": "h6",
+     "san": "Bh6",
+     "share": 0.3401,
+     "cp": 4050,
+     "line": [
+      "e3h6",
+      "g4f5",
+      "f2e2",
+      "f5e5",
+      "g2g4",
+      "e5e6"
+     ]
+    },
+    {
+     "uci": "e3c1",
+     "from": "e3",
+     "to": "c1",
+     "san": "Bc1",
+     "share": 0.3155,
+     "cp": 4044,
+     "line": [
+      "e3c1",
+      "g4f5",
+      "c1d2",
+      "f5e4",
+      "g2g4",
+      "e4d5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 7,
+    "settleDepth": 16,
+    "maxDepth": 17,
+    "marginCp": 1,
+    "rootHistory": [
+     [
+      1,
+      "e3c1"
+     ],
+     [
+      2,
+      "e3h6"
+     ],
+     [
+      3,
+      "e3h6"
+     ],
+     [
+      4,
+      "e3h6"
+     ],
+     [
+      5,
+      "e3h6"
+     ],
+     [
+      6,
+      "e3d2"
+     ],
+     [
+      7,
+      "e3d2"
+     ],
+     [
+      8,
+      "e3d2"
+     ],
+     [
+      9,
+      "e3d2"
+     ],
+     [
+      10,
+      "e3h6"
+     ],
+     [
+      11,
+      "e3h6"
+     ],
+     [
+      12,
+      "e3c1"
+     ],
+     [
+      13,
+      "e3d2"
+     ],
+     [
+      14,
+      "e3d2"
+     ],
+     [
+      15,
+      "e3c1"
+     ],
+     [
+      16,
+      "e3d2"
+     ],
+     [
+      17,
+      "e3d2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.917369,
+   "difficulty": 0.9163,
+   "delayMs": 3476
+  },
+  {
+   "ply": 126,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "g4f5",
+   "san": "Kf5",
+   "evalLc0": 1.0,
+   "evalSF": 1.0,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g4f5",
+     "from": "g4",
+     "to": "f5",
+     "san": "Kf5",
+     "share": 0.6027,
+     "visits": 4421,
+     "policy": 0.3696,
+     "q": -0.9734
+    },
+    {
+     "uci": "g4h5",
+     "from": "g4",
+     "to": "h5",
+     "san": "Kh5",
+     "share": 0.1988,
+     "visits": 1458,
+     "policy": 0.3265,
+     "q": -0.9812
+    },
+    {
+     "uci": "g4h4",
+     "from": "g4",
+     "to": "h4",
+     "san": "Kh4",
+     "share": 0.1985,
+     "visits": 1456,
+     "policy": 0.3038,
+     "q": -0.9818
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.8622,
+    "qMargin": 0.0079,
+    "totalVisits": 7335
+   },
+   "rawDifficulty": 0.862233,
+   "difficulty": 0.8627,
+   "delayMs": 3160
+  },
+  {
+   "ply": 127,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "d2c1",
+   "san": "Bc1",
+   "evalLc0": 0.9468,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "d2c1",
+     "from": "d2",
+     "to": "c1",
+     "san": "Bc1",
+     "share": 1.0,
+     "cp": 4792,
+     "line": [
+      "d2c1",
+      "f5e4",
+      "g2g4",
+      "e4d5",
+      "f2e2",
+      "d5e5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 6,
+    "settleDepth": 19,
+    "maxDepth": 20,
+    "marginCp": 1000,
+    "rootHistory": [
+     [
+      1,
+      "d2c1"
+     ],
+     [
+      2,
+      "d2c1"
+     ],
+     [
+      3,
+      "f2f3"
+     ],
+     [
+      4,
+      "f2f3"
+     ],
+     [
+      5,
+      "f2f3"
+     ],
+     [
+      6,
+      "f2f3"
+     ],
+     [
+      7,
+      "f2f3"
+     ],
+     [
+      8,
+      "f2f3"
+     ],
+     [
+      9,
+      "d2e3"
+     ],
+     [
+      10,
+      "d2e3"
+     ],
+     [
+      11,
+      "d2e3"
+     ],
+     [
+      12,
+      "d2e3"
+     ],
+     [
+      13,
+      "d2e3"
+     ],
+     [
+      14,
+      "f2f3"
+     ],
+     [
+      15,
+      "d2c1"
+     ],
+     [
+      16,
+      "f2f3"
+     ],
+     [
+      17,
+      "f2f3"
+     ],
+     [
+      18,
+      "f2f3"
+     ],
+     [
+      19,
+      "d2c1"
+     ],
+     [
+      20,
+      "d2c1"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.660001,
+   "difficulty": 0.6557,
+   "delayMs": 2084
+  },
+  {
+   "ply": 128,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f5e4",
+   "san": "Ke4",
+   "evalLc0": 1.0,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "f5e4",
+     "from": "f5",
+     "to": "e4",
+     "san": "Ke4",
+     "share": 0.4071,
+     "visits": 3056,
+     "policy": 0.1667,
+     "q": -0.978
+    },
+    {
+     "uci": "f5e5",
+     "from": "f5",
+     "to": "e5",
+     "san": "Ke5",
+     "share": 0.1695,
+     "visits": 1272,
+     "policy": 0.1657,
+     "q": -0.9884
+    },
+    {
+     "uci": "f5g6",
+     "from": "f5",
+     "to": "g6",
+     "san": "Kg6",
+     "share": 0.1346,
+     "visits": 1010,
+     "policy": 0.1627,
+     "q": -0.9899
+    },
+    {
+     "uci": "f5e6",
+     "from": "f5",
+     "to": "e6",
+     "san": "Ke6",
+     "share": 0.1288,
+     "visits": 967,
+     "policy": 0.1632,
+     "q": -0.9916
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.8839,
+    "qMargin": 0.0104,
+    "totalVisits": 7506
+   },
+   "rawDifficulty": 0.883896,
+   "difficulty": 0.8844,
+   "delayMs": 3286
+  },
+  {
+   "ply": 129,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "f2e2",
+   "san": "Ke2",
+   "evalLc0": 0.9999,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "f2e2",
+     "from": "f2",
+     "to": "e2",
+     "san": "Ke2",
+     "share": 0.3347,
+     "cp": 4744,
+     "line": [
+      "f2e2",
+      "e4f5",
+      "e2f3",
+      "f5e5",
+      "g2g4",
+      "e5d5"
+     ]
+    },
+    {
+     "uci": "g2g4",
+     "from": "g2",
+     "to": "g4",
+     "san": "g4",
+     "share": 0.3347,
+     "cp": 4744,
+     "line": [
+      "g2g4",
+      "e4d5",
+      "c1e3",
+      "d5e6",
+      "e3d2",
+      "e6e5"
+     ]
+    },
+    {
+     "uci": "f2g3",
+     "from": "f2",
+     "to": "g3",
+     "san": "Kg3",
+     "share": 0.3306,
+     "cp": 4743,
+     "line": [
+      "f2g3",
+      "e4e5",
+      "g3f3",
+      "e5d6",
+      "c1h6",
+      "d6e5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 7,
+    "settleDepth": 19,
+    "maxDepth": 20,
+    "marginCp": 0,
+    "rootHistory": [
+     [
+      1,
+      "f2e2"
+     ],
+     [
+      2,
+      "f2e2"
+     ],
+     [
+      3,
+      "f2e2"
+     ],
+     [
+      4,
+      "f2e2"
+     ],
+     [
+      5,
+      "f2e2"
+     ],
+     [
+      6,
+      "f2e2"
+     ],
+     [
+      7,
+      "g2g4"
+     ],
+     [
+      8,
+      "g2g4"
+     ],
+     [
+      9,
+      "g2g4"
+     ],
+     [
+      10,
+      "g2g4"
+     ],
+     [
+      11,
+      "g2g4"
+     ],
+     [
+      12,
+      "f2e2"
+     ],
+     [
+      13,
+      "g2g4"
+     ],
+     [
+      14,
+      "g2g4"
+     ],
+     [
+      15,
+      "f2g3"
+     ],
+     [
+      16,
+      "f2g3"
+     ],
+     [
+      17,
+      "f2e2"
+     ],
+     [
+      18,
+      "c1e3"
+     ],
+     [
+      19,
+      "f2e2"
+     ],
+     [
+      20,
+      "f2e2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.9225,
+   "difficulty": 0.9215,
+   "delayMs": 3507
+  },
+  {
+   "ply": 130,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "e4f5",
+   "san": "Kf5",
+   "evalLc0": 1.0,
+   "evalSF": 1.0,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e4f5",
+     "from": "e4",
+     "to": "f5",
+     "san": "Kf5",
+     "share": 0.558,
+     "visits": 4084,
+     "policy": 0.2645,
+     "q": -0.976
+    },
+    {
+     "uci": "e4e5",
+     "from": "e4",
+     "to": "e5",
+     "san": "Ke5",
+     "share": 0.1734,
+     "visits": 1269,
+     "policy": 0.2581,
+     "q": -0.9872
+    },
+    {
+     "uci": "e4d4",
+     "from": "e4",
+     "to": "d4",
+     "san": "Kd4",
+     "share": 0.1359,
+     "visits": 995,
+     "policy": 0.2326,
+     "q": -0.9878
+    },
+    {
+     "uci": "e4d5",
+     "from": "e4",
+     "to": "d5",
+     "san": "Kd5",
+     "share": 0.1327,
+     "visits": 971,
+     "policy": 0.2448,
+     "q": -0.9895
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.843,
+    "qMargin": 0.0112,
+    "totalVisits": 7319
+   },
+   "rawDifficulty": 0.842971,
+   "difficulty": 0.8434,
+   "delayMs": 3050
+  },
+  {
+   "ply": 131,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "e2f2",
+   "san": "Kf2",
+   "evalLc0": 0.9993,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "e2f2",
+     "from": "e2",
+     "to": "f2",
+     "san": "Kf2",
+     "share": 0.4011,
+     "cp": 4497,
+     "line": [
+      "e2f2",
+      "f5e6",
+      "c1e3",
+      "e6e5",
+      "g2g4",
+      "e5d5"
+     ]
+    },
+    {
+     "uci": "e2f3",
+     "from": "e2",
+     "to": "f3",
+     "san": "Kf3",
+     "share": 0.3675,
+     "cp": 4490,
+     "line": [
+      "e2f3",
+      "f5e5",
+      "f3g4",
+      "e5e6",
+      "g4f4",
+      "e6e7"
+     ]
+    },
+    {
+     "uci": "c1d2",
+     "from": "c1",
+     "to": "d2",
+     "san": "Bd2",
+     "share": 0.2314,
+     "cp": 4453,
+     "line": [
+      "c1d2",
+      "f5g4",
+      "d2c1",
+      "g4g3",
+      "e2f1",
+      "g3g4"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 9,
+    "settleDepth": 20,
+    "maxDepth": 20,
+    "marginCp": 7,
+    "rootHistory": [
+     [
+      1,
+      "e2f2"
+     ],
+     [
+      2,
+      "e2f2"
+     ],
+     [
+      3,
+      "e2f2"
+     ],
+     [
+      4,
+      "e2f2"
+     ],
+     [
+      5,
+      "e2f2"
+     ],
+     [
+      6,
+      "e2f2"
+     ],
+     [
+      7,
+      "e2f2"
+     ],
+     [
+      8,
+      "e2f2"
+     ],
+     [
+      9,
+      "c1d2"
+     ],
+     [
+      10,
+      "c1d2"
+     ],
+     [
+      11,
+      "e2f2"
+     ],
+     [
+      12,
+      "e2f3"
+     ],
+     [
+      13,
+      "e2f2"
+     ],
+     [
+      14,
+      "c1d2"
+     ],
+     [
+      15,
+      "c1d2"
+     ],
+     [
+      16,
+      "e2f3"
+     ],
+     [
+      17,
+      "e2f3"
+     ],
+     [
+      18,
+      "e2f2"
+     ],
+     [
+      19,
+      "e2f3"
+     ],
+     [
+      20,
+      "e2f2"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.983244,
+   "difficulty": 0.983,
+   "delayMs": 3891
+  },
+  {
+   "ply": 132,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "f5g4",
+   "san": "Kg4",
+   "evalLc0": 0.9971,
+   "evalSF": 1.0,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f5g4",
+     "from": "f5",
+     "to": "g4",
+     "san": "Kg4",
+     "share": 0.3731,
+     "visits": 1945,
+     "policy": 0.1764,
+     "q": -0.9701
+    },
+    {
+     "uci": "f5e5",
+     "from": "f5",
+     "to": "e5",
+     "san": "Ke5",
+     "share": 0.1521,
+     "visits": 793,
+     "policy": 0.1674,
+     "q": -0.9876
+    },
+    {
+     "uci": "f5f6",
+     "from": "f5",
+     "to": "f6",
+     "san": "Kf6",
+     "share": 0.1299,
+     "visits": 677,
+     "policy": 0.16,
+     "q": -0.9925
+    },
+    {
+     "uci": "f5g6",
+     "from": "f5",
+     "to": "g6",
+     "san": "Kg6",
+     "share": 0.1299,
+     "visits": 677,
+     "policy": 0.1597,
+     "q": -0.9924
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.9269,
+    "qMargin": 0.0175,
+    "totalVisits": 5213
+   },
+   "rawDifficulty": 0.926852,
+   "difficulty": 0.9273,
+   "delayMs": 3543
+  },
+  {
+   "ply": 133,
+   "side": "white",
+   "engine": "Stockfish",
+   "uci": "c1h6",
+   "san": "Bh6",
+   "evalLc0": 0.9989,
+   "evalSF": 1.0,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "c1h6",
+     "from": "c1",
+     "to": "h6",
+     "san": "Bh6",
+     "share": 0.5,
+     "cp": 4676,
+     "line": [
+      "c1h6",
+      "g4f5",
+      "f2f3",
+      "f5e5",
+      "h6e3",
+      "e5e6"
+     ]
+    },
+    {
+     "uci": "c1e3",
+     "from": "c1",
+     "to": "e3",
+     "san": "Be3",
+     "share": 0.5,
+     "cp": 4676,
+     "line": [
+      "c1e3",
+      "g4f5",
+      "e3d2",
+      "f5e6",
+      "d2c1",
+      "e6e7"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 7,
+    "settleDepth": 19,
+    "maxDepth": 19,
+    "marginCp": 0,
+    "rootHistory": [
+     [
+      1,
+      "c1d2"
+     ],
+     [
+      2,
+      "c1d2"
+     ],
+     [
+      3,
+      "c1d2"
+     ],
+     [
+      4,
+      "c1d2"
+     ],
+     [
+      5,
+      "c1e3"
+     ],
+     [
+      6,
+      "c1e3"
+     ],
+     [
+      7,
+      "c1e3"
+     ],
+     [
+      8,
+      "c1h6"
+     ],
+     [
+      9,
+      "c1h6"
+     ],
+     [
+      10,
+      "c1h6"
+     ],
+     [
+      11,
+      "c1h6"
+     ],
+     [
+      12,
+      "f2e2"
+     ],
+     [
+      13,
+      "c1e3"
+     ],
+     [
+      14,
+      "c1e3"
+     ],
+     [
+      15,
+      "c1d2"
+     ],
+     [
+      16,
+      "c1d2"
+     ],
+     [
+      17,
+      "c1e3"
+     ],
+     [
+      18,
+      "c1e3"
+     ],
+     [
+      19,
+      "c1h6"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.9375,
+   "difficulty": 0.9367,
+   "delayMs": 3600
+  },
+  {
+   "ply": 134,
+   "side": "black",
+   "engine": "Lc0",
+   "uci": "g4f5",
+   "san": "Kf5",
+   "evalLc0": 0.5,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g4f5",
+     "from": "g4",
+     "to": "f5",
+     "san": "Kf5",
+     "share": 0.3903,
+     "visits": 2385,
+     "policy": 0.3512,
+     "q": -0.9746
+    },
+    {
+     "uci": "g4h5",
+     "from": "g4",
+     "to": "h5",
+     "san": "Kh5",
+     "share": 0.3252,
+     "visits": 1987,
+     "policy": 0.3368,
+     "q": -0.982
+    },
+    {
+     "uci": "g4h4",
+     "from": "g4",
+     "to": "h4",
+     "san": "Kh4",
+     "share": 0.2846,
+     "visits": 1739,
+     "policy": 0.312,
+     "q": -0.9824
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.9923,
+    "qMargin": 0.0074,
+    "totalVisits": 6111
+   },
+   "rawDifficulty": 0.992295,
+   "difficulty": 0.9928,
+   "delayMs": 3954
+  }
+ ]
+}

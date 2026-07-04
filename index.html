@@ -438,9 +438,20 @@
       if (audioCtx.state === 'suspended') audioCtx.resume();
       return audioCtx;
     }
-    // Autoplay policy: context only runs after a gesture; unlock on the first.
-    ['pointerdown', 'keydown'].forEach(ev =>
-      document.addEventListener(ev, () => ac(), { once: true }));
+    // Autoplay policy: browsers keep audio suspended until a real user
+    // gesture. Best effort at automatic: create + preload at boot (works
+    // outright where the browser trusts the site - e.g. autoplay allowed
+    // in site settings), then keep retrying resume() on any interaction
+    // until it sticks.
+    const UNLOCK_EVENTS = ['pointerdown', 'pointermove', 'keydown', 'touchstart', 'wheel'];
+    function tryUnlock() {
+      ac().resume().then(() => {
+        if (audioCtx.state === 'running')
+          UNLOCK_EVENTS.forEach(ev => document.removeEventListener(ev, tryUnlock, true));
+      }).catch(() => {});
+    }
+    UNLOCK_EVENTS.forEach(ev => document.addEventListener(ev, tryUnlock, true));
+    tryUnlock();
 
     function playSample(name, delay, rate, gain) {
       const buf = samples[name];

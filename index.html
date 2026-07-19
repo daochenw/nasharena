@@ -201,6 +201,29 @@
     }
     .player .status.faded { opacity: 0; }
 
+    /* ---- captured pieces: the material each mind has taken, on the
+       board-side of its eval bar. Duplicates fan out with a card-hand
+       overlap, so even a 15-piece haul stays a quiet little row. ---- */
+    .player .sub { display: flex; align-items: center; }
+    .player .sub .status { flex: 1 1 auto; min-width: 0; }
+    /* The tray owns its full height from ply one — the first capture must
+       not nudge the layout — and lays pieces out as flex items so their
+       sprites never enter line-box math. */
+    .player .caps {
+      margin-left: auto; padding-left: 12px;
+      display: flex; align-items: center;
+      height: 17px;
+    }
+    .player .caps .grp { display: flex; }
+    .player .caps .grp + .grp { margin-left: 3.5px; }
+    .player .caps i {
+      width: 17px; height: 17px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .player .caps .grp i + i { margin-left: -10px; }
+
     /* ---- verdict: the resignation notice, a calling card laid on the
        board. The entire message is signed in the resigner's own hand. ---- */
     #verdict {
@@ -268,7 +291,7 @@
     /* Thoughts are the show: shed them only when height truly runs out
        (landscape phones), never merely because the screen is narrow. */
     @media (max-height: 560px) {
-      .player .status { display: none; }
+      .player .sub { display: none; }
     }
   </style>
 </head>
@@ -278,7 +301,10 @@
     <div class="player" id="pTop">
       <div class="row"><span class="name"></span>
         <span class="conf"><span class="pct"></span><span class="bar"><i></i></span></span></div>
-      <div class="status"></div>
+      <div class="sub">
+        <div class="status"></div>
+        <span class="caps"></span>
+      </div>
     </div>
     <div id="boardArea"><div id="board"></div>
       <div id="verdict"></div>
@@ -313,7 +339,10 @@
     <div class="player" id="pBot">
       <div class="row"><span class="name"></span>
         <span class="conf"><span class="pct"></span><span class="bar"><i></i></span></span></div>
-      <div class="status"></div>
+      <div class="sub">
+        <div class="status"></div>
+        <span class="caps"></span>
+      </div>
     </div>
   </div>
 
@@ -400,6 +429,29 @@
       const eL = m ? m.evalLc0 : 0.5, eS = m ? m.evalSF : 0.5;
       setBar('Lc0',       g.white === 'Lc0'       ? eL : 1 - eL);
       setBar('Stockfish', g.white === 'Stockfish' ? eS : 1 - eS);
+    }
+
+    // ---- captured pieces: what each player has taken. Recomputed from
+    // the live chess.js history, so auto play and scrubbing can never
+    // disagree. ----
+    const CAP_ORDER = ['q', 'r', 'n', 'b', 'p'];   // knight before bishop
+    function updateCaps() {
+      const g = games[gi];
+      const taken = { w: {}, b: {} };   // taken.w = what White captured
+      for (const mv of chess.history({ verbose: true })) {
+        if (mv.captured)
+          taken[mv.color][mv.captured] = (taken[mv.color][mv.captured] || 0) + 1;
+      }
+      for (const c of ['w', 'b']) {
+        const other = c === 'w' ? 'b' : 'w';   // captured pieces keep their colour
+        cardFor(c === 'w' ? g.white : g.black).querySelector('.caps').innerHTML =
+          CAP_ORDER.filter(p => taken[c][p])
+            .map(p => '<span class="grp">'
+              + `<i style="background-image:url('pieces/cooke/${other}${p.toUpperCase()}.svg')"></i>`
+                .repeat(taken[c][p])
+              + '</span>')
+            .join('');
+      }
     }
 
     // Renderer-side tempo remap: hard moves become proper scenes.
@@ -645,6 +697,7 @@
       const last = n > 0 ? uciSquares(moves[n - 1].uci) : undefined;
       ground.set({ fen: chess.fen(), lastMove: last });
       setEvals(n > 0 ? moves[n - 1] : null);
+      updateCaps();
       return mv;
     }
 
@@ -665,6 +718,7 @@
       setActive(null);
       ground.set({ fen: 'start', lastMove: undefined });
       setEvals(null);
+      updateCaps();
       if (!paused) later(thinkNext, 800);
     }
 
@@ -726,6 +780,7 @@
       ground.set({ fen: chess.fen(), lastMove: uciSquares(m.uci) });
       playMoveSound(!!mv.captured);
       setEvals(m);
+      updateCaps();
       // Book moves keep their "from memory" label; real moves get a verdict.
       if (m.ply > bookPlies) setStatus(m.engine, script[ply].settle);
       ply++;

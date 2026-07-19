@@ -6,6 +6,6 @@
 [Black "Stockfish"]
 [Result "1-0"]
 [Opening "Velimirovic Attack"]
-[Termination "adjudication"]
+[Termination "resignation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bc4 e6 7. Be3 Be7 8. Qe2 a6 9. O-O-O Qc7 10. Nxc6 Qxc6 11. Bd3 Qc7 12. g4 Nd7 13. f4 b5 14. Rhf1 Nc5 15. a3 Nxd3+ 16. Qxd3 Bb7 17. f5 Qc4 18. Qd2 Bf6 19. g5 Bxc3 20. Qxd6 Bxe4 21. Qd7+ Kf8 22. Rf2 Bxb2+ 23. Kxb2 Rc8 24. Bd4 Kg8 25. h4 Bxc2 26. Qxc8+ Qxc8 27. Rxc2 Qf8 28. Rdc1 h5 29. Rc8 Kh7 30. Rxf8 Rxf8 31. g6+ fxg6 32. fxe6 g5 33. hxg5 Kg6 34. e7 Re8 35. Bc5 h4 36. Kc3 a5 37. Kd4 Kxg5 38. Ke5 h3 39. Ke6 b4 40. axb4 axb4 41. Bxb4 Kf4 42. Kf7 Rh8 43. Bd6+ Kf3 44. e8=Q Rxe8 45. Kxe8 Ke4 46. Kf7 g5 47. Kg6 g4 48. Kg5 Ke3 49. Kxg4 Kd3 50. Kxh3 Ke4 51. Kg4 Kd4 52. Kf3 1-0
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bc4 e6 7. Be3 Be7 8. Qe2 a6 9. O-O-O Qc7 10. Nxc6 Qxc6 11. Bd3 Qc7 12. g4 Nd7 13. f4 b5 14. Rhf1 Nc5 15. a3 Nxd3+ 16. Qxd3 Bb7 17. f5 Qc4 18. Qd2 Bf6 19. g5 Bxc3 20. Qxd6 Bxe4 21. Qd7+ Kf8 22. Rf2 Bxb2+ 23. Kxb2 Rc8 24. Bd4 Kg8 25. h4 Bxc2 26. Qxc8+ Qxc8 27. Rxc2 1-0

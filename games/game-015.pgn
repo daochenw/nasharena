@@ -6,6 +6,6 @@
 [Black "Stockfish"]
 [Result "1-0"]
 [Opening "Dragon, Yugoslav Attack"]
-[Termination "adjudication"]
+[Termination "resignation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 Bd7 10. O-O-O Rc8 11. Bb3 Nxd4 12. Bxd4 b5 13. a3 a5 14. Nd5 Nxd5 15. Bxg7 Kxg7 16. exd5 Qb6 17. Rhe1 a4 18. Ba2 h5 19. h3 h4 20. c3 b4 21. axb4 Qxb4 22. Re4 Qc5 23. Rxh4 Rh8 24. Rxh8 Rxh8 25. Qd4+ Qxd4 26. Rxd4 g5 27. Bc4 f5 28. Kb1 Kf6 29. Be2 Rh4 30. Rxh4 gxh4 31. f4 e5 32. dxe6 Kxe6 33. Kc2 Bc6 34. Bf1 Kd5 35. Kd2 Kc5 36. Ke3 Bd5 37. g3 hxg3 38. Bd3 g2 39. Kf2 Bf3 40. Bxf5 Kc4 41. Be6+ d5 42. f5 Bh5 43. f6 Kb3 44. Bxd5+ Kxb2 45. c4 a3 46. c5 Be2 47. f7 Bf3 48. Be6 a2 49. Bxa2 Be2 50. f8=Q Kxa2 1-0
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 Bd7 10. O-O-O Rc8 11. Bb3 Nxd4 12. Bxd4 b5 13. a3 a5 14. Nd5 Nxd5 15. Bxg7 Kxg7 16. exd5 Qb6 17. Rhe1 a4 18. Ba2 h5 19. h3 h4 20. c3 b4 21. axb4 Qxb4 22. Re4 Qc5 23. Rxh4 Rh8 24. Rxh8 Rxh8 25. Qd4+ Qxd4 26. Rxd4 g5 27. Bc4 f5 28. Kb1 Kf6 29. Be2 Rh4 30. Rxh4 gxh4 31. f4 e5 32. dxe6 Kxe6 33. Kc2 Bc6 34. Bf1 Kd5 35. Kd2 Kc5 36. Ke3 Bd5 37. g3 hxg3 38. Bd3 g2 39. Kf2 Bf3 40. Bxf5 Kc4 41. Be6+ d5 42. f5 1-0

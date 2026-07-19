@@ -24,6 +24,8 @@ comes from volume + selection):
     no thinking telemetry - the site plays them "from memory" - and the JSON
     carries "bookPlies" so the renderer knows where thinking begins. Each
     opening is played as a colour-reversed pair on consecutive attempts.
+  * RESIGNATION: a side whose OWN eval bar drops below RESIGN_WP resigns
+    instead of moving (termination "resigned", resignSide in the JSON).
   * ADJUDICATION cuts games short once both engines' eval bars agree:
     win adjudicated after WIN_PLIES consecutive plies beyond WIN_WP;
     draw adjudicated after DRAW_PLIES consecutive dead-equal, low-divergence
@@ -71,6 +73,8 @@ MAX_CANDIDATES = 4       # ghost arrows per move
 # (White-POV win probs from BOTH engines), post-book plies only.
 WIN_WP = 0.95            # both engines this sure, for the same side...
 WIN_PLIES = 10           # ...this many consecutive plies -> adjudicate the win
+RESIGN_WP = 0.10         # side to move sees its OWN win prob below this -> resigns
+                         # (fires before the win adjudication; own eval only)
 DRAW_BAND = 0.055        # |wp - 0.5| within this = dead equal (per engine)
 DRAW_DIV = 0.06          # and the engines agree within this
 DRAW_PLIES = 40          # consecutive dead plies -> adjudicate the draw
@@ -376,7 +380,7 @@ def play_game(lc0, sf, lc0_white, lc0_nodes, sf_nodes,
 
     # Adjudication state (book plies excluded: a gambit's eval dip is theory,
     # not drama, and prepared lines must not trip the dead-draw counter).
-    result, termination = None, "natural"
+    result, termination, resign_side = None, "natural", None
     drama = 0.0          # furthest either eval bar ever strayed from 0.5
     dead_run = 0         # consecutive dead-equal, engines-agree plies
     w_run = b_run = 0    # consecutive both-engines-sure plies per side
@@ -417,6 +421,20 @@ def play_game(lc0, sf, lc0_white, lc0_nodes, sf_nodes,
         # ---- adjudication bookkeeping (skip if the game just ended) ----
         if res is not None:
             continue
+        # Resignation: the side to move consults its OWN engine's bar; below
+        # RESIGN_WP it resigns instead of playing on. Checked before the
+        # slower both-engines win adjudication, so hopeless games end here.
+        next_white = board.turn == chess.WHITE
+        next_is_lc0 = next_white == lc0_white
+        own = eval_lc0 if next_is_lc0 else eval_sf
+        own_pov = own if next_white else 1.0 - own
+        if own_pov < RESIGN_WP:
+            resign_side = "white" if next_white else "black"
+            result = "0-1" if next_white else "1-0"
+            termination = "resigned"
+            print(f"    {resign_side} resigns: own win prob {own_pov:.1%} "
+                  f"< {RESIGN_WP:.0%}", flush=True)
+            break
         drama = max(drama, abs(eval_lc0 - 0.5), abs(eval_sf - 0.5))
         dead = (max(abs(eval_lc0 - 0.5), abs(eval_sf - 0.5)) <= DRAW_BAND
                 and abs(eval_lc0 - eval_sf) <= DRAW_DIV)
@@ -445,9 +463,14 @@ def play_game(lc0, sf, lc0_white, lc0_nodes, sf_nodes,
             print(f"    discarded: no drama (peak dev from 0.5 was {drama:.3f})",
                   flush=True)
             return game, None
-    return game, {"white": wn, "black": bn, "result": result,
-                  "opening": opening_name, "bookPlies": book_plies,
-                  "termination": termination, "moves": moves}
+    elif termination == "resigned":
+        game.headers["Termination"] = "resignation"
+    data = {"white": wn, "black": bn, "result": result,
+            "opening": opening_name, "bookPlies": book_plies,
+            "termination": termination, "moves": moves}
+    if resign_side:
+        data["resignSide"] = resign_side
+    return game, data
 
 
 # --------------------------------------------------------------------------- #

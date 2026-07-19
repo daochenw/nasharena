@@ -6,6 +6,6 @@
 [Black "Stockfish"]
 [Result "1-0"]
 [Opening "Najdorf, Poisoned Pawn"]
-[Termination "adjudication"]
+[Termination "resignation"]
 
-1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Qb6 8. Qd2 Qxb2 9. Rb1 Qa3 10. e5 dxe5 11. fxe5 Nfd7 12. Ne4 Qxa2 13. Rd1 h6 14. Bh4 Qb2 15. Bc4 Qb4 16. Bxe6 fxe6 17. c3 Qc4 18. Rf1 Nxe5 19. Qf4 Nbd7 20. Qxf8+ Nxf8 21. Nd6+ Kd7 22. Nxc4 Nxc4 23. Rf7+ Kd6 24. Nb5+ Kc6 25. Rc7+ Kxb5 26. Rb1+ Nb2 27. Rxb2+ Ka4 28. Rc4+ Ka3 29. Rcb4 Ng6 30. Rb1 1-0
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. f4 Qb6 8. Qd2 Qxb2 9. Rb1 Qa3 10. e5 dxe5 11. fxe5 Nfd7 12. Ne4 Qxa2 13. Rd1 h6 14. Bh4 Qb2 15. Bc4 Qb4 16. Bxe6 fxe6 17. c3 Qc4 18. Rf1 Nxe5 19. Qf4 Nbd7 20. Qxf8+ Nxf8 21. Nd6+ Kd7 22. Nxc4 Nxc4 23. Rf7+ Kd6 24. Nb5+ Kc6 25. Rc7+ 1-0

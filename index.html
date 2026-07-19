@@ -201,6 +201,39 @@
     }
     .player .status.faded { opacity: 0; }
 
+    /* ---- verdict: the resignation notice, a calling card laid on the
+       board. The entire message is signed in the resigner's own hand. ---- */
+    #verdict {
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%) scale(.97);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 3;
+      text-align: center;
+      white-space: nowrap;
+      transition: opacity 900ms ease, transform 900ms cubic-bezier(.2, .7, .2, 1);
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid rgba(28, 26, 23, .3);
+      box-shadow: 0 0 0 4px var(--paper), 0 3px 18px rgba(20, 20, 20, .28);
+      padding: 13px 34px 15px;
+    }
+    #verdict.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    #verdict.Lc0 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 0;     /* scripts connect; never letterspace them */
+      line-height: 1;
+    }
+    #verdict.Stockfish {
+      font-family: 'Chakra Petch', var(--sans);
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+
     /* Leela's whole thought-layer breathes softly while she considers. */
     #board.think-l .cg-shapes { animation: breathe 2.6s ease-in-out infinite; }
     @keyframes breathe { 0%, 100% { opacity: .78; } 50% { opacity: 1; } }
@@ -244,6 +277,7 @@
       <div class="status"></div>
     </div>
     <div id="boardArea"><div id="board"></div>
+      <div id="verdict"></div>
       <div id="ctrls">
         <button id="nextBtn" class="ctrl" aria-label="next game">
           <svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor">
@@ -613,6 +647,7 @@
     function startGame(i) {
       clearTimers();
       boardEl.classList.remove('think-l');
+      hideVerdict();
       gi = ((i % games.length) + games.length) % games.length;
       const g = games[gi];
       moves = g.moves;
@@ -629,13 +664,37 @@
       if (!paused) later(thinkNext, 800);
     }
 
-    function gameOver() {
+    // ---- verdict overlay (resignations) ----
+    const verdictEl = document.getElementById('verdict');
+    function showVerdict(engine) {
+      verdictEl.className = engine;   // styles the name in the engine's face
+      const who = document.createElement('span');
+      who.className = 'who';
+      who.textContent = engine === 'Lc0' ? 'Leela' : 'Stockfish';
+      verdictEl.replaceChildren(who, ' resigns');
+      verdictEl.classList.add('show');
+    }
+    function hideVerdict() { verdictEl.classList.remove('show'); }
+
+    // End-of-game card lines + board verdict, shared by auto play and stepping.
+    function showResult() {
       const g = games[gi];
-      setActive(null);
-      boardEl.classList.remove('think-l');
-      if (g.result === '1-0') setStatus(g.white, 'wins this one');
+      if (g.termination === 'resigned') {
+        const side = g.resignSide || (g.result === '1-0' ? 'black' : 'white');
+        const loser = side === 'white' ? g.white : g.black;
+        const winner = side === 'white' ? g.black : g.white;
+        setStatus(loser, 'I resign');
+        setStatus(winner, 'wins this one');
+        showVerdict(loser);
+      } else if (g.result === '1-0') setStatus(g.white, 'wins this one');
       else if (g.result === '0-1') setStatus(g.black, 'wins this one');
       else { setStatus(g.white, 'a draw'); setStatus(g.black, 'a draw'); }
+    }
+
+    function gameOver() {
+      setActive(null);
+      boardEl.classList.remove('think-l');
+      showResult();
       later(() => startGame(gi + 1), GAME_PAUSE);
     }
 
@@ -711,6 +770,7 @@
     }
     function step(dir) {
       pause();
+      hideVerdict();
       const was = ply;
       ply = Math.max(0, Math.min(moves.length, ply + dir));
       const mv = rebuildTo(ply);
@@ -728,10 +788,7 @@
       } else {
         // End of game: auto's result lines over the final settle lines.
         if (ply >= 2) setStatus(moves[ply - 2].engine, settleShown(ply - 2));
-        const g = games[gi];
-        if (g.result === '1-0') setStatus(g.white, 'wins this one');
-        else if (g.result === '0-1') setStatus(g.black, 'wins this one');
-        else { setStatus(g.white, 'a draw'); setStatus(g.black, 'a draw'); }
+        showResult();
       }
     }
 

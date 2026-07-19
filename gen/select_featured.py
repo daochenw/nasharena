@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Pick the top-5 most exciting games and rewrite games/manifest.json to
-list ONLY those five, in rank order.
+"""Pick the top-N most exciting games (default 5; pass N as the only
+argument) and rewrite games/manifest.json to list ONLY those, in rank order.
 
 Excitement is scored by excitement.py (eight spectator factors: sacrifices,
 compensation, comebacks, forced sequences, engine divergence, eval swings,
@@ -17,7 +17,7 @@ from pathlib import Path
 from excitement import evaluate
 
 GAMES = Path(__file__).resolve().parent.parent / "games"
-TOP_N = 5
+TOP_N = int(sys.argv[1]) if len(sys.argv) > 1 else 5
 
 
 def main():

@@ -394,10 +394,9 @@
 
     // Lines carry a category so the same kind of remark is never repeated
     // within a few moves - people don't narrate every thought aloud.
-    const lastSaid = {};   // engine -> { category: ply last said }
-    function gated(engine, plyNo, line, cooldown = 8) {
+    function gated(said, engine, plyNo, line, cooldown = 8) {
       if (!line) return '';
-      const seen = lastSaid[engine] || (lastSaid[engine] = {});
+      const seen = said[engine] || (said[engine] = {});
       if (seen[line.c] != null && plyNo - seen[line.c] < cooldown) return '';
       seen[line.c] = plyNo;
       return line.t;
@@ -442,10 +441,10 @@
 
     // Shown while the mover thinks: their honest reaction to what the
     // opponent just played, judged by their own engine's assessments.
-    function reactionLine(m) {
-      if (ply < 1) return '';
-      const prev = moves[ply - 1];               // opponent's move
-      const mine = ply >= 2 ? moves[ply - 2] : null;  // mover's previous turn
+    function reactionLine(m, i, fenBefore) {
+      if (i < 1) return '';
+      const prev = moves[i - 1];               // opponent's move
+      const mine = i >= 2 ? moves[i - 2] : null;  // mover's previous turn
       const evalOf = mv => m.engine === 'Lc0' ? mv.evalLc0 : mv.evalSF;
       const pov = e => m.side === 'white' ? e : 1 - e;
       const before = pov(mine ? evalOf(mine) : 0.5);
@@ -460,8 +459,8 @@
       // A deviation stings when it cost eval, or upended a long calculation.
       const expected = mine && (mine.candidates || []).find(x => x.uci === mine.uci);
       const reply = expected && expected.line && expected.line[1];
-      if (reply && prev.uci !== reply && (drop >= 0.02 || mine.difficulty >= 0.55) && lastFenBefore) {
-        const san = sanFor(lastFenBefore, reply);
+      if (reply && prev.uci !== reply && (drop >= 0.02 || mine.difficulty >= 0.55) && fenBefore) {
+        const san = sanFor(fenBefore, reply);
         if (san) return { c: 'miss', t: 'expected ' + san };
       }
       if (drop >= 0.10) return { c: 'hit', t: 'that was not in my calculations' };
@@ -477,6 +476,27 @@
         const ch = new Chess(fen);
         return ch.move(moveObj(uci)).san;
       } catch { return null; }
+    }
+
+    // The narration is deterministic, so it's computed once per game:
+    // script[i] = the lines auto play shows for move i (reaction while
+    // thinking, settle at commit). Auto play and stepping both read this,
+    // so the two modes always display identical text.
+    function buildScript() {
+      const said = {};
+      const ch = new Chess();
+      const fens = [];   // fens[i] = position move i was played from
+      return moves.map((m, i) => {
+        fens[i] = ch.fen();
+        ch.move(moveObj(m.uci));
+        if (m.ply <= bookPlies) return { reaction: '', settle: '' };
+        // A reaction accompanies only a proper think (same bar as auto play).
+        const reaction = delayFor(m) >= 2000
+          ? gated(said, m.engine, m.ply, reactionLine(m, i, i >= 1 ? fens[i - 1] : null), 10)
+          : '';
+        const settle = gated(said, m.engine, m.ply, settleLine(m));
+        return { reaction, settle };
+      });
     }
 
     // ============================================================ //
@@ -563,10 +583,10 @@
     let gi = 0;
     let chess = new Chess();
     let moves = [];
+    let script = [];   // per-move narration, precomputed in startGame
     let ply = 0;
     let paused = false;
     let timers = [];
-    let lastFenBefore = null;  // position the last committed move was played from
     const COMMIT_PAUSE = 1460;
     const GAME_PAUSE = 3400;
 
@@ -597,12 +617,12 @@
       const g = games[gi];
       moves = g.moves;
       bookPlies = g.bookPlies ?? BOOK_PLIES;
+      script = buildScript();
       ply = 0;
       chess = new Chess();
       // Seats follow colour: whoever plays White sits in the bottom card.
       bindCard(cards.top, g.black);
       bindCard(cards.bot, g.white);
-      delete lastSaid.Lc0; delete lastSaid.Stockfish;
       setActive(null);
       ground.set({ fen: 'start', lastMove: undefined });
       setEvals(null);
@@ -631,10 +651,7 @@
       } else {
         boardEl.classList.toggle('think-l', m.engine === 'Lc0');
         // A reaction to the opponent's move accompanies a proper think.
-        if (delay >= 2000) {
-          const r = gated(m.engine, m.ply, reactionLine(m), 10);
-          if (r) setStatus(m.engine, r);
-        }
+        if (script[ply].reaction) setStatus(m.engine, script[ply].reaction);
       }
       later(() => commit(m), delay);
     }
@@ -642,13 +659,12 @@
     function commit(m) {
       if (paused) return;
       boardEl.classList.remove('think-l');
-      lastFenBefore = chess.fen();
       const mv = chess.move(moveObj(m.uci));
       ground.set({ fen: chess.fen(), lastMove: uciSquares(m.uci) });
       playMoveSound(!!mv.captured);
       setEvals(m);
       // Book moves keep their "from memory" label; real moves get a verdict.
-      if (m.ply > bookPlies) setStatus(m.engine, gated(m.engine, m.ply, settleLine(m)));
+      if (m.ply > bookPlies) setStatus(m.engine, script[ply].settle);
       ply++;
       later(thinkNext, COMMIT_PAUSE);
     }
@@ -689,6 +705,10 @@
     }
     pauseBtn.addEventListener('click', () => paused ? resume() : pause());
     document.getElementById('nextBtn').addEventListener('click', () => startGame(gi + 1));
+    // What move i's card showed once that move committed.
+    function settleShown(i) {
+      return moves[i].ply <= bookPlies ? BOOK_LINE : script[i].settle;
+    }
     function step(dir) {
       pause();
       const was = ply;
@@ -696,11 +716,22 @@
       const mv = rebuildTo(ply);
       if (ply !== was) playMoveSound(!!(mv && mv.captured));
       Object.values(cards).forEach(c => setStatusEl(c.querySelector('.status'), ''));
-      if (ply > 0) {
-        const m = moves[ply - 1];
-        // Stepping is inspection mode: show the line ungated.
-        const L = m.ply <= bookPlies ? null : settleLine(m);
-        setStatus(m.engine, m.ply <= bookPlies ? BOOK_LINE : (L ? L.t : ''));
+      if (ply === 0) return;
+      // Recreate auto play's exact display at this instant: the last
+      // mover's settle line, and on the other card the thinker's reaction
+      // (or whatever their card still showed from their previous move).
+      setStatus(moves[ply - 1].engine, settleShown(ply - 1));
+      const n = moves[ply];
+      if (n) {
+        const r = n.ply <= bookPlies ? BOOK_LINE : script[ply].reaction;
+        setStatus(n.engine, r || (ply >= 2 ? settleShown(ply - 2) : ''));
+      } else {
+        // End of game: auto's result lines over the final settle lines.
+        if (ply >= 2) setStatus(moves[ply - 2].engine, settleShown(ply - 2));
+        const g = games[gi];
+        if (g.result === '1-0') setStatus(g.white, 'wins this one');
+        else if (g.result === '0-1') setStatus(g.black, 'wins this one');
+        else { setStatus(g.white, 'a draw'); setStatus(g.black, 'a draw'); }
       }
     }
 

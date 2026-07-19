@@ -1,0 +1,11 @@
+[Event "nasharena: Lc0 vs Stockfish"]
+[Site "nasharena.ai"]
+[Date "????.??.??"]
+[Round "10"]
+[White "Lc0"]
+[Black "Stockfish"]
+[Result "1/2-1/2"]
+[Opening "Danish Gambit"]
+[Termination "adjudication"]
+
+1. e4 e5 2. d4 exd4 3. c3 dxc3 4. Bc4 cxb2 5. Bxb2 d5 6. Bxd5 Nf6 7. Bxf7+ Kxf7 8. Qxd8 Bb4+ 9. Qd2 Bxd2+ 10. Nxd2 Rd8 11. Ngf3 Kg8 12. Ne5 Nfd7 13. Rc1 Na6 14. Ke2 Nxe5 15. Bxe5 b6 16. Ke3 Nc5 17. Bd4 Ne6 18. Nf3 Bb7 19. Rhd1 Rd6 20. Ba1 Rxd1 21. Rxd1 Nc5 22. Rc1 Rd8 23. Bd4 Re8 24. Bxc5 Rxe4+ 25. Kd3 bxc5 26. Rxc5 Ra4 27. Rxc7 Bxf3 28. gxf3 Rxa2 29. Ke3 a5 30. Ra7 a4 31. f4 a3 32. h4 Ra1 33. Kf3 h5 34. f5 Ra2 35. Kg3 Kf8 36. f3 Ra1 37. Kf4 a2 38. Ra6 Kf7 39. Ra8 Ke7 40. Ra6 1/2-1/2

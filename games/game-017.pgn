@@ -1,0 +1,11 @@
+[Event "nasharena: Lc0 vs Stockfish"]
+[Site "nasharena.ai"]
+[Date "????.??.??"]
+[Round "17"]
+[White "Lc0"]
+[Black "Stockfish"]
+[Result "1/2-1/2"]
+[Opening "Sicilian Sveshnikov"]
+[Termination "adjudication"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6 8. Na3 b5 9. Nd5 Be7 10. Bxf6 Bxf6 11. c3 Bg5 12. h4 Bh6 13. Nc2 O-O 14. a4 bxa4 15. Rxa4 Kh8 16. Nce3 Ne7 17. Nxe7 Qxe7 18. Nd5 Qb7 19. b3 a5 20. Bc4 Bd7 21. Ra2 Qc6 22. Qe2 a4 23. Rxa4 Rxa4 24. bxa4 Qxa4 25. Qa2 Ra8 26. Nb4 Qxa2 27. Bxa2 Be6 28. Bb1 Ra3 29. Ke2 Rxc3 30. Bd3 g6 31. Ra1 Kg7 32. Ra5 Bc4 33. f3 Bf4 34. h5 gxh5 35. Bxc4 Rxc4 36. Nd5 Rc2+ 37. Kd1 Rc1+ 38. Ke2 Rc2+ 39. Kd1 Rc1+ 40. Ke2 Bg3 41. Ne3 h4 42. Ra6 Re1+ 43. Kd3 h5 44. Rxd6 Bf4 45. Nf5+ Kh7 46. Rf6 Kg8 47. Ne7+ Kf8 48. Nd5 Rd1+ 49. Ke2 Rd2+ 50. Ke1 Rxg2 51. Nxf4 exf4 52. Rxf4 h3 53. Kf1 Rb2 54. Kg1 h2+ 55. Kh1 Rf2 56. Rf5 Kg7 57. Rxh5 Rxf3 58. Kxh2 Rf4 59. Kg2 Rxe4 60. Kf3 1/2-1/2

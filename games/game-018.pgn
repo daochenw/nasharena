@@ -1,0 +1,11 @@
+[Event "nasharena: Lc0 vs Stockfish"]
+[Site "nasharena.ai"]
+[Date "????.??.??"]
+[Round "18"]
+[White "Stockfish"]
+[Black "Lc0"]
+[Result "0-1"]
+[Opening "Sicilian Sveshnikov"]
+[Termination "adjudication"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Ndb5 d6 7. Bg5 a6 8. Na3 b5 9. Bxf6 gxf6 10. Nd5 f5 11. Bxb5 axb5 12. Nxb5 Rb8 13. Nbc7+ Kd7 14. Qh5 Ne7 15. Qxf7 Kc6 16. b4 Qd7 17. b5+ Kb7 18. Na6 fxe4 19. Ndc7 Qg4 20. O-O Rg8 21. g3 Qf3 22. Qe8 e3 23. Rab1 Rg6 24. a4 Rf6 25. h4 exf2+ 26. Kh2 Qg4 27. Qxc8+ Rxc8 28. Rb4 Qe2 29. Rbb1 Nf5 30. Nd5 Nxg3 31. Nc5+ 0-1

@@ -1,0 +1,11 @@
+[Event "nasharena: Lc0 vs Stockfish"]
+[Site "nasharena.ai"]
+[Date "????.??.??"]
+[Round "5"]
+[White "Stockfish"]
+[Black "Lc0"]
+[Result "1-0"]
+[Opening "Evans Gambit"]
+[Termination "adjudication"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. b4 Bxb4 5. c3 Ba5 6. d4 exd4 7. O-O Nf6 8. Ba3 d6 9. e5 Ne4 10. exd6 cxd6 11. Re1 Bf5 12. Nbd2 d5 13. Qb3 dxc4 14. Nxe4 Qb6 15. Nd6+ Kd7 16. Qxc4 Be6 17. Qa4 Bxc3 18. Rab1 Rhb8 19. Ne5+ Kc7 20. Nb5+ Kc8 21. Nd6+ Kc7 22. Nb5+ Kc8 23. Nxc3 Qa6 24. Nxc6 Qxa4 25. Ne7+ Kd7 26. Nxa4 b5 27. Nc5+ Kxe7 28. Nxe6+ 1-0

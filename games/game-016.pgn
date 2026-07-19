@@ -1,0 +1,10 @@
+[Event "nasharena: Lc0 vs Stockfish"]
+[Site "nasharena.ai"]
+[Date "????.??.??"]
+[Round "16"]
+[White "Stockfish"]
+[Black "Lc0"]
+[Result "1/2-1/2"]
+[Opening "Dragon, Yugoslav Attack"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 g6 6. Be3 Bg7 7. f3 O-O 8. Qd2 Nc6 9. Bc4 Bd7 10. O-O-O Rc8 11. Be2 a6 12. g4 b5 13. Nd5 Nxd5 14. Nxc6 Bxc6 15. exd5 Bb7 16. h4 Re8 17. h5 e6 18. Bd4 Bxd4 19. Qxd4 e5 20. Qe3 Qf6 21. Bd3 Qf4 22. Qxf4 exf4 23. Be4 Kg7 24. b3 Rc3 25. Rd4 Re3 26. a4 Kf6 27. axb5 axb5 28. Kd2 Bc8 29. Rf1 gxh5 30. Bd3 Ke5 31. Rb4 Rg8 32. Rh1 Rg5 33. Rxh5 Rxh5 34. gxh5 Rxf3 35. Rxb5 Ba6 36. Rb4 Bxd3 37. cxd3 Rf2+ 38. Ke1 Rh2 39. Rb7 Rxh5 40. Rxf7 Rh1+ 41. Ke2 Rh2+ 42. Ke1 h5 43. Re7+ Kd4 44. Re6 Kxd5 45. Re4 f3 46. Rf4 h4 47. Rxf3 Kd4 48. b4 h3 49. Rf2 Rh1+ 50. Rf1 Rxf1+ 51. Kxf1 Kd5 52. Kg1 Kc6 53. Kh2 Kb5 54. Kxh3 Kxb4 55. Kg4 Kc3 56. Kf5 d5 57. Ke5 Kxd3 58. Kxd5 1/2-1/2

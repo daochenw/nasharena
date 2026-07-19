@@ -1,0 +1,2549 @@
+{
+ "white": "Lc0",
+ "black": "Stockfish",
+ "result": "1/2-1/2",
+ "opening": "Traxler Counterattack",
+ "bookPlies": 12,
+ "termination": "natural",
+ "moves": [
+  {
+   "ply": 1,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "e2e4",
+   "san": "e4",
+   "book": true,
+   "evalLc0": 0.5101,
+   "evalSF": 0.5559,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 2,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "e7e5",
+   "san": "e5",
+   "book": true,
+   "evalLc0": 0.5158,
+   "evalSF": 0.553,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 3,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "g1f3",
+   "san": "Nf3",
+   "book": true,
+   "evalLc0": 0.5144,
+   "evalSF": 0.5587,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 4,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "b8c6",
+   "san": "Nc6",
+   "book": true,
+   "evalLc0": 0.5216,
+   "evalSF": 0.5545,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 5,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "f1c4",
+   "san": "Bc4",
+   "book": true,
+   "evalLc0": 0.5158,
+   "evalSF": 0.5459,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 6,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "g8f6",
+   "san": "Nf6",
+   "book": true,
+   "evalLc0": 0.5373,
+   "evalSF": 0.5672,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 7,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "f3g5",
+   "san": "Ng5",
+   "book": true,
+   "evalLc0": 0.5373,
+   "evalSF": 0.5516,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 8,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "f8c5",
+   "san": "Bc5",
+   "book": true,
+   "evalLc0": 0.6414,
+   "evalSF": 0.67,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 9,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "g5f7",
+   "san": "Nxf7",
+   "book": true,
+   "evalLc0": 0.5,
+   "evalSF": 0.6776,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 10,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "c5f2",
+   "san": "Bxf2+",
+   "book": true,
+   "evalLc0": 0.4928,
+   "evalSF": 0.67,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 11,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "e1f2",
+   "san": "Kxf2",
+   "book": true,
+   "evalLc0": 0.4827,
+   "evalSF": 0.5416,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 12,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "f6e4",
+   "san": "Nxe4+",
+   "book": true,
+   "evalLc0": 0.4928,
+   "evalSF": 0.5658,
+   "changedMind": false,
+   "candidates": [],
+   "viz": {},
+   "extra": {}
+  },
+  {
+   "ply": 13,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "f2g1",
+   "san": "Kg1",
+   "evalLc0": 0.5101,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f2g1",
+     "from": "f2",
+     "to": "g1",
+     "san": "Kg1",
+     "share": 0.9939,
+     "visits": 22665,
+     "policy": 0.7639,
+     "q": 0.0278
+    },
+    {
+     "uci": "f2e3",
+     "from": "f2",
+     "to": "e3",
+     "san": "Ke3",
+     "share": 0.003,
+     "visits": 68,
+     "policy": 0.0854,
+     "q": -0.4812
+    },
+    {
+     "uci": "f2e1",
+     "from": "f2",
+     "to": "e1",
+     "san": "Ke1",
+     "share": 0.0012,
+     "visits": 28,
+     "policy": 0.0702,
+     "q": -0.984
+    },
+    {
+     "uci": "f2f1",
+     "from": "f2",
+     "to": "f1",
+     "san": "Kf1",
+     "share": 0.001,
+     "visits": 23,
+     "policy": 0.0403,
+     "q": -0.6233
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0251,
+    "qMargin": 0.509,
+    "totalVisits": 22803
+   },
+   "rawDifficulty": 0.025088,
+   "difficulty": 0.0321,
+   "delayMs": 407
+  },
+  {
+   "ply": 14,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "d8h4",
+   "san": "Qh4",
+   "evalLc0": 0.5158,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "d8h4",
+     "from": "d8",
+     "to": "h4",
+     "san": "Qh4",
+     "share": 0.9433,
+     "cp": 0,
+     "line": [
+      "d8h4",
+      "g2g3",
+      "e4g3",
+      "f7h8",
+      "c6d4",
+      "h2g3"
+     ]
+    },
+    {
+     "uci": "d8e7",
+     "from": "d8",
+     "to": "e7",
+     "san": "Qe7",
+     "share": 0.0567,
+     "cp": -225,
+     "line": [
+      "d8e7",
+      "f7h8"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 15,
+    "marginCp": 225,
+    "rootHistory": [
+     [
+      1,
+      "d8h4"
+     ],
+     [
+      2,
+      "d8h4"
+     ],
+     [
+      3,
+      "d8h4"
+     ],
+     [
+      4,
+      "d8h4"
+     ],
+     [
+      5,
+      "d8h4"
+     ],
+     [
+      6,
+      "d8h4"
+     ],
+     [
+      7,
+      "d8h4"
+     ],
+     [
+      8,
+      "d8h4"
+     ],
+     [
+      9,
+      "d8h4"
+     ],
+     [
+      10,
+      "d8h4"
+     ],
+     [
+      11,
+      "d8h4"
+     ],
+     [
+      12,
+      "d8h4"
+     ],
+     [
+      13,
+      "d8h4"
+     ],
+     [
+      14,
+      "d8h4"
+     ],
+     [
+      15,
+      "d8h4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.032011,
+   "difficulty": 0.0119,
+   "delayMs": 401
+  },
+  {
+   "ply": 15,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "g2g3",
+   "san": "g3",
+   "evalLc0": 0.5129,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g2g3",
+     "from": "g2",
+     "to": "g3",
+     "san": "g3",
+     "share": 0.9763,
+     "visits": 24930,
+     "policy": 0.2866,
+     "q": 0.0332
+    },
+    {
+     "uci": "d1e2",
+     "from": "d1",
+     "to": "e2",
+     "san": "Qe2",
+     "share": 0.0119,
+     "visits": 303,
+     "policy": 0.2446,
+     "q": -0.242
+    },
+    {
+     "uci": "d1f1",
+     "from": "d1",
+     "to": "f1",
+     "san": "Qf1",
+     "share": 0.0062,
+     "visits": 159,
+     "policy": 0.2442,
+     "q": -0.4429
+    },
+    {
+     "uci": "d1f3",
+     "from": "d1",
+     "to": "f3",
+     "san": "Qf3",
+     "share": 0.0027,
+     "visits": 70,
+     "policy": 0.0404,
+     "q": -0.1962
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0427,
+    "qMargin": 0.2752,
+    "totalVisits": 25534
+   },
+   "rawDifficulty": 0.042696,
+   "difficulty": 0.0546,
+   "delayMs": 419
+  },
+  {
+   "ply": 16,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "e4g3",
+   "san": "Nxg3",
+   "evalLc0": 0.5216,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "e4g3",
+     "from": "e4",
+     "to": "g3",
+     "san": "Nxg3",
+     "share": 0.8267,
+     "cp": 0,
+     "line": [
+      "e4g3",
+      "f7h8",
+      "c6d4",
+      "h2g3",
+      "h4g3",
+      "g1f1"
+     ]
+    },
+    {
+     "uci": "h4f6",
+     "from": "h4",
+     "to": "f6",
+     "san": "Qf6",
+     "share": 0.1733,
+     "cp": -125,
+     "line": [
+      "h4f6",
+      "d1e1",
+      "d7d5",
+      "c4d5",
+      "h8f8",
+      "h2h3"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 15,
+    "marginCp": 125,
+    "rootHistory": [
+     [
+      1,
+      "e4g3"
+     ],
+     [
+      2,
+      "e4g3"
+     ],
+     [
+      3,
+      "e4g3"
+     ],
+     [
+      4,
+      "e4g3"
+     ],
+     [
+      5,
+      "e4g3"
+     ],
+     [
+      6,
+      "e4g3"
+     ],
+     [
+      7,
+      "e4g3"
+     ],
+     [
+      8,
+      "e4g3"
+     ],
+     [
+      9,
+      "e4g3"
+     ],
+     [
+      10,
+      "e4g3"
+     ],
+     [
+      11,
+      "e4g3"
+     ],
+     [
+      12,
+      "e4g3"
+     ],
+     [
+      13,
+      "e4g3"
+     ],
+     [
+      14,
+      "e4g3"
+     ],
+     [
+      15,
+      "e4g3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.061922,
+   "difficulty": 0.0424,
+   "delayMs": 412
+  },
+  {
+   "ply": 17,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "f7h8",
+   "san": "Nxh8",
+   "evalLc0": 0.5173,
+   "evalSF": 0.5,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "f7h8",
+     "from": "f7",
+     "to": "h8",
+     "san": "Nxh8",
+     "share": 0.9824,
+     "visits": 26821,
+     "policy": 0.2035,
+     "q": 0.0378
+    },
+    {
+     "uci": "h2g3",
+     "from": "h2",
+     "to": "g3",
+     "san": "hxg3",
+     "share": 0.0048,
+     "visits": 130,
+     "policy": 0.3052,
+     "q": -0.2697
+    },
+    {
+     "uci": "d2d3",
+     "from": "d2",
+     "to": "d3",
+     "san": "d3",
+     "share": 0.0034,
+     "visits": 93,
+     "policy": 0.0756,
+     "q": -0.2746
+    },
+    {
+     "uci": "d1e1",
+     "from": "d1",
+     "to": "e1",
+     "san": "Qe1",
+     "share": 0.0027,
+     "visits": 73,
+     "policy": 0.1225,
+     "q": -0.9291
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0373,
+    "qMargin": 0.3075,
+    "totalVisits": 27302
+   },
+   "rawDifficulty": 0.037323,
+   "difficulty": 0.0477,
+   "delayMs": 415
+  },
+  {
+   "ply": 18,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "c6d4",
+   "san": "Nd4",
+   "evalLc0": 0.5288,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "c6d4",
+     "from": "c6",
+     "to": "d4",
+     "san": "Nd4",
+     "share": 0.7335,
+     "cp": 0,
+     "line": [
+      "c6d4",
+      "h2g3",
+      "h4g3",
+      "g1f1",
+      "g3f4",
+      "f1g2"
+     ]
+    },
+    {
+     "uci": "g3h1",
+     "from": "g3",
+     "to": "h1",
+     "san": "Nxh1",
+     "share": 0.2665,
+     "cp": -81,
+     "line": [
+      "g3h1",
+      "d1f1",
+      "h4d4",
+      "g1h1",
+      "d4e4",
+      "f1g2"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 1,
+    "settleDepth": 3,
+    "maxDepth": 11,
+    "marginCp": 81,
+    "rootHistory": [
+     [
+      1,
+      "d7d5"
+     ],
+     [
+      2,
+      "d7d5"
+     ],
+     [
+      3,
+      "c6d4"
+     ],
+     [
+      4,
+      "c6d4"
+     ],
+     [
+      5,
+      "c6d4"
+     ],
+     [
+      6,
+      "c6d4"
+     ],
+     [
+      7,
+      "c6d4"
+     ],
+     [
+      8,
+      "c6d4"
+     ],
+     [
+      9,
+      "c6d4"
+     ],
+     [
+      10,
+      "c6d4"
+     ],
+     [
+      11,
+      "c6d4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.21698,
+   "difficulty": 0.2007,
+   "delayMs": 600
+  },
+  {
+   "ply": 19,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "h2g3",
+   "san": "hxg3",
+   "evalLc0": 0.5244,
+   "evalSF": 0.5,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "h2g3",
+     "from": "h2",
+     "to": "g3",
+     "san": "hxg3",
+     "share": 0.973,
+     "visits": 28194,
+     "policy": 0.1455,
+     "q": 0.0376
+    },
+    {
+     "uci": "c4f7",
+     "from": "c4",
+     "to": "f7",
+     "san": "Bf7+",
+     "share": 0.013,
+     "visits": 377,
+     "policy": 0.0891,
+     "q": -0.0257
+    },
+    {
+     "uci": "b1c3",
+     "from": "b1",
+     "to": "c3",
+     "san": "Nc3",
+     "share": 0.004,
+     "visits": 117,
+     "policy": 0.3405,
+     "q": -0.6358
+    },
+    {
+     "uci": "c2c3",
+     "from": "c2",
+     "to": "c3",
+     "san": "c3",
+     "share": 0.0029,
+     "visits": 84,
+     "policy": 0.1265,
+     "q": -0.2114
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.052,
+    "qMargin": 0.0634,
+    "totalVisits": 28975
+   },
+   "rawDifficulty": 0.051981,
+   "difficulty": 0.0664,
+   "delayMs": 427
+  },
+  {
+   "ply": 20,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "h4g3",
+   "san": "Qxg3+",
+   "evalLc0": 0.5244,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "h4g3",
+     "from": "h4",
+     "to": "g3",
+     "san": "Qxg3+",
+     "share": 0.9981,
+     "cp": 0,
+     "line": [
+      "h4g3",
+      "g1f1",
+      "g3f4",
+      "f1g2",
+      "f4g5",
+      "g2h2"
+     ]
+    },
+    {
+     "uci": "h4g5",
+     "from": "h4",
+     "to": "g5",
+     "san": "Qg5",
+     "share": 0.0019,
+     "cp": -501,
+     "line": [
+      "h4g5",
+      "d1h5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 15,
+    "marginCp": 501,
+    "rootHistory": [
+     [
+      1,
+      "h4g3"
+     ],
+     [
+      2,
+      "h4g3"
+     ],
+     [
+      3,
+      "h4g3"
+     ],
+     [
+      4,
+      "h4g3"
+     ],
+     [
+      5,
+      "h4g3"
+     ],
+     [
+      6,
+      "h4g3"
+     ],
+     [
+      7,
+      "h4g3"
+     ],
+     [
+      8,
+      "h4g3"
+     ],
+     [
+      9,
+      "h4g3"
+     ],
+     [
+      10,
+      "h4g3"
+     ],
+     [
+      11,
+      "h4g3"
+     ],
+     [
+      12,
+      "h4g3"
+     ],
+     [
+      13,
+      "h4g3"
+     ],
+     [
+      14,
+      "h4g3"
+     ],
+     [
+      15,
+      "h4g3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.020381,
+   "difficulty": 0.0,
+   "delayMs": 400
+  },
+  {
+   "ply": 21,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "g1f1",
+   "san": "Kf1",
+   "evalLc0": 0.5187,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g1f1",
+     "from": "g1",
+     "to": "f1",
+     "san": "Kf1",
+     "share": 1.0,
+     "visits": 28156,
+     "policy": 1.0,
+     "q": 0.034
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0,
+    "qMargin": 1.0,
+    "totalVisits": 28156
+   },
+   "rawDifficulty": 0.0,
+   "difficulty": 0.0,
+   "delayMs": 400
+  },
+  {
+   "ply": 22,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "g3f4",
+   "san": "Qf4+",
+   "evalLc0": 0.5216,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g3f4",
+     "from": "g3",
+     "to": "f4",
+     "san": "Qf4+",
+     "share": 0.9144,
+     "cp": 0,
+     "line": [
+      "g3f4",
+      "f1g2",
+      "f4g5",
+      "g2f2",
+      "g5f5",
+      "f2g1"
+     ]
+    },
+    {
+     "uci": "g7g6",
+     "from": "g7",
+     "to": "g6",
+     "san": "g6",
+     "share": 0.0444,
+     "cp": -242,
+     "line": [
+      "g7g6",
+      "c4f7",
+      "e8e7",
+      "h1h7",
+      "d7d5",
+      "h8g6"
+     ]
+    },
+    {
+     "uci": "d7d5",
+     "from": "d7",
+     "to": "d5",
+     "san": "d5",
+     "share": 0.0412,
+     "cp": -248,
+     "line": [
+      "d7d5",
+      "d1h5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 13,
+    "marginCp": 242,
+    "rootHistory": [
+     [
+      1,
+      "g3f4"
+     ],
+     [
+      2,
+      "g3f4"
+     ],
+     [
+      3,
+      "g3f4"
+     ],
+     [
+      4,
+      "g3f4"
+     ],
+     [
+      5,
+      "g3f4"
+     ],
+     [
+      6,
+      "g3f4"
+     ],
+     [
+      7,
+      "g3f4"
+     ],
+     [
+      8,
+      "g3f4"
+     ],
+     [
+      9,
+      "g3f4"
+     ],
+     [
+      10,
+      "g3f4"
+     ],
+     [
+      11,
+      "g3f4"
+     ],
+     [
+      12,
+      "g3f4"
+     ],
+     [
+      13,
+      "g3f4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.032788,
+   "difficulty": 0.0127,
+   "delayMs": 401
+  },
+  {
+   "ply": 23,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "f1g2",
+   "san": "Kg2",
+   "evalLc0": 0.5187,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f1g2",
+     "from": "f1",
+     "to": "g2",
+     "san": "Kg2",
+     "share": 0.7163,
+     "visits": 25020,
+     "policy": 0.5278,
+     "q": 0.0334
+    },
+    {
+     "uci": "f1g1",
+     "from": "f1",
+     "to": "g1",
+     "san": "Kg1",
+     "share": 0.2749,
+     "visits": 9602,
+     "policy": 0.3293,
+     "q": 0.0221
+    },
+    {
+     "uci": "f1e1",
+     "from": "f1",
+     "to": "e1",
+     "san": "Ke1",
+     "share": 0.0085,
+     "visits": 298,
+     "policy": 0.1262,
+     "q": -0.1384
+    },
+    {
+     "uci": "d1f3",
+     "from": "d1",
+     "to": "f3",
+     "san": "Qf3",
+     "share": 0.0003,
+     "visits": 10,
+     "policy": 0.0167,
+     "q": -0.9994
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.4595,
+    "qMargin": 0.0113,
+    "totalVisits": 34930
+   },
+   "rawDifficulty": 0.459479,
+   "difficulty": 0.5871,
+   "delayMs": 1780
+  },
+  {
+   "ply": 24,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "f4g5",
+   "san": "Qg5+",
+   "evalLc0": 0.5288,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f4g5",
+     "from": "f4",
+     "to": "g5",
+     "san": "Qg5+",
+     "share": 0.9485,
+     "cp": 0,
+     "line": [
+      "f4g5",
+      "g2f1",
+      "g5f4",
+      "f1g2"
+     ]
+    },
+    {
+     "uci": "b7b6",
+     "from": "b7",
+     "to": "b6",
+     "san": "b6",
+     "share": 0.0515,
+     "cp": -233,
+     "line": [
+      "b7b6",
+      "d1h5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 14,
+    "marginCp": 233,
+    "rootHistory": [
+     [
+      1,
+      "f4g5"
+     ],
+     [
+      2,
+      "f4g5"
+     ],
+     [
+      3,
+      "f4g5"
+     ],
+     [
+      4,
+      "f4g5"
+     ],
+     [
+      5,
+      "f4g5"
+     ],
+     [
+      6,
+      "f4g5"
+     ],
+     [
+      7,
+      "f4g5"
+     ],
+     [
+      8,
+      "f4g5"
+     ],
+     [
+      9,
+      "f4g5"
+     ],
+     [
+      10,
+      "f4g5"
+     ],
+     [
+      11,
+      "f4g5"
+     ],
+     [
+      12,
+      "f4g5"
+     ],
+     [
+      13,
+      "f4g5"
+     ],
+     [
+      14,
+      "f4g5"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.032297,
+   "difficulty": 0.0122,
+   "delayMs": 401
+  },
+  {
+   "ply": 25,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "g2f2",
+   "san": "Kf2",
+   "evalLc0": 0.5173,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g2f2",
+     "from": "g2",
+     "to": "f2",
+     "san": "Kf2",
+     "share": 0.3916,
+     "visits": 19434,
+     "policy": 0.3994,
+     "q": 0.0292
+    },
+    {
+     "uci": "g2f1",
+     "from": "g2",
+     "to": "f1",
+     "san": "Kf1",
+     "share": 0.352,
+     "visits": 17466,
+     "policy": 0.3584,
+     "q": 0.0291
+    },
+    {
+     "uci": "g2h2",
+     "from": "g2",
+     "to": "h2",
+     "san": "Kh2",
+     "share": 0.2553,
+     "visits": 12669,
+     "policy": 0.1885,
+     "q": 0.0413
+    },
+    {
+     "uci": "g2h3",
+     "from": "g2",
+     "to": "h3",
+     "san": "Kh3",
+     "share": 0.0008,
+     "visits": 42,
+     "policy": 0.0372,
+     "q": -0.6001
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.6779,
+    "qMargin": 0.0001,
+    "totalVisits": 49622
+   },
+   "rawDifficulty": 0.677927,
+   "difficulty": 0.8662,
+   "delayMs": 3180
+  },
+  {
+   "ply": 26,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "g5f6",
+   "san": "Qf6+",
+   "evalLc0": 0.5316,
+   "evalSF": 0.5,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "g5f6",
+     "from": "g5",
+     "to": "f6",
+     "san": "Qf6+",
+     "share": 0.3333,
+     "cp": 0,
+     "line": [
+      "g5f6",
+      "f2g3",
+      "f6f4",
+      "g3g2",
+      "f4g5",
+      "g2f2"
+     ]
+    },
+    {
+     "uci": "g5f4",
+     "from": "g5",
+     "to": "f4",
+     "san": "Qf4+",
+     "share": 0.3333,
+     "cp": 0,
+     "line": [
+      "g5f4",
+      "f2g1",
+      "f4g3",
+      "g1f1",
+      "g3f4"
+     ]
+    },
+    {
+     "uci": "g5f5",
+     "from": "g5",
+     "to": "f5",
+     "san": "Qf5+",
+     "share": 0.3333,
+     "cp": 0,
+     "line": [
+      "g5f5",
+      "f2g3",
+      "f5f4",
+      "g3g2",
+      "f4g5",
+      "g2f1"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 7,
+    "settleDepth": 22,
+    "maxDepth": 27,
+    "marginCp": 0,
+    "rootHistory": [
+     [
+      1,
+      "g5f4"
+     ],
+     [
+      2,
+      "g5f4"
+     ],
+     [
+      3,
+      "g5f5"
+     ],
+     [
+      4,
+      "g5f5"
+     ],
+     [
+      5,
+      "g5f5"
+     ],
+     [
+      6,
+      "g5f5"
+     ],
+     [
+      7,
+      "g5f4"
+     ],
+     [
+      8,
+      "g5f4"
+     ],
+     [
+      9,
+      "g5f6"
+     ],
+     [
+      10,
+      "g5f6"
+     ],
+     [
+      11,
+      "g5f6"
+     ],
+     [
+      12,
+      "g5f6"
+     ],
+     [
+      13,
+      "g5f6"
+     ],
+     [
+      14,
+      "g5f4"
+     ],
+     [
+      15,
+      "g5f4"
+     ],
+     [
+      16,
+      "g5f4"
+     ],
+     [
+      17,
+      "g5f4"
+     ],
+     [
+      18,
+      "g5f4"
+     ],
+     [
+      19,
+      "g5f5"
+     ],
+     [
+      20,
+      "g5f4"
+     ],
+     [
+      21,
+      "g5f4"
+     ],
+     [
+      22,
+      "g5f6"
+     ],
+     [
+      23,
+      "g5f6"
+     ],
+     [
+      24,
+      "g5f6"
+     ],
+     [
+      25,
+      "g5f6"
+     ],
+     [
+      26,
+      "g5f6"
+     ],
+     [
+      27,
+      "g5f6"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.881944,
+   "difficulty": 0.8795,
+   "delayMs": 3257
+  },
+  {
+   "ply": 27,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "f2g1",
+   "san": "Kg1",
+   "evalLc0": 0.5216,
+   "evalSF": 0.5,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "f2g1",
+     "from": "f2",
+     "to": "g1",
+     "san": "Kg1",
+     "share": 0.487,
+     "visits": 18844,
+     "policy": 0.1815,
+     "q": 0.0403
+    },
+    {
+     "uci": "f2g3",
+     "from": "f2",
+     "to": "g3",
+     "san": "Kg3",
+     "share": 0.2574,
+     "visits": 9961,
+     "policy": 0.137,
+     "q": 0.0354
+    },
+    {
+     "uci": "f2g2",
+     "from": "f2",
+     "to": "g2",
+     "san": "Kg2",
+     "share": 0.2428,
+     "visits": 9397,
+     "policy": 0.1451,
+     "q": 0.0347
+    },
+    {
+     "uci": "f2e1",
+     "from": "f2",
+     "to": "e1",
+     "san": "Ke1",
+     "share": 0.0098,
+     "visits": 381,
+     "policy": 0.3824,
+     "q": -0.3169
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.6178,
+    "qMargin": 0.0049,
+    "totalVisits": 38698
+   },
+   "rawDifficulty": 0.617809,
+   "difficulty": 0.7894,
+   "delayMs": 2752
+  },
+  {
+   "ply": 28,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "f6g5",
+   "san": "Qg5+",
+   "evalLc0": 0.5259,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f6g5",
+     "from": "f6",
+     "to": "g5",
+     "san": "Qg5+",
+     "share": 0.93,
+     "cp": 0,
+     "line": [
+      "f6g5",
+      "g1h2",
+      "g5f4",
+      "h2g2",
+      "f4g5",
+      "g2h2"
+     ]
+    },
+    {
+     "uci": "d4f3",
+     "from": "d4",
+     "to": "f3",
+     "san": "Nf3+",
+     "share": 0.0531,
+     "cp": -229,
+     "line": [
+      "d4f3",
+      "g1g2",
+      "e5e4",
+      "c4f7",
+      "e8f8",
+      "h1h7"
+     ]
+    },
+    {
+     "uci": "g7g6",
+     "from": "g7",
+     "to": "g6",
+     "san": "g6",
+     "share": 0.0168,
+     "cp": -321,
+     "line": [
+      "g7g6",
+      "h1h7"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 14,
+    "marginCp": 229,
+    "rootHistory": [
+     [
+      1,
+      "f6g5"
+     ],
+     [
+      2,
+      "f6g5"
+     ],
+     [
+      3,
+      "f6g5"
+     ],
+     [
+      4,
+      "f6g5"
+     ],
+     [
+      5,
+      "f6g5"
+     ],
+     [
+      6,
+      "f6g5"
+     ],
+     [
+      7,
+      "f6g5"
+     ],
+     [
+      8,
+      "f6g5"
+     ],
+     [
+      9,
+      "f6g5"
+     ],
+     [
+      10,
+      "f6g5"
+     ],
+     [
+      11,
+      "f6g5"
+     ],
+     [
+      12,
+      "f6g5"
+     ],
+     [
+      13,
+      "f6g5"
+     ],
+     [
+      14,
+      "f6g5"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.032854,
+   "difficulty": 0.0127,
+   "delayMs": 401
+  },
+  {
+   "ply": 29,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "g1f2",
+   "san": "Kf2",
+   "evalLc0": 0.5173,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g1f2",
+     "from": "g1",
+     "to": "f2",
+     "san": "Kf2",
+     "share": 0.4001,
+     "visits": 18746,
+     "policy": 0.4004,
+     "q": 0.0331
+    },
+    {
+     "uci": "g1f1",
+     "from": "g1",
+     "to": "f1",
+     "san": "Kf1",
+     "share": 0.3414,
+     "visits": 15993,
+     "policy": 0.379,
+     "q": 0.0312
+    },
+    {
+     "uci": "g1h2",
+     "from": "g1",
+     "to": "h2",
+     "san": "Kh2",
+     "share": 0.2583,
+     "visits": 12100,
+     "policy": 0.2047,
+     "q": 0.0395
+    },
+    {
+     "uci": "d1g4",
+     "from": "d1",
+     "to": "g4",
+     "san": "Qg4",
+     "share": 0.0002,
+     "visits": 11,
+     "policy": 0.016,
+     "q": -0.9993
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.7827,
+    "qMargin": 0.0019,
+    "totalVisits": 46850
+   },
+   "rawDifficulty": 0.782663,
+   "difficulty": 1.0,
+   "delayMs": 4000
+  },
+  {
+   "ply": 30,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "g5f4",
+   "san": "Qf4+",
+   "evalLc0": 0.523,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g5f4",
+     "from": "g5",
+     "to": "f4",
+     "san": "Qf4+",
+     "share": 0.5,
+     "cp": 0,
+     "line": [
+      "g5f4",
+      "f2g2",
+      "f4g5"
+     ]
+    },
+    {
+     "uci": "g5f6",
+     "from": "g5",
+     "to": "f6",
+     "san": "Qf6+",
+     "share": 0.5,
+     "cp": 0,
+     "line": [
+      "g5f6",
+      "f2g1",
+      "f6g5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 4,
+    "settleDepth": 15,
+    "maxDepth": 30,
+    "marginCp": 0,
+    "rootHistory": [
+     [
+      1,
+      "g5f4"
+     ],
+     [
+      2,
+      "g5f4"
+     ],
+     [
+      3,
+      "g5f4"
+     ],
+     [
+      4,
+      "g5f4"
+     ],
+     [
+      5,
+      "g5f4"
+     ],
+     [
+      6,
+      "g5f5"
+     ],
+     [
+      7,
+      "g5f5"
+     ],
+     [
+      8,
+      "g5f5"
+     ],
+     [
+      9,
+      "g5f5"
+     ],
+     [
+      10,
+      "g5f5"
+     ],
+     [
+      11,
+      "g5f4"
+     ],
+     [
+      12,
+      "g5f4"
+     ],
+     [
+      13,
+      "g5f4"
+     ],
+     [
+      14,
+      "g5f5"
+     ],
+     [
+      15,
+      "g5f4"
+     ],
+     [
+      16,
+      "g5f4"
+     ],
+     [
+      17,
+      "g5f4"
+     ],
+     [
+      18,
+      "g5f4"
+     ],
+     [
+      19,
+      "g5f4"
+     ],
+     [
+      20,
+      "g5f4"
+     ],
+     [
+      21,
+      "g5f4"
+     ],
+     [
+      22,
+      "g5f4"
+     ],
+     [
+      23,
+      "g5f4"
+     ],
+     [
+      24,
+      "g5f4"
+     ],
+     [
+      25,
+      "g5f4"
+     ],
+     [
+      26,
+      "g5f4"
+     ],
+     [
+      27,
+      "g5f4"
+     ],
+     [
+      28,
+      "g5f4"
+     ],
+     [
+      29,
+      "g5f4"
+     ],
+     [
+      30,
+      "g5f4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.6,
+   "difficulty": 0.5917,
+   "delayMs": 1800
+  },
+  {
+   "ply": 31,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "f2g2",
+   "san": "Kg2",
+   "evalLc0": 0.5201,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f2g2",
+     "from": "f2",
+     "to": "g2",
+     "san": "Kg2",
+     "share": 0.5337,
+     "visits": 25271,
+     "policy": 0.4192,
+     "q": 0.0316
+    },
+    {
+     "uci": "f2g1",
+     "from": "f2",
+     "to": "g1",
+     "san": "Kg1",
+     "share": 0.4544,
+     "visits": 21516,
+     "policy": 0.3674,
+     "q": 0.0311
+    },
+    {
+     "uci": "f2e1",
+     "from": "f2",
+     "to": "e1",
+     "san": "Ke1",
+     "share": 0.0117,
+     "visits": 555,
+     "policy": 0.1926,
+     "q": -0.0969
+    },
+    {
+     "uci": "d1f3",
+     "from": "d1",
+     "to": "f3",
+     "san": "Qf3",
+     "share": 0.0003,
+     "visits": 13,
+     "policy": 0.0207,
+     "q": -0.9995
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.5395,
+    "qMargin": 0.0004,
+    "totalVisits": 47355
+   },
+   "rawDifficulty": 0.53952,
+   "difficulty": 0.6893,
+   "delayMs": 2243
+  },
+  {
+   "ply": 32,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "f4g5",
+   "san": "Qg5+",
+   "evalLc0": 0.5201,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f4g5",
+     "from": "f4",
+     "to": "g5",
+     "san": "Qg5+",
+     "share": 0.937,
+     "cp": 0,
+     "line": [
+      "f4g5"
+     ]
+    },
+    {
+     "uci": "b7b6",
+     "from": "b7",
+     "to": "b6",
+     "san": "b6",
+     "share": 0.063,
+     "cp": -216,
+     "line": [
+      "b7b6",
+      "d1h5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 14,
+    "marginCp": 216,
+    "rootHistory": [
+     [
+      1,
+      "f4g5"
+     ],
+     [
+      2,
+      "f4g5"
+     ],
+     [
+      3,
+      "f4g5"
+     ],
+     [
+      4,
+      "f4g5"
+     ],
+     [
+      5,
+      "f4g5"
+     ],
+     [
+      6,
+      "f4g5"
+     ],
+     [
+      7,
+      "f4g5"
+     ],
+     [
+      8,
+      "f4g5"
+     ],
+     [
+      9,
+      "f4g5"
+     ],
+     [
+      10,
+      "f4g5"
+     ],
+     [
+      11,
+      "f4g5"
+     ],
+     [
+      12,
+      "f4g5"
+     ],
+     [
+      13,
+      "f4g5"
+     ],
+     [
+      14,
+      "f4g5"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.03487,
+   "difficulty": 0.0148,
+   "delayMs": 402
+  },
+  {
+   "ply": 33,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "g2f1",
+   "san": "Kf1",
+   "evalLc0": 0.5129,
+   "evalSF": 0.5,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "g2f1",
+     "from": "g2",
+     "to": "f1",
+     "san": "Kf1",
+     "share": 0.4355,
+     "visits": 19922,
+     "policy": 0.3496,
+     "q": 0.0195
+    },
+    {
+     "uci": "g2h2",
+     "from": "g2",
+     "to": "h2",
+     "san": "Kh2",
+     "share": 0.3297,
+     "visits": 15084,
+     "policy": 0.1672,
+     "q": 0.0262
+    },
+    {
+     "uci": "g2f2",
+     "from": "g2",
+     "to": "f2",
+     "san": "Kf2",
+     "share": 0.2335,
+     "visits": 10683,
+     "policy": 0.429,
+     "q": 0.0
+    },
+    {
+     "uci": "g2h3",
+     "from": "g2",
+     "to": "h3",
+     "san": "Kh3",
+     "share": 0.001,
+     "visits": 46,
+     "policy": 0.0369,
+     "q": -0.6158
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.669,
+    "qMargin": 0.0067,
+    "totalVisits": 45748
+   },
+   "rawDifficulty": 0.669028,
+   "difficulty": 0.8548,
+   "delayMs": 3114
+  },
+  {
+   "ply": 34,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "g5f4",
+   "san": "Qf4+",
+   "evalLc0": 0.5331,
+   "evalSF": 0.5,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "g5f4",
+     "from": "g5",
+     "to": "f4",
+     "san": "Qf4+",
+     "share": 0.5,
+     "cp": 0,
+     "line": [
+      "g5f4"
+     ]
+    },
+    {
+     "uci": "g5f5",
+     "from": "g5",
+     "to": "f5",
+     "san": "Qf5+",
+     "share": 0.5,
+     "cp": 0,
+     "line": [
+      "g5f5",
+      "f1g1",
+      "f5g5",
+      "g1f2"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 8,
+    "settleDepth": 28,
+    "maxDepth": 28,
+    "marginCp": 0,
+    "rootHistory": [
+     [
+      1,
+      "g5f4"
+     ],
+     [
+      2,
+      "g5f4"
+     ],
+     [
+      3,
+      "g5f4"
+     ],
+     [
+      4,
+      "g5f4"
+     ],
+     [
+      5,
+      "g5f6"
+     ],
+     [
+      6,
+      "g5f6"
+     ],
+     [
+      7,
+      "g5f6"
+     ],
+     [
+      8,
+      "g5f4"
+     ],
+     [
+      9,
+      "g5f5"
+     ],
+     [
+      10,
+      "g5f5"
+     ],
+     [
+      11,
+      "g5f6"
+     ],
+     [
+      12,
+      "g5f5"
+     ],
+     [
+      13,
+      "g5f4"
+     ],
+     [
+      14,
+      "g5f4"
+     ],
+     [
+      15,
+      "g5f4"
+     ],
+     [
+      16,
+      "g5f4"
+     ],
+     [
+      17,
+      "g5f4"
+     ],
+     [
+      18,
+      "g5f4"
+     ],
+     [
+      19,
+      "g5f4"
+     ],
+     [
+      20,
+      "g5f4"
+     ],
+     [
+      21,
+      "g5f4"
+     ],
+     [
+      22,
+      "g5f4"
+     ],
+     [
+      23,
+      "g5f4"
+     ],
+     [
+      24,
+      "g5f4"
+     ],
+     [
+      25,
+      "g5f5"
+     ],
+     [
+      26,
+      "g5f5"
+     ],
+     [
+      27,
+      "g5f5"
+     ],
+     [
+      28,
+      "g5f4"
+     ]
+    ]
+   },
+   "rawDifficulty": 1.0,
+   "difficulty": 1.0,
+   "delayMs": 4000
+  },
+  {
+   "ply": 35,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "f1g1",
+   "san": "Kg1",
+   "evalLc0": 0.5,
+   "evalSF": 0.5,
+   "changedMind": true,
+   "candidates": [
+    {
+     "uci": "f1g1",
+     "from": "f1",
+     "to": "g1",
+     "san": "Kg1",
+     "share": 0.659,
+     "visits": 22808,
+     "policy": 0.3955,
+     "q": 0.0184
+    },
+    {
+     "uci": "f1g2",
+     "from": "f1",
+     "to": "g2",
+     "san": "Kg2",
+     "share": 0.3159,
+     "visits": 10934,
+     "policy": 0.4426,
+     "q": 0.0
+    },
+    {
+     "uci": "f1e1",
+     "from": "f1",
+     "to": "e1",
+     "san": "Ke1",
+     "share": 0.0248,
+     "visits": 857,
+     "policy": 0.1422,
+     "q": -0.0474
+    },
+    {
+     "uci": "d1f3",
+     "from": "d1",
+     "to": "f3",
+     "san": "Qf3",
+     "share": 0.0003,
+     "visits": 11,
+     "policy": 0.0196,
+     "q": -0.9994
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.5287,
+    "qMargin": 0.0184,
+    "totalVisits": 34610
+   },
+   "rawDifficulty": 0.528739,
+   "difficulty": 0.6756,
+   "delayMs": 2177
+  },
+  {
+   "ply": 36,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "f4g3",
+   "san": "Qg3+",
+   "evalLc0": 0.5,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "f4g3",
+     "from": "f4",
+     "to": "g3",
+     "san": "Qg3+",
+     "share": 0.4725,
+     "cp": 0,
+     "line": [
+      "f4g3",
+      "g1f1"
+     ]
+    },
+    {
+     "uci": "f4g5",
+     "from": "f4",
+     "to": "g5",
+     "san": "Qg5+",
+     "share": 0.4725,
+     "cp": 0,
+     "line": [
+      "f4g5",
+      "g1f2"
+     ]
+    },
+    {
+     "uci": "d4f3",
+     "from": "d4",
+     "to": "f3",
+     "san": "Nf3+",
+     "share": 0.055,
+     "cp": -172,
+     "line": [
+      "d4f3",
+      "g1g2"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 15,
+    "marginCp": 0,
+    "rootHistory": [
+     [
+      1,
+      "f4g3"
+     ],
+     [
+      2,
+      "f4g3"
+     ],
+     [
+      3,
+      "f4g3"
+     ],
+     [
+      4,
+      "f4g3"
+     ],
+     [
+      5,
+      "f4g3"
+     ],
+     [
+      6,
+      "f4g3"
+     ],
+     [
+      7,
+      "f4g3"
+     ],
+     [
+      8,
+      "f4g3"
+     ],
+     [
+      9,
+      "f4g3"
+     ],
+     [
+      10,
+      "f4g3"
+     ],
+     [
+      11,
+      "f4g3"
+     ],
+     [
+      12,
+      "f4g3"
+     ],
+     [
+      13,
+      "f4g3"
+     ],
+     [
+      14,
+      "f4g3"
+     ],
+     [
+      15,
+      "f4g3"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.22,
+   "difficulty": 0.2038,
+   "delayMs": 605
+  },
+  {
+   "ply": 37,
+   "side": "white",
+   "engine": "Lc0",
+   "uci": "g1f1",
+   "san": "Kf1",
+   "evalLc0": 0.5,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g1f1",
+     "from": "g1",
+     "to": "f1",
+     "san": "Kf1",
+     "share": 1.0,
+     "visits": 14373,
+     "policy": 1.0,
+     "q": 0.0084
+    }
+   ],
+   "viz": "intuition",
+   "extra": {
+    "entropyNorm": 0.0,
+    "qMargin": 1.0,
+    "totalVisits": 14373
+   },
+   "rawDifficulty": 0.0,
+   "difficulty": 0.0,
+   "delayMs": 400
+  },
+  {
+   "ply": 38,
+   "side": "black",
+   "engine": "Stockfish",
+   "uci": "g3f4",
+   "san": "Qf4+",
+   "evalLc0": 0.5,
+   "evalSF": 0.5,
+   "changedMind": false,
+   "candidates": [
+    {
+     "uci": "g3f4",
+     "from": "g3",
+     "to": "f4",
+     "san": "Qf4+",
+     "share": 0.9373,
+     "cp": 0,
+     "line": [
+      "g3f4"
+     ]
+    },
+    {
+     "uci": "g7g6",
+     "from": "g7",
+     "to": "g6",
+     "san": "g6",
+     "share": 0.0433,
+     "cp": -246,
+     "line": [
+      "g7g6",
+      "c4f7",
+      "e8e7",
+      "f7d5",
+      "d7d6",
+      "h1h7"
+     ]
+    },
+    {
+     "uci": "e8e7",
+     "from": "e8",
+     "to": "e7",
+     "san": "Ke7",
+     "share": 0.0195,
+     "cp": -310,
+     "line": [
+      "e8e7",
+      "d1h5"
+     ]
+    }
+   ],
+   "viz": "calculation",
+   "extra": {
+    "changes": 0,
+    "settleDepth": 1,
+    "maxDepth": 13,
+    "marginCp": 246,
+    "rootHistory": [
+     [
+      1,
+      "g3f4"
+     ],
+     [
+      2,
+      "g3f4"
+     ],
+     [
+      3,
+      "g3f4"
+     ],
+     [
+      4,
+      "g3f4"
+     ],
+     [
+      5,
+      "g3f4"
+     ],
+     [
+      6,
+      "g3f4"
+     ],
+     [
+      7,
+      "g3f4"
+     ],
+     [
+      8,
+      "g3f4"
+     ],
+     [
+      9,
+      "g3f4"
+     ],
+     [
+      10,
+      "g3f4"
+     ],
+     [
+      11,
+      "g3f4"
+     ],
+     [
+      12,
+      "g3f4"
+     ],
+     [
+      13,
+      "g3f4"
+     ]
+    ]
+   },
+   "rawDifficulty": 0.032315,
+   "difficulty": 0.0122,
+   "delayMs": 401
+  }
+ ]
+}

@@ -1,24 +1,19 @@
 {
   "games": [
     {
-      "file": "game-001.pgn",
-      "data": "game-001.json",
-      "label": "Game 1: Lc0 vs Stockfish (1/2-1/2)"
+      "file": "game-013.pgn",
+      "data": "game-013.json",
+      "label": "Game 1: Lc0 vs Stockfish \u2014 Najdorf, Poisoned Pawn (1-0)"
     },
     {
-      "file": "game-002.pgn",
-      "data": "game-002.json",
-      "label": "Game 2: Stockfish vs Lc0 (1/2-1/2)"
+      "file": "game-008.pgn",
+      "data": "game-008.json",
+      "label": "Game 2: Lc0 vs Stockfish \u2014 Frankenstein-Dracula (0-1)"
     },
     {
-      "file": "game-003.pgn",
-      "data": "game-003.json",
-      "label": "Game 3: Lc0 vs Stockfish (0-1)"
-    },
-    {
-      "file": "game-004.pgn",
-      "data": "game-004.json",
-      "label": "Game 4: Stockfish vs Lc0 (1/2-1/2)"
+      "file": "game-005.pgn",
+      "data": "game-005.json",
+      "label": "Game 3: Stockfish vs Lc0 \u2014 Evans Gambit (1-0)"
     }
   ]
 }

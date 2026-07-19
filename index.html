@@ -259,12 +259,16 @@
       #logo { display: none; }   /* first thing shed: keeps no-overlap guarantee */
     }
     @media (max-height: 560px), (max-width: 460px) {
-      .player .status { display: none; }
       .player { padding: 0 2px; }
       .player .name { font-size: 14px; }
       .player.Lc0 .name { font-size: 20px; }
       .player.Stockfish .name { font-size: 13.5px; }
       .player .bar { width: 88px; }
+    }
+    /* Thoughts are the show: shed them only when height truly runs out
+       (landscape phones), never merely because the screen is narrow. */
+    @media (max-height: 560px) {
+      .player .status { display: none; }
     }
   </style>
 </head>

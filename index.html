@@ -70,6 +70,10 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
+      /* Above chessground pieces (z-index 2) and the resignation plaque
+         (z-index 3): without this, a piece on the h-file steals the
+         hover and the hand cursor never appears on the buttons. */
+      z-index: 4;
     }
     .ctrl {
       background: none;
@@ -79,6 +83,7 @@
       cursor: pointer;
       outline: none;  /* no focus ring: keyboard use after clicking a ctrl drew one */
     }
+    .ctrl, .ctrl * { cursor: pointer; }
     .ctrl svg { display: block; }
     #mute .slash { display: none; }
     #mute.muted .waves { display: none; }

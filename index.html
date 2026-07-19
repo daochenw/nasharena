@@ -163,6 +163,100 @@
       letter-spacing: .02em;
     }
 
+    /* ---- first-load name entrance ------------------------------------
+       Stockfish: each glyph slammed down L→R like a rubber stamp.
+       Leela: soft L→R ink mask; class is stripped at end so nothing clips. ---- */
+    .player.Stockfish .name .letter {
+      display: inline-block;
+      transform-origin: 50% 85%;
+      opacity: 0;
+      will-change: transform, opacity;
+      animation: stamp-in .32s cubic-bezier(.1, .85, .2, 1.05) forwards;
+      animation-delay: calc(var(--i) * 68ms + 40ms);
+    }
+    @keyframes stamp-in {
+      0% {
+        opacity: 0;
+        transform: scale(1.65) translateY(-11px) rotate(calc(var(--r, -4) * 1deg));
+      }
+      58% {
+        opacity: 1;
+        transform: scale(.9) translateY(1.5px) rotate(calc(var(--r, -4) * .2deg));
+      }
+      78% {
+        transform: scale(1.05) translateY(0) rotate(calc(var(--r, -4) * .12deg));
+      }
+      100% {
+        opacity: 1;
+        /* A hair of residual tilt — the stamp never lands perfectly square. */
+        transform: scale(1) translateY(0) rotate(calc(var(--r, -4) * .18deg));
+      }
+    }
+    .player.Lc0 .name.enter-draw {
+      display: inline-block;
+      /* Pad the mask box so Great Vibes swashes aren't cut mid-reveal. */
+      padding: .18em .28em;
+      margin: -.18em -.28em;
+      -webkit-mask-image: linear-gradient(
+        90deg,
+        #000 0%,
+        #000 46%,
+        rgba(0, 0, 0, .4) 52%,
+        transparent 60%
+      );
+      mask-image: linear-gradient(
+        90deg,
+        #000 0%,
+        #000 46%,
+        rgba(0, 0, 0, .4) 52%,
+        transparent 60%
+      );
+      -webkit-mask-size: 280% 100%;
+      mask-size: 280% 100%;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: 100% 50%;
+      mask-position: 100% 50%;
+      opacity: 0;
+      will-change: mask-position, -webkit-mask-position, transform, opacity;
+      animation: leela-ink 1.2s cubic-bezier(.42, .08, .18, 1) forwards;
+      animation-delay: 80ms;
+    }
+    @keyframes leela-ink {
+      0% {
+        opacity: 0;
+        -webkit-mask-position: 100% 50%;
+        mask-position: 100% 50%;
+        transform: translate(-3px, 2px) rotate(-1.2deg);
+      }
+      12% { opacity: 1; }
+      45% { transform: translate(-1px, -1px) rotate(.5deg); }
+      70% { transform: translate(0, 1px) rotate(-.25deg); }
+      100% {
+        opacity: 1;
+        -webkit-mask-position: 0% 50%;
+        mask-position: 0% 50%;
+        transform: translate(0, 0) rotate(0);
+        /* Solid mask for the final frame — JS then drops the class entirely. */
+        -webkit-mask-image: linear-gradient(#000 0 0);
+        mask-image: linear-gradient(#000 0 0);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .player.Stockfish .name .letter {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+      .player.Lc0 .name.enter-draw {
+        animation: none;
+        opacity: 1;
+        transform: none;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+    }
+
     /* Confidence: this engine's own sense of how it's doing. */
     .player .conf { margin-left: auto; display: flex; align-items: center; gap: 8px; }
     .player .pct {
@@ -386,9 +480,42 @@
 
     // ---- player cards ----
     const cards = { top: document.getElementById('pTop'), bot: document.getElementById('pBot') };
-    function bindCard(card, engine) {
+    // First paint only: stamp Stockfish / ink Leela. Later games set names plain.
+    let entrancePending = true;
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ENTRANCE_MS = 1400;   // Leela mask 80ms + 1.2s; SF finishes sooner
+
+    function paintName(el, engine, animate) {
+      const text = engine === 'Lc0' ? 'Leela' : 'Stockfish';
+      el.classList.remove('enter-draw');
+      if (!animate || reduceMotion) {
+        el.textContent = text;
+        return;
+      }
+      if (engine === 'Stockfish') {
+        // One span per glyph; imperfect tilt baked into --r so each stamp lands rough.
+        el.replaceChildren(...[...text].map((ch, i) => {
+          const s = document.createElement('span');
+          s.className = 'letter';
+          s.textContent = ch;
+          s.style.setProperty('--i', i);
+          s.style.setProperty('--r', (Math.random() * 10 - 5).toFixed(1));
+          return s;
+        }));
+      } else {
+        el.textContent = text;
+        el.classList.add('enter-draw');
+        // Drop the mask class when the reveal finishes — no residual clip.
+        el.addEventListener('animationend', ev => {
+          if (ev.target === el && ev.animationName === 'leela-ink')
+            el.classList.remove('enter-draw');
+        }, { once: true });
+      }
+    }
+
+    function bindCard(card, engine, animate) {
       card.className = 'player ' + engine;
-      card.querySelector('.name').textContent = engine === 'Lc0' ? 'Leela' : 'Stockfish';
+      paintName(card.querySelector('.name'), engine, animate);
       setStatusEl(card.querySelector('.status'), '');
     }
     function cardFor(engine) {
@@ -718,13 +845,16 @@
       ply = 0;
       chess = new Chess();
       // Seats follow colour: whoever plays White sits in the bottom card.
-      bindCard(cards.top, g.black);
-      bindCard(cards.bot, g.white);
+      const enter = entrancePending;
+      entrancePending = false;
+      bindCard(cards.top, g.black, enter);
+      bindCard(cards.bot, g.white, enter);
       setActive(null);
       ground.set({ fen: 'start', lastMove: undefined });
       setEvals(null);
       updateCaps();
-      if (!paused) later(thinkNext, 800);
+      // Hold the first think until the names have finished arriving.
+      if (!paused) later(thinkNext, 800 + (enter && !reduceMotion ? ENTRANCE_MS : 0));
     }
 
     // ---- verdict overlay (resignations) ----
@@ -873,6 +1003,8 @@
         if (!games.length) throw new Error('empty');
         const want = parseInt(new URLSearchParams(location.search).get('game'), 10);
         const first = want >= 1 && want <= games.length ? want - 1 : 0;
+        // Wait for the display faces so the stamp / ink don't jump on swap-in.
+        await document.fonts.ready;
         startGame(first);
       } catch (err) {
         cards.top.querySelector('.status').textContent = 'telemetry not found (run gen/generate_games.py)';

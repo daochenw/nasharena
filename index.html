@@ -164,7 +164,9 @@
 
     /* ---- first-load name entrance ------------------------------------
        Stockfish: each glyph slammed down L→R like a rubber stamp.
-       Leela: soft L→R ink mask; class is stripped at end so nothing clips. ---- */
+       Leela: a signature flick — the whole name swoops in small and tilted,
+       pivots around the pen-down point, overshoots and settles with a happy
+       wobble. Class stripped at end so no transform lingers. ---- */
     .player.Stockfish .name .letter {
       display: inline-block;
       transform-origin: 50% 85%;
@@ -191,54 +193,26 @@
         transform: scale(1) translateY(0) rotate(calc(var(--r, -4) * .18deg));
       }
     }
-    .player.Lc0 .name.enter-draw {
+    .player.Lc0 .name.enter-flick {
       display: inline-block;
-      /* Pad the mask box so Great Vibes swashes aren't cut mid-reveal. */
-      padding: .18em .28em;
-      margin: -.18em -.28em;
-      -webkit-mask-image: linear-gradient(
-        90deg,
-        #000 0%,
-        #000 46%,
-        rgba(0, 0, 0, .4) 52%,
-        transparent 60%
-      );
-      mask-image: linear-gradient(
-        90deg,
-        #000 0%,
-        #000 46%,
-        rgba(0, 0, 0, .4) 52%,
-        transparent 60%
-      );
-      -webkit-mask-size: 280% 100%;
-      mask-size: 280% 100%;
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-position: 100% 50%;
-      mask-position: 100% 50%;
+      /* Pivot at the pen-down point: left end of the baseline. */
+      transform-origin: 6% 78%;
       opacity: 0;
-      will-change: mask-position, -webkit-mask-position, transform, opacity;
-      animation: leela-ink 1.2s cubic-bezier(.42, .08, .18, 1) forwards;
+      will-change: transform, opacity;
+      animation: leela-flick .95s cubic-bezier(.3, .75, .3, 1) forwards;
       animation-delay: 80ms;
     }
-    @keyframes leela-ink {
+    @keyframes leela-flick {
       0% {
         opacity: 0;
-        -webkit-mask-position: 100% 50%;
-        mask-position: 100% 50%;
-        transform: translate(-3px, 2px) rotate(-1.2deg);
+        transform: translate(-13px, -6px) rotate(-13deg) scale(.55);
       }
-      12% { opacity: 1; }
-      45% { transform: translate(-1px, -1px) rotate(.5deg); }
-      70% { transform: translate(0, 1px) rotate(-.25deg); }
+      26% { opacity: 1; }
+      55% { transform: translate(1.5px, 1px) rotate(3.2deg) scale(1.07); }
+      76% { transform: translate(-.5px, -.5px) rotate(-1.3deg) scale(.985); }
       100% {
         opacity: 1;
-        -webkit-mask-position: 0% 50%;
-        mask-position: 0% 50%;
-        transform: translate(0, 0) rotate(0);
-        /* Solid mask for the final frame — JS then drops the class entirely. */
-        -webkit-mask-image: linear-gradient(#000 0 0);
-        mask-image: linear-gradient(#000 0 0);
+        transform: translate(0, 0) rotate(0) scale(1);
       }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -247,12 +221,10 @@
         opacity: 1;
         transform: none;
       }
-      .player.Lc0 .name.enter-draw {
+      .player.Lc0 .name.enter-flick {
         animation: none;
         opacity: 1;
         transform: none;
-        -webkit-mask-image: none;
-        mask-image: none;
       }
     }
 
@@ -486,11 +458,11 @@
     // First paint only: stamp Stockfish / ink Leela. Later games set names plain.
     let entrancePending = true;
     const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const ENTRANCE_MS = 1400;   // Leela mask 80ms + 1.2s; SF finishes sooner
+    const ENTRANCE_MS = 1100;   // Leela flick 80ms + .95s; SF finishes sooner
 
     function paintName(el, engine, animate) {
       const text = engine === 'Lc0' ? 'Leela' : 'Stockfish';
-      el.classList.remove('enter-draw');
+      el.classList.remove('enter-flick');
       if (!animate || reduceMotion) {
         el.textContent = text;
         return;
@@ -507,11 +479,11 @@
         }));
       } else {
         el.textContent = text;
-        el.classList.add('enter-draw');
-        // Drop the mask class when the reveal finishes — no residual clip.
+        el.classList.add('enter-flick');
+        // Drop the class when the flick lands — no residual transform.
         el.addEventListener('animationend', ev => {
-          if (ev.target === el && ev.animationName === 'leela-ink')
-            el.classList.remove('enter-draw');
+          if (ev.target === el && ev.animationName === 'leela-flick')
+            el.classList.remove('enter-flick');
         }, { once: true });
       }
     }

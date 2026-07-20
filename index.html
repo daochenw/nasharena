@@ -164,9 +164,9 @@
 
     /* ---- first-load name entrance ------------------------------------
        Stockfish: each glyph slammed down L→R like a rubber stamp.
-       Leela: a signature flick — the whole name swoops in small and tilted,
-       pivots around the pen-down point, overshoots and settles with a happy
-       wobble. Class stripped at end so no transform lingers. ---- */
+       Leela: a starry fade-in — the name resolves out of a soft glow-blur
+       while a few small stars twinkle around it, like light gathering into
+       ink. Classes stripped at end so nothing lingers. ---- */
     .player.Stockfish .name .letter {
       display: inline-block;
       transform-origin: 50% 85%;
@@ -193,27 +193,41 @@
         transform: scale(1) translateY(0) rotate(calc(var(--r, -4) * .18deg));
       }
     }
-    .player.Lc0 .name.enter-flick {
+    .player.Lc0 .name.enter-starry {
+      position: relative;
       display: inline-block;
-      /* Pivot at the pen-down point: left end of the baseline. */
-      transform-origin: 6% 78%;
+      opacity: 0;
+      filter: blur(5px) brightness(1.6);
+      will-change: opacity, filter;
+      animation: leela-starlight 1.1s ease-out forwards;
+      animation-delay: 120ms;
+    }
+    @keyframes leela-starlight {
+      0% { opacity: 0; filter: blur(5px) brightness(1.6); }
+      55% { opacity: .92; filter: blur(1px) brightness(1.15); }
+      100% { opacity: 1; filter: blur(0) brightness(1); }
+    }
+    /* A scatter of stars around the name, each igniting bright and glowing
+       then fading — pure light before the name resolves into ink. */
+    .player.Lc0 .name .spark {
+      position: absolute;
+      pointer-events: none;
+      font-size: var(--sz, 9px);
+      line-height: 1;
+      color: #fff7e6;
+      text-shadow:
+        0 0 3px #fff2cf,
+        0 0 7px rgba(255, 214, 130, .95),
+        0 0 13px rgba(255, 190, 90, .7);
       opacity: 0;
       will-change: transform, opacity;
-      animation: leela-flick .95s cubic-bezier(.3, .75, .3, 1) forwards;
-      animation-delay: 80ms;
+      animation: spark-twinkle 950ms ease-out forwards;
     }
-    @keyframes leela-flick {
-      0% {
-        opacity: 0;
-        transform: translate(-13px, -6px) rotate(-13deg) scale(.55);
-      }
-      26% { opacity: 1; }
-      55% { transform: translate(1.5px, 1px) rotate(3.2deg) scale(1.07); }
-      76% { transform: translate(-.5px, -.5px) rotate(-1.3deg) scale(.985); }
-      100% {
-        opacity: 1;
-        transform: translate(0, 0) rotate(0) scale(1);
-      }
+    @keyframes spark-twinkle {
+      0% { opacity: 0; transform: scale(.15) rotate(0deg); }
+      30% { opacity: 1; transform: scale(1.3) rotate(25deg); }
+      55% { opacity: .95; transform: scale(.95) rotate(5deg); }
+      100% { opacity: 0; transform: scale(.3) rotate(-18deg); }
     }
     @media (prefers-reduced-motion: reduce) {
       .player.Stockfish .name .letter {
@@ -221,11 +235,12 @@
         opacity: 1;
         transform: none;
       }
-      .player.Lc0 .name.enter-flick {
+      .player.Lc0 .name.enter-starry {
         animation: none;
         opacity: 1;
-        transform: none;
+        filter: none;
       }
+      .player.Lc0 .name .spark { display: none; }
     }
 
     /* Confidence: this engine's own sense of how it's doing. */
@@ -458,11 +473,11 @@
     // First paint only: stamp Stockfish / ink Leela. Later games set names plain.
     let entrancePending = true;
     const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const ENTRANCE_MS = 1100;   // Leela flick 80ms + .95s; SF finishes sooner
+    const ENTRANCE_MS = 1250;   // Leela starlight 120ms + 1.1s; SF finishes sooner
 
     function paintName(el, engine, animate) {
       const text = engine === 'Lc0' ? 'Leela' : 'Stockfish';
-      el.classList.remove('enter-flick');
+      el.classList.remove('enter-starry');
       if (!animate || reduceMotion) {
         el.textContent = text;
         return;
@@ -478,12 +493,27 @@
           return s;
         }));
       } else {
-        el.textContent = text;
-        el.classList.add('enter-flick');
-        // Drop the class when the flick lands — no residual transform.
+        // Text node plus a scatter of glowing stars, each on its own beat.
+        const sparks = [...Array(14)].map(() => {
+          const s = document.createElement('span');
+          s.className = 'spark';
+          s.textContent = Math.random() < .5 ? '✦' : '✧';
+          s.style.left = (Math.random() * 96 - 3).toFixed(0) + '%';
+          s.style.top = (Math.random() * 96 - 26).toFixed(0) + '%';
+          s.style.setProperty('--sz', (6 + Math.random() * 8).toFixed(0) + 'px');
+          // Staggered so the sky keeps sparkling, but all done before the
+          // name-fade cleanup (~1220ms) yanks them: 260ms + 950ms run.
+          s.style.animationDelay = (Math.random() * 260) + 'ms';
+          return s;
+        });
+        el.replaceChildren(document.createTextNode(text), ...sparks);
+        el.classList.add('enter-starry');
+        // Drop the class when the fade lands — no residual blur/opacity.
         el.addEventListener('animationend', ev => {
-          if (ev.target === el && ev.animationName === 'leela-flick')
-            el.classList.remove('enter-flick');
+          if (ev.target === el && ev.animationName === 'leela-starlight') {
+            el.classList.remove('enter-starry');
+            el.querySelectorAll('.spark').forEach(s => s.remove());
+          }
         }, { once: true });
       }
     }

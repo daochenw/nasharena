@@ -105,7 +105,6 @@
       white-space: nowrap;
       pointer-events: none;
     }
-    @media (max-width: 640px) { #ctrls { display: none; } }
     #board { /* sized in px by fitBoard() */ }
 
     /* Board colours: sand light squares, venetian clay dark squares. */
@@ -376,9 +375,13 @@
     }
 
     /* ---- progressive shedding: the board is king ---- */
+    /* Logo (top-left) and ctrls (right strip) collide with the column once
+       the board eats the margins — shed both before that happens. */
+    @media (max-height: 780px), (max-width: 820px) {
+      #logo, #ctrls { display: none; }
+    }
     @media (max-height: 660px), (max-width: 540px) {
       #stage { padding: 10px 12px; gap: 8px; }
-      #logo { display: none; }   /* first thing shed: keeps no-overlap guarantee */
     }
     @media (max-height: 560px), (max-width: 460px) {
       .player { padding: 0 2px; }

@@ -13,7 +13,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Chakra+Petch:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Great+Vibes&family=Chakra+Petch:wght@500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -171,7 +171,16 @@
       font-weight: 500;
       letter-spacing: .05em;
     }
-    /* Stockfish's name in his own voice: machined. */
+    /* Each seat in its own voice: the human side takes the flowing hand the
+       replay page gives Leela, against Stockfish's machined one. */
+    .player.You .name {
+      font-family: 'Great Vibes', cursive;
+      font-variant-caps: normal;
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 0;     /* scripts connect; never letterspace them */
+      line-height: 1;
+    }
     .player.Stockfish .name {
       font-family: 'Chakra Petch', var(--sans);
       font-variant-caps: normal;
@@ -306,8 +315,14 @@
       font-weight: 600;
       letter-spacing: .02em;
     }
-    /* The page's own hand: outcomes that belong to the player, or to
-       neither side. */
+    #verdict.You {
+      font-family: 'Great Vibes', cursive;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 0;     /* scripts connect; never letterspace them */
+      line-height: 1;
+    }
+    /* The page's own hand, for the outcome that belongs to neither side. */
     #verdict.plain {
       font-family: var(--serif);
       font-variant-caps: all-small-caps;
@@ -388,6 +403,7 @@
     @media (max-height: 560px), (max-width: 460px) {
       .player { padding: 0 2px; }
       .player .name { font-size: 14px; }
+      .player.You .name { font-size: 20px; }
       .player.Stockfish .name { font-size: 13.5px; }
       .player .bar { width: 88px; }
     }
@@ -437,7 +453,7 @@
         <div id="ctrlTip"></div>
       </div>
     </div>
-    <div class="player" id="pBot">
+    <div class="player You" id="pBot">
       <div class="row"><span class="name"></span></div>
       <div class="sub">
         <div class="status"></div>
@@ -798,10 +814,10 @@
     const resignBtn = document.getElementById('resignBtn');
     // Each notice is signed in the hand it belongs to.
     const VERDICT = {
-      'you-mated':    { face: 'Stockfish', text: 'checkmate' },
-      'sf-mated':     { face: 'plain',     text: 'checkmate' },
+      'you-mated':    { face: 'Stockfish', text: 'Stockfish wins' },
+      'sf-mated':     { face: 'You',       text: 'you win' },
       'sf-resigns':   { face: 'Stockfish', text: 'Stockfish resigns' },
-      'you-resigns':  { face: 'plain',     text: 'you resign' },
+      'you-resigns':  { face: 'You',       text: 'you resign' },
       'draw':         { face: 'plain',     text: 'a draw' },
     };
 

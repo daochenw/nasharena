@@ -21,6 +21,12 @@ gen/generate_games.py   →  games/*.pgn + games/manifest.json  →  index.html 
   placeholder game so the page still works.
 - **`gen/generate_games.py`** — drives Lc0 and Stockfish over UCI with
   [`python-chess`](https://python-chess.readthedocs.io/) and writes PGNs.
+- **`stockfish.html`** — play Stockfish yourself, as White, at the strength the
+  games were generated with. A page cannot spawn the native binary, so it runs
+  Stockfish compiled to WebAssembly (`vendor/stockfish/`, see the README there)
+  in a Web Worker: 100k nodes per move and a 16k-node eval probe, the same
+  budgets and resignation rule as `generate_games.py`. Adjust `SEARCH_NODES` in
+  the page to weaken it.
 
 ## View the site
 

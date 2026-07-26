@@ -185,7 +185,9 @@
     }
 
     /* ---- first-load name entrance ------------------------------------
-       Stockfish: each glyph slammed down L→R like a rubber stamp. ---- */
+       Stockfish: each glyph slammed down L→R like a rubber stamp.
+       You: Leela's starry fade-in — the name resolves out of a soft
+       glow-blur while small stars twinkle around it. ---- */
     .player.Stockfish .name .letter {
       display: inline-block;
       transform-origin: 50% 85%;
@@ -212,12 +214,52 @@
         transform: scale(1) translateY(0) rotate(calc(var(--r, -4) * .18deg));
       }
     }
+    .player.You .name.enter-starry {
+      position: relative;
+      display: inline-block;
+      opacity: 0;
+      filter: blur(5px) brightness(1.6);
+      will-change: opacity, filter;
+      animation: you-starlight 1.1s ease-out forwards;
+      animation-delay: 120ms;
+    }
+    @keyframes you-starlight {
+      0% { opacity: 0; filter: blur(5px) brightness(1.6); }
+      55% { opacity: .92; filter: blur(1px) brightness(1.15); }
+      100% { opacity: 1; filter: blur(0) brightness(1); }
+    }
+    .player.You .name .spark {
+      position: absolute;
+      pointer-events: none;
+      font-size: var(--sz, 9px);
+      line-height: 1;
+      color: #fff7e6;
+      text-shadow:
+        0 0 3px #fff2cf,
+        0 0 7px rgba(255, 214, 130, .95),
+        0 0 13px rgba(255, 190, 90, .7);
+      opacity: 0;
+      will-change: transform, opacity;
+      animation: spark-twinkle 950ms ease-out forwards;
+    }
+    @keyframes spark-twinkle {
+      0% { opacity: 0; transform: scale(.15) rotate(0deg); }
+      30% { opacity: 1; transform: scale(1.3) rotate(25deg); }
+      55% { opacity: .95; transform: scale(.95) rotate(5deg); }
+      100% { opacity: 0; transform: scale(.3) rotate(-18deg); }
+    }
     @media (prefers-reduced-motion: reduce) {
       .player.Stockfish .name .letter {
         animation: none;
         opacity: 1;
         transform: none;
       }
+      .player.You .name.enter-starry {
+        animation: none;
+        opacity: 1;
+        filter: none;
+      }
+      .player.You .name .spark { display: none; }
     }
 
     /* Confidence: Stockfish's own sense of how he is doing. The human
@@ -286,7 +328,7 @@
     .player .caps .grp i + i { margin-left: -10px; }
 
     /* ---- verdict: the closing notice, a calling card laid on the board.
-       The message is signed in the hand it belongs to. ---- */
+       The message is the page's, the name inside it is its owner's. ---- */
     #verdict {
       position: absolute;
       left: 50%; top: 50%;
@@ -302,28 +344,25 @@
       border: 1px solid rgba(28, 26, 23, .3);
       box-shadow: 0 0 0 4px var(--paper), 0 3px 18px rgba(20, 20, 20, .28);
       padding: 13px 34px 15px;
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 500;
+      letter-spacing: .01em;
     }
     #verdict.show { opacity: 1; transform: translate(-50%, -50%) scale(1); pointer-events: auto; }
-    #verdict.Stockfish {
+    /* Only the name wears its owner's face, the way a trademark keeps its
+       lettering; the words around it stay in the page's own hand. */
+    #verdict.Stockfish .who {
       font-family: 'Chakra Petch', var(--sans);
       font-size: 18px;
       font-weight: 600;
       letter-spacing: .02em;
     }
-    #verdict.You {
+    #verdict.You .who {
       font-family: 'Great Vibes', cursive;
       font-size: 28px;
       font-weight: 400;
       letter-spacing: 0;     /* scripts connect; never letterspace them */
-      line-height: 1;
-    }
-    /* The page's own hand, for the outcome that belongs to neither side. */
-    #verdict.plain {
-      font-family: var(--serif);
-      font-variant-caps: all-small-caps;
-      font-size: 20px;
-      font-weight: 500;
-      letter-spacing: .05em;
     }
     /* Dismissal sits on the card's corner, over the paper ring. */
     #verdictClose {
@@ -550,6 +589,10 @@
     // White is the player, so the bottom seat is yours, as on the replay page.
     const cards = { top: document.getElementById('pTop'), bot: document.getElementById('pBot') };
     const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Carried over from the door on the landing page; 'You' if they came
+    // straight here, which is the one name that takes a pronoun's verb.
+    const playerName =
+      (sessionStorage.getItem('nasharena.playerName') || '').trim() || 'You';
 
     function paintStockfishName(el) {
       const text = 'Stockfish';
@@ -563,6 +606,30 @@
         s.style.setProperty('--r', (Math.random() * 10 - 5).toFixed(1));
         return s;
       }));
+    }
+
+    // Same starry entrance Leela uses on the replay page.
+    function paintYouName(el, text) {
+      el.classList.remove('enter-starry');
+      if (reduceMotion) { el.textContent = text; return; }
+      const sparks = [...Array(14)].map(() => {
+        const s = document.createElement('span');
+        s.className = 'spark';
+        s.textContent = Math.random() < .5 ? '✦' : '✧';
+        s.style.left = (Math.random() * 96 - 3).toFixed(0) + '%';
+        s.style.top = (Math.random() * 96 - 26).toFixed(0) + '%';
+        s.style.setProperty('--sz', (6 + Math.random() * 8).toFixed(0) + 'px');
+        s.style.animationDelay = (Math.random() * 260) + 'ms';
+        return s;
+      });
+      el.replaceChildren(document.createTextNode(text), ...sparks);
+      el.classList.add('enter-starry');
+      el.addEventListener('animationend', ev => {
+        if (ev.target === el && ev.animationName === 'you-starlight') {
+          el.classList.remove('enter-starry');
+          el.querySelectorAll('.spark').forEach(s => s.remove());
+        }
+      }, { once: true });
     }
 
     // ---- confidence bar: Stockfish's own sense of the position ----
@@ -794,13 +861,14 @@
     const verdictEl = document.getElementById('verdict');
     const verdictText = document.getElementById('verdictText');
     const resignBtn = document.getElementById('resignBtn');
-    // Each notice is signed in the hand it belongs to.
+    // A name, then what became of it. Resigning is his win either way.
     const VERDICT = {
-      'you-mated':    { face: 'Stockfish', text: 'Stockfish wins' },
-      'sf-mated':     { face: 'You',       text: 'you win' },
-      'sf-resigns':   { face: 'Stockfish', text: 'Stockfish resigns' },
-      'you-resigns':  { face: 'You',       text: 'you resign' },
-      'draw':         { face: 'plain',     text: 'a draw' },
+      'you-mated':    { face: 'Stockfish', who: 'Stockfish', text: ' wins' },
+      'sf-mated':     { face: 'You',       who: playerName,
+                        text: playerName === 'You' ? ' win' : ' wins' },
+      'sf-resigns':   { face: 'Stockfish', who: 'Stockfish', text: ' resigns' },
+      'you-resigns':  { face: 'Stockfish', who: 'Stockfish', text: ' wins' },
+      'draw':         { face: 'plain',     who: '',          text: 'a draw' },
     };
 
     function endGame(kind) {
@@ -809,7 +877,14 @@
       setPlayable(false);
       resignBtn.disabled = true;
       const v = VERDICT[kind];
-      verdictText.textContent = v.text;
+      if (v.who) {
+        const who = document.createElement('span');
+        who.className = 'who';
+        who.textContent = v.who;
+        verdictText.replaceChildren(who, v.text);
+      } else {
+        verdictText.textContent = v.text;
+      }
       verdictEl.className = v.face;
       verdictEl.classList.add('show');
     }
@@ -854,10 +929,10 @@
       setBar(0.5);
       updateCaps();
       setPlayable(true);   // also marks the opening moves' pieces
-      // Wait for the display faces so the stamp doesn't jump on swap-in.
+      // Wait for the display faces so the stamp / starlight don't jump on swap-in.
       await document.fonts.ready;
       paintStockfishName(cards.top.querySelector('.name'));
-      cards.bot.querySelector('.name').textContent = 'You';
+      paintYouName(cards.bot.querySelector('.name'), playerName);
     })();
   </script>
 </body>

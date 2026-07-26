@@ -105,6 +105,13 @@
       transition: color 300ms ease;
     }
     #playSf:hover { color: var(--ink); }
+    /* The engine keeps his own machined face here, as on his player card. */
+    #playSf .sf {
+      font-family: 'Chakra Petch', var(--sans);
+      font-weight: 600;
+      font-size: 12.5px;
+      letter-spacing: .02em;
+    }
     #mute .slash { display: none; }
     #mute.muted .waves { display: none; }
     #mute.muted .slash { display: initial; }
@@ -315,9 +322,9 @@
     }
     .player .caps .grp i + i { margin-left: -10px; }
 
-    /* ---- verdict: the resignation notice, a calling card laid on the
-       board. The entire message is signed in the resigner's own hand. ---- */
-    #verdict {
+    /* ---- board card: resignation notice and the name ask that opens
+       the door to Stockfish — same calling card on the board. ---- */
+    #verdict, #nameAsk {
       position: absolute;
       left: 50%; top: 50%;
       transform: translate(-50%, -50%) scale(.97);
@@ -333,20 +340,79 @@
       box-shadow: 0 0 0 4px var(--paper), 0 3px 18px rgba(20, 20, 20, .28);
       padding: 13px 34px 15px;
     }
-    #verdict.show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-    #verdict.Lc0 {
+    #verdict.show, #nameAsk.show {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    #nameAsk.show { pointer-events: auto; }
+    /* The notice is written in the page's own hand; only the name inside it
+       wears its owner's face, the way a trademark keeps its lettering. */
+    #verdict {
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 500;
+      letter-spacing: .01em;
+    }
+    #verdict.Lc0 .who {
       font-family: 'Great Vibes', cursive;
       font-size: 28px;
       font-weight: 400;
       letter-spacing: 0;     /* scripts connect; never letterspace them */
-      line-height: 1;
     }
-    #verdict.Stockfish {
+    #verdict.Stockfish .who {
       font-family: 'Chakra Petch', var(--sans);
       font-size: 18px;
       font-weight: 600;
       letter-spacing: .02em;
     }
+    /* Name ask: the human hand, with a quiet return cue at the trailing edge.
+       Card footprint stays near a "Stockfish resigns" plaque. */
+    #nameAsk {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 16px 6px 22px;
+    }
+    /* The script's descenders run deep, and an input clips to its content
+       box — so the field is a full line box tall, not a glyph tall. */
+    #nameAsk input {
+      display: block;
+      box-sizing: content-box;
+      width: 6.6em;
+      height: 34px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: none;
+      appearance: none;
+      background: transparent;
+      color: var(--ink);
+      font-family: 'Great Vibes', cursive;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 34px;
+      text-align: center;
+      caret-color: var(--ink);
+    }
+    #nameAsk input::placeholder { color: var(--ink-soft); }
+    #nameGo {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: rgba(20, 20, 20, .34);
+      cursor: pointer;
+      outline: none;
+      transition: color 280ms ease;
+    }
+    #nameGo:hover { color: rgba(20, 20, 20, .62); }
+    #nameGo svg { display: block; }
 
     /* Leela's whole thought-layer breathes softly while she considers. */
     #board.think-l .cg-shapes { animation: breathe 2.6s ease-in-out infinite; }
@@ -403,8 +469,22 @@
     </div>
     <div id="boardArea"><div id="board"></div>
       <div id="verdict"></div>
+      <div id="nameAsk">
+        <input id="nameInput" type="text" maxlength="24" autocomplete="off"
+               spellcheck="false" placeholder="your name" aria-label="your name" />
+        <button id="nameGo" type="button" aria-label="continue">
+          <!-- Return / Enter cue: the keycap's own arrow, turning back to
+               the left. Kept light so the name leads. -->
+          <svg viewBox="0 0 16 16" width="15" height="15" fill="none"
+               stroke="currentColor" stroke-width="1.35" stroke-linecap="round"
+               stroke-linejoin="round" aria-hidden="true">
+            <path d="M12.5 3.5v5.2c0 1.2-.98 2.2-2.2 2.2H4"/>
+            <path d="M6.4 8.4L4 10.9l2.4 2.5"/>
+          </svg>
+        </button>
+      </div>
       <div id="ctrls">
-        <a id="playSf" class="ctrl" href="stockfish.html">play Stockfish</a>
+        <a id="playSf" class="ctrl" href="stockfish.html">play <span class="sf">Stockfish</span></a>
         <button id="pauseBtn" class="ctrl" aria-label="pause or resume">
           <svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor">
             <g class="bars"><rect x="7" y="6" width="3.4" height="12" rx="1"/><rect x="13.6" y="6" width="3.4" height="12" rx="1"/></g>
@@ -865,6 +945,7 @@
     // ---- verdict overlay (resignations) ----
     const verdictEl = document.getElementById('verdict');
     function showVerdict(engine) {
+      hideNameAsk();
       verdictEl.className = engine;   // styles the name in the engine's face
       const who = document.createElement('span');
       who.className = 'who';
@@ -873,6 +954,43 @@
       verdictEl.classList.add('show');
     }
     function hideVerdict() { verdictEl.classList.remove('show'); }
+
+    // ---- name ask: the door to Stockfish opens with a calling card ----
+    const nameAskEl = document.getElementById('nameAsk');
+    const nameInput = document.getElementById('nameInput');
+    function showNameAsk() {
+      hideVerdict();
+      nameInput.value = '';
+      nameAskEl.classList.add('show');
+      // After the click's focus settles on the link, pull it into the field.
+      setTimeout(() => nameInput.focus(), 0);
+    }
+    function hideNameAsk() { nameAskEl.classList.remove('show'); }
+    function commitName() {
+      const name = nameInput.value.trim();
+      if (!name) return;
+      sessionStorage.setItem('nasharena.playerName', name);
+      location.href = 'stockfish.html';
+    }
+    document.getElementById('playSf').addEventListener('click', e => {
+      e.preventDefault();
+      showNameAsk();
+    });
+    document.getElementById('nameGo').addEventListener('click', commitName);
+    nameInput.addEventListener('keydown', e => {
+      // Enter and Return are the same key; both submit the name.
+      if (e.key === 'Enter' || e.key === 'Return') {
+        e.preventDefault();
+        e.stopPropagation();
+        commitName();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        hideNameAsk();
+      } else {
+        e.stopPropagation();   // don't let space/arrows steer the reel
+      }
+    });
 
     // End-of-game card lines + board verdict, shared by auto play and stepping.
     function showResult() {

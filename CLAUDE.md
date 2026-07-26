@@ -1,1 +1,1 @@
-Sacrifice grammar for concision
+Sacrifice grammar for concision in all replies.

@@ -372,7 +372,9 @@
       padding: 5px 16px 6px 22px;
     }
     /* The script's descenders run deep, and an input clips to its content
-       box — so the field is a full line box tall, not a glyph tall. */
+       box — so the field is a full line box tall, not a glyph tall.
+       Great Vibes also overhangs its advance; a trailing thin space is
+       kept in the value (stripped on submit) so the caret sits past the ink. */
     #nameAsk input {
       display: block;
       box-sizing: content-box;
@@ -956,6 +958,24 @@
     // ---- name ask: the door to Stockfish opens with a calling card ----
     const nameAskEl = document.getElementById('nameAsk');
     const nameInput = document.getElementById('nameInput');
+    // Great Vibes overhangs its advance; a trailing thin space parks the
+    // caret past the ink. Stripped before the name is stored.
+    const CARET_GAP = '\u2005';   // four-per-em space: a slight runway past script ink
+    function nameValue() {
+      return nameInput.value.replaceAll(CARET_GAP, '').trim();
+    }
+    function syncCaretGap() {
+      const bare = nameInput.value.replaceAll(CARET_GAP, '');
+      if (!bare) { nameInput.value = ''; return; }
+      const start = nameInput.selectionStart;
+      const end = nameInput.selectionEnd;
+      const hadGap = nameInput.value.endsWith(CARET_GAP);
+      const limit = hadGap ? nameInput.value.length - 1 : nameInput.value.length;
+      const atEnd = start >= limit && end >= limit;
+      nameInput.value = bare + CARET_GAP;
+      if (atEnd) nameInput.setSelectionRange(nameInput.value.length, nameInput.value.length);
+      else nameInput.setSelectionRange(Math.min(start, bare.length), Math.min(end, bare.length));
+    }
     function showNameAsk() {
       hideVerdict();
       nameInput.value = '';
@@ -965,7 +985,7 @@
     }
     function hideNameAsk() { nameAskEl.classList.remove('show'); }
     function commitName() {
-      const name = nameInput.value.trim();
+      const name = nameValue();
       if (!name) return;
       sessionStorage.setItem('nasharena.playerName', name);
       location.href = 'stockfish.html';
@@ -975,6 +995,7 @@
       showNameAsk();
     });
     document.getElementById('nameGo').addEventListener('click', commitName);
+    nameInput.addEventListener('input', syncCaretGap);
     nameInput.addEventListener('keydown', e => {
       // Enter and Return are the same key; both submit the name.
       if (e.key === 'Enter' || e.key === 'Return') {
@@ -985,6 +1006,21 @@
         e.preventDefault();
         e.stopPropagation();
         hideNameAsk();
+      } else if (e.key === 'Backspace') {
+        // One press should erase the last real glyph, not only the gap.
+        const v = nameInput.value;
+        if (v.endsWith(CARET_GAP)
+            && nameInput.selectionStart === v.length
+            && nameInput.selectionEnd === v.length) {
+          e.preventDefault();
+          e.stopPropagation();
+          const next = v.slice(0, -2);   // drop gap + last character
+          nameInput.value = next ? next + CARET_GAP : '';
+          const pos = nameInput.value.length;
+          nameInput.setSelectionRange(pos, pos);
+        } else {
+          e.stopPropagation();
+        }
       } else {
         e.stopPropagation();   // don't let space/arrows steer the reel
       }

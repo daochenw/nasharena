@@ -75,7 +75,7 @@
       flex-direction: row;
       align-items: center;
       gap: 6px;
-      /* Above chessground pieces (z-index 2) and the verdict plaque
+      /* Above the board's stacking context (z-index 0) and the plaque
          (z-index 3): without this, a piece on the h-file steals the
          hover and the hand cursor never appears on the buttons. */
       z-index: 4;
@@ -109,7 +109,10 @@
     #mute .slash { display: none; }
     #mute.muted .waves { display: none; }
     #mute.muted .slash { display: initial; }
-    #board { /* sized in px by fitBoard() */ }
+    /* Isolate chessground's piece stacking (resting 2, anim 8, dragging 11)
+       inside the board so an animated piece cannot rise above the verdict
+       plaque or the side strip. */
+    #board { position: relative; z-index: 0; /* sized in px by fitBoard() */ }
 
     /* Board colours: sand light squares, venetian clay dark squares. */
     cg-board {
@@ -119,9 +122,15 @@
     cg-board square.last-move { background-color: rgba(196, 145, 62, .32); }
     /* Chessground hands the whole board a pointer cursor; the hand belongs
        only over a piece that can actually be picked up. Those squares are
-       marked by setPlayable() through highlight.custom. */
+       marked by setPlayable() through highlight.custom.
+       pointer-events:auto on the square is for the desktop cursor only —
+       on touch it recreates chessground's old "highlighted squares eat
+       the gesture" bug (lichess-org/chessground#82), so keep it off when
+       there is no fine pointer. */
     .cg-wrap.manipulable cg-board { cursor: default; }
-    cg-board square.movable { pointer-events: auto; cursor: pointer; }
+    @media (hover: hover) and (pointer: fine) {
+      cg-board square.movable { pointer-events: auto; cursor: pointer; }
+    }
     /* Chessground's own theme paints these lichess green; restate them in
        the page's ink so a playable board still reads as this board. */
     cg-board square.move-dest {

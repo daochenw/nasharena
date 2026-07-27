@@ -434,15 +434,15 @@
     }
 
     /* ---- progressive shedding: the board is king ---- */
-    /* The logo (top-left) collides with the column once the board eats the
-       top margin — shed it when height runs short. The ctrls strip only
-       collides when *width* runs short: a short-but-wide desktop (1080p at
-       125% scaling, 1366×768) keeps a generous right strip, and shedding on
-       height alone was closing the door to the play page on those screens. */
+    /* Logo collides with the column when height runs short. The ctrls strip
+       only collides when the board is *width*-limited (narrow and tall):
+       then the side margin vanishes. When the board is height-limited —
+       landscape phones, including Display Zoom (~693×320), and short-wide
+       desktops — the gutters stay, so the door stays open. */
     @media (max-height: 780px) {
       #logo { display: none; }
     }
-    @media (max-width: 820px) {
+    @media (max-width: 820px) and (orientation: portrait) {
       #logo, #ctrls { display: none; }
     }
     @media (max-height: 660px), (max-width: 540px) {
